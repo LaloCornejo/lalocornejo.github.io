@@ -89,7 +89,7 @@
     height: 10vh;
     padding-right: 5vw;
     padding-top: 2vh;
-    height: 20vh;
+    height: 10vh;
     -webkit-filter: brightness(0) invert(1);
     filter: brightness(0) invert(1);
   }
@@ -201,8 +201,8 @@
     width: auto;
     color: black;
   }
-  .spacer{
-    height: 20vh;
+  .spacer_bottom{
+    height: 10vh;
     width: auto;
     color: black;
   }
