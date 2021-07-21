@@ -7,7 +7,11 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
         <title>O Ta Ku</title>
     </head>
-
+    <style>
+        html{
+            overflow: hidden;
+        }
+    </style>
     
     <body>
         <!-- LOADER -->
@@ -16,157 +20,39 @@
         </div>
         <!-- end loader -->
 
-
         <!-- header -->
         <div class="header">
-            <!--Gradient-->
-                <div class="gradient"></div>
-            <!--End gradient-->                    
+
+            <div class="gradient"></div>
 
             <!--Top Header-->
             <div id="home" class="Title">
                 <a class="link" href="#home"><img class="logo_white" src="img/Logo3.gif" alt="logo" ></a>
-
+        
                 <div class="emboss-txt">オタク</div>
-
+        
                 <div class="SbTitle">"Otaku"</div>
-                    <!--Scroll-->
-                <a class="scroll" href="#spacer1" >
-                    <img id="White" src="img/scroll-down2.gif" alt="scroll-down">
-                </a>
-                    <!--End Scroll-->
+
             </div>
-                    <!--End top header-->
+            <!--End top header-->
+            <div class="Lat-text-r">
+                NodeMCU
+            </div>
+            <a class="button-full-right"></a>
+    
+            <div class="Lat-text-l">
+                Weeb
+            </div>
+            <a class="button-full-left"></a>    
         </div>
-            <!--End header-->
+        <!--End header-->
 
-                    <!--Text-->
-                    <!--Container 1-->
-                    <div id="spacer1">
-                    </div>
-                    <div id="C1">
-                        <div class="container">
-                            <div class="row">
-                                <div class="column-left">
-                                    <div class="column-txt-l">                                            
-                                        <div class="txt-cl">
-                                            <h1>Nino Nakano (中野 二乃)</h1><p>
-                                            Nino Nakano is the second sister of the Nakano quintuplets. She usually acts as the mother of the family, she cooks for them and takes care of their medical needs. Among the five sisters, she is the one who has the highest hostility towards Fuutarou and often rebels against him.
-                                            <p></p>
-                                            She confesses to Fuutarou in chapter 59. Fuutarou does not hear it so she confessed again in chapter 60.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="column-right">
-                                    <div class="full">
-                                        <img id="Nino" class="img-responsive-med-vertic" src="img/Nino S2.jpg" alt="Nino">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--End Container 2-->
-
-                    <div class="spacer"></div>
-
-                    <!--Container 2-->
-                    <div id="C2">
-                        <div class="container">
-                            <div class="row">
-                                <div class="column-left">
-                                    <div class="full">
-                                        <div id="Miku" >
-                                            <video class="img-responsive-med-vertic" autoplay muted controls>
-                                                <source src="img/miku.mp4">
-                                            </video>
-                                        </div>x
-                                    </div>
-                                </div>
-                                <div class="column-right-2">
-                                    <div class="column-txt-r">                                            
-                                        <div class="txt-cl">
-                                            <h1>Miku Nakano (中なか野の 三み玖)</h1><p>
-                                            Es la tercera hermana de las quintillizas Nakano. Debido a la influencia de Fuutarou, ella es la primera de las hermanas en entablar amistad con él.                                        
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--End Container 2-->
-
-                    <div class="spacer"></div>
-
-                    <!--Container 3-->
-                    <div id="C3">
-                        <div class="container">
-                            <div class="row">
-                                <div class="column-left-3">
-                                    <div class="column-txt-r">                                            
-                                        <div class="txt-cl">
-                                            <h1>Chika Fujiwara (藤原 千花ふじわら ちか)</h1><p>
-                                            Is the heroine in the Kaguya-sama wa Kokurasetai series. She is a third-year high school student at Shuchi'in Academy, a member of the Tabletop Gaming Club and the current secretary of the high school Student Council.                                        </div>
-                                    </div>
-                                </div>
-                                <div class="column-right">
-                                    <div class="full">
-                                        <div>
-                                            <img id="Chika" class="img-responsive-med-vertic" src="img/Chika S2.jpg" alt="#Chika">
-                                        </div>x
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--End Container 3-->
-
-                    <div class="spacer"></div>
-
-                    <!--End Text-->
-            
-                <a href="#home" ><img class="go_top" src="img/go-top.gif" alt="#top"></a>
-                
+    
         <script>
             $(window).load("load", function(){
                 $(".loader-container").fadeOut(3000);
-                $('#Nino').fadeOut();
-                $('.column-left').fadeOut();
             });
         </script>
-        <script>
-            $(window).scroll(function () {
-                if ($(this).scrollTop() > 300) {
-                    $('.go_top').fadeIn();
-                } else {
-                    $('.go_top').fadeOut();
-                }
-            });
-        </script>
-        <script>
-            $(window).scroll(function () {
-                if ($(this).scrollTop() > 560) {
-                    $('#Nino').fadeIn();
-                    $('.column-left').fadeIn();
-                } else {
-                    $('#Nino').fadeOut();
-                    $('.column-left').fadeOut();
-                }
-                if ($(this).scrollTop() > 560) {
-                    $('#Miku').fadeIn();
-                    $('.column-right-2').fadeIn();
-                } else {
-                    $('#Miku').fadeOut();
-                    $('.column-right-2').fadeOut();
-                }
-                if ($(this).scrollTop() > 1050) {
-                    $('#Chika').fadeIn();
-                    $('.column-left-3').fadeIn();
-                } else {
-                    $('#Chika').fadeOut();
-                    $('.column-left-3').fadeOut();
-                }
-            });
-        </script>        
+
     </body>
-    <body>  </body>
 </html>
