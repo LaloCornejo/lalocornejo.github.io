@@ -15,6 +15,7 @@ html{
     width: 100vw;
     max-width: 100%;
     height: 100vw;
+    overflow-x: hidden;
   }
 body{
     background-color: black;
@@ -98,7 +99,7 @@ h1{
 .Container-L:hover{
     position: absolute;
     display: flex;
-    background-color: rgba(255, 255, 255, .45);
+    background-color: rgba(0, 166, 255, 0.45);
     height: 95vh;
     width: 45vw;
     justify-content: center;
@@ -110,7 +111,7 @@ h1{
 .Container-R:hover{
     position: absolute;
     display: flex;
-    background-color: rgba(255, 255, 255, .45);
+    background-color: rgba(183, 0, 255, 0.35);
     height: 95vh;
     width: 45vw;
     justify-content: center;
@@ -147,6 +148,6 @@ h1{
     75%{ opacity: 1 ; };
 }
 @keyframes Hover{
-    0%{ opacity: 0.05 ; };
+    0%{ opacity: 0.02 ; };
     75%{ opacity: 0.25 ; };
 }
