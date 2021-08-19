@@ -99,7 +99,7 @@ h1{
 .Container-L:hover{
     position: absolute;
     display: flex;
-    background-color: rgba(0, 166, 255, 0.45);
+    background-color: rgba(0, 166, 255, 0.35);
     height: 95vh;
     width: 45vw;
     justify-content: center;
@@ -122,7 +122,7 @@ h1{
 }
 .School{
     display: flex;
-    font-size: 150px;
+    font-size: 10vh;
     font-family: FuturaMedium;
     color: white;
     height: 95vh;
@@ -133,7 +133,7 @@ h1{
 }
 .Weeb{
     display: flex;
-    font-size: 150px;
+    font-size: 10vh;
     font-family: FuturaMedium;
     color: white;
     height: 95vh;
@@ -148,6 +148,6 @@ h1{
     75%{ opacity: 1 ; };
 }
 @keyframes Hover{
-    0%{ opacity: 0.02 ; };
+    0%{ opacity: 0.05 ; };
     75%{ opacity: 0.25 ; };
 }
