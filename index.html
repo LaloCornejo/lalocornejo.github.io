@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang = "en">
+<html lang="en">
     <head>
         <title>LaloCornejo</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,9 +7,13 @@
         <link rel="icon favicon" href="img/favicon-32x32.png">
     </head>
 
-    <body>
+    <body>\
+        <div class="DarkMode">
+        </div>
         <div id="Title">
-            <a class="link" href="#home"><img class="logo-white" src="img/Logo3.gif" alt="Logo"></a>
+            <button id="theme-toggle" aria-label="Switch to dark theme">
+                <a class="link" href="#home"><img class="logo-white" src="img/Logo3.gif" alt="Logo"></a>
+            </button>
             <div class="Front">
                 <h1>オタク</h1>
 
@@ -25,18 +29,19 @@
     
         <div class="Container">
             <div class="Container-L">
-                <div class="Weeb">
+                <a class="Weeb" href="weeb.html">
                     Weeb
-                </div>
+                </a>
             </div>
             <div class="Container-R">
-                <div class="School">
+                <a class="School" href="nodeMCU.html">
                     School
-                </div>
+                </a>
             </div>
         </div>
         
         <!-----------------SCRIPTS----------------------->
+        <script src="/js/theme-toggle.js"></script>
     </body>
 
 </html>

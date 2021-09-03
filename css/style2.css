@@ -1,3 +1,7 @@
+:root{
+    --clr-foreground: hsl(0 0% 0%);
+    --clr-background: hsl(0 0% 100%);
+}
 @font-face {
     font-family: BebasNeue;
     src: url("../fonts/BebasNeue-Regular.otf");
@@ -10,18 +14,39 @@
     font-family: FuturaMedium;
     src: url("../fonts/futuraMedium.ttf");
 }
+@media (prefers-color-scheme: dark){
+    :root{
+        --clr-background: hsl(0 0% 0%);
+        --clr-foreground: hsl(0 0% 100%);
+    }    
+}
+.dark-theme{
+    --clr-foreground: hsl(0 0% 100%);
+    --clr-background: hsl(0 0% 0%);
+}
+.light-theme{
+    --clr-foreground: hsl(0 0% 0%);
+    --clr-background: hsl(0 0% 100%);
+}
+.DarkMode{
+    background: black;
+    animation: DarkMode 700ms linear normal;
+}
+.LightMode{
+    animation: DarkMode 700ms linear normal;
+}
 html{
     scroll-behavior: smooth;
     width: 100vw;
     max-width: 100%;
     height: 100vw;
     overflow-x: hidden;
-  }
+}
 body{
-    background-color: black;
+    background: var(--clr-background);
+    color: var(--clr-foreground);
 }
 h1{
-    color: white;
     font-size: 20vh;
 }
 #Title {
@@ -47,7 +72,7 @@ h1{
     display: flex;
     height: 3vw;
     justify-content: center;
-    bottom: 5vh;
+    bottom: 2vh;
     opacity: .8;
     animation: FadeInScroll 3000ms linear normal;
     -webkit-animation: FadeInScroll 3000ms linear normal;
@@ -150,4 +175,15 @@ h1{
 @keyframes Hover{
     0%{ opacity: 0.05 ; };
     75%{ opacity: 0.25 ; };
+}
+@keyframes DarkMode{
+    0%{opacity: 0;};
+    60%{opacity: 1;};
+    
+}
+#theme-toggle{
+    cursor: pointer;
+    background: 0;
+    border: 0;
+    border-radius: 50%;
 }
