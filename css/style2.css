@@ -28,13 +28,6 @@
     --clr-foreground: hsl(0 0% 0%);
     --clr-background: hsl(0 0% 100%);
 }
-.DarkMode{
-    background: black;
-    animation: DarkMode 700ms linear normal;
-}
-.LightMode{
-    animation: DarkMode 700ms linear normal;
-}
 html{
     scroll-behavior: smooth;
     width: 100vw;
@@ -175,11 +168,6 @@ h1{
 @keyframes Hover{
     0%{ opacity: 0.05 ; };
     75%{ opacity: 0.25 ; };
-}
-@keyframes DarkMode{
-    0%{opacity: 0;};
-    60%{opacity: 1;};
-    
 }
 #theme-toggle{
     cursor: pointer;
