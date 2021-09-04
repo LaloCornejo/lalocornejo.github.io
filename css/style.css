@@ -77,7 +77,7 @@ h1{
     height: 3vw;
     justify-content: center;
     bottom: 2vh;
-    opacity: .8;
+    opacity: 1;
     animation: FadeInScroll 3000ms linear normal;
     -webkit-animation: FadeInScroll 3000ms linear normal;
 }
@@ -174,7 +174,6 @@ h1{
     cursor: pointer;
     background: 0;
     border: 0;
-    opacity: 0.8;
     margin: 4vh;
     border-radius: 50%;
     position: absolute;
@@ -218,11 +217,6 @@ h1{
     transform-origin: top;
     transition: transform 0ms linear 100ms, opacity 100ms linear;
 }
-#theme-toggle:hover,
-#theme-toggle:focus {
-    outline: 0;
-    opacity: 1;
-}
 .toggle-circle {
     fill: var(--clr-background);
     transition: transform 500ms ease-out;
@@ -235,7 +229,8 @@ h1{
     fill: var(--clr-foreground);
     transition: transform 500ms ease-out;
 }
-*-------------------------ANIMATIONS------------------------*/
+
+/*-------------------------ANIMATIONS------------------------*/
 
 @keyframes FadeInScrollBlue{
     0%{background-color: rgba(130, 130, 130, 0.494);
