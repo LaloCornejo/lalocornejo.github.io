@@ -2,10 +2,8 @@
     --clr-foreground: hsl(0 0% 100%);
     --clr-background: hsl(0 0% 0%);
 }
-@font-face {
-    font-family: BebasNeue;
-    src: url("../fonts/BebasNeue-Regular.otf");
-}
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
 @font-face {
     font-family: FuturaLight;
     src: url("../fonts/FuturaLight.otf");
@@ -14,6 +12,7 @@
     font-family: FuturaMedium;
     src: url("../fonts/futuraMedium.ttf");
 }
+
 @media (prefers-color-scheme: dark){
     :root{
         --clr-background: hsl(0 0% 0%);
@@ -31,16 +30,20 @@
 html{
     scroll-behavior: smooth;
     width: 100vw;
-    max-width: 100%;
     height: 100vw;
     overflow-x: hidden;
+    font-size: 16px;
 }
 body{
     background: var(--clr-background);
     color: var(--clr-foreground);
 }
 h1{
-    font-size: 20vh;
+    margin-top: 20vh;
+    font-size: 10vw;
+}
+a{
+    text-decoration: none;
 }
 #Title {
     display: flex;
@@ -50,36 +53,27 @@ h1{
     height: 100vh;
     top: 0;
     left: 0;
-    justify-content: center;
     border-radius: 0 0 0 0;
   }
-.logo-conta{
-    left: 0;
-    top: 0;
-    background-color: blue;
-    height: 27vh;
-    width: 17vw;
-    display: flex;
-    position: absolute;
-    border-bottom-right-radius: 50vh;
-    transition: transform 400ms ease-out;
-}
 .logo-white{
     position: absolute;
-    height: 18vh;
+    display: flex;
+    width: 15vw;
+    margin: 20px;
     left: 0;
     top: 3vh;
     filter: brightness(0)invert(1);
 }
+.light-theme .logo-white{
+    filter: brightness(0);
+}
 .scroll{
     position: absolute;
     display: flex;
+    scroll-behavior: smooth;
     height: 3vw;
-    justify-content: center;
-    bottom: 2vh;
+    bottom: 0;
     opacity: 1;
-    animation: FadeInScroll 3000ms linear normal;
-    -webkit-animation: FadeInScroll 3000ms linear normal;
 }
 #spacer1{
     height: auto;
@@ -110,34 +104,37 @@ h1{
     height: 40vh;
 }
 .Container-L{
-    left: 2vw;
     position: absolute;
-    display: flex;
-    background-color: rgba(130, 130, 130, 0.494);
+    left: 2vw;
     height: 40vh;
     width: 46.5vw;
     justify-content: center;
-    align-items: center;
-    border-radius: 30px;
 }
 .Container-R{
-    right: 2vw;
     position: absolute;
-    display: flex;
-    background-color: rgba(130, 130, 130, 0.494);
+    right: 2vw;
     height: 40vh;
     width: 46.5vw;
     justify-content: center;
+}
+.btn-1, .btn-2, .btn-3, .btn-4{
+    position: absolute;
+    display: flex;
+    height: 40vh;
+    width: 46.5vw;
+    background-color: rgba(130, 130, 130, 0.494);
     align-items: center;
     border-radius: 30px;
 }
-.Container-L:hover{
-    background-color: rgba(0, 166, 255, 0.35);
+.btn-1:hover{
+    background-color: rgba(0, 166, 255, .65);
     justify-content: center;
     align-items: center;
     border-radius: 30px;
-    animation: FadeInScrollBlue 500ms linear normal;
-    -webkit-animation: FadeInScrollBlue 500ms linear normal;
+    animation: FadeInScrollBlue 300ms linear normal;
+    -webkit-animation: FadeInScrollBlue 300ms linear normal;
+}
+/*.Container-L:hover{
 }
 .Container-R:hover{
     display: flex;
@@ -147,10 +144,10 @@ h1{
     border-radius: 30px;
     animation: FadeInScrollPurple 500ms linear normal;
     -webkit-animation: FadeInScrollPurple 500ms linear normal;
-}
+}*/
 .School{
     display: flex;
-    font-size: 10vh;
+    font-size: 10vw;
     font-family: FuturaMedium;
     color: var(--clr-foreground);
     height: 40vh;
@@ -161,7 +158,18 @@ h1{
 }
 .Weeb{
     display: flex;
-    font-size: 10vh;
+    font-size: 10vw;
+    font-family: FuturaMedium;
+    color: var(--clr-foreground);
+    height: 40vh;
+    width: 46.5vw;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+}
+.X{
+    display: flex;
+    font-size: 10vw;
     font-family: FuturaMedium;
     color: var(--clr-foreground);
     height: 40vh;
