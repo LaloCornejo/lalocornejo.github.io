@@ -13,7 +13,7 @@
     src: url("../fonts/futuraMedium.ttf");
 }
 
-@media (prefers-color-scheme: dark){
+/*@media (prefers-color-scheme: dark){
     :root{
         --clr-background: hsl(0 0% 0%);
         --clr-foreground: hsl(0 0% 100%);
@@ -131,38 +131,31 @@ a{
     background-color: rgba(130, 130, 130, 0.494);
     align-items: center;
     border-radius: 30px;
+    transition-duration: .5s;
 }
 .btn-1:hover{
-    background-color: rgba(0, 132, 255, 0.65);
+    background-color: rgba(0, 166, 255, 0.55);
     justify-content: center;
     align-items: center;
     border-radius: 30px;
-    animation: FadeInScrollBlue 300ms linear normal;
-    -webkit-animation: FadeInScrollBlue 300ms linear normal;
 }
 .btn-2:hover{
-    background-color: rgba(162, 0, 255, 0.65);
+    background-color: rgba(183, 0, 255, 0.55);
     justify-content: center;
     align-items: center;
     border-radius: 30px;
-    animation: FadeInScrollBlue 300ms linear normal;
-    -webkit-animation: FadeInScrollBlue 300ms linear normal;
 }
 .btn-3:hover{
-    background-color: rgba(255, 0, 234, 0.65);
+    background-color: rgba(255, 0, 234, 0.55);
     justify-content: center;
     align-items: center;
     border-radius: 30px;
-    animation: FadeInScrollBlue 300ms linear normal;
-    -webkit-animation: FadeInScrollBlue 300ms linear normal;
 }
 .btn-4:hover{
-    background-color: rgba(0, 255, 229, 0.65);
+    background-color: rgba(0, 255, 229, 0.55);
     justify-content: center;
     align-items: center;
     border-radius: 30px;
-    animation: FadeInScrollBlue 300ms linear normal;
-    -webkit-animation: FadeInScrollBlue 300ms linear normal;
 }
 /*.Container-L:hover{
 }
@@ -195,7 +188,6 @@ a{
 .Weeb{
     display: flex;
     font-size: 6.5vw;
-    max-font-size: ;
     font-family: Poppins;
     font-weight: 400;
     color: var(--clr-foreground);
@@ -280,22 +272,26 @@ a{
 /*-------------------------ANIMATIONS------------------------*/
 
 @keyframes FadeInScrollBlue{
-    0%{background-color: rgba(130, 130, 130, 0.494);
-       opacity: 1 ; };
-    75%{background-color: rgba(0, 166, 255, 0.35);
-        opacity: 1 ; };
+    0%{background-color: rgba(130, 130, 130, 0.494)}
+    100%{background-color: rgba(0, 166, 255, 0.55)}
 }
 @keyframes FadeInScrollPurple{
-    0%{background-color: rgba(130, 130, 130, 0.494);
-       opacity: 1 ; };
-    75%{background-color: rgba(183, 0, 255, 0.35);
-        opacity: 1 ; };
+    0%{background-color: rgba(130, 130, 130, 0.494)}
+    100%{background-color: rgba(183, 0, 255, 0.55)}
+}
+@keyframes FadeInScrollRose{
+    0%{background-color: rgba(130, 130, 130, 0.494)}
+    100%{background-color: rgba(255, 0, 234, 0.55)}
+}
+@keyframes FadeInScrollAqua{
+    0%{background-color: rgba(130, 130, 130, 0.494)}
+    100%{background-color: rgba(0, 255, 229, 0.55)}
 }
 @keyframes Hover{
-    0%{ opacity: 0.05 ; };
-    75%{ opacity: 0.25 ; };
+    0%{ opacity: 0.05 }
+    100%{ opacity: 0.25 }
 }
-@keyframes Focus {
-    0%{transition: ;};
-    100%{};
+@keyframes SizeI {
+    0%{transform: scale(1)}
+    100%{transform: scale(1.3)}
 }
