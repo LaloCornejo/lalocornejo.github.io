@@ -123,7 +123,7 @@ body{
     align-items: center;
 }
 h1{
-    font-size: 11rem;
+    font-size: 10rem;
     font-family: "FuturaLight";
 }
 h2 {
@@ -136,9 +136,11 @@ h4 {
 }
 a {
     text-decoration: none;
+    text-decoration-color: white;
 }
 
 .Front {
+    height: 98vh;
     display: flex;
     align-items: center;
 }
@@ -158,9 +160,14 @@ a {
 }
 #SubTitle {
     color: rgb(218, 1, 218);
+    border-color: #ae00ff;
+    position: relative;
+    top: 125%;
+    left: 10%;
 }
 #Title {
-
+    text-align: center;
+    justify-self: center;
 }
 #Tdes{
     width: 65vw;
@@ -170,12 +177,10 @@ a {
 /*================= Grid ==================*/
 .grid {
     display: grid;
-    place-items: center;
-}
-.grid_item {
-    border: 2px solid rgb(140, 0, 255);
+    grid-template-rows: 50px;
 }
 
+/*================= Login ==================*/
 .Login{
     position: fixed;
     width: 100%;
@@ -223,12 +228,8 @@ a {
     transition: transform .5s ease, height .2s ease;
 }
 
-.wrapper .active-popup {
+.active-popup {
     transform: scale(1);
-}
-
-.wrapper .active {
-    height: 520px;
 }
 
 .wrapper .form-box {
@@ -249,6 +250,8 @@ a {
     cursor: pointer;
     z-index: 1;
 }
+
+
 .form-box h2{ 
     font-size: 2rem;
     text-align: center;
@@ -321,3 +324,9 @@ a {
     font-weight: 600;
 }
 
+.Dark {
+    display: flex;
+    background-color: black;
+    align-content: center;
+    height: 500px;
+}

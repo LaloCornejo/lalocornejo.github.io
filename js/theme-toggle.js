@@ -7,6 +7,7 @@ function enableDarkMode() {
   document.body.classList.add("dark-theme");
   themeToggle.setAttribute("aria-label", "Switch to light theme");
   window.localStorage.setItem("theme", "dark");
+  console.log('dark');
 }
 
 function enableLightMode() {
@@ -14,6 +15,7 @@ function enableLightMode() {
   document.body.classList.add("light-theme");
   themeToggle.setAttribute("aria-label", "Switch to dark theme");
   window.localStorage.setItem("theme", "light");
+  console.log('light');
 }
 
 function setThemePreference() {
