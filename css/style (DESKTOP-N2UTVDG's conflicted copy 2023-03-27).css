@@ -1,0 +1,323 @@
+:root{
+    --clr-foreground: hsl(0 0% 100%);
+    --clr-background: hsl(0, 0%, 5%);
+}
+@font-face {
+    font-family: "FuturaLight";
+    src: url("../fonts/FuturaLight.otf");
+}
+@font-face {
+    font-family: "BebasNeue";
+    src: url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+}
+@font-face {
+    font-family: "Poppins";
+    src: url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+}
+@font-face {
+    font-family: "FuturaMedium";
+    src: url("../fonts/futuraMedium.ttf");
+}
+@font-face {
+    font-family: "JetBrains";
+    src: url("../fonts/JetBrainsMono-Regular.ttf");
+}
+
+
+/*================= Themes ==================*/
+@media (prefers-color-scheme: dark){
+    :root{
+        --clr-foreground: hsl(0, 0%, 100%);
+        --clr-background: hsl(0, 0%, 5%);
+        }
+}
+.dark-theme{
+    --clr-foreground: hsl(0, 0%, 100%);
+    --clr-background: hsl(0, 0%, 5%);
+}
+.light-theme{
+    --clr-foreground: hsl(0 0% 5%);
+    --clr-background: hsl(0, 0%, 100%);
+}
+::-webkit-scrollbar{
+    width: 5px;
+}
+::-webkit-scrollbar-track{
+    background: var(--clr-background);
+}
+::-webkit-scrollbar-thumb{
+    background: rgb(140, 0, 255);
+    border-radius: 20px;
+}
+#theme-toggle {
+    top: 1rem;
+    background: 0;
+    border: 0;
+    position: absolute;
+    isolation: isolate;
+    right: 1rem;
+}
+#theme-toggle svg {
+    fill: var(--clr-foreground);
+} 
+#theme-toggle::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: hsl(0 0% 50% / 0.2);
+    border-radius: inherit;
+    transform: scale(0);
+    opacity: 0;
+    z-index: -1;
+}
+.light-theme #theme-toggle::before {
+    animation: pulseToLight 650ms ease-out;
+}
+.dark-theme #theme-toggle::before {
+    animation: pulseToDark 650ms ease-out;
+}
+#theme-toggle::after {
+    content: attr(aria-label);
+    position: absolute;
+    color: var(--clr-foreground);
+    background: var(--clr-foreground);
+    width: max-content;
+    font-size: 1.5rem;
+    left: 0;
+    right: 0;
+    top: 95%;
+    margin: 0 auto;
+    padding: 0.5em 1em;
+    border-radius: 0.125em;
+    opacity: 0;
+    transform: scale(0);
+    transform-origin: top;
+    transition: transform 0ms linear 100ms, opacity 100ms linear;
+}
+.toggle-circle {
+    fill: var(--clr-background);
+    transition: transform 500ms ease-out;
+}
+  
+.light-theme .toggle-circle {
+    transform: translate(-34%, 40%);
+}
+.toggle-sun {
+    fill: var(--clr-foreground);
+    transition: transform 500ms ease-out;
+}
+
+/*========================================================*/
+
+html{
+    display: flex;
+    scroll-behavior: smooth;
+    overflow: auto;
+}
+body{
+    background: var(--clr-background);
+    color: var(--clr-foreground);
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    font-size: 11rem;
+    font-family: "FuturaLight";
+}
+h2 {
+    font-size: 1.5rem;
+    font-family: "Poppins";
+}
+h4 {
+    font-size: 1.7rem;
+    font-family: "JetBrains";
+}
+a {
+    text-decoration: none;
+}
+
+.Front {
+    display: flex;
+    align-items: center;
+}
+.dark-theme .logoAt {
+    filter: brightness(0)invert(1);
+}
+.light-theme .logoAt {
+    filter: brightness(0);
+}
+#Logo {
+    width: 7vw;
+    min-width: 110px;
+    max-width: 160px;
+    left:.5rem;
+    top: 0;
+    position: fixed;
+}
+#SubTitle {
+    color: rgb(218, 1, 218);
+}
+#Title {
+
+}
+#Tdes{
+    width: 65vw;
+}
+
+
+/*================= Grid ==================*/
+.grid {
+    display: grid;
+    place-items: center;
+}
+.grid_item {
+    border: 2px solid rgb(140, 0, 255);
+}
+
+.Login{
+    position: fixed;
+    width: 100%;
+    top: 50%;
+    bottom: 50%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.btnLogin-popup{
+    width: 25vw;
+    height: 18vh;
+    background: transparent;
+    border: 5px solid #ae00ff;
+    outline: pointer;
+    border-radius: 3vw;
+    cursor: pointer;
+    font-size: 2.5rem;
+    color: #ae00ff;
+    font-family: "JetBrains";
+    font-weight: 700;
+    transition: .4s;
+}
+
+.btnLogin-popup:hover{
+    background: #ae00ff;
+    color: white;
+}
+.wrapper {
+    position: relative;
+    top: 30%;
+    width: 34vw;
+    height: 30vw;
+    background: transparent;
+    border: 4px solid rgba(131, 131, 131, 0.1);
+    border-radius: 2.5vw;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transform: scale(0);
+    transition: transform .5s ease, height .2s ease;
+}
+
+.wrapper .active-popup {
+    transform: scale(1);
+}
+
+.wrapper .active {
+    height: 520px;
+}
+
+.wrapper .form-box {
+    width: 100%;
+    padding: 7vw;
+}
+
+.wrapper .icon-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 5vw;
+    height: 4vw;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1;
+}
+.form-box h2{ 
+    font-size: 2rem;
+    text-align: center;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 6vh;
+    border-bottom: 3px solid;
+    margin: 30px 0;
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    font-weight: 500;
+    pointer-events: none;
+    color: var(--clr-foreground);
+    font-family: "JetBrains";
+    transition: .3s;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top: 5px;
+}
+
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--clr-foreground);
+    font-family: "JetBrains";
+}
+
+.remember {
+    font-size: .9rem;
+    color: var(--clr-foreground);
+    font-family: "JetBrains";
+    font-weight: 500;
+    margin: 15px 0 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.remember label input {
+    accent-color: #ae00ff;
+    margin-right: 10px;
+}
+
+.btn {
+    width: 100%;
+    height: 6vh;
+    background: #ae00ff;
+    border: none;
+    outline: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 1rem;
+    color: white;
+    font-weight: 600;
+}
+
