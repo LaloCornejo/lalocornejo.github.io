@@ -7,8 +7,9 @@
         <link rel="stylesheet" href="css/style.css">
         <link rel="icon favicon" href="img/favicon-32x32.png">
     </head>
-
+    
     <body>
+
             <!--================================ Dark mode ================================-->
             <div class="DarkMode">
                 <button id="theme-toggle" aria-label="Switch to dark theme">
@@ -35,33 +36,54 @@
 
         <div class="wrapper ">
             <a class="icon-close">
-                <ion-icon name="ellipsis-horizontal"></ion-icon>
+                <ion-icon name="arrow-back"></ion-icon>
             </a>
 
             <div class="form-box login">
                 <h4>login</h4>
                 <form action="#">
                     <div class="input-box">
-                        <input type="username" name="username" id="username" required>
-                        <label>Username</label>
+                        <input type="username" name="email" id="email" required>
+                        <label>Email</label>
                     </div>
                     <div class="input-box">
                         <input type="password" name="password" id="password" required>
                         <label>Password</label>
                     </div>
-                    <div class="remember">
-                        <label><input type=checkbox>Remember me</label>
-                    </div>
-                    <button type="submit" class="btn"  onclick="validation()" >Login</button>
+                    <button type="submit" class="btn"  onclick="validate()"> Login </button>
                 </form>
             </div>
         </div>
 
-        <!-----------------SCRIPTS----------------------->
-        <script src="/js/theme-toggle.js"></script>
+        <!-----------------SCRIPTS----------------------->                    
+        <script type="module">
+            // Import the functions you need from the SDKs you need
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
+            // TODO: Add SDKs for Firebase products that you want to use
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js";
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-database.js";
+            // https://firebase.google.com/docs/web/setup#available-libraries
+          
+            // Your web app's Firebase configuration
+            const firebaseConfig = {
+              apiKey: "AIzaSyBA1yWtqFmeS0fOZXwDozUf0ZFdDx8i4r0",
+              authDomain: "lalocornejo-db.firebaseapp.com",
+              databaseURL: "https://lalocornejo-db-default-rtdb.firebaseio.com",
+              projectId: "lalocornejo-db",
+              storageBucket: "lalocornejo-db.appspot.com",
+              messagingSenderId: "817457376944",
+              appId: "1:817457376944:web:7835a07af9a658c5c59575"
+            };
+          
+            // Initialize Firebase
+            const app = initializeApp(firebaseConfig);
+            const auth = firebase.auth();
+            const database = firebase.database();
+
+          </script>        <script src="/js/theme-toggle.js"></script>
         <script src="/js/Login.js"></script>
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    </body>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        </body>
 
 </html>

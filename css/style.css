@@ -2,25 +2,34 @@
     --clr-foreground: hsl(0 0% 100%);
     --clr-background: hsl(0, 0%, 5%);
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans');
+
+@import url("https://fonts.googleapis.com/cs2?family=Bebas+Neue"); 
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins'); 
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P');
+
 @font-face {
-    font-family: "FuturaLight";
-    src: url("../fonts/FuturaLight.otf");
-}
-@font-face {
-    font-family: "BebasNeue";
-    src: url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-}
-@font-face {
-    font-family: "Poppins";
-    src: url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+    font-family: "JetBrains";
+    src: url("../fonts/JetBrainsMono-Regular.ttf");
 }
 @font-face {
     font-family: "FuturaMedium";
     src: url("../fonts/futuraMedium.ttf");
 }
 @font-face {
-    font-family: "JetBrains";
-    src: url("../fonts/JetBrainsMono-Regular.ttf");
+    font-family: "FuturaLight";
+    src: url("../fonts/FuturaLight.otf");
+}
+@font-face {
+    font-family: "PressStart2P";
+    src: url("../fonts/PressStart2P-Regular.ttf");
+}
+@font-face {
+    font-family: "Foldit";
+    src: url("../fonts/Foldit-Medium.ttf");
 }
 
 
@@ -28,12 +37,12 @@
 @media (prefers-color-scheme: dark){
     :root{
         --clr-foreground: hsl(0, 0%, 100%);
-        --clr-background: hsl(0, 0%, 5%);
+        --clr-background: hsl(281, 35%, 9%);
         }
 }
 .dark-theme{
     --clr-foreground: hsl(0, 0%, 100%);
-    --clr-background: hsl(0, 0%, 5%);
+    --clr-background: hsl(270, 15%, 4%);
 }
 .light-theme{
     --clr-foreground: hsl(0 0% 5%);
@@ -123,12 +132,12 @@ body{
     align-items: center;
 }
 h1{
-    font-size: 10rem;
-    font-family: "FuturaLight";
+    font-size: 15rem;
+    font-family: "Foldit";
 }
 h2 {
     font-size: 1.5rem;
-    font-family: "Poppins";
+    font-family: "JettBrains";
 }
 h4 {
     font-size: 1.7rem;
@@ -160,23 +169,24 @@ a {
 }
 #SubTitle {
     color: rgb(218, 1, 218);
-    border-color: #ae00ff;
-    position: relative;
-    top: 125%;
-    left: 10%;
+    position: static;
 }
 #Title {
+    position: static;
     text-align: center;
     justify-self: center;
+    height: 25vh;
 }
 #Tdes{
-    width: 65vw;
+    position: static;
+    width: 50vw;
 }
 
 
 /*================= Grid ==================*/
 .grid {
     display: grid;
+    position: static;
     grid-template-rows: 50px;
 }
 
@@ -269,7 +279,7 @@ a {
     position: absolute;
     top: 50%;
     left: 5px;
-    transform: translateY(-50%);
+    transform: translateY(-60%);
     font-size: 1rem;
     font-weight: 500;
     pointer-events: none;
@@ -296,14 +306,8 @@ a {
     font-family: "JetBrains";
 }
 
-.remember {
-    font-size: .9rem;
-    color: var(--clr-foreground);
-    font-family: "JetBrains";
-    font-weight: 500;
-    margin: 15px 0 20px;
-    display: flex;
-    justify-content: space-between;
+.input-box input:focus {
+    border-bottom: 2px solid #ae00ff;
 }
 
 .remember label input {
