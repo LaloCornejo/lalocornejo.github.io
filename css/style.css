@@ -175,7 +175,8 @@ a {
     position: static;
     text-align: center;
     justify-self: center;
-    height: 25vh;
+    height: auto;
+    line-height: 1px;
 }
 #Tdes{
     position: static;
