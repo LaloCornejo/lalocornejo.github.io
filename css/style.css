@@ -130,10 +130,11 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    text-decoration: none;
 }
 h1{
     font-size: 15rem;
-    font-family: "Foldit";
+    font-family: "FuturaMedium";
 }
 h2 {
     font-size: 1.5rem;
@@ -145,7 +146,12 @@ h4 {
 }
 a {
     text-decoration: none;
+    color: white;
     text-decoration-color: white;
+}
+iframe {
+    display: flex;
+    border: none;
 }
 
 .Front {
@@ -334,4 +340,24 @@ a {
     background-color: black;
     align-content: center;
     height: 500px;
+}
+
+
+.navtab{
+    background-color: #ae00ff;
+    bottom: 0;
+    color: white;
+    width: 100vw;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.logged_in{
+    visibility: visible;
+}
+.logged_out{
+    visibility: hidden;
 }

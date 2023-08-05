@@ -4,6 +4,7 @@
         <meta charset="UTF-8" />
         <title>_____________ L Æ L Ö _____________</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
         <link rel="stylesheet" href="css/style.css">
         <link rel="icon favicon" href="img/favicon-32x32.png">
     </head>
@@ -28,9 +29,8 @@
             <a href="index.html">
                 <img class="logoAt" id="Logo" src="img/Logo3.gif" alt="Logo">
             </a>
-
         <!--==================================== Title ================================-->
-        <div class="Login">
+        <div class="Login" id="Login">
             <button id = "Login" class="btnLogin-popup">login</button>
         </div>
 
@@ -39,7 +39,7 @@
                 <ion-icon name="arrow-back"></ion-icon>
             </a>
 
-            <div class="form-box login">
+            <div class="form-box login" id="login-form">
                 <h4>login</h4>
                 <form action="#">
                     <div class="input-box">
@@ -50,36 +50,15 @@
                         <input type="password" name="password" id="password" required>
                         <label>Password</label>
                     </div>
-                    <button type="submit" class="btn"  onclick="loggin()"> Login </button>
+                    <button type="submit" class="btn"  id="loggin"> Login </button>
                 </form>
             </div>
         </div>
-
+        
         <!-----------------SCRIPTS----------------------->                    
-        <script type="module">
-            // Import the functions you need from the SDKs you need
-            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
-            // TODO: Add SDKs for Firebase products that you want to use
-            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js";
-            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-database.js";
-            // https://firebase.google.com/docs/web/setup#available-libraries
-
-            // Your web app's Firebase configuration
-            const firebaseConfig = {
-                apiKey: "AIzaSyBA1yWtqFmeS0fOZXwDozUf0ZFdDx8i4r0",
-                authDomain: "lalocornejo-db.firebaseapp.com",
-                databaseURL: "https://lalocornejo-db-default-rtdb.firebaseio.com",
-                projectId: "lalocornejo-db",
-                storageBucket: "lalocornejo-db.appspot.com",
-                messagingSenderId: "817457376944",
-                appId: "1:817457376944:web:7835a07af9a658c5c59575"
-              };
-
-            
-            </script>        
-        <script src="/js/Firebase.js"></script> 
-        <script src="/js/theme-toggle.js"></script>
-        <script src="/js/Login.js"></script>
+        <script src="/js/main.js" type="module"></script>
+        <script src="/js/Auth.js" type="module"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
         </body>
