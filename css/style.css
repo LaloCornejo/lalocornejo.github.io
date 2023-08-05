@@ -27,10 +27,6 @@
     font-family: "PressStart2P";
     src: url("../fonts/PressStart2P-Regular.ttf");
 }
-@font-face {
-    font-family: "Foldit";
-    src: url("../fonts/Foldit-Medium.ttf");
-}
 
 
 /*================= Themes ==================*/
@@ -148,10 +144,6 @@ a {
     text-decoration: none;
     color: white;
     text-decoration-color: white;
-}
-iframe {
-    display: flex;
-    border: none;
 }
 
 .Front {
