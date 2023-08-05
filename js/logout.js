@@ -1,10 +1,12 @@
 import { signOut } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
-import { auth } from "./Firebase.js";
+import { auth } from "./FirebaseConfig.js";
 
-const logout = document.querySelector(".chika");
+const logout = document.querySelector("#btnloggout");
 
 logout.addEventListener("click", async (e) => {
-  try {
+  e.preventDefault();
+  console.log("logout clicked");
+  try{
     await signOut(auth);
     console.log("logged out");
   } catch (error) {

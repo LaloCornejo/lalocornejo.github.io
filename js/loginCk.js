@@ -1,3 +1,5 @@
+import { Noti } from "./Noti.js";
+
 const loggedOutLinks = document.querySelectorAll('.logged-out');
 const loggedInLinks = document.querySelectorAll('.logged-in');
 
@@ -11,5 +13,6 @@ export const loginCk = (user) => {
     } else {
         loggedOutLinks.forEach(link => link.style.display = 'none');
         console.log("logged out");
+        Noti("로그인이 필요합니다.", "error")
     }
 }

@@ -142,7 +142,7 @@ h4 {
 }
 a {
     text-decoration: none;
-    color: white;
+    color: var(--clr-foreground);
     text-decoration-color: white;
 }
 
@@ -161,7 +161,7 @@ a {
     width: 7vw;
     min-width: 110px;
     max-width: 160px;
-    left:.5rem;
+    left: 1vw;
     top: 0;
     position: fixed;
 }
@@ -323,7 +323,7 @@ a {
     border-radius: 7px;
     cursor: pointer;
     font-size: 1rem;
-    color: white;
+    color: var(--clr-foreground);
     font-weight: 600;
 }
 
@@ -334,22 +334,28 @@ a {
     height: 500px;
 }
 
+#loggin{
+    font-family: "JetBrains";
+    font-size: 1.5rem;
+    color: white;
+}
+
+/*================= NavTab ==================*/
+
 
 .navtab{
-    background-color: #ae00ff;
-    bottom: 0;
-    color: white;
-    width: 100vw;
+    font-size: 2rem;
+    background-color: transparent;
+    position: fixed;
+    border: 0;
+    bottom: 7vw;
+    bottom: 2vh;
+    color: var(--clr-foreground);
+    max-width: 10vw;
+    min-width: 5vw;
     height: 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 1000;
-}
-
-.logged_in{
-    visibility: visible;
-}
-.logged_out{
-    visibility: hidden;
 }
