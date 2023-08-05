@@ -26,38 +26,39 @@
                 </button>
             </div>
 
-            <a href="index.html">
+            <a id="home" href="index.html">
                 <img class="logoAt" id="Logo" src="img/Logo3.gif" alt="Logo">
             </a>
 
             <button id="btnloggout" class="navtab logged-out">
                 <ion-icon name="power-outline"></ion-icon>
             </button>
-        <!--==================================== Title ================================-->
-        <div class="Login" id="Login">
-            <button id = "Login" class="btnLogin-popup">login</button>
-        </div>
-
-        <div class="wrapper ">
-            <a class="icon-close">
-                <ion-icon name="arrow-back"></ion-icon>
-            </a>
-
-            <div class="form-box login" id="login-form">
-                <h4>login</h4>
-                <form action="#">
-                    <div class="input-box">
-                        <input type="username" name="email" id="email" required>
-                        <label>Email</label>
-                    </div>
-                    <div class="input-box">
-                        <input type="password" name="password" id="password" required>
-                        <label>Password</label>
-                    </div>
-                    <button type="submit" class="btn"  id="loggin"> login </button>
-                </form>
+            
+            <!--==================================== Title ================================-->
+            <div class="Login active-page" id="Login">
+                <button id = "Login" class="btnLogin-popup">login</button>
             </div>
-        </div>
+
+            <div class="wrapper">
+                <a class="icon-close">
+                    <ion-icon name="arrow-back"></ion-icon>
+                </a>
+
+                <div class="form-box login" id="login-form">
+                    <h4>login</h4>
+                    <form action="#">
+                        <div class="input-box">
+                            <input type="username" name="email" id="email" required>
+                            <label>Email</label>
+                        </div>
+                        <div class="input-box">
+                            <input type="password" name="password" id="password" required>
+                            <label>Password</label>
+                        </div>
+                        <button type="submit" class="btn"  id="loggin"> login </button>
+                    </form>
+                </div>
+            </div>
         
         <!-----------------SCRIPTS----------------------->                    
         <script src="/js/DarkMode.js" type="module"></script>

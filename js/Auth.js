@@ -17,6 +17,7 @@ signIn.addEventListener("click", async (e) => {
         const credentials = await signInWithEmailAndPassword (auth, email, password)
         Noti("Welcome " + credentials.user.email)
         console.log(credentials)
+        wrapper.classList.remove("active-popup");
     }catch(error){
         if(error.code == "auth/user-not-found"){
             Noti("User not found", "error")

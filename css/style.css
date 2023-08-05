@@ -234,7 +234,7 @@ a {
     align-items: center;
     overflow: hidden;
     transform: scale(0);
-    transition: transform .5s ease, height .2s ease;
+    transition: transform .3s ease;
 }
 
 .active-popup {
@@ -358,4 +358,30 @@ a {
     justify-content: space-between;
     align-items: center;
     z-index: 1000;
+}
+
+.active-page{
+    animation: slideIn 700ms ease-in-out forwards;
+}
+
+.innactive-page{
+    animation: slideOut 600ms ease-in-out .4s forwards;
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+    }to {
+        transform: translateX(-150%);
+        visibility: hidden;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        visibility: visible;
+        transform: translateX(150%);
+    }to {
+        transform: translateX(0);
+    }
 }

@@ -13,3 +13,5 @@ logout.addEventListener("click", async (e) => {
     console.log(error);
   }
 });
+
+document.onload = signOut(auth);
