@@ -11,6 +11,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P');
 
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@1,500&display=swap');
+
 @font-face {
     font-family: "JetBrains";
     src: url("../fonts/JetBrainsMono-Regular.ttf");
@@ -118,6 +120,7 @@ html{
     display: flex;
     scroll-behavior: smooth;
     overflow: auto;
+    overflow-x: hidden;
 }
 body{
     background: var(--clr-background);
@@ -134,12 +137,10 @@ h1{
 }
 h2 {
     font-size: 1.5rem;
-    font-family: "JettBrains";
-}
+    font-family: 'JetBrains Mono', monospace;}
 h4 {
     font-size: 1.7rem;
-    font-family: "JetBrains";
-}
+    font-family: 'JetBrains Mono', monospace;}
 a {
     text-decoration: none;
     color: var(--clr-foreground);
@@ -220,13 +221,14 @@ a {
     color: white;
 }
 .wrapper {
-    position: relative;
+    position: absolute;
     top: 30%;
     width: 34vw;
     height: 30vw;
     background: transparent;
     border: 4px solid rgba(131, 131, 131, 0.1);
     border-radius: 2.5vw;
+    -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
     box-shadow: 0 0 30px rgba(0, 0, 0, .5);
     display: flex;
@@ -302,8 +304,7 @@ a {
     font-size: 1rem;
     font-weight: 500;
     color: var(--clr-foreground);
-    font-family: "JetBrains";
-}
+    font-family: 'JetBrains Mono', monospace;}
 
 .input-box input:focus {
     border-bottom: 2px solid #ae00ff;
@@ -335,9 +336,17 @@ a {
 }
 
 #loggin{
-    font-family: "JetBrains";
+    font-family: 'JetBrains Mono', monospace;
     font-size: 1.5rem;
     color: white;
+}
+
+#word{
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.5rem;
+    color: white;
+    background: none;
+    border: none;
 }
 
 /*================= NavTab ==================*/
@@ -365,7 +374,7 @@ a {
 }
 
 .innactive-page{
-    animation: slideOut 600ms ease-in-out .4s forwards;
+    animation: slideOut 600ms ease-in-out .15s forwards;
 }
 
 @keyframes slideOut {

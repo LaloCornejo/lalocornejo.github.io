@@ -32,8 +32,11 @@ import './logout.js'
 */
 
 const wrapper = document.querySelector('.wrapper');
+const front = document.querySelector('.Front');
+const loginPage = document.querySelector('.Login');
 const loginButton = document.querySelector(".Login");
 const closebx = document.querySelector('.icon-close');
+const word = document.querySelector('#word');
 
 loginButton.addEventListener("click", () => {
   wrapper.classList.add("active-popup");
@@ -43,17 +46,23 @@ closebx.addEventListener("click", () => {
   wrapper.classList.remove("active-popup");
 });
 
-const login_hide = document.querySelector(".active-page");
+word.addEventListener("click", () => {
+  front.classList.remove("active-page");
+  front.classList.add("innactive-page");
+  loginPage.classList.remove("innactive-page");
+  loginPage.classList.add("active-page");
+  
+});
 
 
 onAuthStateChanged(auth, async (user) => {
   if (user) {
-    login_hide.classList.remove("active-page");
-    login_hide.classList.add("innactive-page");
+    loginPage.classList.remove("active-page");
+    loginPage.classList.add("innactive-page");
     loginCk(user);
   } else {
-    login_hide.classList.remove("innactive-page");
-    login_hide.classList.add("active-page");
+    //loginPage.classList.remove("innactive-page");
+    //loginPage.classList.add("active-page");
     loginCk(user);
   }
 });

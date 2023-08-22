@@ -12,7 +12,7 @@ export const loginCk = (user) => {
         console.log("logged in");
     } else {
         loggedOutLinks.forEach(link => link.style.display = 'none');
-        console.log("logged out");
+        console.log("logged out (loginCk)");
         Noti("로그인이 필요합니다.", "error")
     }
 }
