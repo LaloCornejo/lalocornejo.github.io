@@ -1,7 +1,7 @@
 export function Noti(message, type="success"){
     Toastify({
         text: message,
-        duration: 3000,
+        duration: 2000,
         destination: "",
         newWindow: true,
         close: true,
