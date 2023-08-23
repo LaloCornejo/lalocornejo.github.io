@@ -22,6 +22,42 @@ import './Auth.js'
 import './logout.js'
 
 /*
+#    #   ##   #####  #   ##   #####  #      ######  ####  
+#    #  #  #  #    # #  #  #  #    # #      #      #      
+#    # #    # #    # # #    # #####  #      #####   ####  
+#    # ###### #####  # ###### #    # #      #           # 
+ #  #  #    # #   #  # #    # #    # #      #      #    # 
+  ##   #    # #    # # #    # #####  ###### ######  ####  
+*/
+
+const wrapper = document.querySelector('.wrapper');
+const front = document.querySelector('.Front');
+const loginPage = document.querySelector('.Login');
+const logoutButton = document.querySelector(".logoubttn");
+const closebx = document.querySelector('.icon-close');
+const loader = document.querySelector('.loader');
+const hidden = document.querySelectorAll('.hidden');
+
+
+/*
+ ####  #    #    #       ####    ##   #####  
+#    # ##   #    #      #    #  #  #  #    # 
+#    # # #  #    #      #    # #    # #    # 
+#    # #  # #    #      #    # ###### #    # 
+#    # #   ##    #      #    # #    # #    # 
+ ####  #    #    ######  ####  #    # ##### 
+*/
+
+window.addEventListener('load', () => {
+  loader.classList.add('loader-hidden');
+  loader.addEventListener('transitionend', () => {
+    document.body.removeChild(loader);
+    loginPage.classList.remove('hidden');
+    wrapper.classList.remove('hidden');
+  });
+});
+
+/*
 #       #######  #####  ### #     # 
 #       #     # #     #  #  ##    # 
 #       #     # #        #  # #   # 
@@ -31,14 +67,9 @@ import './logout.js'
 ####### #######  #####  ### #     # 
 */
 
-const wrapper = document.querySelector('.wrapper');
-const front = document.querySelector('.Front');
-const loginPage = document.querySelector('.Login');
-const loginButton = document.querySelector(".Login");
-const closebx = document.querySelector('.icon-close');
 const word = document.querySelector('#word');
 
-loginButton.addEventListener("click", () => {
+loginPage.addEventListener("click", () => {
   wrapper.classList.add("active-popup");
 });
 
@@ -59,6 +90,9 @@ onAuthStateChanged(auth, async (user) => {
   if (user) {
     loginPage.classList.remove("active-page");
     loginPage.classList.add("innactive-page");
+    logoutButton.classList.remove("logged-out");
+    logoutButton.classList.remove("hidden");
+    logoutButton.classList.add("logged-in");
     loginCk(user);
   } else {
     //loginPage.classList.remove("innactive-page");
@@ -66,3 +100,4 @@ onAuthStateChanged(auth, async (user) => {
     loginCk(user);
   }
 });
+

@@ -11,59 +11,80 @@
     
     <body>
         <!--================================ Dark mode ================================-->
-            <div class="DarkMode">
-                <button id="theme-toggle" aria-label="Switch to dark theme">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 100 100">
-                        <g class="toggle-sun">
-                            <circle class="cls-1" cx="50" cy="50" r="30" />
-                            <circle class="cls-1" cx="100"></circle>
-                        </g>    
-                        <g class="toggle-circle">
-                            <circle class="cls-1" cx="99" cy="-3" r="22" />
-                        </g>
-                    </svg>    
-                </button>
-            </div>
-            
-            <a href="index.html">
-                <img class="logoAt" id="Logo" src="img/Logo3.gif" alt="Logo">
-            </a>
+        <div class="DarkMode">
+            <button id="theme-toggle" aria-label="Switch to dark theme">
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 100 100">
+                    <g class="toggle-sun">
+                        <circle class="cls-1" cx="50" cy="50" r="30" />
+                        <circle class="cls-1" cx="100"></circle>
+                    </g>    
+                    <g class="toggle-circle">
+                        <circle class="cls-1" cx="99" cy="-3" r="22" />
+                    </g>
+                </svg>    
+            </button>
+        </div>
+        
+        <a href="index.html">
+            <img class="logoAt" id="Logo" src="img/Logo3.gif" alt="Logo">
+        </a>
 
-            
-            <!--==================================== 
-                #######                       
-   #    # ##### #      ###### 
-   #    #   #   #      #      
-   #    #   #   #      #####  
-   #    #   #   #      #      
-   #    #   #   #      #      
-   #    #   #   ###### ###### 
-   ================================-->
+
+        <!-- LOADER -->
+            <div class="loader"></div>
+        <!-- end loader -->
+
+        <!--==================================== 
+            ######                                                     
+            #     # # ###### #    # #    # ###### #    # #    # ###### 
+            #     # # #      ##   # #    # #      ##   # #    # #      
+            ######  # #####  # #  # #    # #####  # #  # #    # #####  
+            #     # # #      #  # # #    # #      #  # # #    # #      
+            #     # # #      #   ##  #  #  #      #   ## #    # #      
+            ######  # ###### #    #   ##   ###### #    #  ####  ###### 
+        ================================-->
    
-   <div class="Front active-page">            
-       <div class="grid">
-           <h4 id="SubTitle">// Title //</h4>
-                    <h1 id="Title">LÆLÖ</h1>
-                    <h2 id="Tdes">天才, 億万長者, プレイボーイ, 慈善家, <a id="word" type="button"> パックマン</a>、 
-                        未ミテ更台ミワロ写求すぞッゆ利応セワ展委写レよ過自ぶ介人リねて
-                    </h2>
+        <div class="Front active-page">            
+           <div class="grid">
+               <h4 id="SubTitle">// Title //</h4>
+                <h1 id="Title">LÆLÖ</h1>
+                <h2 id="Tdes">天才, 億万長者, プレイボーイ, 慈善家, <a id="word" type="button"> パックマン</a>、 
+                未ミテ更台ミワロ写求すぞッゆ利応セワ展委写レよ過自ぶ介人リねて</h2>
+            </div> 
+            
+            <div class="horizontal-grid">
+                <div class="social">
+                    <a href="https://www.twitch.tv/l___a___l___o" >
+                        <ion-icon name="logo-twitch"></ion-icon>
+                    </a>
                 </div>
                 
+                <div class="social">
+                    <a href="https://github.com/LaloCornejo"  >
+                        <ion-icon name="logo-github"></ion-icon>
+                    </a>
+                </div>
+                
+                <div class="social">
+                    <a href="https://www.youtube.com/channel/UCPRKmKf9NkiAt1fHBlgI9Sw" >
+                        <ion-icon name="logo-youtube"></ion-icon>
+                    </a>
+                </div>
             </div>
         </div>
         
-<!--==================================== 
-#       ####   ####  # #    # 
-#      #    # #    # # ##   # 
-#      #    # #      # # #  # 
-#      #    # #  ### # #  # # 
-#      #    # #    # # #   ## 
-######  ####   ####  # #    # 
-================================-->
-        <div class="Login innactive-page" id="Login">
+        <!--==================================== 
+            #       ####   ####  # #    # 
+            #      #    # #    # # ##   # 
+            #      #    # #      # # #  # 
+            #      #    # #  ### # #  # # 
+            #      #    # #    # # #   ## 
+            ######  ####   ####  # #    # 
+        ================================-->
+        <div class="Login innactive-page hidden" id="Login">
             <button id = "Login" class="btnLogin-popup">login</button>
         </div>
-        <div class="wrapper">
+        <div class="wrapper hidden">
             <a class="icon-close">
                 <ion-icon name="arrow-back"></ion-icon>
             </a>
@@ -84,7 +105,7 @@
         </div>
                     
         
-        <button id="btnloggout" class="navtab logged-out">
+        <button id="btnloggout" class="logoubttn logged-out hidden">
             <ion-icon name="power-outline"></ion-icon>
         </button>
                                 
