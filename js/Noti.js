@@ -1,10 +1,10 @@
 export function Noti(message, type="success"){
     Toastify({
         text: message,
-        duration: 2000,
+        duration: 1500,
         destination: "",
         newWindow: true,
-        close: true,
+        close: false,
         gravity: "bottom", // `top` or `bottom`
         position: "right", // `left`, `center` or `right`
         stopOnFocus: true, // Prevents dismissing of toast on hover
