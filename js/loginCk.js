@@ -1,18 +1,16 @@
-import { Noti } from "./Noti.js";
+import { Noti } from "./noti.js";
 
-const loggedOutLinks = document.querySelectorAll('.logged-out');
-const loggedInLinks = document.querySelectorAll('.logged-in');
-
-console.log(loggedOutLinks)
-console.log(loggedInLinks)
+const loggedOutLinks = document.querySelectorAll(".logged-out");
+const loggedInLinks = document.querySelectorAll(".logged-in");
 
 export const loginCk = (user) => {
-    if (user) {
-        loggedOutLinks.forEach(link => link.style.display = 'block');
-        console.log("logged in");
-    } else {
-        loggedOutLinks.forEach(link => link.style.display = 'none');
-        console.log("logged out (loginCk)");
-        Noti("Logged Out :)", "error")
-    }
-}
+  if (user) {
+    loggedInLinks.forEach((link) => (link.style.visibility = "hidden"));
+    loggedOutLinks.forEach((link) => (link.style.visibility = "visible"));
+  } else {
+    loggedInLinks.forEach((link) => (link.style.visibility = "visible"));
+    loggedOutLinks.forEach((link) => (link.style.visibility = "hidden"));
+    Noti("Logged Out :)", "error")
+    console.log("logged out cdfgd");
+  }
+};

@@ -31,28 +31,19 @@
 
 
         <!-- LOADER -->
-            <div class="loader">
-                <div class="cube">
-                    <div class="top"></div>
-                    <div>
-                        <span style="--i:0;"></span>
-                        <span style="--i:1;"></span>
-                        <span style="--i:2;"></span>
-                        <span style="--i:3;"></span>
-                    </div>
-                    </div>
-            </div>
+        <div class="loader">
+            <div class="cube">
+                <div class="top"></div>
+                <div>
+                    <span style="--i:0;"></span>
+                    <span style="--i:1;"></span>
+                    <span style="--i:2;"></span>
+                    <span style="--i:3;"></span>
+                </div>
+                </div>
+        </div>
         <!-- end loader -->
 
-        <!--==================================== 
-            ######                                                     
-            #     # # ###### #    # #    # ###### #    # #    # ###### 
-            #     # # #      ##   # #    # #      ##   # #    # #      
-            ######  # #####  # #  # #    # #####  # #  # #    # #####  
-            #     # # #      #  # # #    # #      #  # # #    # #      
-            #     # # #      #   ##  #  #  #      #   ## #    # #      
-            ######  # ###### #    #   ##   ###### #    #  ####  ###### 
-        ================================-->
    
         <div class="Front active-page">            
            <div class="grid">
@@ -83,14 +74,7 @@
             </div>
         </div>
         
-        <!--==================================== 
-            #       ####   ####  # #    # 
-            #      #    # #    # # ##   # 
-            #      #    # #      # # #  # 
-            #      #    # #  ### # #  # # 
-            #      #    # #    # # #   ## 
-            ######  ####   ####  # #    # 
-        ================================-->
+
         <div class="Login innactive-page hidden" id="Login">
             <button id = "Login" class="btnLogin-popup">
                 login
@@ -117,11 +101,14 @@
                 </form>
             </div>
         </div>
-                    
-        
-        <button id="btnloggout" class="logoubttn logged-out hidden">
-        ** loggout **
-        </button>
+
+
+        <div id="LoggedInPage" class="innactive-page">
+            <button id="btnloggout" class=" logged-out logoubttn ">
+            ** loggout **
+            </button>
+            <div id="Notepad" class=""></div>            
+        </div>
                                 
                                 
         <!-----------------SCRIPTS----------------------->                    

@@ -204,8 +204,8 @@ a {
      margin:  12vw;
      cursor: pointer;
     }
-
-/*================= Login ==================*/
+    
+    /*================= Login ==================*/
 .Login{
     position: fixed;
     width: 100%;
@@ -368,84 +368,26 @@ a {
     border: none;
 }
 
-/*================= Loader ==================*/
-
-.loader{
+/*================= NavTab ==================*/
+#LoggedInPage{
     position: fixed;
-    z-index: 1000;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
     display: flex;
+    top: 5%;
+    width: 100%;
+    height: auto;
+    min-height: 30%;
+    align-items: center;
     justify-content: center;
     align-items: center;
-    background: var(--clr-background);
-    transition: opacity .65s, visibility .65s;
 }
 
-.loader-hidden{
-    opacity: 0;
-    visibility: hidden;
-}
-
-.cube{
-    position: relative;
-    width: 100px;
-    height: 100px;
-    transform-style: preserve-3d;
-    animation: animate 1s linear infinite;
-}
-
-.cube div{
-    position: absolute;
-    top: 0;
-    left: 0;
+#Notepad {
+    padding: 5% 20% 0 20%;
+    right: 0;
+    display: flex;
     width: 100%;
-    height: 100%;
-    transform-style: preserve-3d;
+    height: auto;
 }
-
-.cube div span{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient( var(--clr-foreground), #ae00ff);
-    transform: rotateY(calc(90deg * var(--i))) translateZ(50px);
-}
-
-.top{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100px;
-    height: 100px;
-    background: var(--clr-foreground);
-    transform: rotateX(90deg) translateZ(50px);
-}
-
-.top::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100px;
-    height: 100px;
-    background: #ae00ff;
-    transform: translateZ(-150px);
-    -webkit-filter: blur(20px);
-    filter: blur(20px);
-    box-shadow: 0 0 120px rgba(174, 0, 255, 0.2),
-    0 0 200px rgba(174, 0, 255, 0.4),
-    0 0 300px rgba(174, 0, 255, 0.6),
-    0 0 400px rgba(174, 0, 255, .8),
-    0 0 500px rgba(174, 0, 255, 1),
-
-}
-/*================= NavTab ==================*/
-
 
 .logoubttn{
     font-size: 1rem;
@@ -466,7 +408,7 @@ a {
 }
 
 .logoubttn:hover{
-    color: white;
+    color: var(--clr-foreground);
 }
 
 .active-page{
@@ -512,3 +454,79 @@ a {
     }
 }
 
+    /*================= Loader ==================*/
+    
+    .loader{
+        position: fixed;
+        z-index: 1000;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: var(--clr-background);
+        transition: opacity .65s, visibility .65s;
+    }
+    
+    .loader-hidden{
+        opacity: 0;
+        visibility: hidden;
+    }
+    
+    .cube{
+        position: relative;
+        width: 100px;
+        height: 100px;
+        transform-style: preserve-3d;
+        animation: animate 1s linear infinite;
+    }
+    
+    .cube div{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+    }
+    
+    .cube div span{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient( var(--clr-foreground), #ae00ff);
+        transform: rotateY(calc(90deg * var(--i))) translateZ(50px);
+    }
+    
+    .top{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100px;
+        height: 100px;
+        background: var(--clr-foreground);
+        transform: rotateX(90deg) translateZ(50px);
+    }
+    
+    .top::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100px;
+        height: 100px;
+        background: #ae00ff;
+        transform: translateZ(-150px);
+        -webkit-filter: blur(20px);
+        filter: blur(20px);
+        box-shadow: 0 0 120px rgba(174, 0, 255, 0.2),
+        0 0 200px rgba(174, 0, 255, 0.4),
+        0 0 300px rgba(174, 0, 255, 0.6),
+        0 0 400px rgba(174, 0, 255, .8),
+        0 0 500px rgba(174, 0, 255, 1),
+    
+    }
