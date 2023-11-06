@@ -8,7 +8,7 @@ import { loginCk } from "./loginCk.js";
 
 import './Auth.js'
 import './logout.js'
-// import { setupNotes } from "./Notes.js";
+import { setupNotes } from "./Notes.js";
 
 
 const wrapper = document.querySelector('.wrapper');

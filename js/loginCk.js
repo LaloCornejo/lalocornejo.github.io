@@ -1,4 +1,4 @@
-import { Noti } from "./noti.js";
+import { Noti } from "./Noti.js";
 
 const loggedOutLinks = document.querySelectorAll(".logged-out");
 const loggedInLinks = document.querySelectorAll(".logged-in");
