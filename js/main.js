@@ -8,7 +8,7 @@ import { loginCk } from "./loginCk.js";
 
 import './Auth.js'
 import './logout.js'
-import { setupNotes } from "./Notes.js";
+// import { setupNotes } from "./Notes.js";
 
 
 const wrapper = document.querySelector('.wrapper');
@@ -43,7 +43,7 @@ closebx.addEventListener("click", () => {
 
 word.addEventListener("click", () => {
   front.classList.replace("active-page", "innactive-page");
-  //loginPage.classList.replace("innactive-page", "active-page");
+  // loginPage.classList.replace("innactive-page", "active-page");
   loginPage.classList.remove("innactive-page");
   loginPage.classList.add("active-page");
 });
@@ -54,6 +54,7 @@ exports.addHeaders = functions.https.onRequest((req, res) => {
   res.set('X-Content-Type-Options', 'nosniff');
   // your code here
 });
+
 
 onAuthStateChanged(auth, async (user) => {
   loginCk(user);
