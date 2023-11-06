@@ -1,15 +1,18 @@
 //                   Autor: LÆLÖ 
-
-import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
-import { getDocs, collection } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-firestore.js";
-
-import { auth, db } from './FirebaseConfig.js'
+//                   Date: 2023-09-05
 import { loginCk } from "./loginCk.js";
-
+import { auth, db } from './FirebaseConfig.js';
+import { collection, getDocs } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-firestore.js";
 import './Auth.js'
 import './logout.js'
-import { setupNotes } from "./Notes.js";
 
+
+const notesCollection = collection(db, "Notes");
+getDocs(notesCollection).then(querySnapshot => {
+  querySnapshot.forEach(doc => {
+    console.log(doc.id, " => ", doc.data());
+  });
+});
 
 const wrapper = document.querySelector('.wrapper');
 const front = document.querySelector('.Front');
@@ -20,8 +23,6 @@ const loader = document.querySelector('.loader');
 const word = document.querySelector('#word');
 const loggedInPage = document.querySelector('#LoggedInPage');
 
-
-
 window.addEventListener('load', () => {
   loader.classList.add('loader-hidden');
   loader.addEventListener('transitionend', () => {
@@ -30,8 +31,6 @@ window.addEventListener('load', () => {
     wrapper.classList.remove('hidden');
   });
 });
-
-
 
 loginPage.addEventListener("click", () => {
   wrapper.classList.add("active-popup");
@@ -48,36 +47,46 @@ word.addEventListener("click", () => {
   loginPage.classList.add("active-page");
 });
 
-const functions = require('firebase-functions');
 
-exports.addHeaders = functions.https.onRequest((req, res) => {
-  res.set('X-Content-Type-Options', 'nosniff');
-  // your code here
-});
-
-
-onAuthStateChanged(auth, async (user) => {
+auth.onAuthStateChanged(user => {
   loginCk(user);
-  if (user) {
-      try{
-        const querrySnapshot = await getDocs(collection(db, "Notes"));
-        setupNotes(querrySnapshot.docs);
-      }catch(error){
-        console.log(error);
-      }
-      //logoutButton.classList.replace("logged-out", "logged-in");
-      logoutButton.classList.remove("logged-out");
-      logoutButton.classList.add("logged-in");
-      //loginPage.classList.replace("active-page", "innactive-page");
-      loginPage.classList.remove("active-page");
-      loginPage.classList.add("innactive-page");
-      //loggedInPage.classList.replace("innactive-page", "active-page");
-      loggedInPage.classList.remove("innactive-page");
-      loggedInPage.classList.add("active-page");
-    
-  } else {
-    setupNotes([]);
-    loginCk(user);
+  try {
+    if (user) {
+        startApp(user);
+        logoutButton.classList.replace("logged-out", "logged-in");
+        logoutButton.classList.remove("logged-out");
+        logoutButton.classList.add("logged-in");
+        loginPage.classList.replace("active-page", "innactive-page");
+        // loginPage.classList.remove("active-page");
+        // loginPage.classList.add("innactive-page");
+        loggedInPage.classList.replace("innactive-page", "active-page");
+        // loggedInPage.classList.remove("innactive-page");
+        // loggedInPage.classList.add("active-page");
+      
+    } else {
+      loginCk(user);
+    } 
+   
+  }catch (error) {
+      console.log(error);
   }
 });
 
+
+function startApp(user) {
+  // Get the form and listen for submit event
+  var form = document.querySelector('#add-note-form');
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // New note 
+    const notesCollection = collection(db, "Notes");
+    notesCollection.add({
+      note: form.note.value,
+      userId: user.uid
+    });
+    
+    // Clear the form
+    form.note.value = '';
+  });
+}

@@ -29,11 +29,11 @@ function enableLightMode() {
 }
 
 function setThemePreference() {
-  if (window.localStorage.getItem("theme") == "dark") {
-    enableDarkMode();
+  if (window.localStorage.getItem("theme") == "light") {
+    enableLightMode();
     return;
   }
-  enableLightMode();
+  enableDarkMode();
 }
 document.onload = setThemePreference();
 
