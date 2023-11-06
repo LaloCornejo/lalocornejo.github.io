@@ -48,6 +48,12 @@ word.addEventListener("click", () => {
   loginPage.classList.add("active-page");
 });
 
+const functions = require('firebase-functions');
+
+exports.addHeaders = functions.https.onRequest((req, res) => {
+  res.set('X-Content-Type-Options', 'nosniff');
+  // your code here
+});
 
 onAuthStateChanged(auth, async (user) => {
   loginCk(user);
