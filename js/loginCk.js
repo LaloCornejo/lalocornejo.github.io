@@ -10,7 +10,7 @@ export const loginCk = (user) => {
   } else {
     loggedInLinks.forEach((link) => (link.style.visibility = "visible"));
     loggedOutLinks.forEach((link) => (link.style.visibility = "hidden"));
-    Noti("Logged Out :)", "error")
-    console.log("logged out cdfgd");
+    Noti("Logged Out ಠ益ಠ", "error");
+    console.log("logged out");
   }
 };

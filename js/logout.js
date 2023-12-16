@@ -6,7 +6,7 @@ const front = document.querySelector(".Front");
 
 logout.addEventListener("click", async (e) => {
   e.preventDefault();
-  try{
+  try {
     await signOut(auth);
     //front.classList.replace("innactive-page", "active-page")
     front.classList.remove("innactive-page");
