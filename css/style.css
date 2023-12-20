@@ -142,17 +142,17 @@ body {
 }
 
 h1 {
-    font-size: 15rem;
+    font-size: 18vw;
     font-family: "FuturaMedium";
 }
 
 h2 {
-    font-size: 1.5rem;
+    font-size: 2vw;
     font-family: 'JetBrains Mono', monospace;
 }
 
 h4 {
-    font-size: 1.7rem;
+    font-size: 2vw;
     font-family: 'JetBrains Mono', monospace;
 }
 
@@ -170,6 +170,7 @@ a {
 .Front {
     height: 98vh;
     width: auto;
+    max-width: 75vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -196,9 +197,11 @@ a {
 #SubTitle {
     color: rgb(218, 1, 218);
     position: static;
+    max-width: 60vw;
 }
 
 #Title {
+    max-width: 60vw;
     position: static;
     text-align: center;
     justify-self: center;
@@ -207,8 +210,10 @@ a {
 }
 
 #Tdes {
+    top: 0vh;
+    max-width: 60vw;
     position: static;
-    width: 50vw;
+    width: 75vw;
 }
 
 
@@ -230,11 +235,23 @@ a {
 }
 
 .horizontal-grid .social {
-    font-size: 2.5rem;
-    max-width: 10vw;
-    min-width: 5vw;
+    font-size: 2.3rem;
+    max-width: 5vw;
+    min-width: 3vw;
     margin: 12vw;
-    cursor: pointer;
+    cursor: wait;
+}
+@media screen and (max-width: 850px) {
+    .horizontal-grid .social {
+        font-size: 5vw;
+    }
+    #Tdes {
+        font-size: 3vw;
+    }
+    #SubTitle {
+        font-size: 3vw;
+    }
+    
 }
 
 /*================= Login ==================*/
@@ -246,17 +263,20 @@ a {
     align-items: center;
     justify-content: center;
     display: flex;
+
 }
 
 .btnLogin-popup {
+    position: absolute;
     width: 25vw;
+    min-width: 25%;
     height: 18vh;
     background: transparent;
     border: 5px solid #ae00ff;
     outline: pointer;
     border-radius: 3vw;
     cursor: pointer;
-    font-size: 2.5rem;
+    font-size: 3.5vw;
     color: #ae00ff;
     font-family: "JetBrains";
     font-weight: 700;
@@ -271,8 +291,8 @@ a {
 .wrapper {
     position: absolute;
     top: 25%;
-    width: 34vw;
-    height: 30vw;
+    width: 35vw;
+    height: 50vh;
     background: transparent;
     border: 4px solid rgba(131, 131, 131, 0.1);
     border-radius: 2.5vw;
@@ -397,7 +417,7 @@ a {
 
 #word {
     font-family: 'JetBrains Mono', monospace;
-    font-size: 1.5rem;
+    /* font-size: 2rem; */
     color: var(--clr-foreground);
     background: none;
     border: none;

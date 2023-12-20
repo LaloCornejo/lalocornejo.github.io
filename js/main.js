@@ -1,18 +1,18 @@
 //                   Autor: LÆLÖ
-//                   Date: 20231215
+//                   Date: 20231219
 import { loginCk } from "./loginCk.js";
 // import { auth, db } from './FirebaseConfig.js';
 // import { collection, getDocs } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-firestore.js";
 import "./Auth.js";
 import "./logout.js";
 
-const notesCollection = collection(db, "Notes");
+// const notesCollection = collection(db, "Notes");
 
-getDocs(notesCollection).then((querySnapshot) => {
-  querySnapshot.forEach((doc) => {
-    console.log(doc.id, " => ", doc.data());
-  });
-});
+// getDocs(notesCollection).then((querySnapshot) => {
+//   querySnapshot.forEach((doc) => {
+//     console.log(doc.id, " => ", doc.data());
+//   });
+// });
 
 const wrapper = document.querySelector(".wrapper");
 const front = document.querySelector(".Front");
