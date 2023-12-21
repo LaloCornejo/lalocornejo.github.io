@@ -68,15 +68,12 @@ menu.addEventListener("click", (e) => {
         nav.classList.add("active-menu");
         nav.classList.remove("innactive-menu");
         console.log("menuIn");
+        selected = true;
       }, 75);  
     }catch (error) {
       console.log(error);
     }
-  }
-});
-
-window.addEventListener("click", (e) => {
-  if(selected){
+  }else{
     try {
       setTimeout(() => {
         nav.classList.add("innactive-menu");
@@ -92,6 +89,25 @@ window.addEventListener("click", (e) => {
       console.log(error);
     }  
   }
+});
+
+window.addEventListener("click", () => {
+  if(selected){
+    try {
+      setTimeout(() => {
+        nav.classList.add("innactive-menu");
+        nav.classList.remove("active-menu");
+        console.log("menuOut");
+      }, 200); 
+      setTimeout(() => {
+        menu.classList.remove("menu-selected");
+        menu.classList.add("menu-no-selected");
+        selected = false;
+      }, 275); 
+    } catch (error) {
+      console.log(error);
+    }  
+  } 
 });
 
 window.addEventListener("load", () => {
@@ -116,10 +132,27 @@ closebx.addEventListener("click", () => {
 });
 
 word.addEventListener("click", () => {
-  front.classList.replace("active-page", "innactive-page");
-  // loginPage.classList.replace("innactive-page", "active-page");
-  loginPage.classList.remove("innactive-page");
-  loginPage.classList.add("active-page");
+  if( selected ){
+    try {
+      setTimeout(() => {
+        front.classList.replace("active-page", "innactive-page");
+        // loginPage.classList.replace("innactive-page", "active-page");
+        loginPage.classList.remove("innactive-page");
+        loginPage.classList.add("active-page");
+      }, 470);
+    }catch (error) {
+      console.log(error);
+    }
+  }else {
+    try {
+      front.classList.replace("active-page", "innactive-page");
+      // loginPage.classList.replace("innactive-page", "active-page");
+      loginPage.classList.remove("innactive-page");
+      loginPage.classList.add("active-page");
+    } catch (error) {
+      console.log(error);
+    }
+  }
 });
 
 auth.onAuthStateChanged((user) => {
