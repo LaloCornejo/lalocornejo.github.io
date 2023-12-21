@@ -27,7 +27,7 @@ const nav = document.querySelector(".navapps");
 let selected = false;
 const navcontainer = document.querySelector(".nav");
 
-navcontainer.addEventListener("mouseenter", (e) => {
+navcontainer.addEventListener("mouseenter", () => {
   try {
     selected = true;
     menu.classList.remove("menu-no-selected");
@@ -42,7 +42,7 @@ navcontainer.addEventListener("mouseenter", (e) => {
   }
 });
 
-navcontainer.addEventListener("mouseleave", (e) => {
+navcontainer.addEventListener("mouseleave", () => {
   try {
     setTimeout(() => {
       nav.classList.add("innactive-menu");
@@ -59,7 +59,7 @@ navcontainer.addEventListener("mouseleave", (e) => {
   }
 });
 
-menu.addEventListener("click", (e) => {
+menu.addEventListener("click", () => {
   if (!selected) {
     try {
       menu.classList.remove("menu-no-selected");
@@ -91,7 +91,7 @@ menu.addEventListener("click", (e) => {
   }
 });
 
-window.addEventListener("click", () => {
+window.addEventListener("click", (e) => {
   if(selected){
     try {
       setTimeout(() => {
@@ -110,7 +110,7 @@ window.addEventListener("click", () => {
   } 
 });
 
-window.addEventListener("load", () => {
+window.addEventListener("load", (e) => {
   setTimeout(() => {
     loader.classList.add("loader-hidden");
     loader.addEventListener("transitionend", () => {
@@ -133,12 +133,10 @@ closebx.addEventListener("click", () => {
 
 word.addEventListener("click", () => {
     try {
-      setTimeout(() => {
         front.classList.replace("active-page", "innactive-page");
         // loginPage.classList.replace("innactive-page", "active-page");
         loginPage.classList.remove("innactive-page");
         loginPage.classList.add("active-page");
-      }, 470);
     }catch (error) {
       console.log(error);
     }
