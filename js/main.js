@@ -1,7 +1,7 @@
 //                   Autor: LÆLÖ
-//                   Date: 20231219
+//                   Date: 20231220
 import { loginCk } from "./loginCk.js";
-// import { auth, db } from './FirebaseConfig.js';
+import { auth, db } from "./FirebaseConfig.js";
 // import { collection, getDocs } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-firestore.js";
 import "./Auth.js";
 import "./logout.js";
@@ -22,16 +22,39 @@ const closebx = document.querySelector(".icon-close");
 const loader = document.querySelector(".loader");
 const word = document.querySelector("#word");
 const loggedInPage = document.querySelector("#LoggedInPage");
+const menu = document.querySelector(".menu");
+const nav = document.querySelector(".navapps");
+const navcontainer = document.querySelector(".nav");
+
+navcontainer.addEventListener("mouseenter", () => {
+  menu.classList.remove("menu-no-selected");
+  menu.classList.add("menu-selected");
+  setTimeout(() => {
+    nav.classList.remove("innactive-menu");
+    nav.classList.add("active-menu");
+  }, 75);
+});
+
+navcontainer.addEventListener("mouseleave", () => {
+  nav.classList.remove("active-menu");
+  nav.classList.add("innactive-menu");
+  setTimeout(() => {
+    menu.classList.remove("menu-selected");
+    menu.classList.add("menu-no-selected");
+  }, 75);
+});
 
 window.addEventListener("load", () => {
-  loader.classList.add("loader-hidden");
-  loader.addEventListener("transitionend", () => {
-    if (document.body.contains(loader)) {
-      document.body.removeChild(loader);
-    }
-    loginPage.classList.remove("hidden");
-    wrapper.classList.remove("hidden");
-  });
+  setTimeout(() => {
+    loader.classList.add("loader-hidden");
+    loader.addEventListener("transitionend", () => {
+      if (document.body.contains(loader)) {
+        document.body.removeChild(loader);
+      }
+      loginPage.classList.remove("hidden");
+      wrapper.classList.remove("hidden");
+    });
+  }, 300);
 });
 
 loginPage.addEventListener("click", () => {
