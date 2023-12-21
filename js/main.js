@@ -132,7 +132,6 @@ closebx.addEventListener("click", () => {
 });
 
 word.addEventListener("click", () => {
-  if( selected ){
     try {
       setTimeout(() => {
         front.classList.replace("active-page", "innactive-page");
@@ -143,16 +142,6 @@ word.addEventListener("click", () => {
     }catch (error) {
       console.log(error);
     }
-  }else {
-    try {
-      front.classList.replace("active-page", "innactive-page");
-      // loginPage.classList.replace("innactive-page", "active-page");
-      loginPage.classList.remove("innactive-page");
-      loginPage.classList.add("active-page");
-    } catch (error) {
-      console.log(error);
-    }
-  }
 });
 
 auth.onAuthStateChanged((user) => {
