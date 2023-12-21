@@ -148,17 +148,17 @@ h1 {
 
 h2 {
     font-size: 2vw;
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'JetBrains Mono';
 }
 
 h4 {
     font-size: 2vw;
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'JetBrains Mono';
 }
 
 h5 {
     font-size: rem;
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'JetBrains Mono';
 }
 
 a {
@@ -219,7 +219,7 @@ a {
 /*================= NavApps ==================*/
 .nav {
     position: fixed;
-    width: 2vw;
+    width: 1vw;
     height: 100vh;
     display: flex;
     left: 0;
@@ -236,15 +236,17 @@ a {
 
 .menu {
     z-index: 1;
-    border: #ae00ff 5px solid;
-    font-size: 1.5rem;
-    padding: 50px 15px 50px 15px;
-    border-radius: 0 30px 30px 0;
+    border: #ae00ff 2px solid;
+    background-color: rgba(255, 0, 255, 0.2);
+    font-size: 1rem;
+    padding: 30px 12px 30px 5px;
+    border-radius: 0 25px 25px 0;
     position: fixed;
     top: 50vh;
     left: 0;
     cursor: pointer;
     height: fit-content;
+    transition: .4s;
 }
 
 .navapps {
@@ -265,7 +267,6 @@ a {
     cursor: pointer;
     color: var(--clr-foreground);
     font-family: 'JetBrains Mono', monospace;
-    transition: .4s;
     justify-content: center;
     align-items: center;
     text-decoration: none;
@@ -318,9 +319,10 @@ a {
         font-size: 3vw;
     }
 
-    #apps {
-        padding: 50px 10px 50px 2vw;
+    .nav:hover .menu {
+       font-size: 2vw;
     }
+    
 
 }
 
@@ -551,11 +553,11 @@ a {
 }
 
 .active-menu {
-    animation: slideInSll 250ms ease-in-out forwards;
+    animation: slideInSll 150ms ease-in-out forwards;
 }
 
 .innactive-menu {
-    animation: slideOutSll 250ms ease-in-out forwards;
+    animation: slideOutSll 150ms ease-in-out forwards;
 }
 
 .menu-selected {
@@ -570,8 +572,8 @@ a {
     from {
         transform: translateY(0);
         top: 50vh;
-        padding: 50px 15px 50px 15px;
-        border-radius: 0 30px 30px 0;
+        padding: 30px 12px 30px 5px;
+        border-radius: 0 25px 25px 0;
     }
 
     to {
@@ -595,8 +597,8 @@ a {
     to {
         transform: translateY(0);
         top: 50vh;
-        padding: 50px 15px 50px 15px;
-        border-radius: 0 30px 30px 0;
+        padding: 30px 12px 30px 5px;
+        border-radius: 0 25px 25px 0;    
     }
 
 }
@@ -635,7 +637,6 @@ a {
 
 @keyframes slideInSll {
     from {
-        visibility: hidden;
         transform: translateX(-55px);
     }
 

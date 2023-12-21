@@ -24,24 +24,74 @@ const word = document.querySelector("#word");
 const loggedInPage = document.querySelector("#LoggedInPage");
 const menu = document.querySelector(".menu");
 const nav = document.querySelector(".navapps");
+let selected = false;
 const navcontainer = document.querySelector(".nav");
 
 navcontainer.addEventListener("mouseenter", () => {
-  menu.classList.remove("menu-no-selected");
-  menu.classList.add("menu-selected");
-  setTimeout(() => {
-    nav.classList.remove("innactive-menu");
-    nav.classList.add("active-menu");
-  }, 75);
+  try {
+    selected = true;
+    menu.classList.remove("menu-no-selected");
+    menu.classList.add("menu-selected");
+    setTimeout(() => {
+      nav.classList.add("active-menu");
+      nav.classList.remove("innactive-menu");
+      console.log("menuIn");
+    }, 75);  
+  }catch (error) {
+    console.log(error);
+  }
 });
 
 navcontainer.addEventListener("mouseleave", () => {
-  nav.classList.remove("active-menu");
-  nav.classList.add("innactive-menu");
-  setTimeout(() => {
-    menu.classList.remove("menu-selected");
-    menu.classList.add("menu-no-selected");
-  }, 75);
+  try {
+    setTimeout(() => {
+      nav.classList.add("innactive-menu");
+      nav.classList.remove("active-menu");
+      console.log("menuOut");
+    }, 200); 
+    setTimeout(() => {
+      menu.classList.remove("menu-selected");
+      menu.classList.add("menu-no-selected");
+      selected = false;
+    }, 275); 
+  } catch (error) {
+    console.log(error);
+  }
+});
+
+nav.addEventListener("click", () => {
+  if (!selected) {
+    try {
+      menu.classList.remove("menu-no-selected");
+      menu.classList.add("menu-selected");
+      setTimeout(() => {
+        nav.classList.add("active-menu");
+        nav.classList.remove("innactive-menu");
+        console.log("menuIn");
+      }, 75);  
+    }catch (error) {
+      console.log(error);
+    }
+  }
+});
+
+window.addEventListener("click", (e) => {
+  if(selected){
+    try {
+      setTimeout(() => {
+        nav.classList.add("innactive-menu");
+        nav.classList.remove("active-menu");
+        console.log("menuOut");
+      }, 200); 
+      setTimeout(() => {
+        menu.classList.remove("menu-selected");
+        menu.classList.add("menu-no-selected");
+        selected = false;
+      }, 275); 
+    } catch (error) {
+      console.log(error);
+    }  
+  }
 });
 
 window.addEventListener("load", () => {
