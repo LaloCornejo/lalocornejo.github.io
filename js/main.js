@@ -27,7 +27,7 @@ const nav = document.querySelector(".navapps");
 let selected = false;
 const navcontainer = document.querySelector(".nav");
 
-navcontainer.addEventListener("mouseenter", () => {
+navcontainer.addEventListener("mouseenter", (e) => {
   try {
     selected = true;
     menu.classList.remove("menu-no-selected");
@@ -42,7 +42,7 @@ navcontainer.addEventListener("mouseenter", () => {
   }
 });
 
-navcontainer.addEventListener("mouseleave", () => {
+navcontainer.addEventListener("mouseleave", (e) => {
   try {
     setTimeout(() => {
       nav.classList.add("innactive-menu");
@@ -59,7 +59,7 @@ navcontainer.addEventListener("mouseleave", () => {
   }
 });
 
-nav.addEventListener("click", () => {
+menu.addEventListener("click", (e) => {
   if (!selected) {
     try {
       menu.classList.remove("menu-no-selected");
