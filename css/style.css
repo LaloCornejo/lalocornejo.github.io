@@ -11,7 +11,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P');
 
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains:ital,wght@1,500&display=swap');
 
 @font-face {
     font-family: "JetBrains";
@@ -148,17 +148,17 @@ h1 {
 
 h2 {
     font-size: 2vw;
-    font-family: 'JetBrains Mono';
+    font-family: 'JetBrains', monospace;
 }
 
 h4 {
     font-size: 2vw;
-    font-family: 'JetBrains Mono';
+    font-family: 'JetBrains', monospace;
 }
 
 h5 {
     font-size: rem;
-    font-family: 'JetBrains Mono';
+    font-family: 'JetBrains', monospace;
 }
 
 a {
@@ -269,7 +269,7 @@ a {
     font-size: 2vw;
     cursor: pointer;
     color: var(--clr-foreground);
-    font-family: 'JetBrains Mono';
+    font-family: 'JetBrains', monospace;
 }
 
 .navapps .navapp a:hover {
@@ -283,7 +283,7 @@ a {
     background-color: grey;
     font-size: 1.5vw;
     color: var(--clr-foreground);
-    font-family: 'JetBrains Mono';
+    font-family: 'JetBrains', monospace;
     transition: .4s;
 
 }
@@ -474,7 +474,7 @@ a {
     font-size: 1rem;
     font-weight: 500;
     color: var(--clr-foreground);
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'JetBrains', monospace;
 }
 
 .input-box input:focus {
@@ -507,13 +507,13 @@ a {
 }
 
 #loggin {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'JetBrains', monospace;
     font-size: 1.5rem;
     color: white;
 }
 
 #word {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'JetBrains', monospace;
     /* font-size: 2rem; */
     color: var(--clr-foreground);
     background: none;
@@ -556,7 +556,7 @@ a {
     justify-content: center;
     align-items: center;
     z-index: 1;
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'JetBrains', monospace;
 }
 
 .logoubttn:hover {
