@@ -6,6 +6,8 @@ import { auth, db } from "./FirebaseConfig.js";
 import "./Auth.js";
 import "./logout.js";
 
+let isMobile = navigator.userAgentData.mobile;
+
 // const notesCollection = collection(db, "Notes");
 
 // getDocs(notesCollection).then((querySnapshot) => {
@@ -27,19 +29,31 @@ const nav = document.querySelector(".navapps");
 let selected = false;
 const navcontainer = document.querySelector(".nav");
 
-navcontainer.addEventListener("mouseenter", () => {
-  try {
-    selected = true;
-    menu.classList.remove("menu-no-selected");
-    menu.classList.add("menu-selected");
-    setTimeout(() => {
-      nav.classList.add("active-menu");
-      nav.classList.remove("innactive-menu");
-      console.log("menuIn");
-    }, 75);  
-  }catch (error) {
-    console.log(error);
-  }
+navcontainer.addEventListener("mouseenter", (event) => {
+    try {
+      selected = true;
+      menu.classList.remove("menu-no-selected");
+      menu.classList.add("menu-selected");
+      setTimeout(() => {
+        nav.classList.add("active-menu");
+        nav.classList.remove("innactive-menu");
+        console.log("menuIn");
+      }, 75);  
+    }catch (error) {
+      console.log(error);  
+    }
+    try {
+      selected = true;
+      menu.classList.remove("menu-no-selected");
+      menu.classList.add("menu-selected");
+      setTimeout(() => {
+        nav.classList.add("active-menu");
+        nav.classList.remove("innactive-menu");
+        console.log("menuIn");
+      }, 75);  
+    }catch (error) {
+      console.log(error);
+    }
 });
 
 navcontainer.addEventListener("mouseleave", () => {
@@ -59,58 +73,60 @@ navcontainer.addEventListener("mouseleave", () => {
   }
 });
 
-menu.addEventListener("click", () => {
-  if (!selected) {
-    try {
-      menu.classList.remove("menu-no-selected");
-      menu.classList.add("menu-selected");
-      setTimeout(() => {
-        nav.classList.add("active-menu");
-        nav.classList.remove("innactive-menu");
-        console.log("menuIn");
-        selected = true;
-      }, 75);  
-    }catch (error) {
-      console.log(error);
+if(isMobile){
+  menu.addEventListener("touchstart", () => {
+    if (!selected) {
+      try {
+        menu.classList.remove("menu-no-selected");
+        menu.classList.add("menu-selected");
+        setTimeout(() => {
+          nav.classList.add("active-menu");
+          nav.classList.remove("innactive-menu");
+          console.log("menuIn");
+          selected = true;
+        }, 75);  
+      }catch (error) {
+        console.log(error);
+      }
+    }else{
+      try {
+        setTimeout(() => {
+          nav.classList.add("innactive-menu");
+          nav.classList.remove("active-menu");
+          console.log("menuOut");
+        }, 200); 
+        setTimeout(() => {
+          menu.classList.remove("menu-selected");
+          menu.classList.add("menu-no-selected");
+          selected = false;
+        }, 275); 
+      } catch (error) {
+        console.log(error);
+      }  
     }
-  }else{
-    try {
-      setTimeout(() => {
-        nav.classList.add("innactive-menu");
-        nav.classList.remove("active-menu");
-        console.log("menuOut");
-      }, 200); 
-      setTimeout(() => {
-        menu.classList.remove("menu-selected");
-        menu.classList.add("menu-no-selected");
-        selected = false;
-      }, 275); 
-    } catch (error) {
-      console.log(error);
-    }  
-  }
-});
+  });
 
-window.addEventListener("click", (e) => {
-  if(selected){
-    try {
-      setTimeout(() => {
-        nav.classList.add("innactive-menu");
-        nav.classList.remove("active-menu");
-        console.log("menuOut");
-      }, 200); 
-      setTimeout(() => {
-        menu.classList.remove("menu-selected");
-        menu.classList.add("menu-no-selected");
-        selected = false;
-      }, 275); 
-    } catch (error) {
-      console.log(error);
-    }  
-  } 
-});
+  window.addEventListener("touchstart", () => {
+    if(selected){
+      try {
+        setTimeout(() => {
+          nav.classList.add("innactive-menu");
+          nav.classList.remove("active-menu");
+          console.log("menuOut");
+        }, 200); 
+        setTimeout(() => {
+          menu.classList.remove("menu-selected");
+          menu.classList.add("menu-no-selected");
+          selected = false;
+        }, 275); 
+      } catch (error) {
+        console.log(error);
+      }  
+    } 
+  });
+};
 
-window.addEventListener("load", (e) => {
+window.addEventListener("load", () => {
   setTimeout(() => {
     loader.classList.add("loader-hidden");
     loader.addEventListener("transitionend", () => {
@@ -132,14 +148,23 @@ closebx.addEventListener("click", () => {
 });
 
 word.addEventListener("click", () => {
-    try {
-        front.classList.replace("active-page", "innactive-page");
-        // loginPage.classList.replace("innactive-page", "active-page");
-        loginPage.classList.remove("innactive-page");
-        loginPage.classList.add("active-page");
-    }catch (error) {
-      console.log(error);
-    }
+  if (selected) {
+    setTimeout(() => {
+      // front.classList.replace("active-page", "innactive-page");
+      front.classList.remove("active-page");
+      front.classList.add("innactive-page");
+      // loginPage.classList.replace("innactive-page", "active-page");
+      loginPage.classList.remove("innactive-page");
+      loginPage.classList.add("active-page");
+    }, 400);
+  }else{
+    // front.classList.replace("active-page", "innactive-page");
+    front.classList.remove("active-page");
+    front.classList.add("innactive-page");
+    // loginPage.classList.replace("innactive-page", "active-page");
+    loginPage.classList.remove("innactive-page");
+    loginPage.classList.add("active-page");
+  }
 });
 
 auth.onAuthStateChanged((user) => {

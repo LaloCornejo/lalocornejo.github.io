@@ -167,6 +167,19 @@ a {
     text-decoration-color: white;
 }
 
+.FrontBk {
+    z-index: -1;
+    position: fixed;
+    height: 40vh;
+    width: 50vh;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(52deg, rgb(255, 0, 255), rgb(0, 247, 255));
+    transition: transform 500ms ease-out;
+    border-radius: 100%;
+    filter: blur(100px);
+}
+
 .Front {
     height: 98vh;
     width: auto;
@@ -219,25 +232,28 @@ a {
 /*================= NavApps ==================*/
 .nav {
     position: fixed;
-    width: 1vw;
+    width: 2vw;
     height: 100vh;
-    display: flex;
     left: 0;
 }
 
 .nav:hover {
-    width: 10vw;
+    width: 15vw;
 }
 
-.nav:hover .menu {
-    background-color: #ae00ff;
-    color: white;
+.nav ul {
+    padding-left: 1.5vw;
+    margin: 0;
+}
+
+.nav li {
+    list-style: none;
 }
 
 .menu {
     z-index: 1;
-    border: #ae00ff 2px solid;
-    background-color: rgba(255, 0, 255, 0.2);
+    color: white;
+    background-color: rgb(255, 0, 255);
     font-size: 1rem;
     padding: 30px 12px 30px 5px;
     border-radius: 0 25px 25px 0;
@@ -251,30 +267,37 @@ a {
 
 .navapps {
     position: absolute;
-    /* width: 4vw; */
+    width: auto;
     display: grid;
     height: 60vh;
     top: 20vh;
     left: 0;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
     align-items: center;
 }
 
 .navapps .navapp {
-    display: flex;
-    align-items: center;
+    position: relative;
+    left: 0;
     font-size: 2vw;
     cursor: pointer;
     color: var(--clr-foreground);
-    font-family: 'JetBrains Mono', monospace;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    border-radius: 100%;
+    font-family: 'JetBrains Mono';
 }
 
 .navapps .navapp a:hover {
     color: #ae00ff;
+
+}
+
+.appTitle{
+    visibility: hidden;
+    position: relative;
+    background-color: grey;
+    font-size: 1.5vw;
+    color: var(--clr-foreground);
+    font-family: 'JetBrains Mono';
+    transition: .4s;
+
 }
 
 /*================= Grid ==================*/
@@ -283,8 +306,16 @@ a {
     position: static;
     grid-template-rows: 50px;
 }
+.Hgrid-2x1 {
+    display: grid;
+    grid: repeat(1, auto) / auto-flow 60px;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+}
 
-.horizontal-grid {
+.horizontal-grid-social {
     position: fixed;
     bottom: 1.5vh;
     align-items: center;
@@ -294,7 +325,7 @@ a {
     height: 5vh;
 }
 
-.horizontal-grid .social {
+.horizontal-grid-social .social {
     font-size: 2.3rem;
     max-width: 5vw;
     min-width: 3vw;
@@ -323,6 +354,10 @@ a {
        font-size: 2vw;
     }
     
+    .FrontBk{
+        height: 60vw;
+        width: 50vw;    
+    }
 
 }
 
