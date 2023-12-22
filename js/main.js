@@ -6,7 +6,7 @@ import { auth, db } from "./FirebaseConfig.js";
 import "./Auth.js";
 import "./logout.js";
 
-let isMobile = window.innerWidth <= 768;
+let isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
 // const notesCollection = collection(db, "Notes");
 
