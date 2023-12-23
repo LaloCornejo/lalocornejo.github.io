@@ -41,6 +41,9 @@
         --clr-background: hsl(281, 35%, 9%);
     }
 }
+.DarkMode {
+    z-index: 1000000000;
+}
 
 .dark-theme {
     --clr-foreground: hsl(0, 0%, 100%);
