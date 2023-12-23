@@ -16,8 +16,8 @@ export function Noti(message, type = "success") {
       "font-family": "JetBrains Mono",
       "font-size": "1.2em",
       "@keyframes opacity": "from{opacity: .7;} to{opacity: 0;}", // Fix the typo in the @keyframes property
-      background: type == "success" ? "linear-gradient(90deg, rgba(0,255,140,1) 0%, rgba(240,0,255,1) 100%)" : "linear-gradient(90deg, rgba(255,0,0,0.6565543185459094) 0%, rgba(0,215,255,1) 100%)", // Add a colon after the property name "background"
-      "box-shadow": "0 0 80px" + (type == "success" ? "linear-gradient(90deg, rgba(0,255,140,1) 0%, rgba(240,0,255,1) 100%)" : "linear-gradient(90deg, rgba(255,0,0,0.6565543185459094) 0%, rgba(0,215,255,1) 100%)"),
+      background: type == "success" ? "linear-gradient(45deg, rgba(0,24,126,1) 0%, rgba(255,0,241,1) 77%)" : "linear-gradient(45deg, rgba(255,0,0,0.7) 0%, rgba(52,31,0,0.7) 100%)", // Add a colon after the property name "background"
+      "box-shadow": "0 0 80px" + (type == "success" ? "#00ff8c" : "#ff0000"),
     },
     onClick: function () {}, // Callback after click
   }).showToast();
