@@ -13,10 +13,13 @@ import { loginCk } from "./loginCk.js";
 import "./Auth.js";
 import "./logout.js";
 
-let isMobile =
-  /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-    navigator.userAgent
+export function isMobile() {
+  return (
+    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent
+    ) || window.innerWidth < 900
   );
+}
 
 const loader = document.querySelector(".loader");
 
@@ -66,7 +69,7 @@ navcontainer.addEventListener("mouseleave", () => {
   }
 });
 
-if (isMobile) {
+if (isMobile()) {
   menu.addEventListener("touchstart", () => {
     if (!selected) {
       try {

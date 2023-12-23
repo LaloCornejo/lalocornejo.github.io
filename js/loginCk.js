@@ -1,4 +1,5 @@
 import { Noti } from "./Noti.js";
+import { isMobile } from "./main.js";
 
 const loggedOutLinks = document.querySelectorAll(".logged-out");
 const loggedInLinks = document.querySelectorAll(".logged-in");
@@ -10,7 +11,7 @@ export const loginCk = (user) => {
   } else {
     loggedInLinks.forEach((link) => (link.style.visibility = "visible"));
     loggedOutLinks.forEach((link) => (link.style.visibility = "hidden"));
-    Noti("Logged Out ಠ益ಠ", "error");
+    Noti("Logged Out ಠ益ಠ", "error", isMobile);
     console.log("logged out");
   }
 };

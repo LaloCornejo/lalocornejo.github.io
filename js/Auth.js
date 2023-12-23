@@ -1,6 +1,7 @@
 import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
 import { Noti } from "./Noti.js";
 import { auth } from "./FirebaseConfig.js";
+import { isMobile } from "./main.js";
 
 const signIn = document.querySelector("#loggin");
 
@@ -13,15 +14,15 @@ signIn.addEventListener("click", async (e) => {
 
   try {
     const credentials = await signInWithEmailAndPassword(auth, email, password);
-    Noti("Welcome LÆLÖ", "success");
+    Noti("Welcome LÆLÖ", "success", isMobile);
     console.log(credentials);
     wrapper.classList.remove("active-popup");
   } catch (error) {
     if (error.code == "auth/user-not-found") {
-      Noti("User not found", "error");
+      Noti("User not found", "error", isMobile);
     } else if (error.code == "auth/wrong-password") {
-      Noti("Wrong password", "error");
-    } else if (error.code == "auth/invalid-email") {
+      Noti("Wrong password", "error", isMobile);
+    } else if (error.code == "auth/invalid-email", isMobile) {
       Noti("Invalid email", "error");
     }
     console.log(error);

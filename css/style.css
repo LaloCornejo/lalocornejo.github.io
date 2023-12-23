@@ -534,13 +534,13 @@ a {
 
 .btnloggout {
     font-size: 1.5rem;
+    width: fit-content;
     border: 0;
     background: transparent;
     cursor: pointer;
     position: fixed;
-    top: 7vh;
+    top: 10vh;
     color: #ae00ff;
-    max-width: 15vw;
     justify-content: center;
     align-items: center;
     z-index: 1;
@@ -945,6 +945,6 @@ a {
     }
 
     .btnloggout {
-        font-size: 2vw;
+        font-size: 4vw;
     }
 }
