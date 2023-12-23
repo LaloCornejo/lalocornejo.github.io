@@ -13,7 +13,7 @@ signIn.addEventListener("click", async (e) => {
 
   try {
     const credentials = await signInWithEmailAndPassword(auth, email, password);
-    Noti("Welcome " + credentials.user.email);
+    Noti("Welcome LÆLÖ", "success");
     console.log(credentials);
     wrapper.classList.remove("active-popup");
   } catch (error) {
