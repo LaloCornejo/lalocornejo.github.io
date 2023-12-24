@@ -69,9 +69,61 @@ navcontainer.addEventListener("mouseleave", () => {
   }
 });
 
-if (isMobile()) {
-  menu.addEventListener("touchstart", () => {
-    if (!selected) {
+// if (isMobile()) {
+  // menu.addEventListener("touchstart", () => {
+    // if (!selected) {
+      // try {
+        // menu.classList.remove("menu-no-selected");
+        // menu.classList.add("menu-selected");
+        // setTimeout(() => {
+          // nav.classList.add("active-menu");
+          // nav.classList.remove("innactive-menu");
+          // console.log("menuIn");
+          // selected = true;
+        // }, 75);
+      // } catch (error) {
+        // console.log(error);
+      // }
+    // } else {
+      // try {
+        // setTimeout(() => {
+          // nav.classList.add("innactive-menu");
+          // nav.classList.remove("active-menu");
+          // console.log("menuOut");
+        // }, 200);
+        // setTimeout(() => {
+          // menu.classList.remove("menu-selected");
+          // menu.classList.add("menu-no-selected");
+          // selected = false;
+        // }, 275);
+      // } catch (error) {
+        // console.log(error);
+      // }
+    // }
+  // });
+// 
+  // window.addEventListener("touchstart", () => {
+    // if (selected) {
+      // try {
+        // setTimeout(() => {
+          // nav.classList.add("innactive-menu");
+          // nav.classList.remove("active-menu");
+          // console.log("menuOut");
+        // }, 200);
+        // setTimeout(() => {
+          // menu.classList.remove("menu-selected");
+          // menu.classList.add("menu-no-selected");
+          // selected = false;
+        // }, 275);
+      // } catch (error) {
+        // console.log(error);
+      // }
+    // }
+  // });
+// }
+
+window.addEventListener("click", () => {
+  if (!selected) {
       try {
         menu.classList.remove("menu-no-selected");
         menu.classList.add("menu-selected");
@@ -100,27 +152,7 @@ if (isMobile()) {
         console.log(error);
       }
     }
-  });
-
-  window.addEventListener("touchstart", () => {
-    if (selected) {
-      try {
-        setTimeout(() => {
-          nav.classList.add("innactive-menu");
-          nav.classList.remove("active-menu");
-          console.log("menuOut");
-        }, 200);
-        setTimeout(() => {
-          menu.classList.remove("menu-selected");
-          menu.classList.add("menu-no-selected");
-          selected = false;
-        }, 275);
-      } catch (error) {
-        console.log(error);
-      }
-    }
-  });
-}
+});
 
 window.addEventListener("load", () => {
   setTimeout(() => {

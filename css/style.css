@@ -16,6 +16,7 @@
 @font-face {
     font-family: "JetBrains";
     src: url("../fonts/JetBrains-Regular.ttf");
+    src: url("../fonts/JetBrainsMono-Regular.woff2")
 }
 
 @font-face {
