@@ -240,9 +240,9 @@ a {
     left: 0;
 }
 
-/* .nav:hover {
-    width: 30vw;
-} */
+.nav:hover {
+    width: 20vw;
+}
 
 .nav ul {
     padding-left: 1.5vw;

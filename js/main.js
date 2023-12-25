@@ -137,7 +137,7 @@ if (!isMobile()) {
 // }
 
 if (isMobile()) {
-  menu.addEventListener("click", () => {
+  menu.addEventListener("click", async () => {
     if (!selected) {
       try {
         menu.classList.remove("menu-no-selected");
@@ -148,6 +148,9 @@ if (isMobile()) {
           console.log("menuIn");
           selected = true;
         }, 75);
+
+        // delay entries to prevent double clicks
+        await new Promise(resolve => setTimeout(resolve, 300));
       } catch (error) {
         console.log(error);
       }
@@ -168,26 +171,26 @@ if (isMobile()) {
       }
     }
   });
-
-  window.addEventListener("touchstart", () => {
-    if (front.classList.contains("active-page") & selected) {
-      try {
-        setTimeout(() => {
-          nav.classList.add("innactive-menu");
-          nav.classList.remove("active-menu");
-          console.log("menuOut");
-        }, 200);
-        setTimeout(() => {
-          menu.classList.remove("menu-selected");
-          menu.classList.add("menu-no-selected");
-          selected = false;
-        }, 275);
-      } catch (error) {
-        console.log(error);
-      }
-    }
-  });
 }
+
+window.addEventListener("touchstart", () => {
+  if (front.classList.contains("active-page") && selected) {
+    try {
+      setTimeout(() => {
+        nav.classList.add("innactive-menu");
+        nav.classList.remove("active-menu");
+        console.log("menuOut");
+      }, 200);
+      setTimeout(() => {
+        menu.classList.remove("menu-selected");
+        menu.classList.add("menu-no-selected");
+        selected = false;
+      }, 275);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+});
 
 login.addEventListener("click", () => {
   wrapper.classList.add("active-popup");
@@ -213,9 +216,6 @@ word.addEventListener("click", () => {
   }
 });
 
-function startApp(user) {
-  // Your code for the startApp function
-}
 
 auth.onAuthStateChanged(async (user) => {
   loginCk(user);
