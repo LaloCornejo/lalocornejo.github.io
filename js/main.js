@@ -135,8 +135,40 @@ navcontainer.addEventListener("mouseleave", () => {
   // });
 // }
 
+menu.addEventListener("click", () => {
+  if (!selected) {
+    try {
+      menu.classList.remove("menu-no-selected");
+      menu.classList.add("menu-selected");
+      setTimeout(() => {
+        nav.classList.add("active-menu");
+        nav.classList.remove("innactive-menu");
+        console.log("menuIn");
+        selected = true;
+      }, 75);
+    } catch (error) {
+      console.log(error);
+    }
+  } else {
+    try {
+      setTimeout(() => {
+        nav.classList.add("innactive-menu");
+        nav.classList.remove("active-menu");
+        console.log("menuOut");
+      }, 200);
+      setTimeout(() => {
+        menu.classList.remove("menu-selected");
+        menu.classList.add("menu-no-selected");
+        selected = false;
+      }, 275);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+});                                                                         
+
 window.addEventListener("click", () => {
-    if (front.classList.contains("active-page") && selected) {
+    if (front.classList.contains("active-page") & selected) {
       try {
         setTimeout(() => {
           nav.classList.add("innactive-menu");
