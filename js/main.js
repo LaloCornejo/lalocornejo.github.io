@@ -37,6 +37,19 @@ const closebx = document.querySelector(".icon-close");
 const logoutButton = document.querySelector(".btnloggout");
 const loggedInPage = document.querySelector(".LoggedInPage");
 
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    loader.classList.add("loader-hidden");
+    loader.addEventListener("transitionend", () => {
+      if (document.body.contains(loader)) {
+        document.body.removeChild(loader);
+      }
+      login.classList.remove("hidden");
+      wrapper.classList.remove("hidden");
+    });
+  }, 300);
+});
+
 navcontainer.addEventListener("mouseenter", (event) => {
   try {
     selected = true;
@@ -123,20 +136,7 @@ navcontainer.addEventListener("mouseleave", () => {
 // }
 
 window.addEventListener("click", () => {
-  if (!selected) {
-      try {
-        menu.classList.remove("menu-no-selected");
-        menu.classList.add("menu-selected");
-        setTimeout(() => {
-          nav.classList.add("active-menu");
-          nav.classList.remove("innactive-menu");
-          console.log("menuIn");
-          selected = true;
-        }, 75);
-      } catch (error) {
-        console.log(error);
-      }
-    } else {
+    if (front.classList.contains("active-page") && selected) {
       try {
         setTimeout(() => {
           nav.classList.add("innactive-menu");
@@ -152,19 +152,6 @@ window.addEventListener("click", () => {
         console.log(error);
       }
     }
-});
-
-window.addEventListener("load", () => {
-  setTimeout(() => {
-    loader.classList.add("loader-hidden");
-    loader.addEventListener("transitionend", () => {
-      if (document.body.contains(loader)) {
-        document.body.removeChild(loader);
-      }
-      login.classList.remove("hidden");
-      wrapper.classList.remove("hidden");
-    });
-  }, 300);
 });
 
 login.addEventListener("click", () => {

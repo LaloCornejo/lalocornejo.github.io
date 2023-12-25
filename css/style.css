@@ -16,7 +16,7 @@
 @font-face {
     font-family: "JetBrains";
     src: url("../fonts/JetBrains-Regular.ttf");
-    src: url("../fonts/JetBrainsMono-Regular.woff2")
+    src: url("../fonts/JetBrainsMono-Regular.woff2");
 }
 
 @font-face {
@@ -368,7 +368,7 @@ a {
     cursor: pointer;
     font-size: 3.5vw;
     color: #ae00ff;
-    font-family: "JetBrains Mono";
+    font-family: "JetBrains Mono", "JetBrains";
     font-weight: 700;
     transition: .4s;
 }
@@ -410,8 +410,8 @@ a {
 
 .wrapper .icon-close {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 2vh;
+    right: 1vw;
     width: 5vw;
     height: 4vw;
     font-size: 1.5rem;
@@ -448,7 +448,7 @@ a {
     font-weight: 500;
     pointer-events: none;
     color: var(--clr-foreground);
-    font-family: "JetBrains Mono";
+    font-family: "JetBrains Mono", "JetBrains";
     transition: .3s;
 }
 
