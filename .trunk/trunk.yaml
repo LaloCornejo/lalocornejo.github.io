@@ -29,7 +29,7 @@ lint:
     - yamllint@1.33.0
 actions:
   enabled:
-    - trunk-announce
-    - trunk-check-pre-push
-    - trunk-fmt-pre-commit
-    - trunk-upgrade-available
+    # - trunk-announce
+    # - trunk-check-pre-push
+    # - trunk-fmt-pre-commit
+    # - trunk-upgrade-available
