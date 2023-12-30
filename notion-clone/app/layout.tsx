@@ -1,7 +1,11 @@
+
+import { Toaster } from 'sonner'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import { url } from 'inspector'
+import { ThemeProvider } from '@/components/providers/theme'
+import { ConvexClientProvider } from '@/components/providers/convex-provider'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -30,8 +34,21 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <body className={inter.className}>
+        <ConvexClientProvider>
+        <ThemeProvider
+          attribute='class'
+          defaultTheme='system'
+          enableSystem
+          disableTransitionOnChange
+          storageKey='LÆLÖ-theme'
+        >
+          <Toaster position='bottom-center'/>
+          {children}
+        </ThemeProvider>
+        </ConvexClientProvider>
+      </body>
     </html>
   )
 }
