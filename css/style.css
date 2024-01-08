@@ -132,7 +132,7 @@
 html {
     display: flex;
     scroll-behavior: smooth;
-    overflow: auto;
+    overflow: hidden;
 }
 
 body {
@@ -156,7 +156,7 @@ h2 {
 }
 
 h4 {
-    font-size: 2vw;
+    font-size: 1.2vw;
     font-family: 'JetBrains Mono', "JetBrains";
 }
 
@@ -208,27 +208,59 @@ a {
     max-width: 60vw;
     position: static;
     text-align: center;
+    align-items: center;
     justify-self: center;
-    height: auto;
     line-height: 1px;
 }
 
 #Tdes {
-    top: 0vh;
-    max-width: 60vw;
+    bottom: 10vh;
+    left: calc((100vw - 65vw )/ 2);
     position: static;
-    width: 75vw;
+    text-align: center;
+    width: 65vw;
+    height: auto;
+    line-height: 10px;
+    color: var(--clr-foreground);
+    position: fixed;
+}
+.info {
+    position: fixed;
+    top: 0;
+    width: auto;
+    height: fit-content;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    justify-items: center;
+    z-index: 1000000000;
+    font-size: 1.6em;
+    color: var(--clr-foreground);
+    font-family: 'JetBrains Mono', "JetBrains";
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    font-weight:500;
+}
+
+#time {
+    position: relative;
+    top: 1.8rem;
+    opacity: .5;
 }
 
 #version {
-    position: fixed;
-    top: 1.5rem;
-    /* right: 5vw; */
-    font-size: 1.3em;
-    color: var(--clr-foreground);
+    position: relative;
+    top: 1.8rem;
     opacity: .4;
+}
+
+#word {
     font-family: 'JetBrains Mono', "JetBrains";
-    padding: 10px;
+    /* font-size: 2rem; */
+    background: none;
+    border: none;
 }
 
 /*================= NavApps ==================*/
@@ -505,14 +537,6 @@ a {
     color: white;
 }
 
-#word {
-    font-family: 'JetBrains Mono', "JetBrains";
-    /* font-size: 2rem; */
-    color: var(--clr-foreground);
-    background: none;
-    border: none;
-}
-
 /*================= NavTab ==================*/
 .LoggedInPage {
     position: fixed;
@@ -760,56 +784,80 @@ a {
 @keyframes moveInCircle {
     0% {
         transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
     }
 
     50% {
         transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
     }
 
     100% {
         transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
     }
 }
 
 @keyframes moveVertical {
     0% {
         transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
     }
 
     50% {
         transform: translateY(50%);
+        -webkit-transform: translateY(50%);
     }
 
     100% {
         transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
     }
 }
 
 @keyframes moveHorizontal {
     0% {
         transform: translateX(-50%) translateY(-10%);
+        -webkit-transform: translateX(-50%) translateY(-10%);
     }
 
     50% {
         transform: translateX(50%) translateY(10%);
+        -webkit-transform: translateX(50%) translateY(10%);
     }
 
     100% {
         transform: translateX(-50%) translateY(-10%);
+        -webkit-transform: translateX(-50%) translateY(-10%);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
     }
 }
 
 
 .FrontBk {
     z-index: -1;
-    height: 40vh;
-    width: 50vh;
+    height: 60vh;
+    width: 70vh;
     position: fixed;
     overflow: hidden;
     background: linear-gradient(87deg, var(--color-bg1), var(--color-bg2));
     border-radius: 100%;
     filter: blur(120px);
     -webkit-filter: blur(120px);
+
+    animation: rotate 20s linear infinite;
+    -webkit-animation: rotate 20s linear infinite;
 
     svg {
         display: none;
@@ -836,6 +884,7 @@ a {
 
         transform-origin: center center;
         animation: moveVertical 10s ease infinite;
+        -webkit-animation: moveVertical 10s ease infinite;
 
         opacity: 1;
     }
@@ -853,6 +902,7 @@ a {
 
         transform-origin: calc(50% - 400px);
         animation: moveInCircle 5s reverse infinite;
+        -webkit-animation: moveInCircle 5s reverse infinite;
 
         opacity: 1;
     }
@@ -870,6 +920,7 @@ a {
 
         transform-origin: calc(50% + 400px);
         animation: moveInCircle 10s linear infinite;
+        -webkit-animation: moveInCircle 10s linear infinite;
 
         opacity: 1;
     }
@@ -887,8 +938,9 @@ a {
 
         transform-origin: calc(50% - 200px);
         animation: moveHorizontal 25s ease infinite;
+        -webkit-animation: moveHorizontal 25s ease infinite;
 
-        opacity: 0.7;
+        opacity: 1;
     }
 
     .g5 {
@@ -904,6 +956,7 @@ a {
 
         transform-origin: calc(50% - 800px) calc(50% + 200px);
         animation: moveInCircle 15s ease infinite;
+        -webkit-animation: moveInCircle 15s ease infinite;
 
         opacity: 1;
     }
@@ -918,8 +971,33 @@ a {
         font-size: 5vw;
     }
 
-    #Tdes {
+    h2 {
         font-size: 3vw;
+    }
+
+    .info {
+        top: 15vh;
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: auto;
+    }
+
+    .info #time , .info #separator-time {
+        visibility: hidden;
+    }
+
+    #version {
+        font-size: 5vw;
+        opacity: .2;
+    }
+
+    #Tdes {
+        line-height: normal;
+        bottom : calc(10vh + 10vh);
+    }
+
+    #Tdes #sub {
+        font-size: 1.5vw;
     }
 
     #SubTitle {

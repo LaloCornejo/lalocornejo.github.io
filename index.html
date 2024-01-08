@@ -56,7 +56,7 @@
 
         <ul class="navapps innactive-menu">
             <li class="navapp">
-                <a href="localhost:3000">
+                <a href="/notion-clone/app/">
                     <div class="Hgrid-2x1">
                         <ion-icon name="accessibility-outline" id="app"></ion-icon>
                         <div class="appTitle"> //xdd</div>
@@ -100,8 +100,15 @@
             <div class="grid">
             <h4 id="SubTitle">// Title</h4>
             <h1 id="Title">LÆLÖ</h1>
-            <h2 id="Tdes">天才, 億万長者, プレイボーイ, 慈善家, <a id="word"> パックマン</a>、
-                未ミテ更台ミワロ写求すぞッゆ利応セワ展委写レよ過自ぶ介人リねて</h2>
+            <div id="Tdes">
+                <h2 style="font-weight: 700;">「未来を予測する最善<a id="word">の</a>方法は、それを発明することだ。」</h2>
+                <h4 id="sub" style="font-weight: 550; opacity: 60%;">
+                    „Die beste Art, die Zukunft vorherzusagen, ist, sie zu erfinden.“</h4>
+                <h4 id="sub" style="font-weight: 500; opacity: 40%;">
+                    “La meilleure façon de prédire l’avenir est de l’inventer.”</h4>
+                <h4 id="sub" style="font-weight: 400; opacity: 25%;">
+                    “The best way to predict the future is to invent it.”</h4>
+            </div>
         </div>
 
         <div class="horizontal-grid-social">
@@ -180,9 +187,28 @@
         </button>
     </div>
 
-    <div id="version">
-        <ion-icon name="git-branch-outline"></ion-icon>
-        4.1.1
+    <div class="info">
+        <div id="version">
+            <ion-icon name="git-branch-outline"></ion-icon>
+             v1.0.1
+        </div>
+
+        <div
+            style="position: relative;
+            top: 1.8rem;
+            font-size: 1.3em;
+            color: var(--clr-foreground);
+            opacity: .6;
+            font-family: JetBrains Mono, JetBrains;
+            font-weight: 200;
+            padding:  0 3.5rem 0 3.5rem;"
+            id="separator-time"
+        >|</div>
+
+        <div  style="display: grid; grid-template-columns: auto auto; justify-content: center; align-items: center;" id="time">
+            <ion-icon style="padding-right: 1rem;" name="time-outline"></ion-icon>
+            <div id="current-time"></div>
+        </div>
     </div>
 
 

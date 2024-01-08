@@ -173,6 +173,15 @@ if (isMobile()) {
   });
 }
 
+// -=================== Clock ===================-
+
+let time = document.querySelector("#current-time");
+
+setInterval(() => {
+  let d = new Date();
+  time.innerHTML = d.toLocaleTimeString( "en-US", { hour: 'numeric', minute: 'numeric', hour12: true });
+})
+
 window.addEventListener("touchstart", () => {
   if (front.classList.contains("active-page") && selected) {
     try {
