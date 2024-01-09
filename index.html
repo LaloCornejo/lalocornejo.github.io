@@ -1,223 +1,258 @@
-<!--V1.0-->
-
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>~ L Æ L Ö ~</title>
-    <meta content="text/html; charset=UTF-8; X-Content-Type-Options=nosniff" http-equiv="Content-Type" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon favicon" href="img/favicon-32x32.png">
-</head>
+    <meta
+      content="text/html; charset=UTF-8; X-Content-Type-Options=nosniff"
+      http-equiv="Content-Type"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon favicon" href="img/favicon-32x32.png" />
+  </head>
 
-<body>
+  <body>
     <!--================================ Dark mode ================================-->
     <div class="DarkMode">
-        <button id="theme-toggle" aria-label="Switch to dark theme">
-            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 100 100">
-                <g class="toggle-sun">
-                    <circle class="cls-1" cx="50" cy="50" r="30" />
-                    <circle class="cls-1" cx="100"></circle>
-                </g>
-                <g class="toggle-circle">
-                    <circle class="cls-1" cx="99" cy="-3" r="22" />
-                </g>
-            </svg>
-        </button>
+      <button id="theme-toggle" aria-label="Switch to dark theme">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="50"
+          height="50"
+          viewBox="0 0 100 100"
+        >
+          <g class="toggle-sun">
+            <circle class="cls-1" cx="50" cy="50" r="30" />
+            <circle class="cls-1" cx="100"></circle>
+          </g>
+          <g class="toggle-circle">
+            <circle class="cls-1" cx="99" cy="-3" r="22" />
+          </g>
+        </svg>
+      </button>
     </div>
 
     <a href="index.html">
-        <img class="logoAt" id="Logo" src="img/128832214.png" alt="Logo">
+      <img class="logoAt" id="Logo" src="img/128832214.png" alt="Logo" />
     </a>
-
 
     <!--============================== LOADER ===================================-->
     <div class="loader">
-        <div class="cube">
-            <div class="top"></div>
-            <div>
-                <span style="--i:0;"></span>
-                <span style="--i:1;"></span>
-                <span style="--i:2;"></span>
-                <span style="--i:3;"></span>
-            </div>
+      <div class="cube">
+        <div class="top"></div>
+        <div>
+          <span style="--i: 0"></span>
+          <span style="--i: 1"></span>
+          <span style="--i: 2"></span>
+          <span style="--i: 3"></span>
         </div>
+      </div>
     </div>
     <!-- end loader -->
 
     <!--================================ NAVAPPS ================================-->
     <div class="nav">
-        <a class="menu">
-            <ion-icon id="apps" name="apps-outline"></ion-icon>
-        </a>
+      <a class="menu">
+        <ion-icon id="apps" name="apps-outline"></ion-icon>
+      </a>
 
-        <ul class="navapps innactive-menu">
-            <li class="navapp">
-                <a href="/notion-clone/app/">
-                    <div class="Hgrid-2x1">
-                        <ion-icon name="accessibility-outline" id="app"></ion-icon>
-                        <div class="appTitle"> //xdd</div>
-                    </div>
-                </a>
-            </li>
-            
-            <li class="navapp">
-                <a href="">
-                    <div class="Hgrid-2x1">
-                        <ion-icon name="browsers-outline" id="app"></ion-icon>
-                            <div class="appTitle"> //browser</div>
-                    </div>
-                </a>
-            </li>
-            
-            <li class="navapp">
-                <a href="">
-                    <div class="Hgrid-2x1">
-                        <ion-icon name="chatbubbles-outline" id="app"></ion-icon>
-                            <div class="appTitle"> //chat</div>
-                    </div>
-                </a>
-            </li>
-            
-            <li class="navapp">
-                <a href="">
-                    <div class="Hgrid-2x1">
-                        <ion-icon name="cloud-upload-outline" id="app"></ion-icon>
-                            <div class="appTitle"> //files</div>
-                    </div>
-                </a>
-            </li>
-        </ul>
+      <ul class="navapps innactive-menu">
+        <li class="navapp">
+          <a href="/notion-clone/app/">
+            <div class="Hgrid-2x1">
+              <ion-icon name="accessibility-outline" id="app"></ion-icon>
+              <div class="appTitle">//xdd</div>
+            </div>
+          </a>
+        </li>
+
+        <li class="navapp">
+          <a href="">
+            <div class="Hgrid-2x1">
+              <ion-icon name="browsers-outline" id="app"></ion-icon>
+              <div class="appTitle">//browser</div>
+            </div>
+          </a>
+        </li>
+
+        <li class="navapp">
+          <a href="">
+            <div class="Hgrid-2x1">
+              <ion-icon name="chatbubbles-outline" id="app"></ion-icon>
+              <div class="appTitle">//chat</div>
+            </div>
+          </a>
+        </li>
+
+        <li class="navapp">
+          <a href="">
+            <div class="Hgrid-2x1">
+              <ion-icon name="cloud-upload-outline" id="app"></ion-icon>
+              <div class="appTitle">//files</div>
+            </div>
+          </a>
+        </li>
+      </ul>
     </div>
     <!--============================== end navapps ===================================-->
 
-
     <div class="Front active-page">
+      <div class="grid">
+        <h4 id="SubTitle">// Title</h4>
+        <h1 id="Title">LÆLÖ</h1>
+        <div id="Tdes">
+          <h2 style="font-weight: 700">
+            「未来を予測する最善<a id="word">の</a
+            >方法は、それを発明することだ。」
+          </h2>
+          <h4 id="sub" style="font-weight: 550; opacity: 60%">
+            „Die beste Art, die Zukunft vorherzusagen, ist, sie zu erfinden.“
+          </h4>
+          <h4 id="sub" style="font-weight: 500; opacity: 40%">
+            “La meilleure façon de prédire l’avenir est de l’inventer.”
+          </h4>
+          <h4 id="sub" style="font-weight: 400; opacity: 25%">
+            “The best way to predict the future is to invent it.”
+          </h4>
+        </div>
+      </div>
 
-            <div class="grid">
-            <h4 id="SubTitle">// Title</h4>
-            <h1 id="Title">LÆLÖ</h1>
-            <div id="Tdes">
-                <h2 style="font-weight: 700;">「未来を予測する最善<a id="word">の</a>方法は、それを発明することだ。」</h2>
-                <h4 id="sub" style="font-weight: 550; opacity: 60%;">
-                    „Die beste Art, die Zukunft vorherzusagen, ist, sie zu erfinden.“</h4>
-                <h4 id="sub" style="font-weight: 500; opacity: 40%;">
-                    “La meilleure façon de prédire l’avenir est de l’inventer.”</h4>
-                <h4 id="sub" style="font-weight: 400; opacity: 25%;">
-                    “The best way to predict the future is to invent it.”</h4>
-            </div>
+      <div class="horizontal-grid-social">
+        <div class="social">
+          <a href="https://www.twitch.tv/l_ae_l_o">
+            <ion-icon name="logo-twitch"></ion-icon>
+          </a>
         </div>
 
-        <div class="horizontal-grid-social">
-            <div class="social">
-                <a href="https://www.twitch.tv/l_ae_l_o">
-                    <ion-icon name="logo-twitch"></ion-icon>
-                </a>
-            </div>
-
-            <div class="social">
-                <a href="https://github.com/LaloCornejo">
-                    <ion-icon name="logo-github"></ion-icon>
-                </a>
-            </div>
-
-            <div class="social">
-                <a href="https://www.youtube.com/channel/UCPRKmKf9NkiAt1fHBlgI9Sw">
-                    <ion-icon name="logo-youtube"></ion-icon>
-                </a>
-            </div>
+        <div class="social">
+          <a href="https://github.com/LaloCornejo">
+            <ion-icon name="logo-github"></ion-icon>
+          </a>
         </div>
 
-        <div class="FrontBk">
-            <svg xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <filter id="goo">
-                  <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
-                  <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo" />
-                  <feBlend in="SourceGraphic" in2="goo" />
-                </filter>
-              </defs>
-            </svg>
-            <div class="gradients-container">
-              <div class="g1"></div>
-              <div class="g2"></div>
-              <div class="g3"></div>
-              <div class="g4"></div>
-              <div class="g5"></div>
-            </div>
-        </div>  
+        <div class="social">
+          <a href="https://www.youtube.com/channel/UCPRKmKf9NkiAt1fHBlgI9Sw">
+            <ion-icon name="logo-youtube"></ion-icon>
+          </a>
+        </div>
+      </div>
 
+      <div class="FrontBk">
+        <svg xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <filter id="goo">
+              <feGaussianBlur
+                in="SourceGraphic"
+                stdDeviation="10"
+                result="blur"
+              />
+              <feColorMatrix
+                in="blur"
+                mode="matrix"
+                values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8"
+                result="goo"
+              />
+              <feBlend in="SourceGraphic" in2="goo" />
+            </filter>
+          </defs>
+        </svg>
+        <div class="gradients-container">
+          <div class="g1"></div>
+          <div class="g2"></div>
+          <div class="g3"></div>
+          <div class="g4"></div>
+          <div class="g5"></div>
+        </div>
+      </div>
     </div>
-
 
     <div class="Login innactive-page hidden">
-        <button id="Login" class="btnLogin-popup">
-            login
-        </button>
+      <button id="Login" class="btnLogin-popup">login</button>
     </div>
     <div class="wrapper hidden">
-        <a class="icon-close">
-            <ion-icon name="arrow-back"></ion-icon>
-        </a>
-        <div class="form-box login" id="login-form">
-            <h4>// login</h4>
-            <form action="#">
-                <div class="input-box">
-                    <input type="username" name="email" id="email" required>
-                    <label>Email</label>
-                </div>
-                <div class="input-box">
-                    <input type="password" name="password" id="password" required>
-                    <label>Password</label>
-                </div>
-                <button type="submit" class="btn" id="loggin">
-                    login
-                </button>
-            </form>
-        </div>
+      <a class="icon-close">
+        <ion-icon name="arrow-back"></ion-icon>
+      </a>
+      <div class="form-box login" id="login-form">
+        <h4>// login</h4>
+        <form action="#">
+          <div class="input-box">
+            <input type="username" name="email" id="email" required />
+            <label>Email</label>
+          </div>
+          <div class="input-box">
+            <input type="password" name="password" id="password" required />
+            <label>Password</label>
+          </div>
+          <button type="submit" class="btn" id="loggin">login</button>
+        </form>
+      </div>
     </div>
 
-
     <div class="LoggedInPage logged-out">
-        <button class="btnloggout logged-out">
-            ** loggout **
-        </button>
+      <button class="btnloggout logged-out">** loggout **</button>
     </div>
 
     <div class="info">
-        <div id="version">
-            <ion-icon name="git-branch-outline"></ion-icon>
-             v1.0.1
-        </div>
+      <div id="version">
+        <ion-icon name="git-branch-outline"></ion-icon>
+        v1.0.1
+      </div>
 
-        <div
-            style="position: relative;
-            top: 1.8rem;
-            font-size: 1.3em;
-            color: var(--clr-foreground);
-            opacity: .6;
-            font-family: JetBrains Mono, JetBrains;
-            font-weight: 200;
-            padding:  0 3.5rem 0 3.5rem;"
-            id="separator-time"
-        >|</div>
+      <div
+        style="
+          position: relative;
+          top: 1.8rem;
+          font-size: 1.3em;
+          color: var(--clr-foreground);
+          opacity: 0.6;
+          font-family:
+            JetBrains Mono,
+            JetBrains;
+          font-weight: 200;
+          padding: 0 3.5rem 0 3.5rem;
+        "
+        id="separator-time"
+      >
+        |
+      </div>
 
-        <div  style="display: grid; grid-template-columns: auto auto; justify-content: center; align-items: center;" id="time">
-            <ion-icon style="padding-right: 1rem;" name="time-outline"></ion-icon>
-            <div id="current-time"></div>
-        </div>
+      <div
+        style="
+          display: grid;
+          grid-template-columns: auto auto;
+          justify-content: center;
+          align-items: center;
+        "
+        id="time"
+      >
+        <ion-icon style="padding-right: 1rem" name="time-outline"></ion-icon>
+        <div id="current-time"></div>
+      </div>
     </div>
-
 
     <!-----------------SCRIPTS----------------------->
     <script src="/js/DarkMode.js" type="module"></script>
     <script src="/js/main.js" type="module"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-</body>
-
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
 </html>
+
+<!--v1.0.1-->
