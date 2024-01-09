@@ -144,6 +144,7 @@ body {
   background: var(--clr-background);
   color: var(--clr-foreground);
   overflow: hidden;
+  transition: 0.2s;
 }
 
 h1 {
@@ -197,7 +198,7 @@ a {
   top: 0vh;
   z-index: 1;
   position: fixed;
-  transition: 0.4s;
+  transition: 1s;
 }
 
 #SubTitle {
@@ -209,13 +210,13 @@ a {
 }
 
 #Title {
-  max-width: 60vw;
+  max-width: 65vw;
   position: static;
   text-align: center;
   align-items: center;
   justify-self: center;
   line-height: 1px;
-  transition: 0.4s;
+  transition: 1s;
 }
 
 #Tdes {
@@ -229,7 +230,7 @@ a {
   color: var(--clr-foreground);
   position: fixed;
   font-family: "JetBrains Mono", "JetBrains";
-  transition: 0.4s;
+  transition: 1s;
 }
 .info {
   position: fixed;
@@ -246,7 +247,7 @@ a {
   color: var(--clr-foreground);
   font-family: "JetBrains Mono", "JetBrains";
   padding: 10px;
-  transition: 0.4s;
+  transition: 1s;
   font-weight: 500;
 }
 
@@ -267,6 +268,7 @@ a {
   /* font-size: 2rem; */
   background: none;
   border: none;
+  transition: 1s;
 }
 
 /*================= NavApps ==================*/
@@ -379,6 +381,7 @@ a {
   min-width: 3vw;
   margin: 12vw;
   cursor: wait;
+  transition: 1s;
 }
 
 /*================= Login ==================*/
