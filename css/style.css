@@ -133,7 +133,7 @@
 html {
   display: flex;
   scroll-behavior: smooth;
-  overflow: hidden;
+  overflow: auto;
 }
 
 body {
