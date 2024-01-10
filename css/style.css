@@ -279,12 +279,12 @@ a {
   z-index: 1000000001;
   position: absolute;
   height: 95vh;
-  width: 20vw;
+  max-width: 60%;
+  width: 15vw;
   min-width: fit-content;
   left: 1vw;
   top: calc((100vh - 95vh) / 2);
   border-radius: 20px;
-  display: flex;
   align-items: top;
   justify-content: center;
   background: rgb(53, 0, 106);
@@ -292,8 +292,6 @@ a {
   background: -webkit-linear-gradient(180deg, rgba(53, 0, 106, 1) 0%, rgba(0, 78, 106, 1) 100%);
   background: linear-gradient(180deg, rgba(53, 0, 106, 1) 0%, rgba(0, 78, 106, 1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#35006a", endColorstr="#004e6a", GradientType=1);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
   font-family: "JetBrains Mono", "JetBrains";
   border: 1px outset rgba(255, 255, 255, 0.6);
   display: grid;
@@ -305,6 +303,7 @@ a {
   grid-template-columns: 50% auto auto auto;
   grid-template-rows: auto;
   width: 90%;
+  min-width: 10vw;
   height: min-content;
   margin: 20px 10px 10px 5%;
 }
@@ -322,16 +321,17 @@ a {
 }
 
 .sideBar .icon:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(34, 34, 34, 0.6);
 }
 
 .sideBar .pinnedIcons {
+  position: relative;
+  width: 100%;
   margin-top: 2vh;
   top: 0;
   display: grid;
   grid-template-rows: min-content;
   grid-template-columns: auto auto auto;
-  width: 100%;
   height: min-content;
 }
 
@@ -350,11 +350,11 @@ a {
   border-radius: 10px;
   transition: 0.3s;
   color: white;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(34, 34, 34, 0.5);
 }
 
 .sideBar .pinnedIcon:hover {
-  background-color: rgba(34, 34, 34, 0.7);
+  background-color: rgba(22, 22, 22, 0.7);
 }
 
 .sideBar .searchBox {
@@ -367,7 +367,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: left;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(34, 34, 34, 0.5);
   border-radius: 8px;
   opacity: .6;
   transition: 0.4s;
@@ -1070,7 +1070,8 @@ a {
   }
 
   .sideBar {
-    width: 30vw;
+    width: 35vw;
+    min-width: max-content;
   }
 
 
@@ -1097,7 +1098,28 @@ a {
 
 @media screen and (max-width: 650px) {
   .sideBar {
-    width: 40vw;
+    width: 80vw;
+    min-width: max-content;
+  }
+  
+  @keyframes slideOutSB {
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(-90vw);
+    }
+  }
+
+  @keyframes slideInSB {
+    from {
+      transform: translateX(-90vw);
+    }
+
+    to {
+      transform: translateX(0);
+    }
   }
 }
 
