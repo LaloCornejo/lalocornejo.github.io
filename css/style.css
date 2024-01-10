@@ -279,7 +279,7 @@ a {
   z-index: 1000000001;
   position: absolute;
   height: 95vh;
-  width: 15vw;
+  width: 20vw;
   min-width: fit-content;
   left: 1vw;
   top: calc((100vh - 95vh) / 2);
@@ -720,13 +720,13 @@ a {
   }
 
   to {
-    transform: translateX(-20vw);
+    transform: translateX(-30vw);
   }
 }
 
 @keyframes slideInSB {
   from {
-    transform: translateX(-20vw);
+    transform: translateX(-30vw);
   }
 
   to {
@@ -1026,7 +1026,7 @@ a {
 }
 
 /*=================-- Mobile --==================*/
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 930px) {
   .horizontal-grid .social {
     font-size: 5vw;
   }
@@ -1070,8 +1070,9 @@ a {
   }
 
   .sideBar {
-    width: 50vw;
+    width: 30vw;
   }
+
 
   @keyframes slideOutSB {
     from {
@@ -1079,13 +1080,13 @@ a {
     }
 
     to {
-      transform: translateX(-60vw);
+      transform: translateX(-50vw);
     }
   }
 
   @keyframes slideInSB {
     from {
-      transform: translateX(-60vw);
+      transform: translateX(-50vw);
     }
 
     to {
@@ -1094,9 +1095,15 @@ a {
   }
 }
 
+@media screen and (max-width: 650px) {
+  .sideBar {
+    width: 40vw;
+  }
+}
+
 @media screen and (max-height: 500px) {
   .sideBar {
-    width: 25vw;
+    width: 50vw;
   }
 
   #Tdes {
