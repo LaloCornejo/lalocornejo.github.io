@@ -56,51 +56,38 @@
     </div>
     <!-- end loader -->
 
-    <!--================================ NAVAPPS ================================-->
-    <div class="nav">
-      <a class="menu">
-        <ion-icon id="apps" name="apps-outline"></ion-icon>
-      </a>
+    <!--================================ SideBar ================================-->
+    <div class="sideBar sideBarInnactive">
+      <div style="display: grid; grid-template-columns: 50% auto auto auto; grid-template-rows: auto; width: 90%; height: min-content; margin: 20px 10px 10px 5%;">
+        <ion-icon class="icon" name="hardware-chip-sharp"></ion-icon>
+        <ion-icon class="icon" name="arrow-back"></ion-icon>
+        <ion-icon class="icon" name="arrow-forward"></ion-icon>
+        <a href="/" alt="Home">
+          <ion-icon class="icon" name="planet-sharp"></ion-icon>
+        </a>
+      </div>
 
-      <ul class="navapps innactive-menu">
-        <li class="navapp">
-          <a href="/notion-clone/app/">
-            <div class="Hgrid-2x1">
-              <ion-icon name="accessibility-outline" id="app"></ion-icon>
-              <div class="appTitle">//xdd</div>
-            </div>
-          </a>
-        </li>
+      <div class="hgrid-1x2-SB-segT">
+        <svg height="20px" width="11vw">
+          <line x1="10%" y1="50%" x2="90%" y2="50%" style="stroke:rgba(255, 255, 255, 0.3); stroke-width:2" />
+        </svg>
+        <div class="sparat">
+          l_ae_l_o
+        </div>
+      </div>
 
-        <li class="navapp">
-          <a href="">
-            <div class="Hgrid-2x1">
-              <ion-icon name="browsers-outline" id="app"></ion-icon>
-              <div class="appTitle">//browser</div>
-            </div>
-          </a>
-        </li>
+      <div class="searchBox">
+        <ion-icon class="icon" name="search"></ion-icon>
+        Search...
+      </div>
 
-        <li class="navapp">
-          <a href="">
-            <div class="Hgrid-2x1">
-              <ion-icon name="chatbubbles-outline" id="app"></ion-icon>
-              <div class="appTitle">//chat</div>
-            </div>
-          </a>
-        </li>
-
-        <li class="navapp">
-          <a href="">
-            <div class="Hgrid-2x1">
-              <ion-icon name="cloud-upload-outline" id="app"></ion-icon>
-              <div class="appTitle">//files</div>
-            </div>
-          </a>
-        </li>
-      </ul>
-    </div>
-    <!--============================== end navapps ===================================-->
+      <div class="pinnedIcons">
+        <ion-icon class="pinnedIcon" name="code-slash-sharp"></ion-icon>
+        <ion-icon class="pinnedIcon" name="terminal"></ion-icon>
+        <ion-icon class="pinnedIcon" name="qr-code"></ion-icon>
+      </div>
+      </div>
+      <!--============================== end navapps ===================================-->
 
     <div class="Front active-page">
       <div class="grid">
@@ -202,7 +189,7 @@
     <div class="info">
       <div id="version">
         <ion-icon name="git-branch-outline"></ion-icon>
-        v1.0.1
+        v1.0.2
       </div>
 
       <div
@@ -255,4 +242,4 @@
   </body>
 </html>
 
-<!--v1.0.1-->
+<!--v1.0.2-->

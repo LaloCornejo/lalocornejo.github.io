@@ -23,10 +23,7 @@ export function isMobile() {
 
 const loader = document.querySelector(".loader");
 
-const menu = document.querySelector(".menu");
-const nav = document.querySelector(".navapps");
-let selected = false;
-const navcontainer = document.querySelector(".nav");
+const SideBar = document.querySelector(".sideBar");
 
 const front = document.querySelector(".Front");
 const word = document.querySelector("#word");
@@ -49,128 +46,22 @@ window.addEventListener("load", () => {
     });
   }, 300);
 });
-if (!isMobile()) {
-  navcontainer.addEventListener("mouseenter", (event) => {
-    try {
-      selected = true;
-      menu.classList.remove("menu-no-selected");
-      menu.classList.add("menu-selected");
-      setTimeout(() => {
-        nav.classList.add("active-menu");
-        nav.classList.remove("innactive-menu");
-        console.log("menuIn");
-      }, 75);
-    } catch (error) {
-      console.log(error);
-    }
-  });
 
-  navcontainer.addEventListener("mouseleave", () => {
-    try {
-      setTimeout(() => {
-        nav.classList.add("innactive-menu");
-        nav.classList.remove("active-menu");
-        console.log("menuOut");
-      }, 200);
-      setTimeout(() => {
-        menu.classList.remove("menu-selected");
-        menu.classList.add("menu-no-selected");
-        selected = false;
-      }, 275);
-    } catch (error) {
-      console.log(error);
-    }
-  });
-}
+// -=================== SideBar ===================-
+document.addEventListener("mousemove", setCords);
 
-// if (isMobile()) {
-// menu.addEventListener("touchstart", () => {
-// if (!selected) {
-// try {
-// menu.classList.remove("menu-no-selected");
-// menu.classList.add("menu-selected");
-// setTimeout(() => {
-// nav.classList.add("active-menu");
-// nav.classList.remove("innactive-menu");
-// console.log("menuIn");
-// selected = true;
-// }, 75);
-// } catch (error) {
-// console.log(error);
-// }
-// } else {
-// try {
-// setTimeout(() => {
-// nav.classList.add("innactive-menu");
-// nav.classList.remove("active-menu");
-// console.log("menuOut");
-// }, 200);
-// setTimeout(() => {
-// menu.classList.remove("menu-selected");
-// menu.classList.add("menu-no-selected");
-// selected = false;
-// }, 275);
-// } catch (error) {
-// console.log(error);
-// }
-// }
-// });
-//
-// window.addEventListener("touchstart", () => {
-// if (selected) {
-// try {
-// setTimeout(() => {
-// nav.classList.add("innactive-menu");
-// nav.classList.remove("active-menu");
-// console.log("menuOut");
-// }, 200);
-// setTimeout(() => {
-// menu.classList.remove("menu-selected");
-// menu.classList.add("menu-no-selected");
-// selected = false;
-// }, 275);
-// } catch (error) {
-// console.log(error);
-// }
-// }
-// });
-// }
+let selected = false;
 
-if (isMobile()) {
-  menu.addEventListener("click", async () => {
-    if (!selected) {
-      try {
-        menu.classList.remove("menu-no-selected");
-        menu.classList.add("menu-selected");
-        setTimeout(() => {
-          nav.classList.add("active-menu");
-          nav.classList.remove("innactive-menu");
-          console.log("menuIn");
-          selected = true;
-        }, 75);
-
-        // delay entries to prevent double clicks
-        await new Promise(resolve => setTimeout(resolve, 300));
-      } catch (error) {
-        console.log(error);
-      }
-    } else {
-      try {
-        setTimeout(() => {
-          nav.classList.add("innactive-menu");
-          nav.classList.remove("active-menu");
-          console.log("menuOut");
-        }, 200);
-        setTimeout(() => {
-          menu.classList.remove("menu-selected");
-          menu.classList.add("menu-no-selected");
-          selected = false;
-        }, 275);
-      } catch (error) {
-        console.log(error);
-      }
-    }
-  });
+function setCords(e) {
+  if( e.clientX < 40 & e.clientX > 0 && selected === false) {
+    SideBar.classList.remove("sideBarInnactive");
+    SideBar.classList.add("sideBarActive");
+    selected = true;
+  }else if (e.clientX > 400 && selected === true) {
+    SideBar.classList.remove("sideBarActive");
+    SideBar.classList.add("sideBarInnactive");
+    selected = false;
+  }
 }
 
 // -=================== Clock ===================-
@@ -200,6 +91,8 @@ window.addEventListener("touchstart", () => {
     }
   }
 });
+
+// -=================== Login ===================-
 
 login.addEventListener("click", () => {
   wrapper.classList.add("active-popup");
