@@ -279,9 +279,9 @@ a {
   z-index: 1000000001;
   position: absolute;
   height: 95vh;
-  max-width: 60%;
-  width: 15vw;
-  min-width: fit-content;
+  /* max-width: 60%; */
+  /* width: 15vw; */
+  width: fit-content;
   left: 1vw;
   top: calc((100vh - 95vh) / 2);
   border-radius: 20px;
@@ -295,21 +295,26 @@ a {
   font-family: "JetBrains Mono", "JetBrains";
   border: 1px outset rgba(255, 255, 255, 0.6);
   display: grid;
-  grid-template-rows: min-content min-content min-content auto calc((95vh / 5) * 3);
+  grid-template-rows: min-content min-content min-content auto;
 }
 
 .sideBar .sideBarHead {
   display: grid;
-  grid-template-columns: 50% auto auto auto;
+  width: fit-content;
+  right: 15%;
+  grid-template-columns: auto auto  auto auto;
   grid-template-rows: auto;
-  width: 90%;
   min-width: 10vw;
   height: min-content;
-  margin: 20px 10px 10px 5%;
+  margin: 20px 25px 10px 5%;
+}
+
+#separatorHead {
+  width: 150px;
 }
 
 .sideBar .icon {
-  font-size: 1.1rem;
+  font-size: 1.3em;
   padding: 7px;
   cursor: pointer;
   border-radius: 10px;
@@ -380,6 +385,7 @@ a {
 }
 
 .sparat {
+  font-family: 'JetBrains Mono', 'JetBrains';
   opacity: 1;
   margin-right: 20px;
   font-size: .7rem;
@@ -394,10 +400,10 @@ a {
 }
 
 
-.hgrid-1x2-SB-segT {
+.hgrid-1x1 {
   display: grid;
   grid-template-rows: min-content;
-  grid-template-columns: min-content min-content;
+  grid-template-columns: auto;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -436,7 +442,7 @@ a {
   max-width: 5vw;
   min-width: 3vw;
   margin: 12vw;
-  cursor: wait;
+  cursor: alias;
   transition: 1s;
 }
 
@@ -652,52 +658,21 @@ a {
 }
 
 .sideBarActive {
-  animation: slideInSB 700ms ease-in-out forwards;
+  animation: slideInSB 400ms ease-in-out forwards;
 }
 
 .sideBarInnactive {
-  animation: slideOutSB 700ms ease-in-out forwards;
-}
-
-@keyframes menuSeleacted {
-  from {
-    transform: translateY(0);
-    top: 50vh;
-    padding: 30px 12px 30px 5px;
-    border-radius: 0 25px 25px 0;
-  }
-
-  to {
-    transform: translateY(-150%);
-    top: 90vh;
-    padding: 15px 40px 15px 40px;
-    border-radius: 3px 3px 15px 15px;
-    font-size: 1.7vw;
-  }
-}
-
-@keyframes menuNoSeleacted {
-  from {
-    transform: translateY(-150%);
-    top: 90vh;
-    padding: 15px 40px 15px 40px;
-    border-radius: 3px 3px 15px 15px;
-  }
-
-  to {
-    transform: translateY(0);
-    top: 50vh;
-    padding: 30px 12px 30px 5px;
-    border-radius: 0 25px 25px 0;
-  }
+  animation: slideOutSB 450ms ease-in-out forwards;
 }
 
 @keyframes slideOut {
   from {
+    -webkit-transform: translateX(0);
     transform: translateX(0);
   }
 
   to {
+    -webkit-transform: translateX(-250%);
     transform: translateX(-250%);
     visibility: hidden;
   }
@@ -706,40 +681,48 @@ a {
 @keyframes slideIn {
   from {
     visibility: visible;
+    -webkit-transform: translateX(250%);
     transform: translateX(250%);
   }
 
   to {
+    -webkit-transform: translateX(0);
     transform: translateX(0);
   }
 }
 
 @keyframes slideOutSB {
   from {
+    -webkit-transform: translateX(0);
     transform: translateX(0);
   }
 
   to {
-    transform: translateX(-30vw);
+    -webkit-transform: translateX(-50vw);
+    transform: translateX(-50vw);
   }
 }
 
 @keyframes slideInSB {
   from {
-    transform: translateX(-30vw);
+    -webkit-transform: translateX(-50vw);
+    transform: translateX(-50vw);
   }
 
   to {
+    -webkit-transform: translateX(0);
     transform: translateX(0);
   }
 }
 
 @keyframes animate {
   from {
+    -webkit-transform: rotateX(-30deg) rotateY(0deg);
     transform: rotateX(-30deg) rotateY(0deg);
   }
 
   to {
+    -webkit-transform: rotateX(-30deg) rotateY(360deg);
     transform: rotateX(-30deg) rotateY(360deg);
   }
 }
@@ -1036,9 +1019,9 @@ a {
   }
 
   .info {
-    top: calc(100vh - 90vh);
+    top: 10vh;
     opacity: 0.5;
-    font-size: 4vw;
+    font-size: 3vw;
   }
 
   #Tdes {
@@ -1052,6 +1035,14 @@ a {
 
   #SubTitle {
     font-size: 3vw;
+  }
+
+  #separatorHead {
+    width: 100px;
+  }
+
+  .sideBar .icon {
+    font-size: 1.2em;
   }
 
   .FrontBk {
@@ -1068,64 +1059,12 @@ a {
   .btnloggout {
     font-size: 4vw;
   }
-
-  .sideBar {
-    width: 35vw;
-    min-width: max-content;
-  }
-
-
-  @keyframes slideOutSB {
-    from {
-      transform: translateX(0);
-    }
-
-    to {
-      transform: translateX(-50vw);
-    }
-  }
-
-  @keyframes slideInSB {
-    from {
-      transform: translateX(-50vw);
-    }
-
-    to {
-      transform: translateX(0);
-    }
-  }
 }
 
-@media screen and (max-width: 650px) {
+
+@media screen and (max-height: 600px) {
   .sideBar {
-    width: 80vw;
-    min-width: max-content;
-  }
-  
-  @keyframes slideOutSB {
-    from {
-      transform: translateX(0);
-    }
-
-    to {
-      transform: translateX(-90vw);
-    }
-  }
-
-  @keyframes slideInSB {
-    from {
-      transform: translateX(-90vw);
-    }
-
-    to {
-      transform: translateX(0);
-    }
-  }
-}
-
-@media screen and (max-height: 500px) {
-  .sideBar {
-    width: 50vw;
+    width: 65vw;
   }
 
   #Tdes {
