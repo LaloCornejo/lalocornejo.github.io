@@ -1,199 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>~ L Æ L Ö ~</title>
-    <meta
-      content="text/html; charset=UTF-8; X-Content-Type-Options=nosniff"
-      http-equiv="Content-Type"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="icon favicon" href="img/favi2.svg" />
-  </head>
 
-  <body>
-    <!--================================ Dark mode ================================-->
-    <div class="DarkMode">
-      <button id="theme-toggle" aria-label="Switch to dark theme">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="50"
-          height="50"
-          viewBox="0 0 100 100"
-        >
-          <g class="toggle-sun">
-            <circle class="cls-1" cx="50" cy="50" r="30" />
-            <circle class="cls-1" cx="100"></circle>
-          </g>
-          <g class="toggle-circle">
-            <circle class="cls-1" cx="99" cy="-3" r="22" />
-          </g>
-        </svg>
-      </button>
-    </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>~ L Æ L Ö ~</title>
+  <meta content="text/html; charset=UTF-8; X-Content-Type-Options=nosniff" http-equiv="Content-Type" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon favicon" href="img/favi2.svg" />
+</head>
 
-    <a href="/">
-      <img class="logoAt" id="Logo" src="img/Logo.svg" alt="Logo" />
-    </a>
+<body>
+  <!--================================ Dark mode ================================-->
+  <div class="DarkMode">
+    <button id="theme-toggle" aria-label="Switch to dark theme">
+      <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 100 100">
+        <g class="toggle-sun">
+          <circle class="cls-1" cx="50" cy="50" r="30" />
+          <circle class="cls-1" cx="100"></circle>
+        </g>
+        <g class="toggle-circle">
+          <circle class="cls-1" cx="99" cy="-3" r="22" />
+        </g>
+      </svg>
+    </button>
+  </div>
 
-    <!--============================== LOADER ===================================-->
-    <div class="loader">
-      <div class="cube">
-        <div class="top"></div>
-        <div>
-          <span style="--i: 0"></span>
-          <span style="--i: 1"></span>
-          <span style="--i: 2"></span>
-          <span style="--i: 3"></span>
-        </div>
+  <a href="/">
+    <img class="logoAt" id="Logo" src="img/Logo.svg" alt="Logo" />
+  </a>
+
+  <!--============================== LOADER ===================================-->
+  <div class="loader">
+    <div class="cube">
+      <div class="top"></div>
+      <div>
+        <span style="--i: 0"></span>
+        <span style="--i: 1"></span>
+        <span style="--i: 2"></span>
+        <span style="--i: 3"></span>
       </div>
     </div>
-    <!-- end loader -->
+  </div>
+  <!-- end loader -->
 
-    <!--================================ SideBar ================================-->
-    <div class="sideBar sideBarInnactive">
-      <div style="display: grid; grid-template-columns: 50% auto auto auto; grid-template-rows: auto; width: 90%; height: min-content; margin: 20px 10px 10px 5%;">
-        <ion-icon class="icon" name="hardware-chip-sharp"></ion-icon>
-        <ion-icon class="icon" name="arrow-back"></ion-icon>
-        <ion-icon class="icon" name="arrow-forward"></ion-icon>
-        <a href="/" alt="Home">
-          <ion-icon class="icon" name="planet-sharp"></ion-icon>
+  <!--================================ SideBar ================================-->
+  <div class="sideBar sideBarInnactive">
+    <div
+      style="display: grid; grid-template-columns: 50% auto auto auto; grid-template-rows: auto; width: 90%; height: min-content; margin: 20px 10px 10px 5%;">
+      <ion-icon class="icon" name="hardware-chip-sharp"></ion-icon>
+      <ion-icon class="icon" name="arrow-back"></ion-icon>
+      <ion-icon class="icon" name="arrow-forward"></ion-icon>
+      <a href="/" alt="Home">
+        <ion-icon class="icon" name="planet-sharp"></ion-icon>
+      </a>
+    </div>
+
+    <div class="hgrid-1x2-SB-segT">
+      <svg height="20px" width="11vw">
+        <line x1="10%" y1="50%" x2="90%" y2="50%" style="stroke:rgba(255, 255, 255, 0.3); stroke-width:2" />
+      </svg>
+      <div class="sparat">
+        l_ae_l_o
+      </div>
+    </div>
+
+    <div class="searchBox">
+      <ion-icon class="icon" name="search"></ion-icon>
+      Search...
+    </div>
+
+    <div class="pinnedIcons">
+      <ion-icon class="pinnedIcon" name="code-slash-sharp"></ion-icon>
+      <ion-icon class="pinnedIcon" name="terminal"></ion-icon>
+      <ion-icon class="pinnedIcon" name="qr-code"></ion-icon>
+    </div>
+  </div>
+  <!--============================== end navapps ===================================-->
+
+  <div class="Front active-page">
+    <div class="grid">
+      <h4 id="SubTitle">// Title</h4>
+      <h1 id="Title">LÆLÖ</h1>
+      <div id="Tdes">
+        <h2 style="font-weight: 700">
+          「未来を予測する最善<a id="word">の</a>方法は、それを発明することだ。」
+        </h2>
+        <h4 id="sub" style="font-weight: 550; opacity: 60%">
+          „Die beste Art, die Zukunft vorherzusagen, ist, sie zu erfinden.“
+        </h4>
+        <h4 id="sub" style="font-weight: 500; opacity: 40%">
+          “La meilleure façon de prédire l’avenir est de l’inventer.”
+        </h4>
+        <h4 id="sub" style="font-weight: 400; opacity: 25%">
+          “The best way to predict the future is to invent it.”
+        </h4>
+      </div>
+    </div>
+
+    <div class="horizontal-grid-social">
+      <div class="social">
+        <a href="https://www.twitch.tv/l_ae_l_o">
+          <ion-icon name="logo-twitch"></ion-icon>
         </a>
       </div>
 
-      <div class="hgrid-1x2-SB-segT">
-        <svg height="20px" width="11vw">
-          <line x1="10%" y1="50%" x2="90%" y2="50%" style="stroke:rgba(255, 255, 255, 0.3); stroke-width:2" />
-        </svg>
-        <div class="sparat">
-          l_ae_l_o
-        </div>
+      <div class="social">
+        <a href="https://github.com/LaloCornejo">
+          <ion-icon name="logo-github"></ion-icon>
+        </a>
       </div>
 
-      <div class="searchBox">
-        <ion-icon class="icon" name="search"></ion-icon>
-        Search...
-      </div>
-
-      <div class="pinnedIcons">
-        <ion-icon class="pinnedIcon" name="code-slash-sharp"></ion-icon>
-        <ion-icon class="pinnedIcon" name="terminal"></ion-icon>
-        <ion-icon class="pinnedIcon" name="qr-code"></ion-icon>
-      </div>
-      </div>
-      <!--============================== end navapps ===================================-->
-
-    <div class="Front active-page">
-      <div class="grid">
-        <h4 id="SubTitle">// Title</h4>
-        <h1 id="Title">LÆLÖ</h1>
-        <div id="Tdes">
-          <h2 style="font-weight: 700">
-            「未来を予測する最善<a id="word">の</a
-            >方法は、それを発明することだ。」
-          </h2>
-          <h4 id="sub" style="font-weight: 550; opacity: 60%">
-            „Die beste Art, die Zukunft vorherzusagen, ist, sie zu erfinden.“
-          </h4>
-          <h4 id="sub" style="font-weight: 500; opacity: 40%">
-            “La meilleure façon de prédire l’avenir est de l’inventer.”
-          </h4>
-          <h4 id="sub" style="font-weight: 400; opacity: 25%">
-            “The best way to predict the future is to invent it.”
-          </h4>
-        </div>
-      </div>
-
-      <div class="horizontal-grid-social">
-        <div class="social">
-          <a href="https://www.twitch.tv/l_ae_l_o">
-            <ion-icon name="logo-twitch"></ion-icon>
-          </a>
-        </div>
-
-        <div class="social">
-          <a href="https://github.com/LaloCornejo">
-            <ion-icon name="logo-github"></ion-icon>
-          </a>
-        </div>
-
-        <div class="social">
-          <a href="https://www.youtube.com/channel/UCPRKmKf9NkiAt1fHBlgI9Sw">
-            <ion-icon name="logo-youtube"></ion-icon>
-          </a>
-        </div>
-      </div>
-
-      <div class="FrontBk">
-        <svg xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <filter id="goo">
-              <feGaussianBlur
-                in="SourceGraphic"
-                stdDeviation="10"
-                result="blur"
-              />
-              <feColorMatrix
-                in="blur"
-                mode="matrix"
-                values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8"
-                result="goo"
-              />
-              <feBlend in="SourceGraphic" in2="goo" />
-            </filter>
-          </defs>
-        </svg>
-        <div class="gradients-container">
-          <div class="g1"></div>
-          <div class="g2"></div>
-          <div class="g3"></div>
-          <div class="g4"></div>
-          <div class="g5"></div>
-        </div>
+      <div class="social">
+        <a href="https://www.youtube.com/channel/UCPRKmKf9NkiAt1fHBlgI9Sw">
+          <ion-icon name="logo-youtube"></ion-icon>
+        </a>
       </div>
     </div>
 
-    <div class="Login innactive-page hidden">
-      <button id="Login" class="btnLogin-popup">login</button>
-    </div>
-    <div class="wrapper hidden">
-      <a class="icon-close">
-        <ion-icon name="arrow-back"></ion-icon>
-      </a>
-      <div class="form-box login" id="login-form">
-        <h4>// login</h4>
-        <form action="#">
-          <div class="input-box">
-            <input type="username" name="email" id="email" required />
-            <label>Email</label>
-          </div>
-          <div class="input-box">
-            <input type="password" name="password" id="password" required />
-            <label>Password</label>
-          </div>
-          <button type="submit" class="btn" id="loggin">login</button>
-        </form>
+    <div class="FrontBk">
+      <svg xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <filter id="goo">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo" />
+            <feBlend in="SourceGraphic" in2="goo" />
+          </filter>
+        </defs>
+      </svg>
+      <div class="gradients-container">
+        <div class="g1"></div>
+        <div class="g2"></div>
+        <div class="g3"></div>
+        <div class="g4"></div>
+        <div class="g5"></div>
       </div>
     </div>
+  </div>
 
-    <div class="LoggedInPage logged-out">
-      <button class="btnloggout logged-out">** loggout **</button>
+  <div class="Login innactive-page hidden">
+    <button id="Login" class="btnLogin-popup">login</button>
+  </div>
+  <div class="wrapper hidden">
+    <a class="icon-close">
+      <ion-icon name="arrow-back"></ion-icon>
+    </a>
+    <div class="form-box login" id="login-form">
+      <h4>// login</h4>
+      <form action="#">
+        <div class="input-box">
+          <input type="username" name="email" id="email" required />
+          <label>Email</label>
+        </div>
+        <div class="input-box">
+          <input type="password" name="password" id="password" required />
+          <label>Password</label>
+        </div>
+        <button type="submit" class="btn" id="loggin">login</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="LoggedInPage logged-out">
+    <button class="btnloggout logged-out">** loggout **</button>
+  </div>
+
+  <div class="info">
+    <div id="version">
+      <ion-icon name="git-branch-outline"></ion-icon>
+      v1.0.2
     </div>
 
-    <div class="info">
-      <div id="version">
-        <ion-icon name="git-branch-outline"></ion-icon>
-        v1.0.2
-      </div>
-
-      <div
-        style="
+    <div style="
           position: relative;
           top: 1.8rem;
           font-size: 1.3em;
@@ -204,42 +183,29 @@
             JetBrains;
           font-weight: 200;
           padding: 0 3.5rem 0 3.5rem;
-        "
-        id="separator-time"
-      >
-        |
-      </div>
+        " id="separator-time">
+      |
+    </div>
 
-      <div
-        style="
+    <div style="
           display: grid;
           grid-template-columns: auto auto;
           justify-content: center;
           align-items: center;
-        "
-        id="time"
-      >
-        <ion-icon style="padding-right: 1rem" name="time-outline"></ion-icon>
-        <div id="current-time"></div>
-      </div>
+        " id="time">
+      <ion-icon style="padding-right: 1rem" name="time-outline"></ion-icon>
+      <div id="current-time"></div>
     </div>
+  </div>
 
-    <!-----------------SCRIPTS----------------------->
-    <script src="/js/DarkMode.js" type="module"></script>
-    <script src="/js/main.js" type="module"></script>
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/toastify-js"
-    ></script>
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
-  </body>
+  <!-----------------SCRIPTS----------------------->
+  <script src="/js/DarkMode.js" type="module"></script>
+  <script src="/js/main.js" type="module"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
 </html>
 
 <!--v1.0.2-->

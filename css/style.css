@@ -41,6 +41,7 @@
     --clr-background: hsl(281, 35%, 9%);
   }
 }
+
 .DarkMode {
   z-index: 1000000000;
 }
@@ -232,6 +233,7 @@ a {
   font-family: "JetBrains Mono", "JetBrains";
   transition: 1s;
 }
+
 .info {
   position: fixed;
   z-index: -1;
@@ -284,11 +286,11 @@ a {
   display: flex;
   align-items: top;
   justify-content: center;
-  background: rgb(53,0,106);
-  background: -moz-linear-gradient(180deg, rgba(53,0,106,1) 0%, rgba(0,78,106,1) 100%);
-  background: -webkit-linear-gradient(180deg, rgba(53,0,106,1) 0%, rgba(0,78,106,1) 100%);
-  background: linear-gradient(180deg, rgba(53,0,106,1) 0%, rgba(0,78,106,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#35006a",endColorstr="#004e6a",GradientType=1);
+  background: rgb(53, 0, 106);
+  background: -moz-linear-gradient(180deg, rgba(53, 0, 106, 1) 0%, rgba(0, 78, 106, 1) 100%);
+  background: -webkit-linear-gradient(180deg, rgba(53, 0, 106, 1) 0%, rgba(0, 78, 106, 1) 100%);
+  background: linear-gradient(180deg, rgba(53, 0, 106, 1) 0%, rgba(0, 78, 106, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#35006a", endColorstr="#004e6a", GradientType=1);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   font-family: "JetBrains Mono", "JetBrains";
@@ -370,9 +372,9 @@ a {
 .sparat {
   opacity: 1;
   margin-right: 20px;
-  font-size: .7rem; 
-  height: min-content; 
-  color: white; 
+  font-size: .7rem;
+  height: min-content;
+  color: white;
   opacity: 0.3;
   transition: 0.4s;
 }
@@ -392,6 +394,7 @@ a {
   width: 100%;
   height: min-content;
 }
+
 /*================= Grid ==================*/
 .grid {
   display: grid;
@@ -533,8 +536,8 @@ a {
   transition: 0.3s;
 }
 
-.input-box input:focus ~ label,
-.input-box input:valid ~ label {
+.input-box input:focus~label,
+.input-box input:valid~label {
   top: 5px;
 }
 
@@ -914,12 +917,9 @@ a {
   .g1 {
     z-index: -1;
     position: absolute;
-    background: radial-gradient(
-        circle at center,
+    background: radial-gradient(circle at center,
         rgba(var(--color1), 0.8) 0,
-        rgba(var(--color1), 0) 50%
-      )
-      no-repeat;
+        rgba(var(--color1), 0) 50%) no-repeat;
     mix-blend-mode: var(--blending);
 
     width: var(--circle-size);
@@ -937,12 +937,9 @@ a {
   .g2 {
     z-index: -1;
     position: absolute;
-    background: radial-gradient(
-        circle at center,
+    background: radial-gradient(circle at center,
         rgba(var(--color2), 0.8) 0,
-        rgba(var(--color2), 0) 50%
-      )
-      no-repeat;
+        rgba(var(--color2), 0) 50%) no-repeat;
     mix-blend-mode: var(--blending);
 
     width: var(--circle-size);
@@ -960,12 +957,9 @@ a {
   .g3 {
     z-index: -1;
     position: absolute;
-    background: radial-gradient(
-        circle at center,
+    background: radial-gradient(circle at center,
         rgba(var(--color3), 0.8) 0,
-        rgba(var(--color3), 0) 50%
-      )
-      no-repeat;
+        rgba(var(--color3), 0) 50%) no-repeat;
     mix-blend-mode: var(--blending);
 
     width: var(--circle-size);
@@ -983,12 +977,9 @@ a {
   .g4 {
     z-index: -1;
     position: absolute;
-    background: radial-gradient(
-        circle at center,
+    background: radial-gradient(circle at center,
         rgba(var(--color4), 0.8) 0,
-        rgba(var(--color4), 0) 50%
-      )
-      no-repeat;
+        rgba(var(--color4), 0) 50%) no-repeat;
     mix-blend-mode: var(--blending);
 
     width: var(--circle-size);
@@ -1006,12 +997,9 @@ a {
   .g5 {
     z-index: -1;
     position: absolute;
-    background: radial-gradient(
-        circle at center,
+    background: radial-gradient(circle at center,
         rgba(var(--color5), 0.8) 0,
-        rgba(var(--color5), 0) 50%
-      )
-      no-repeat;
+        rgba(var(--color5), 0) 50%) no-repeat;
     mix-blend-mode: var(--blending);
 
     width: calc(var(--circle-size) * 2);
