@@ -53,14 +53,26 @@ document.addEventListener("mousemove", setCords);
 let selected = false;
 
 function setCords(e) {
-  if( e.clientX < 40 & e.clientX > 0 && selected === false) {
-    SideBar.classList.remove("sideBarInnactive");
-    SideBar.classList.add("sideBarActive");
-    selected = true;
-  }else if (e.clientX > 400 && selected === true) {
-    SideBar.classList.remove("sideBarActive");
-    SideBar.classList.add("sideBarInnactive");
-    selected = false;
+  if(!isMobile) {
+    if( e.clientX < 40 & e.clientX > 0 && selected === false) {
+      SideBar.classList.remove("sideBarInnactive");
+      SideBar.classList.add("sideBarActive");
+      selected = true;
+    }else if (e.clientX > 400 && selected === true) {
+      SideBar.classList.remove("sideBarActive");
+      SideBar.classList.add("sideBarInnactive");
+      selected = false;
+    }
+  }else {
+    if( e.clientX < 40 & e.clientX > 0 && selected === false) {
+      SideBar.classList.remove("sideBarInnactive");
+      SideBar.classList.add("sideBarActive");
+      selected = true;
+  }else if (e.clientX > 300 && selected === true) {
+      SideBar.classList.remove("sideBarActive");
+      SideBar.classList.add("sideBarInnactive");
+      selected = false;
+    }
   }
 }
 
@@ -72,25 +84,6 @@ setInterval(() => {
   let d = new Date();
   time.innerHTML = d.toLocaleTimeString( "en-US", { hour: 'numeric', minute: 'numeric', hour12: true });
 })
-
-window.addEventListener("touchstart", () => {
-  if (front.classList.contains("active-page") && selected) {
-    try {
-      setTimeout(() => {
-        nav.classList.add("innactive-menu");
-        nav.classList.remove("active-menu");
-        console.log("menuOut");
-      }, 200);
-      setTimeout(() => {
-        menu.classList.remove("menu-selected");
-        menu.classList.add("menu-no-selected");
-        selected = false;
-      }, 275);
-    } catch (error) {
-      console.log(error);
-    }
-  }
-});
 
 // -=================== Login ===================-
 

@@ -134,7 +134,8 @@
 html {
   display: flex;
   scroll-behavior: smooth;
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 body {
@@ -297,6 +298,15 @@ a {
   border: 1px outset rgba(255, 255, 255, 0.6);
   display: grid;
   grid-template-rows: min-content min-content min-content auto calc((95vh / 5) * 3);
+}
+
+.sideBar .sideBarHead {
+  display: grid;
+  grid-template-columns: 50% auto auto auto;
+  grid-template-rows: auto;
+  width: 90%;
+  height: min-content;
+  margin: 20px 10px 10px 5%;
 }
 
 .sideBar .icon {
@@ -738,7 +748,7 @@ a {
 
 .loader {
   position: fixed;
-  z-index: 1000;
+  z-index: 10000000099;
   top: 0;
   left: 0;
   width: 100vw;
@@ -1059,4 +1069,57 @@ a {
     font-size: 4vw;
   }
 
+  .sideBar {
+    width: 50vw;
+  }
+
+  @keyframes slideOutSB {
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(-60vw);
+    }
+  }
+
+  @keyframes slideInSB {
+    from {
+      transform: translateX(-60vw);
+    }
+
+    to {
+      transform: translateX(0);
+    }
+  }
+}
+
+@media screen and (max-height: 500px) {
+  .sideBar {
+    width: 25vw;
+  }
+
+  #Tdes {
+    visibility: hidden;
+  }
+
+  @keyframes slideOutSB {
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(-30vw);
+    }
+  }
+
+  @keyframes slideInSB {
+    from {
+      transform: translateX(-30vw);
+    }
+
+    to {
+      transform: translateX(0);
+    }
+  }
 }
