@@ -56,7 +56,7 @@ function setCords(e) {
       SideBar.classList.remove("sideBarInnactive");
       SideBar.classList.add("sideBarActive");
       selected = true;
-    }else if ( e.clientX > 500  && selected === true) {
+    }else if ( e.clientX > 500 && selected === true) {
       SideBar.classList.remove("sideBarActive");
       SideBar.classList.add("sideBarInnactive");
       selected = false;

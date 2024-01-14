@@ -156,17 +156,17 @@ h1 {
 
 h2 {
   font-size: 2vw;
-  font-family: "JetBrains Mono", "JetBrains";
+  font-family: Hack , sans-serif, 'JetBrains Mono', 'JetBrains';
 }
 
 h4 {
   font-size: 1.2vw;
-  font-family: "JetBrains Mono", "JetBrains";
+  font-family: Hack , sans-serif, 'JetBrains Mono', 'JetBrains';
 }
 
 h5 {
   font-size: rem;
-  font-family: "JetBrains Mono", "JetBrains";
+  font-family: Hack , sans-serif, 'JetBrains Mono', 'JetBrains';
 }
 
 a {
@@ -206,7 +206,7 @@ a {
 #SubTitle {
   color: rgb(218, 1, 218);
   font-weight: 700;
-  font-family: "JetBrains Mono", "JetBrains";
+  font-family: Hack , sans-serif, 'JetBrains Mono', 'JetBrains';
   position: static;
   max-width: 60vw;
 }
@@ -231,7 +231,7 @@ a {
   line-height: 10px;
   color: var(--clr-foreground);
   position: fixed;
-  font-family: "JetBrains Mono", "JetBrains";
+  font-family: Hack , sans-serif, 'JetBrains Mono', 'JetBrains';
   transition: 1s;
 }
 
@@ -248,7 +248,7 @@ a {
   z-index: 1000000000;
   font-size: 1.6em;
   color: var(--clr-foreground);
-  font-family: "JetBrains Mono", "JetBrains";
+  font-family: Hack , sans-serif, 'JetBrains Mono', 'JetBrains';
   padding: 10px;
   transition: 1s;
   font-weight: 500;
@@ -267,7 +267,7 @@ a {
 }
 
 #word {
-  font-family: "JetBrains Mono", "JetBrains";
+  font-family: Hack , sans-serif, 'JetBrains Mono', 'JetBrains';
   /* font-size: 2rem; */
   background: none;
   border: none;
@@ -284,7 +284,7 @@ a {
   width: fit-content;
   left: 1vw;
   top: calc((100vh - 95vh) / 2);
-  border-radius: 20px;
+  border-radius: 10px;
   align-items: top;
   justify-content: center;
   background: rgb(53, 0, 106);
@@ -292,8 +292,8 @@ a {
   background: -webkit-linear-gradient(180deg, rgba(53, 0, 106, 1) 0%, rgba(0, 78, 106, 1) 100%);
   background: linear-gradient(180deg, rgba(53, 0, 106, 1) 0%, rgba(0, 78, 106, 1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#35006a", endColorstr="#004e6a", GradientType=1);
-  font-family: "JetBrains Mono", "JetBrains";
-  border: 1px outset rgba(255, 255, 255, 0.6);
+  font-family: Hack , sans-serif, 'JetBrains Mono', 'JetBrains';
+  border: .3px solid rgba(255, 255, 255, 0.3);
   display: grid;
   grid-template-rows: min-content min-content min-content auto;
 }
@@ -331,7 +331,8 @@ a {
 
 .sideBar .pinnedIcons {
   position: relative;
-  width: 100%;
+  justify-self: center;
+  width: 90%;
   margin-top: 2vh;
   top: 0;
   display: grid;
@@ -355,39 +356,39 @@ a {
   border-radius: 10px;
   transition: 0.3s;
   color: white;
-  background-color: rgba(34, 34, 34, 0.5);
+  background-color: rgba(34, 34, 34, 0.3);
 }
 
 .sideBar .pinnedIcon:hover {
-  background-color: rgba(22, 22, 22, 0.7);
+  background-color: rgba(22, 22, 22, 0.8);
 }
 
 .sideBar .searchBox {
   position: relative;
   font-size: .8rem;
   margin: auto;
-  width: 95%;
+  width: 85%;
   height: 4vh;
   padding: 0;
   display: flex;
   align-items: center;
-  justify-content: left;
-  background-color: rgba(34, 34, 34, 0.5);
+  color: rgba(255, 255, 255, 0.753);
+  background-color: rgba(34, 34, 34, 0.3);
   border-radius: 8px;
-  opacity: .6;
   transition: 0.4s;
 }
 
 .sideBar .searchBox:hover {
-  background-color: rgba(34, 34, 34, 0.7);
+  background-color: rgba(34, 34, 34, 0.8);
+}
 
-  opacity: 1;
+.sideBar .searchBox .icon {
+  margin-left: 10px;
 }
 
 .sparat {
-  font-family: 'JetBrains Mono', 'JetBrains';
-  opacity: 1;
-  margin-right: 20px;
+  font-family: Hack , sans, 'JetBrains Mono', 'JetBrains';
+  margin-bottom: 10px;
   font-size: .7rem;
   height: min-content;
   color: white;
@@ -468,7 +469,7 @@ a {
   cursor: pointer;
   font-size: 3.5vw;
   color: #ae00ff;
-  font-family: "JetBrains Mono", "JetBrains";
+  font-family: Hack , sans-serif, 'JetBrains Mono', 'JetBrains';
   font-weight: 700;
   transition: 0.4s;
 }
@@ -548,7 +549,7 @@ a {
   font-weight: 500;
   pointer-events: none;
   color: var(--clr-foreground);
-  font-family: "JetBrains Mono", "JetBrains";
+  font-family: Hack , sans-serif, 'JetBrains Mono', 'JetBrains';
   transition: 0.3s;
 }
 
@@ -566,7 +567,7 @@ a {
   font-size: 1rem;
   font-weight: 500;
   color: var(--clr-foreground);
-  font-family: "JetBrains Mono", "JetBrains";
+  font-family: Hack , sans-serif, 'JetBrains Mono', 'JetBrains';
 }
 
 .input-box input:focus {
@@ -599,7 +600,7 @@ a {
 }
 
 #loggin {
-  font-family: "JetBrains Mono", "JetBrains";
+  font-family: Hack , sans-serif, 'JetBrains Mono', 'JetBrains';
   font-size: 1.5rem;
   color: white;
 }
@@ -636,7 +637,7 @@ a {
   justify-content: center;
   align-items: center;
   z-index: 1;
-  font-family: "JetBrains Mono", "JetBrains";
+  font-family: Hack , sans-serif, 'JetBrains Mono', 'JetBrains';
 }
 
 .btnloggout:hover {
@@ -698,15 +699,15 @@ a {
   }
 
   to {
-    -webkit-transform: translateX(-50vw);
-    transform: translateX(-50vw);
+    -webkit-transform: translateX(-60vw);
+    transform: translateX(-60vw);
   }
 }
 
 @keyframes slideInSB {
   from {
-    -webkit-transform: translateX(-50vw);
-    transform: translateX(-50vw);
+    -webkit-transform: translateX(-60vw);
+    transform: translateX(-60vw);
   }
 
   to {
