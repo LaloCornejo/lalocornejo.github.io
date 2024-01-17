@@ -287,14 +287,15 @@ a {
   border-radius: 10px;
   align-items: top;
   justify-content: center;
-  background: rgb(198,0,196);
-  background: -moz-linear-gradient(180deg, rgba(198,0,196,1) 20%, rgba(150,0,255,1) 100%);
-  background: -webkit-linear-gradient(180deg, rgba(198,0,196,1) 20%, rgba(150,0,255,1) 100%);
-  background: linear-gradient(180deg, rgba(198,0,196,1) 20%, rgba(150,0,255,1) 100%);
+  background: rgba(198,0,196, .5);
+  background: -moz-linear-gradient(180deg, rgba(198,0,196,.5) 20%, rgba(150,0,255,.5) 100%);
+  background: -webkit-linear-gradient(180deg, rgba(198,0,196,.5) 20%, rgba(150,0,255,.5) 100%);
+  background: linear-gradient(180deg, rgba(198,0,196,.5) 20%, rgba(150,0,255,.5) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c600c4",endColorstr="#9600ff",GradientType=1);   font-family:  'Hack', 'JetBrains Mono', 'JetBrains', sans-serif;
   border: 1px solid rgba(255, 255, 255, 0.1);
   display: grid;
   grid-template-rows: min-content min-content min-content auto;
+  backdrop-filter: blur(20px);
 }
 
 .sideBar .sideBarHead {
@@ -1061,6 +1062,26 @@ a {
   .btnloggout {
     font-size: 4vw;
   }
+
+  @keyframes slideOutSB {
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(-90vw);
+    }
+  }
+
+  @keyframes slideInSB {
+    from {
+      transform: translateX(-90vw);
+    }
+
+    to {
+      transform: translateX(0);
+    }
+  }
 }
 
 
@@ -1079,13 +1100,13 @@ a {
     }
 
     to {
-      transform: translateX(-30vw);
+      transform: translateX(-70vw);
     }
   }
 
   @keyframes slideInSB {
     from {
-      transform: translateX(-30vw);
+      transform: translateX(-70vw);
     }
 
     to {

@@ -120,3 +120,11 @@ auth.onAuthStateChanged(async (user) => {
     loggedInPage.classList.remove("logged-out");
   }
 });
+
+// -=================== Compiler ===================-
+
+const compiler = require('./compiler');
+const input = '(add 2 ( sub 4 3 ) )';
+const output = compiler(input);
+console.llog( output );
+console.log(JSON.stringify( output, null, 2 ));

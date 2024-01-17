@@ -1,0 +1,2 @@
+
+const output = compiler( input );
