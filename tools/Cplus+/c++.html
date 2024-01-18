@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>~ L Æ L Ö ~</title>
+  <meta content="text/html; charset=UTF-8; X-Content-Type-Options=nosniff" http-equiv="Content-Type" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
+  <link rel="stylesheet" href="/css/global.css" />
+  <link rel="stylesheet" href="/css/compiler.css" />
+  <link rel="icon favicon" href="../img/favi2.svg" />
+</head>
+
+<body>
+  <!--================================ Dark mode ================================-->
+  <div class="DarkMode">
+    <button id="theme-toggle" aria-label="Switch to dark theme">
+      <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 100 100">
+        <g class="toggle-sun">
+          <circle class="cls-1" cx="50" cy="50" r="30" />
+          <circle class="cls-1" cx="100"></circle>
+        </g>
+        <g class="toggle-circle">
+          <circle class="cls-1" cx="99" cy="-3" r="22" />
+        </g>
+      </svg>
+    </button>
+  </div>
+
+  <a href="/home">
+    <img class="logoAt" id="Logo" src="/img/Logo.svg" alt="Logo" />
+  </a>
+
+  <!--============================== LOADER ===================================-->
+  <div class="loader">
+    <div class="cube">
+      <div class="top"></div>
+      <div>
+        <span style="--i: 0"></span>
+        <span style="--i: 1"></span>
+        <span style="--i: 2"></span>
+        <span style="--i: 3"></span>
+      </div>
+    </div>
+  </div>
+  <!-- end loader -->
+
+  <!--================================ SideBar ================================-->
+  <div class="sideBar sideBarInnactive">
+    <div class="sideBarHead">
+      <ion-icon class="icon" style="font-size: 1.5em;" name="hardware-chip-sharp"></ion-icon>
+      <span id="separatorHead"></span>
+      <ion-icon class="icon" name="arrow-back"></ion-icon>
+      <a href="../" alt="Home">
+        <ion-icon class="icon" name="planet-sharp"></ion-icon>
+      </a>
+    </div>
+
+    <div class="hgrid-1x1">
+      <div class="sparat">
+        l_ae_l_o
+      </div>
+    </div>
+
+    <div class="searchBox">
+      <ion-icon class="icon" name="search"></ion-icon>
+      Search...
+    </div>
+
+    <div class="pinnedIcons">
+      <ion-icon class="pinnedIcon" name="code-slash-sharp"></ion-icon>
+      <ion-icon class="pinnedIcon" name="terminal"></ion-icon>
+      <ion-icon class="pinnedIcon" name="qr-code"></ion-icon>
+    </div>
+  </div>
+
+  <!--================================ Main ================================-->
+  <div class="Compiler">
+    <div class="Title">
+      Cplus.plus
+      <img src="/img/cpp_logo.svg" alt="C++ Logo" />
+    </div>
+    
+    <div class="CodeArea">
+      <textarea id="code" rows="50" cols="60" draggable="false">
+#include<iostream>
+using namespace std;
+int main() {
+  
+}
+        </textarea>
+      </div>
+      
+      <!-- <button onclick="compile()">Compile and Run</button> -->
+      <div class="RunComment">
+        <p id="windows">
+          <ion-icon name="flash-outline"></ion-icon>ctrl + enter
+        </p>
+        <p id="macos">
+          <ion-icon name="flash-outline"></ion-icon>⌘ + enter
+        </p>
+      </div>
+      
+      <p id="output"></p>
+    </div>
+
+  <script src="/js/main.js" type="module"></script>
+  <script src="/js/compiler.js" type="module"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
