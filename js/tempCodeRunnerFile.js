@@ -1,2 +1,0 @@
-
-const output = compiler( input );
