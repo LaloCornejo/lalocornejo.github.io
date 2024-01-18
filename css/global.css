@@ -542,3 +542,29 @@ a {
     transform: rotateX(-30deg) rotateY(360deg);
   }
 }
+
+@media screen and (max-width: 500px) {
+  /* .sideBar {
+    display: none;
+  } */
+
+  @keyframes slideOutSB {
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(-120vw);
+    }
+  }
+
+  @keyframes slideInSB {
+    from {
+      transform: translateX(-120vw);
+    }
+
+    to {
+      transform: translateX(0);
+    }
+  }
+}

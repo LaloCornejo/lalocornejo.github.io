@@ -366,11 +366,11 @@ html, body {
 
 .blob {
   z-index: -1;
-  height: 80vh;
-  width: 80vh;
+  height: 100vh;
+  width: 100vh;
   position: absolute;
-  filter: blur(60px);
-  -webkit-filter: blur(60px);
+  filter: blur(40px);
+  -webkit-filter: blur(40px);
   overflow: hidden;
 }
 /*
@@ -536,10 +536,10 @@ html, body {
   }
 
   .blob {
-    height: 60vw;
-    width: 60vw;
-    filter: blur(30px);
-    -webkit-filter: blur(30px);
+    height: 100vw;
+    width: 100vw;
+    filter: blur(20px), brightness(2), contrast(1.2);
+    -webkit-filter: blur(20px), brightness(2), contrast(1.2);
   }
 
   .wrapper {
@@ -548,26 +548,6 @@ html, body {
 
   .btnloggout {
     font-size: 4vw;
-  }
-
-  @keyframes slideOutSB {
-    from {
-      transform: translateX(0);
-    }
-
-    to {
-      transform: translateX(-90vw);
-    }
-  }
-
-  @keyframes slideInSB {
-    from {
-      transform: translateX(-90vw);
-    }
-
-    to {
-      transform: translateX(0);
-    }
   }
 }
 
