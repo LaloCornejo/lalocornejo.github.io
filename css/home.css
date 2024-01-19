@@ -538,8 +538,8 @@ html, body {
   .blob {
     height: 100vw;
     width: 100vw;
-    filter: blur(20px), brightness(2), contrast(1.2);
-    -webkit-filter: blur(20px), brightness(2), contrast(1.2);
+    filter: blur(20px), saturate(4);
+    -webkit-filter: blur(20px), saturate(4);
   }
 
   .wrapper {
