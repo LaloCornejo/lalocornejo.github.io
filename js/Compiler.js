@@ -2,6 +2,7 @@
  | C | O | M | P | I | L | E | R |   | S | C | R | I | P | T | S | 
  +---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+*/
 
+
 function compile() {
   var code = document.getElementById("code").value;
   var data = {

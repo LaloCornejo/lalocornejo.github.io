@@ -100,16 +100,45 @@ body {
   caret-color: turquoise;
 }
 
+.RunComment {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  right: 3%;
+  top: 15%;
+  height: min-content;
+  width: 15%;
+  border-radius: 15px;
+  box-shadow: 0 0 10px .5px rgb(64, 0, 255);
+}
+
+#windows,
 #macos {
   position: relative;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  justify-items: center;
+  justify-content: space-evenly;
   align-items: center;
   align-content: center;
-  border-radius: 15px;
-  background-color: rgb(11, 0, 26);
-  padding: 5px;
-  border-radius: 7px;
+  height: 100%;
+  width: 100%;
+  color: rgba(255, 255, 255, .6);
+  transition: all .25s ease-in-out;
+}
+
+#windows:hover,
+#macos:hover {
+  color: rgba(255, 255, 255, 1);
+}
+
+.RunComment ion-icon {
+  position: relative;
+  font-size: calc(.5em + 1vw);
+}
+
+.RunComment p {
+  position: relative;
+  font-size: calc(.4em + .3vw);
+  padding: 2%;
 }

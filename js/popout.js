@@ -34,13 +34,11 @@ social.forEach((item) => {
     const originX = event.clientX;
     const originY = event.clientY;
 
-    popOutContent.style.transform = `translate(calc(${originX}px - 50%), calc(${originY}px))`;
-    button.style.transform = `translate(calc(${originX}px - 50%), calc(${originY}px - 50%))`; // Added semicolon at the end
     popOut.classList.add("active");
 
     setTimeout(() => {
-      popOutContent.style.transform = "scale(1) translate(0, 0)";
-      button.style.transform = "scale(1) translate(0, 0)";
+      popOutContent.style.transform = "scale(1)";
+      button.style.transform = "scale(1)";
     }, 250);
   });
 });
