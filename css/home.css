@@ -498,6 +498,11 @@ html, body {
     opacity: 1;
   } */
 /* } */
+
+.social {
+  height: min-content;
+  width: min-content;
+}
 /*=================-- Mobile --==================*/
 @media screen and (max-width: 930px) {
   .horizontal-grid .social {

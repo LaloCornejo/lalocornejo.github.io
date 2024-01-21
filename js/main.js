@@ -1,15 +1,9 @@
 //                   Autor: LÆLÖ
 //                   Date: 20240117
 
-/*
-######                          #     #                      
-#     #   ##   #####  #    #    ##   ##  ####  #####  ###### 
-#     #  #  #  #    # #   #     # # # # #    # #    # #      
-#     # #    # #    # ####      #  #  # #    # #    # #####  
-#     # ###### #####  #  #      #     # #    # #    # #      
-#     # #    # #   #  #   #     #     # #    # #    # #      
-######  #    # #    # #    #    #     #  ####  #####  ###### 
-*/
+/*---+---+---+---+---+---+---+---+
+ | D | A | R | K | M | O | D | E |
+ +---+---+---+---+---+---+---+---*/
 
 const themeToggle = document.querySelector("#theme-toggle");
 
@@ -67,8 +61,8 @@ window.addEventListener("load", () => {
       if (document.body.contains(loader)) {
         document.body.removeChild(loader);
       }
-      login.classList.remove("hidden");
-      wrapper.classList.remove("hidden");
+      // login.classList.remove("hidden");
+      // wrapper.classList.remove("hidden");
     });
   }, 300);
 });

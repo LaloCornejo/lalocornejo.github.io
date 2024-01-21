@@ -1,0 +1,56 @@
+const social = document.querySelectorAll(".social");
+const popOut = document.querySelector(".popOut");
+
+const close = document.querySelector("#popOutClose");
+const maximize = document.querySelector("#popOutOpen");
+const popOutContent = document.querySelector(".popOutContent");
+const button = document.querySelector(".Buttons");
+const iframe = document.querySelector("#socialSnipet");
+
+const twitch = document.querySelector("#twitch");
+const github = document.querySelector("#github");
+const youtube = document.querySelector("#youtube");
+
+social.forEach((item) => {
+  item.addEventListener("click", (event) => {
+    console.log(item);
+    if (item.id == "github") {
+      maximize.href = "https://github.com/LaloCornejo";
+      iframe.src = "https://github.com/LaloCornejo";
+      iframe.title = "Github";
+      iframe.setAttribute("sandbox", "allow-scripts allow-same-origin");
+    } else if (item.id == "twitch") {
+      maximize.href = "https://twitch.tv/l_ae_l_o";
+      iframe.src = "https://twitch.tv/l_ae_l_o";
+      iframe.setAttribute("sandbox", "allow-scripts allow-same-origin");
+      iframe.title = "Twitch";
+    } else if (item.id == "youtube") {
+      maximize.href = "https://www.youtube.com/channel/UCPRKmKf9NkiAt1fHBlgI9Sw";
+      iframe.src = "https://www.youtube.com/channel/UCPRKmKf9NkiAt1fHBlgI9Sw";
+      iframe.setAttribute("sandbox", "allow-scripts allow-same-origin");
+      iframe.title = "Youtube";
+    }
+
+    const originX = event.clientX;
+    const originY = event.clientY;
+
+    popOutContent.style.transform = `translate(calc(${originX}px - 50%), calc(${originY}px))`;
+    button.style.transform = `translate(calc(${originX}px - 50%), calc(${originY}px - 50%))`; // Added semicolon at the end
+    popOut.classList.add("active");
+
+    setTimeout(() => {
+      popOutContent.style.transform = "scale(1) translate(0, 0)";
+      button.style.transform = "scale(1) translate(0, 0)";
+    }, 250);
+  });
+});
+
+close.addEventListener("click", () => {
+  if (popOut.classList.contains("active")) {
+    popOutContent.style.removeProperty("transform"); 
+    button.style.removeProperty("transform");
+    setTimeout(() => {
+      popOut.classList.remove("active");
+    }, 250);
+  }
+});

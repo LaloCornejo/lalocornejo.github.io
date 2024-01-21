@@ -13,6 +13,21 @@
 </head>
 
 <body>
+  <!--================================ PopOut ================================-->
+  <div class="popOut">
+    <div class="popOutContent">
+      <iframe id="socialSnipet" src="" title=""></iframe>
+    </div>
+    <div class="Buttons">
+      <a id="popOutClose">
+        <ion-icon name="close"></ion-icon>
+      </a>
+      <a id="popOutOpen">
+        <ion-icon name="resize"></ion-icon>        
+      </a>
+    </div>
+  </div>
+
   <!--================================ Dark mode ================================-->
   <div class="DarkMode">
     <button id="theme-toggle" aria-label="Switch to dark theme">
@@ -99,23 +114,20 @@
     </div>
 
     <div class="horizontal-grid-social">
-      <div class="social">
-        <a href="https://www.twitch.tv/l_ae_l_o">
+        <!-- <a href="https://www.twitch.tv/l_ae_l_o"> -->
+        <a class="social" id="twitch">
           <ion-icon name="logo-twitch"></ion-icon>
         </a>
-      </div>
 
-      <div class="social">
-        <a href="https://github.com/LaloCornejo">
+        <a class="social" id="github" >
+        <!-- <a href="https://github.com/LaloCornejo"> -->
           <ion-icon name="logo-github"></ion-icon>
         </a>
-      </div>
 
-      <div class="social">
-          <a href="https://www.youtube.com/channel/UCPRKmKf9NkiAt1fHBlgI9Sw">
+          <!-- <a href="https://www.youtube.com/channel/UCPRKmKf9NkiAt1fHBlgI9Sw"> -->
+          <a class="social" id="youtube">
           <ion-icon name="logo-youtube"></ion-icon>
         </a>
-      </div>
     </div>
 
     <div class="blob">
@@ -210,6 +222,7 @@
   <!-----------------SCRIPTS----------------------->
   <script src="../js/home.js" type="module"></script>
   <script src="../js/main.js" type="module"></script>
+  <script src="../js/popout.js" type="module"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
