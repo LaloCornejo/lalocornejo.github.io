@@ -81,29 +81,52 @@
       Cplus.plus
       <img src="/img/cpp_logo.svg" alt="C++ Logo" />
     </div>
+
+    <div class="Terminal" id="TerminalWindow">
+      <div class="Header">
+        <div class="Icons">
+          <ion-icon class="CloseTerminal" name="close-outline"></ion-icon>
+        </div>
+        <p>lalocornejo/home/ ~</p>
+      </div>
+      <textarea id="TerminalOutput"></textarea>
+    </div>
     
     <div class="CodeArea">
       <textarea id="code" rows="50" cols="60" draggable="false">
+/*
+        ██▓    ▄▄▄     ▓█████ ██▓    ▒█████  
+        ▓██▒   ▒████▄   ▓█   ▀▓██▒   ▒██▒  ██▒
+        ▒██░   ▒██  ▀█▄ ▒███  ▒██░   ▒██░  ██▒
+        ▒██░   ░██▄▄▄▄██▒▓█  ▄▒██░   ▒██   ██░
+        ░██████ ▓█   ▓██░▒████░██████░ ████▓▒░
+        ░ ▒░▓   ▒▒   ▓▒█░░ ▒░ ░ ▒░▓  ░ ▒░▒░▒░ 
+        ░ ░ ▒    ░   ▒▒  ░ ░  ░ ░ ▒    ░ ▒ ▒░ 
+          ░ ░    ░   ▒     ░    ░ ░  ░ ░ ░ ▒  
+            ░        ░     ░      ░      ░ ░  
+
+           -==-  Welcome to LÆLÖ's C++ Compiler -==- 
+*/
+
+
 #include<iostream>
 using namespace std;
 int main() {
   
-}
-        </textarea>
+}</textarea>
       </div>
       
       <!-- <button onclick="compile()">Compile and Run</button> -->
       <div class="RunComment">
         <div id="windows">
-          <ion-icon name="code-download"></ion-icon>
           <p>
-            Run: ctrl + enter
+            ctrl + enter
           </p>
         </div>
         <div id="macos">
           <ion-icon name="code-download"></ion-icon>
           <p>
-            Run: ⌘ + enter
+            ⌘ + enter
           </p>
         </div>
       </div>
@@ -113,6 +136,7 @@ int main() {
 
   <script src="/js/main.js" type="module"></script>
   <script src="/js/compiler.js" type="module"></script>
+  <script src="/js/draggableContent.js" type="module"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 

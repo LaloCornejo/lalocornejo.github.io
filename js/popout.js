@@ -18,16 +18,13 @@ social.forEach((item) => {
       maximize.href = "https://github.com/LaloCornejo";
       iframe.src = "https://github.com/LaloCornejo";
       iframe.title = "Github";
-      iframe.setAttribute("sandbox", "allow-scripts allow-same-origin");
     } else if (item.id == "twitch") {
       maximize.href = "https://twitch.tv/l_ae_l_o";
-      iframe.src = "https://twitch.tv/l_ae_l_o";
-      iframe.setAttribute("sandbox", "allow-scripts allow-same-origin");
+      iframe.src = "https://player.twitch.tv/?channel=l_ae_l_o&parent=lalocornejo.github.io";
       iframe.title = "Twitch";
     } else if (item.id == "youtube") {
       maximize.href = "https://www.youtube.com/channel/UCPRKmKf9NkiAt1fHBlgI9Sw";
       iframe.src = "https://www.youtube.com/channel/UCPRKmKf9NkiAt1fHBlgI9Sw";
-      iframe.setAttribute("sandbox", "allow-scripts allow-same-origin");
       iframe.title = "Youtube";
     }
 

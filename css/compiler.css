@@ -25,9 +25,9 @@ body {
   padding: 0;
   font-family: Hack, "JetBrainsMono", "JetBrains", sans-serif;
   font-size: 16px;
-  overflow: hidden;
-  height: auto;
+  height: 100vh;
   width: 100vw;
+  overflow: hidden;
 }
 
 .Compiler {
@@ -107,17 +107,18 @@ body {
   align-items: center;
   align-content: center;
   right: 3%;
-  top: 15%;
-  height: min-content;
-  width: 15%;
+  top: 5%;
+  height: fit-content;
+  width: 8%;
   border-radius: 15px;
   box-shadow: 0 0 10px .5px rgb(64, 0, 255);
+  -webkit-user-drag: true;
 }
 
 #windows,
 #macos {
   position: relative;
-  display: flex;
+  display: none;
   justify-content: space-evenly;
   align-items: center;
   align-content: center;
@@ -141,4 +142,70 @@ body {
   position: relative;
   font-size: calc(.4em + .3vw);
   padding: 2%;
+}
+
+.Terminal {
+  z-index: 99;
+  left: 20%;
+  resize: both;
+  position: absolute;
+  height: 60%;
+  width: 75%;
+  display: grid;
+  grid-template-rows: 10% 90%;
+  grid-template-columns: 100%;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  background-color: rgba(255, 0, 251, 0.65);
+  border-radius: 15px;
+  scale: 0;
+  display: none;
+}
+
+.active {
+  scale: 1;
+  display: grid;
+}
+
+.Terminal .Header {
+  position: relative;
+  display: grid;
+  grid-template-rows: 100%;
+  grid-template-columns: 5% 95%;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+  cursor: pointer;
+}
+.Terminal .Header ion-icon {
+  position: relative;
+  font-size: calc(.3em + .5vw);
+  padding: 3px;
+  background-color: rgb(255, 0, 0);
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 100%;
+  transition: all .25s ease-in-out;
+}
+
+.Terminal .Header ion-icon:hover {
+  box-shadow: 0 0 10px 1px rgb(255, 255, 255);
+}
+
+.Terminal textarea {
+  resize: none;
+  position: relative;
+  border: none;
+  border-radius: 15px;
+  max-height: fit-content;
+  height: 90%;
+  width: 96.4%;
+  font-family: Hack, "JetBrainsMono", "JetBrains", sans-serif;
+  font-size: 14px;
+  background-color:black;
+  color: white;
 }
