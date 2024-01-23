@@ -602,7 +602,7 @@ a {
   position: fixed;
   z-index: 1000000002;
   height: 97%;
-  width: 80%;
+  width: 90%;
   background: var(--clr-background);
   border-radius: 25px;
   transition: transform 0.3s ease-in-out;
@@ -627,7 +627,7 @@ a {
 
 .Buttons a {
   display: flex;
-  font-size: calc(1em + 1vw);
+  font-size: calc(.5em + 1vw);
   align-items: center;
   justify-content: center;
   justify-items: center;
@@ -637,13 +637,13 @@ a {
   padding: 15%;
   background: var(--clr-background);
   color: var(--clr-foreground);
-  border-radius: 40%;
+  border-radius: 45%;
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
 }
 
 .Buttons a:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 .popOutContent iframe {
