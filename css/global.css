@@ -637,7 +637,7 @@ a {
   padding: 15%;
   background: var(--clr-background);
   color: var(--clr-foreground);
-  border-radius: 45%;
+  border-radius: 50%;
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
 }

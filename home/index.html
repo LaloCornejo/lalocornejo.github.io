@@ -14,21 +14,31 @@
 
 <body>
   <!--================================ PopOut ================================-->
+
   <div class="popOut">
     <div class="popOutContent">
       <!-- <spline-viewer hint loading-anim-type="spinner-small-dark" url="https://prod.spline.design/bDcoH0lPe2Du6G8t/scene.splinecode"></spline-viewer> -->
       <iframe id="socialSnipet" src="" title="" frameborder="0" allowfullscreen="true" scrolling="no"></iframe>
       <!-- <iframe src="https://player.twitch.tv/?l_ae_l_o&parent=github.io" height="100%" width="100%" allowfullscreen></iframe> -->
-      </div>
+    </div>
     <div class="Buttons">
       <a id="popOutClose">
         <ion-icon name="close"></ion-icon>
       </a>
       <a id="popOutOpen">
-        <ion-icon name="resize"></ion-icon>        
+        <ion-icon name="resize"></ion-icon>
       </a>
     </div>
   </div>
+
+  <!--================================ Banners ================================-->
+  <a href="https://www.youtube.com/channel/UCPRKmKf9NkiAt1fHBlgI9Sw" class="bannerImg" target="_blank">
+    <img id="YT" src="/img/bannerYT.png"/>
+  </a>
+
+  <a href="https://github.com/LaloCornejo" class="bannerImg" target="_blank">
+    <img id="GH" src="/img/bannerGH.png"/>
+  </a>
 
   <!--================================ Dark mode ================================-->
   <div class="DarkMode">
@@ -87,7 +97,7 @@
 
     <div class="pinnedIcons">
       <ion-icon class="pinnedIcon" name="code-slash-sharp"></ion-icon>
-      <a href="/tools/Cplus+/">  
+      <a href="/tools/Cplus+/">
         <ion-icon class="pinnedIcon" name="terminal"></ion-icon>
       </a>
       <ion-icon class="pinnedIcon" name="qr-code"></ion-icon>
@@ -114,26 +124,28 @@
         </h4>
       </div>
     </div>
-
+    
     <div class="horizontal-grid-social">
-        <!-- <a href="https://www.twitch.tv/l_ae_l_o"> -->
-        <a class="social" id="twitch">
-          <ion-icon name="logo-twitch"></ion-icon>
-        </a>
 
-        <a class="social" id="github" >
-        <!-- <a href="https://github.com/LaloCornejo"> -->
-          <ion-icon name="logo-github"></ion-icon>
-        </a>
+      <a class="social" id="twitch">
+        <div id="socialSelector"></div>
+        <ion-icon name="logo-twitch"></ion-icon>
+      </a>
 
-          <!-- <a href="https://www.youtube.com/channel/UCPRKmKf9NkiAt1fHBlgI9Sw"> -->
-          <a class="social" id="youtube">
-          <ion-icon name="logo-youtube"></ion-icon>
-        </a>
+      <a class="social" id="github">
+        <div id="socialSelector"></div>
+        <ion-icon name="logo-github"></ion-icon>
+      </a>
+
+      <a class="social" id="youtube">
+        <div id="socialSelector"></div>
+        <ion-icon name="logo-youtube"></ion-icon>
+      </a>
     </div>
 
     <div class="blob">
-      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" id="blobSvg">
+      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        width="100%" id="blobSvg">
         <defs>
           <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
             <stop offset="0%" style="stop-color: #aa00ff;"></stop>
@@ -141,10 +153,7 @@
           </linearGradient>
         </defs>
         <path transform="translate(100 100)" fill="url(#gradient)">
-          <animate attributeName="d"
-            dur="20000ms"
-            repeatCount="indefinite"
-            values="
+          <animate attributeName="d" dur="20000ms" repeatCount="indefinite" values="
             M42.6,-57.3C50.7,-43.9,49.7,-26.2,49,-11.4C48.4,3.5,48,15.5,43.1,25.8C38.3,36.1,28.8,44.7,15.6,54.6C2.3,64.5,-14.7,75.9,-26.2,71.8C-37.8,67.7,-43.8,48.2,-54.2,30.9C-64.6,13.6,-79.4,-1.5,-81.2,-18.3C-82.9,-35.1,-71.7,-53.6,-56,-65.7C-40.3,-77.8,-20.2,-83.4,-1.5,-81.6C17.2,-79.9,34.4,-70.7,42.6,-57.3Z;
 
             M29.8,-29.1C42.4,-24.9,59.2,-19.1,64.5,-8.5C69.9,2.2,63.8,17.8,55.9,33.1C48.1,48.5,38.4,63.7,25.5,67.2C12.6,70.6,-3.5,62.3,-15.3,53.2C-27.1,44.1,-34.4,34.1,-45.2,22.6C-56,11.1,-70.2,-1.9,-70.3,-14.4C-70.5,-26.9,-56.7,-39,-42.6,-42.9C-28.6,-46.8,-14.3,-42.6,-2.9,-39.2C8.6,-35.8,17.1,-33.2,29.8,-29.1Z;
@@ -162,40 +171,40 @@
       </svg>
     </div>
 
-  <div class="Login innactive-page hidden">
-    <button id="Login" class="btnLogin-popup">login</button>
-  </div>
-  <div class="wrapper hidden">
-    <a class="icon-close">
-      <ion-icon name="arrow-back"></ion-icon>
-    </a>
-    <div class="form-box login" id="login-form">
-      <h4>// login</h4>
-      <form action="#">
-        <div class="input-box">
-          <input type="username" name="email" id="email" required />
-          <label>Email</label>
-        </div>
-        <div class="input-box">
-          <input type="password" name="password" id="password" required />
-          <label>Password</label>
-        </div>
-        <button type="submit" class="btn" id="loggin">login</button>
-      </form>
+    <div class="Login innactive-page hidden">
+      <button id="Login" class="btnLogin-popup">login</button>
     </div>
-  </div>
-
-  <div class="LoggedInPage logged-out">
-    <button class="btnloggout logged-out">** loggout **</button>
-  </div>
-
-  <div class="info">
-    <div id="version">
-      <ion-icon name="git-branch-outline"></ion-icon>
-      v1.0.5
+    <div class="wrapper hidden">
+      <a class="icon-close">
+        <ion-icon name="arrow-back"></ion-icon>
+      </a>
+      <div class="form-box login" id="login-form">
+        <h4>// login</h4>
+        <form action="#">
+          <div class="input-box">
+            <input type="username" name="email" id="email" required />
+            <label>Email</label>
+          </div>
+          <div class="input-box">
+            <input type="password" name="password" id="password" required />
+            <label>Password</label>
+          </div>
+          <button type="submit" class="btn" id="loggin">login</button>
+        </form>
+      </div>
     </div>
 
-    <div style="
+    <div class="LoggedInPage logged-out">
+      <button class="btnloggout logged-out">** loggout **</button>
+    </div>
+
+    <div class="info">
+      <div id="version">
+        <ion-icon name="git-branch-outline"></ion-icon>
+        v1.0.5
+      </div>
+
+      <div style="
           position: relative;
           top: 1.8rem;
           font-size: 1.3em;
@@ -207,28 +216,28 @@
           font-weight: 200;
           padding: 0 3.5rem 0 3.5rem;
         " id="separator-time">
-      |
-    </div>
+        |
+      </div>
 
-    <div style="
+      <div style="
           display: grid;
           grid-template-columns: auto auto;
           justify-content: center;
           align-items: center;
         " id="time">
-      <ion-icon style="padding-right: 1rem" name="time-outline"></ion-icon>
-      <div id="current-time"></div>
+        <ion-icon style="padding-right: 1rem" name="time-outline"></ion-icon>
+        <div id="current-time"></div>
+      </div>
     </div>
-  </div>
 
-  <!-----------------SCRIPTS----------------------->
-  <script src="../js/home.js" type="module"></script>
-  <script src="../js/main.js" type="module"></script>
-  <script src="../js/popout.js" type="module"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-  <script type="module" src="https://unpkg.com/@splinetool/viewer@1.0.31/build/spline-viewer.js"></script>
+    <!-----------------SCRIPTS----------------------->
+    <script src="../js/home.js" type="module"></script>
+    <script src="../js/main.js" type="module"></script>
+    <script src="../js/popout.js" type="module"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.0.31/build/spline-viewer.js"></script>
 </body>
 
 </html>
