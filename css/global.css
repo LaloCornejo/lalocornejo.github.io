@@ -1,9 +1,11 @@
 :root {
   --clr-foreground: hsl(0 0% 100%);
-  --clr-background: hsl(281, 35%, 9%);
+  --clr-background: rgb(2, 0, 3);
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans");
+@import 
+
+url("https://fonts.googleapis.com/css2?family=Josefin+Sans");
 
 @import url("https://fonts.googleapis.com/cs2?family=Bebas+Neue");
 
@@ -37,8 +39,8 @@
 /*================= Themes ==================*/
 @media (prefers-color-scheme: dark) {
   :root {
-    --clr-foreground: hsl(0, 0%, 100%);
-    --clr-background: hsl(281, 35%, 9%);
+    --clr-foreground: rgb(255, 255, 255);
+    --clr-background: rgb(2, 0, 3);
   }
 }
 
@@ -47,8 +49,8 @@
 }
 
 .dark-theme {
-  --clr-foreground: hsl(0, 0%, 100%);
-  --clr-background: hsl(270, 15%, 4%);
+  --clr-foreground: rgb(255, 255, 255);
+  --clr-background: rgb(2, 0, 3);
 }
 
 .light-theme {
@@ -149,6 +151,10 @@ body {
   transition: 0.2s;
 }
 
+svg {
+  shape-rendering: optimizeSpeed;
+}
+
 h1 {
   font-size: 18vw;
   font-family: "FuturaMedium";
@@ -156,17 +162,17 @@ h1 {
 
 h2 {
   font-size: 2vw;
-  font-family:  'Hack', 'JetBrains Mono', 'JetBrains', sans-serif;
+  font-family: 'Hack', 'JetBrains Mono', 'JetBrains', sans-serif;
 }
 
 h4 {
   font-size: 1.2vw;
-  font-family:  'Hack', 'JetBrains Mono', 'JetBrains', sans-serif;
+  font-family: 'Hack', 'JetBrains Mono', 'JetBrains', sans-serif;
 }
 
 h5 {
   font-size: rem;
-  font-family:  'Hack', 'JetBrains Mono', 'JetBrains', sans-serif;
+  font-family: 'Hack', 'JetBrains Mono', 'JetBrains', sans-serif;
 }
 
 a {
@@ -219,19 +225,18 @@ a {
   background: rgba(255, 0, 251, 0.65);
   background: -moz-linear-gradient(180deg, rgba(255, 0, 251, 0.65) 0%, rgba(149, 0, 255, 0.65) 100%);
   background: -webkit-linear-gradient(180deg, rgba(255, 0, 251, 0.65) 0%, rgba(149, 0, 255, 0.65) 100%);
-  background: linear-gradient(180deg,rgba(255, 0, 251, 0.65) 0%, rgba(149, 0, 255, 0.65) 100%);
-  font-family:  'Hack', 'JetBrains Mono', 'JetBrains', sans-serif;
+  background: linear-gradient(180deg, rgba(255, 0, 251, 0.65) 0%, rgba(149, 0, 255, 0.65) 100%);
+  font-family: 'Hack', 'JetBrains Mono', 'JetBrains', sans-serif;
   border: 1px solid rgba(255, 255, 255, 0.1);
   display: grid;
   grid-template-rows: min-content min-content min-content auto;
-  backdrop-filter: blur(30px);
 }
 
 .sideBar .sideBarHead {
   display: grid;
   width: fit-content;
   right: 15%;
-  grid-template-columns: auto auto  auto auto;
+  grid-template-columns: auto auto auto auto;
   grid-template-rows: auto;
   min-width: 10vw;
   height: min-content;
@@ -316,7 +321,7 @@ a {
 }
 
 .sparat {
-  font-family:  'Hack', 'JetBrains Mono', 'JetBrains', sans-serif;
+  font-family: 'Hack', 'JetBrains Mono', 'JetBrains', sans-serif;
   font-weight: 800;
   margin-bottom: 10px;
   font-size: .7rem;
@@ -460,6 +465,14 @@ a {
   transform: translateZ(-150px);
   -webkit-filter: blur(20px);
   filter: blur(20px);
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000;
+  transform: translate3d(0, 0, 0);
+  transform: translateZ(0);
   box-shadow:
     0 0 120px rgba(174, 0, 255, 0.2),
     0 0 200px rgba(174, 0, 255, 0.4),
@@ -485,6 +498,15 @@ a {
 
 .sideBarActive {
   animation: slideInSB 400ms ease-in-out forwards;
+  backdrop-filter: blur(10px);
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000;
+  transform: translate3d(0, 0, 0);
+  transform: translateZ(0);
 }
 
 .sideBarInnactive {
@@ -580,7 +602,8 @@ a {
 }
 
 .popOut {
-  z-index: 9999999999; /* Updated z-index value */
+  z-index: 9999999999;
+  /* Updated z-index value */
   position: fixed;
   display: flex;
   width: 100%;
@@ -588,6 +611,14 @@ a {
   background: rgba(255, 0, 251, 0.45);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000;
+  transform: translate3d(0, 0, 0);
+  transform: translateZ(0);
   align-items: center;
   align-content: center;
   justify-content: center;
@@ -656,4 +687,77 @@ a {
 .active {
   visibility: visible;
   opacity: 1;
+}
+
+.loaderContainer {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.loadBarcontainer {
+  height: .4vh;
+  width: 20%;
+  max-width: 250px;
+  background: rgba(255, 162, 255, 0.5);
+  border-radius: 40px;
+  overflow: hidden;
+  justify-content: left;
+  align-items: left;
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.loadBar {
+  position: relative;
+  height: 100%;
+  width: 40%;
+  background: rgb(212, 0, 255);
+  border-radius: 40px;
+  animation: load 1s ease-in-out infinite;
+}
+
+@keyframes load {
+  0% {
+    left: -50%;
+  }
+
+  100% {
+    left: 120%;
+  }
+}
+
+.loader img {
+  opacity: 0;
+  width: 5%;
+  min-width: 100px;
+  animation: loaderIn .3s ease-in-out forwards .1s 1 normal, loaderOut .3s ease-in-out forwards 1.1s 1 normal;
+}
+
+@keyframes loaderIn {
+  0% {
+    opacity: 0;
+    transform: translateY(40%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes loaderOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-40%);
+  }
 }

@@ -1,4 +1,7 @@
-html, body {
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+html,
+body {
   margin: 0;
   padding: 0;
   font-family: 'Hack', 'JetBrains Mono', 'JetBrains', sans-serif;
@@ -10,7 +13,7 @@ html, body {
 #SubTitle {
   color: rgb(218, 1, 218);
   font-weight: 700;
-  font-family:  'Hack', 'JetBrains Mono', 'JetBrains', sans-serif;
+  font-family: 'Hack', 'JetBrains Mono', 'JetBrains', sans-serif;
   position: static;
   max-width: 60vw;
 }
@@ -35,7 +38,7 @@ html, body {
   line-height: 10px;
   color: var(--clr-foreground);
   position: fixed;
-  font-family:  'Hack', 'JetBrains Mono', 'JetBrains', sans-serif;
+  font-family: 'Hack', 'JetBrains Mono', 'JetBrains', sans-serif;
   transition: 1s;
 }
 
@@ -52,7 +55,7 @@ html, body {
   z-index: 1000000000;
   font-size: 1.6em;
   color: var(--clr-foreground);
-  font-family:  'Hack', 'JetBrains Mono', 'JetBrains', sans-serif;
+  font-family: 'Hack', 'JetBrains Mono', 'JetBrains', sans-serif;
   padding: 10px;
   transition: 1s;
   font-weight: 500;
@@ -71,7 +74,7 @@ html, body {
 }
 
 #word {
-  font-family:  'Hack', 'JetBrains Mono', 'JetBrains', sans-serif;
+  font-family: 'Hack', 'JetBrains Mono', 'JetBrains', sans-serif;
   /* font-size: 2rem; */
   background: none;
   border: none;
@@ -100,7 +103,7 @@ html, body {
   cursor: pointer;
   font-size: 3.5vw;
   color: #ae00ff;
-  font-family:  'Hack', 'JetBrains Mono', 'JetBrains', sans-serif;
+  font-family: 'Hack', 'JetBrains Mono', 'JetBrains', sans-serif;
   font-weight: 700;
   transition: 0.4s;
 }
@@ -120,6 +123,14 @@ html, body {
   border-radius: 2.5vw;
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000;
+  transform: translate3d(0, 0, 0);
+  transform: translateZ(0);
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
@@ -180,7 +191,7 @@ html, body {
   font-weight: 500;
   pointer-events: none;
   color: var(--clr-foreground);
-  font-family:  'Hack', 'JetBrains Mono', 'JetBrains', sans-serif;
+  font-family: 'Hack', 'JetBrains Mono', 'JetBrains', sans-serif;
   transition: 0.3s;
 }
 
@@ -198,7 +209,7 @@ html, body {
   font-size: 1rem;
   font-weight: 500;
   color: var(--clr-foreground);
-  font-family:  'Hack', 'JetBrains Mono', 'JetBrains', sans-serif;
+  font-family: 'Hack', 'JetBrains Mono', 'JetBrains', sans-serif;
 }
 
 .input-box input:focus {
@@ -231,7 +242,7 @@ html, body {
 }
 
 #loggin {
-  font-family:  'Hack', 'JetBrains Mono', 'JetBrains', sans-serif;
+  font-family: 'Hack', 'JetBrains Mono', 'JetBrains', sans-serif;
   font-size: 1.5rem;
   color: white;
 }
@@ -260,7 +271,7 @@ html, body {
   justify-content: center;
   align-items: center;
   z-index: 1;
-  font-family:  'Hack', 'JetBrains Mono', 'JetBrains', sans-serif;
+  font-family: 'Hack', 'JetBrains Mono', 'JetBrains', sans-serif;
 }
 
 .btnloggout:hover {
@@ -366,13 +377,24 @@ html, body {
 
 .blob {
   z-index: -1;
-  height: 100vh;
-  width: 100vh;
-  position: absolute;
-  filter: blur(40px);
-  -webkit-filter: blur(40px);
-  overflow: hidden;
+  height: 90vh;
+  width: 90vh;
+  position: fixed;
+  align-self: center;
+  justify-self: center;
+  overflow: visible;
+  /* filter: blur(30px);
+  -webkit-filter: blur(30px);
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000;
+  transform: translate3d(0, 0, 0);
+  transform: translateZ(0); */
 }
+
 /*
 
 .FrontBk {
@@ -387,7 +409,7 @@ html, body {
   -webkit-animation: rotate 30s linear infinite, ballDeformation 5s ease-in-out infinite; */
 
 
-  /* svg {
+/* svg {
     display: none;
   }
 
@@ -506,6 +528,7 @@ html, body {
   height: min-content;
   width: min-content;
 }
+
 /*=================-- Mobile --==================*/
 @media screen and (max-width: 930px) {
   .horizontal-grid .social {
@@ -546,8 +569,6 @@ html, body {
   .blob {
     height: 100vw;
     width: 100vw;
-    filter: blur(20px), saturate(4);
-    -webkit-filter: blur(20px), saturate(4);
   }
 
   .wrapper {
@@ -601,16 +622,24 @@ html, body {
   overflow: hidden;
 }
 
-.social:hover  #socialSelector {
+.social:hover #socialSelector {
   visibility: visible;
   opacity: 1;
   background: linear-gradient(87deg, var(--color-bg1), var(--color-bg2));
   filter: blur(20px);
   -webkit-filter: blur(20px);
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000;
+  transform: translate3d(0, 0, 0);
+  transform: translateZ(0);
 }
 
 .bannerImg {
-  position: absolute;
+  position: fixed;
   display: flex;
   justify-content: center;
   justify-items: center;
@@ -618,23 +647,82 @@ html, body {
   align-content: center;
   width: 100%;
   height: auto;
-  object-fit: cover;
+  bottom: 0;
   z-index: 10;
 }
 
-#YT, #GH {
-  position: fixed;
-  bottom: 8vh;
+#YT,
+#GH {
   border-radius: 20px;
-  opacity: 0;
-  visibility: hidden;
+  /* opacity: 0;
+  visibility: hidden; */
+  min-width: fit-content;
+  min-height: fit-content;
   transition: all 0.3s ease-in-out;
   box-shadow: 0 0 60px 5px rgba(255, 255, 255, 0.4);
 }
 
 #YT {
-  width: 45%;
-  height: auto;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.YTContainer {
+  display: flex;
+  position: relative;
+  margin-bottom: 8vh;
+  width: 500px;
+  height: 200px;
+  align-items: center;
+  background-color: var(--clr-background);
+  border-radius: 20px;
+  font-family: "Roboto", sans-serif;
+}
+
+.YTContainer #YTicon{
+  position: absolute;
+  display: flex;
+  width: 60px;
+  left: -30px;
+  top: -25px;
+}
+
+.YTContainer #YTLogo {
+  height: 80%;
+  width: auto;
+  margin-left: 5%;
+  border-radius: 50%;
+}
+
+.YTContainer .YTText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  height: 100%;
+  padding: 0 5%;
+  background-color: var(--clr-background);}
+
+.YTText h1 {
+  font-size: calc(1em + 1vw);
+  color: var(--clr-foreground);
+  font: 'Roboto', sans-serif, bold;
+}
+
+.YTText h2 {
+  font-size: calc(.5em + .7vw);
+  color: var(--clr-foreground);
+  margin-top: 0;
+  font: 'Roboto', sans-serif;
+  font-weight: 200;
+}
+
+.YTContainer p {
+  font-size: calc(.4em + .5vw);
+  color: var(--clr-foreground);
+  margin-top: 0;
+  font: 'Roboto', sans-serif;
+  font-weight: 100;
 }
 
 @media screen and (max-width: 930px) {
@@ -646,4 +734,65 @@ html, body {
 #GH {
   width: auto;
   height: 25%;
+  visibility: visible;
+}
+
+.GHContainer {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 8vh;
+  width: 500px;
+  height: 200px;
+  align-items: center;
+  background-color: var(--clr-background);
+  border-radius: 20px;
+  font-family: "Roboto", sans-serif;
+}
+
+.GHContainer #GHicon{
+  position: absolute;
+  display: flex;
+  width: 60px;
+  left: -30px;
+  top: -25px;
+}
+
+.GHContainer #GHLogo {
+  height: 150px;
+  width: auto;
+  margin-left: 5%;
+  border-radius: 50%;
+  border: white 2px solid;
+}
+
+.GHContainer .GHText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  height: 100%;
+  padding: 0 5%;
+  background-color: var(--clr-background);}
+
+.GHText h1 {
+  font-size: calc(1em + 1vw);
+  color: var(--clr-foreground);
+  font: 'Roboto', sans-serif, bold;
+}
+
+.GHText h2 {
+  font-size: calc(.5em + .7vw);
+  color: var(--clr-foreground);
+  margin-top: 0;
+  font: 'Roboto', sans-serif;
+  font-weight: 200;
+}
+
+.GHContainer p {
+  font-size: calc(.4em + .5vw);
+  color: var(--clr-foreground);
+  margin-top: 0;
+  font: 'Roboto', sans-serif;
+  font-weight: 100;
 }

@@ -16,6 +16,10 @@ const GH = document.querySelector("#GH");
 
 let hoverTimeout;
 
+const blob = document.querySelector(".blob");
+
+const blobAnim = document.querySelector("blobAnim");
+
 social.forEach((item) => {
   item.addEventListener("click", (event) => {
     console.log(item);
@@ -38,12 +42,15 @@ social.forEach((item) => {
       iframe.title = "Youtube";
     }
 
+    
     popOut.classList.add("active");
-
+    
     setTimeout(() => {
       popOutContent.style.transform = "scale(1)";
       button.style.transform = "scale(1)";
     }, 250);
+    blob.style = "  filter: blur(0px); -webkit-filter: blur(0px);";
+    blobAnim.removeAttribute("dur");
   });
 });
 
@@ -104,6 +111,8 @@ youtube.addEventListener("mouseout", () => {
 close.addEventListener("click", () => {
   if (popOut.classList.contains("active")) {
     popOutContent.style.removeProperty("transform");
+
+    blob.removeAttribute("style");
     button.style.removeProperty("transform");
 
     setTimeout(() => {
