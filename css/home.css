@@ -765,14 +765,14 @@ body {
 }
 
 .GHText h1 {
-  font-size: calc(1em + 1vw);
+  font-size: calc(.7em + .8vw);
   color: var(--clr-foreground);
   font: 'Roboto', sans-serif, bold;
   margin-bottom: 0;
 }
 
 .GHText h2 {
-  font-size: calc(.5em + .7vw);
+  font-size: calc(.4em + .6vw);
   color: var(--clr-foreground);
   margin-top: 0;
   font: 'Roboto', sans-serif;

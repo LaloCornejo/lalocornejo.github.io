@@ -200,9 +200,10 @@ body {
   resize: none;
   position: relative;
   border: none;
-  border-radius: 15px;
+  border-radius: 10px;
   max-height: fit-content;
-  height: 90%;
+  margin-bottom: 2%;
+  height: 93%;
   width: 96.4%;
   font-family: Hack, "JetBrainsMono", "JetBrains", sans-serif;
   font-size: 14px;

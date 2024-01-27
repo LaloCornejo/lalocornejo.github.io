@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>~ L Æ L Ö ~</title>
   <meta content="text/html; charset=UTF-8; X-Content-Type-Options=nosniff" http-equiv="Content-Type" />
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
-  <link rel="stylesheet" href="/css/global.css" />
   <link rel="stylesheet" href="/css/compiler.css" />
+  <link rel="stylesheet" href="/css/global.css" />
   <link rel="icon favicon" href="/img/favicon/favicon.ico" />
 </head>
 
@@ -34,13 +34,10 @@
 
   <!--============================== LOADER ===================================-->
   <div class="loader">
-    <div class="cube">
-      <div class="top"></div>
-      <div>
-        <span style="--i: 0"></span>
-        <span style="--i: 1"></span>
-        <span style="--i: 2"></span>
-        <span style="--i: 3"></span>
+    <div class="loaderContainer">
+      <img id="loaderImg" src="/img/LogoDark.png" alt="Logo">
+      <div class="loadBarcontainer">
+        <div class="loadBar"></div>
       </div>
     </div>
   </div>
@@ -91,9 +88,9 @@
       </div>
       <textarea id="TerminalOutput"></textarea>
     </div>
-    
+
     <div class="CodeArea">
-      <textarea id="code" rows="50" cols="60" draggable="false">
+      <textarea id="code" rows="50" cols="60" draggable="false" style="color: rgb(185, 185, 185);">
 /*
         ██▓    ▄▄▄     ▓█████ ██▓    ▒█████  
         ▓██▒   ▒████▄   ▓█   ▀▓██▒   ▒██▒  ██▒
@@ -111,28 +108,34 @@
 
 #include<iostream>
 using namespace std;
+
 int main() {
-  
-}</textarea>
-      </div>
-      
-      <!-- <button onclick="compile()">Compile and Run</button> -->
-      <div class="RunComment">
-        <div id="windows">
-          <p>
-            ctrl + enter
-          </p>
-        </div>
-        <div id="macos">
-          <ion-icon name="code-download"></ion-icon>
-          <p>
-            ⌘ + enter
-          </p>
-        </div>
-      </div>
-      
-      <p id="output"></p>
+
+  cout << "Hello World!";
+
+return 0;
+
+}
+</textarea>
     </div>
+
+    <!-- <button onclick="compile()">Compile and Run</button> -->
+    <div class="RunComment">
+      <div id="windows">
+        <p>
+          ctrl + enter
+        </p>
+      </div>
+      <div id="macos">
+        <ion-icon name="code-download"></ion-icon>
+        <p>
+          ⌘ + enter
+        </p>
+      </div>
+    </div>
+
+    <p id="output"></p>
+  </div>
 
   <script src="/js/main.js" type="module"></script>
   <script src="/js/compiler.js" type="module"></script>

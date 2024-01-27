@@ -5,7 +5,7 @@
  const Terminal = document.querySelector(".Terminal");
 
 document.addEventListener("keydown", function (event) {
-  if ((navigator.userAgent.indexOf("Mac") === -1 && event.ctrlKey && event.key === "Enter") || (navigator.userAgent.indexOf("Mac") !== -1 && event.key === "Enter")) {
+  if ((navigator.userAgent.indexOf("Mac") === -1 && event.ctrlKey && event.key === "Enter") || (navigator.userAgent.indexOf("Mac") != -1 && event.key === "Enter")) {
     compile();
   }
 });
@@ -34,7 +34,7 @@ function compile() {
 }
 
 function system() {
-  if (navigator.userAgent.indexOf("Mac") != -1) {
+  if ( navigator.userAgent.indexOf("Mac") != -1 ) {
     // Mac
     document.getElementById("windows").style.display = "none";
     document.getElementById("macos").style.display = "flex";
