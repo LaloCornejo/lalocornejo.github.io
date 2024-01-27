@@ -639,38 +639,33 @@ body {
 }
 
 .bannerImg {
-  position: fixed;
+  position: absolute;
   display: flex;
   justify-content: center;
   justify-items: center;
   align-items: center;
   align-content: center;
-  width: 100%;
+  width: fit-content;
   height: auto;
-  bottom: 0;
+  object-fit: cover;
+  bottom: 8vh;
   z-index: 10;
 }
 
 #YT,
 #GH {
   border-radius: 20px;
-  /* opacity: 0;
-  visibility: hidden; */
+  opacity: 0;
+  visibility: hidden;
   min-width: fit-content;
   min-height: fit-content;
   transition: all 0.3s ease-in-out;
-  box-shadow: 0 0 60px 5px rgba(255, 255, 255, 0.4);
-}
-
-#YT {
-  visibility: hidden;
-  opacity: 0;
+  box-shadow: 0 0 60px 5px var(--clr-foreground);
 }
 
 .YTContainer {
   display: flex;
   position: relative;
-  margin-bottom: 8vh;
   width: 500px;
   height: 200px;
   align-items: center;
@@ -731,19 +726,12 @@ body {
   }
 }
 
-#GH {
-  width: auto;
-  height: 25%;
-  visibility: visible;
-}
-
 .GHContainer {
   display: flex;
   flex-direction: column;
   position: relative;
-  margin-bottom: 8vh;
-  width: 500px;
-  height: 200px;
+  width: 250px;
+  height: 300px;
   align-items: center;
   background-color: var(--clr-background);
   border-radius: 20px;
@@ -754,14 +742,14 @@ body {
   position: absolute;
   display: flex;
   width: 60px;
-  left: -30px;
+  left: -25px;
   top: -25px;
 }
 
 .GHContainer #GHLogo {
   height: 150px;
   width: auto;
-  margin-left: 5%;
+  margin-top: 10%;
   border-radius: 50%;
   border: white 2px solid;
 }
@@ -770,15 +758,17 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   width: 50%;
   height: 100%;
-  padding: 0 5%;
-  background-color: var(--clr-background);}
+  background-color: var(--clr-background);
+}
 
 .GHText h1 {
   font-size: calc(1em + 1vw);
   color: var(--clr-foreground);
   font: 'Roboto', sans-serif, bold;
+  margin-bottom: 0;
 }
 
 .GHText h2 {

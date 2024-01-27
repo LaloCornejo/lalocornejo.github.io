@@ -70,8 +70,6 @@ window.addEventListener("load", () => {
       if (document.body.contains(loader)) {
         document.body.removeChild(loader);
       }
-      login.classList.remove("hidden");
-      wrapper.classList.remove("hidden");
     });
   }, 1200);
 });

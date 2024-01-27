@@ -666,8 +666,8 @@ a {
   width: auto;
   margin: 50% 10px 0 10%;
   padding: 15%;
-  background: var(--clr-background);
-  color: var(--clr-foreground);
+  background: black;
+  color: white;
   border-radius: 50%;
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
