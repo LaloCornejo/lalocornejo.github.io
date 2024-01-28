@@ -575,32 +575,6 @@ a {
   }
 }
 
-@media screen and (max-width: 500px) {
-  /* .sideBar {
-    display: none;
-  } */
-
-  @keyframes slideOutSB {
-    from {
-      transform: translateX(0);
-    }
-
-    to {
-      transform: translateX(-120vw);
-    }
-  }
-
-  @keyframes slideInSB {
-    from {
-      transform: translateX(-120vw);
-    }
-
-    to {
-      transform: translateX(0);
-    }
-  }
-}
-
 .popOut {
   z-index: 9999999999;
   /* Updated z-index value */
@@ -684,6 +658,12 @@ a {
   border: none;
 }
 
+@media screen and (max-width: 930px) {
+  .popOut .popOutContent {
+    width: 80%;
+  }
+}
+
 .active {
   visibility: visible;
   opacity: 1;
@@ -731,7 +711,7 @@ a {
   }
 }
 
-.loader img {
+.loaderContainer img {
   opacity: 0;
   width: 5%;
   min-width: 100px;

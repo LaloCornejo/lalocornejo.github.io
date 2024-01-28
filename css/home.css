@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+.dark-theme {
+  --clr-foreground: rgb(255, 255, 255);
+  --clr-background: rgb(2, 0, 3);
+}
+
+.light-theme {
+  --clr-foreground: hsl(0 0% 5%);
+  --clr-background: hsl(0, 0%, 100%);
+}
+
 html,
 body {
   margin: 0;
@@ -382,17 +392,7 @@ body {
   position: fixed;
   align-self: center;
   justify-self: center;
-  overflow: visible;
-  /* filter: blur(30px);
-  -webkit-filter: blur(30px);
-  -webkit-backface-visibility: hidden;
-  -webkit-perspective: 1000;
-  -webkit-transform: translate3d(0, 0, 0);
-  -webkit-transform: translateZ(0);
-  backface-visibility: hidden;
-  perspective: 1000;
-  transform: translate3d(0, 0, 0);
-  transform: translateZ(0); */
+  overflow: hidden;
 }
 
 /*
