@@ -24,13 +24,13 @@ body {
   color: rgb(218, 1, 218);
   font-weight: 700;
   font-family: 'Hack', 'JetBrains Mono', 'JetBrains', sans-serif;
-  position: static;
+  position: relative;
   max-width: 60vw;
 }
 
 #Title {
   max-width: 65vw;
-  position: static;
+  position: relative;
   text-align: center;
   align-items: center;
   justify-self: center;
@@ -39,15 +39,12 @@ body {
 }
 
 #Tdes {
-  bottom: 10vh;
-  left: calc((100vw - 65vw) / 2);
-  position: static;
+  position: relative;
   text-align: center;
   width: 65vw;
   height: auto;
   line-height: 10px;
   color: var(--clr-foreground);
-  position: fixed;
   font-family: 'Hack', 'JetBrains Mono', 'JetBrains', sans-serif;
   transition: 1s;
 }
@@ -389,7 +386,7 @@ body {
   z-index: -1;
   height: 90vh;
   width: 90vh;
-  position: fixed;
+  position: absolute;
   align-self: center;
   justify-self: center;
   overflow: hidden;

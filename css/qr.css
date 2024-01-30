@@ -6,6 +6,15 @@ body {
   width: 100vw;
 }
 
+.light-mode {
+  svg {
+    filter: none;
+  }
+  .qr-code img{
+    filter: invert(1);
+  }
+}
+
 .App {
   position: relative;
   height: 100%;
@@ -19,11 +28,13 @@ body {
 .App .AppContainer {
   position: relative;
   display: flex;
-  height: 90%;
-  width: 80%;
+  height: max-content;
+  width: max-content;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: var(--clr-foreground);
+  border-radius: 20px;
 }
 
 .AppContainer #inputContainer {
@@ -39,12 +50,10 @@ body {
 .qr-code {
   position: relative;
   display: flex;
-  height: auto;
+  height: 40vh;
   width: auto;
-  margin: 20px;
-  padding: 10px;
-  border: var(--clr-foreground) 5px solid;
   border-radius: 20px;
+  z-index: -1;
 }
 
 .URLContainer {
@@ -125,23 +134,23 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font: 100 3rem "JetBrains", sans-serif;
+  font: 200 3rem "JetBrains", sans-serif;
   color: var(--clr-foreground);
-  opacity: .3;
+  opacity: .5;
   width: 100%;
   height: auto;
   top: 10vh;
 }
 
 .footer {
-  position: relative;
+  position: absolute;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  font: 100 1.2rem "JetBrains", sans-serif;
+  font: 200 1.2rem "JetBrains", sans-serif;
   color: var(--clr-foreground);
-  opacity: .3;
+  opacity: .5;
   width: 100%;
   height: auto;
   bottom: 0;

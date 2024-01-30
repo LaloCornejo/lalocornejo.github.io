@@ -350,9 +350,9 @@ a {
 
 /*================= Grid ==================*/
 .grid {
-  display: grid;
-  position: static;
-  grid-template-rows: 50px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
 .Hgrid-2x1 {
