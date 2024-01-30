@@ -6,13 +6,8 @@ body {
   width: 100vw;
 }
 
-.light-mode {
-  svg {
-    filter: none;
-  }
-  .qr-code img{
-    filter: invert(1);
-  }
+.light-theme img {
+  filter: invert(1);
 }
 
 .App {
@@ -54,6 +49,7 @@ body {
   width: auto;
   border-radius: 20px;
   z-index: -1;
+  padding: 15px;
 }
 
 .URLContainer {

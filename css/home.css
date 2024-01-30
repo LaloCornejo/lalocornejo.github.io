@@ -24,13 +24,18 @@ body {
   color: rgb(218, 1, 218);
   font-weight: 700;
   font-family: 'Hack', 'JetBrains Mono', 'JetBrains', sans-serif;
+  font-size: 1.3em;
   position: relative;
   max-width: 60vw;
+  margin-bottom: 0;
 }
 
 #Title {
-  max-width: 65vw;
+  max-width: 60vw;
   position: relative;
+  font-size: 20em;
+  font-weight: 700;
+  align-self: center;
   text-align: center;
   align-items: center;
   justify-self: center;
@@ -41,9 +46,9 @@ body {
 #Tdes {
   position: relative;
   text-align: center;
-  width: 65vw;
+  width: 60vw;
   height: auto;
-  line-height: 10px;
+  line-height: 5px;
   color: var(--clr-foreground);
   font-family: 'Hack', 'JetBrains Mono', 'JetBrains', sans-serif;
   transition: 1s;

@@ -44,3 +44,11 @@ function typeURL() {
     url.focus();
   }, 50);
 }
+
+qrCodeImage.addEventListener("click", async () => {
+  try {
+    await navigator.clipboard.writeText(qrCodeImage.src);
+  } catch (err) {
+    console.error("Failed to copy!", err);
+  }
+});
