@@ -24,7 +24,7 @@ social.forEach((item) => {
     if (item.id == "github") {
       try {
         maximize.href = "https://github.com/LaloCornejo";
-        iframe.src = "";
+        iframe.src = "https://github.com/LaloCornejo";
         iframe.title = "Github";
       } catch (e) {
         console.log(e);
@@ -46,7 +46,7 @@ social.forEach((item) => {
       try {
         maximize.href =
           "https://www.youtube.com/channel/UCPRKmKf9NkiAt1fHBlgI9Sw";
-        iframe.src = "";
+        iframe.src = "https://www.youtube.com/channel/UCPRKmKf9NkiAt1fHBlgI9Sw";
         iframe.title = "Youtube";
       } catch (e) {
         console.log(e);
@@ -106,6 +106,9 @@ youtube.addEventListener("mouseout", () => {
 
 close.addEventListener("click", () => {
   if (popOut.classList.contains("active")) {
+    iframe.removeAttribute("src");
+    iframe.removeAttribute("title");
+    
     popOutContent.style.removeProperty("transform");
     button.style.removeProperty("transform");
 

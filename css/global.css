@@ -662,6 +662,11 @@ a {
   .popOut .popOutContent {
     width: 80%;
   }
+
+  .popOut .Buttons {
+    top: 5%;
+    font-size: 2em;
+  }
 }
 
 .active {

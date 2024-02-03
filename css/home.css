@@ -560,6 +560,10 @@ body {
     font-size: 3vw;
   }
 
+  #Title {
+    font-size: 20vw;
+  }
+
   #separatorHead {
     width: 100px;
   }
