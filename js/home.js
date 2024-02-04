@@ -35,26 +35,16 @@ closebx.addEventListener("click", () => {
 });
 
 word.addEventListener("click", () => {
-  if (selected) {
-    setTimeout(() => {
-      front.classList.remove("active-page");
-      front.classList.add("innactive-page");
-      login.classList.remove("innactive-page");
-      login.classList.add("active-page");
-    }, 400);
-  } else {
     front.classList.remove("active-page");
     front.classList.add("innactive-page");
     login.classList.remove("innactive-page");
     login.classList.add("active-page");
-  }
 });
 
 
 auth.onAuthStateChanged(async (user) => {
   loginCk(user);
   if (user) {
-    startApp(user);
     login.classList.remove("active-page");
     login.classList.add("innactive-page");
     logoutButton.classList.remove("logged-out");

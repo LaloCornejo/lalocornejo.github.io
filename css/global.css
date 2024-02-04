@@ -228,13 +228,13 @@ a {
   background: linear-gradient(180deg, rgba(255, 0, 251, 0.65) 0%, rgba(149, 0, 255, 0.65) 100%);
   font-family: 'Hack', 'JetBrains Mono', 'JetBrains', sans-serif;
   border: 1px solid rgba(255, 255, 255, 0.1);
-  display: grid;
-  grid-template-rows: min-content min-content min-content auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .sideBar .sideBarHead {
   display: grid;
-  width: fit-content;
+  width: 90%;
   right: 15%;
   grid-template-columns: auto auto auto auto;
   grid-template-rows: auto;
@@ -266,8 +266,8 @@ a {
 .sideBar .pinnedIcons {
   position: relative;
   justify-self: center;
+  align-self: center;
   width: 90%;
-  margin-top: 2vh;
   top: 0;
   display: grid;
   grid-template-rows: min-content;
@@ -294,6 +294,55 @@ a {
 }
 
 .sideBar .pinnedIcon:hover {
+  background-color: rgba(22, 22, 22, 0.8);
+}
+
+.sideBar .sideBarTiles {
+  position: relative;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  min-height: 75%;
+  height: auto;
+  top: 0;
+  margin-bottom: 5%;
+  margin: auto;
+}
+
+.sideBar .sideBarTiles .tile {
+  position: relative;
+  width: 100%;
+  height: 4vh;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 20% 80%;
+  text-align: left;
+  align-items: center;
+  justify-content: left;
+  gap: 0;
+  padding: 0;
+  cursor: alias;
+  border-radius: 10px;
+  transition: 0.3s;
+  color: white;
+  background-color: rgba(34, 34, 34, 0.3);
+}
+
+.tile ion-icon {
+  font-size: 1.3rem;
+  margin: auto;
+  padding: 0;
+  color: white;
+}
+
+.tile p {
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+.sideBar .sideBarTiles .tile:hover {
   background-color: rgba(22, 22, 22, 0.8);
 }
 
