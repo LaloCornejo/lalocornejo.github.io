@@ -22,37 +22,23 @@ social.forEach((item) => {
     iframe.title = "";
 
     if (item.id == "github") {
-      try {
+      var title = "Github";
         maximize.href = "https://github.com/LaloCornejo";
         iframe.src = "https://github.com/LaloCornejo";
         iframe.title = "Github";
-      } catch (e) {
-        console.log(e);
-        iframe.src = "";
-        iframe.title = "Github";
-      }
     } else if (item.id == "twitch") {
-      try {
+      var title = "Twitch";
         maximize.href = "https://twitch.tv/l_ae_l_o";
         iframe.src =
-          "https://player.twitch.tv/?channel=l_ae_l_o&parent=lalocornejo.github.io";
+        "https://player.twitch.tv/?channel=l_ae_l_o&parent=lalocornejo.github.io";
         iframe.title = "Twitch";
-      } catch (e) {
-        console.log(e);
-        iframe.src = "";
-        iframe.title = "Twitch";
-      }
+
     } else if (item.id == "youtube") {
-      try {
+      var title = "Youtube";
         maximize.href =
           "https://www.youtube.com/channel/UCPRKmKf9NkiAt1fHBlgI9Sw";
         iframe.src = "https://www.youtube.com/channel/UCPRKmKf9NkiAt1fHBlgI9Sw";
         iframe.title = "Youtube";
-      } catch (e) {
-        console.log(e);
-        iframe.src = "";
-        iframe.title = "Youtube";
-      }
     }
 
     popOut.classList.add("active");
@@ -117,3 +103,9 @@ close.addEventListener("click", () => {
     }, 250);
   }
 });
+
+iframe.onerror = function () {
+  iframe.src = "";
+  iframe.title = title;
+  console.log("Error");
+}
