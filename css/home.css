@@ -645,151 +645,102 @@ body {
   transform: translateZ(0);
 }
 
-.bannerImg {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  justify-items: center;
-  align-items: center;
-  align-content: center;
-  width: fit-content;
-  height: auto;
-  object-fit: cover;
-  bottom: 8vh;
-  z-index: 10;
-}
-
-#YT,
-#GH {
-  border-radius: 20px;
-  opacity: 0;
-  visibility: hidden;
-  min-width: fit-content;
-  min-height: fit-content;
-  transition: all 0.3s ease-in-out;
-  box-shadow: 0 0 60px 5px var(--clr-foreground);
-}
-
-.YTContainer {
-  display: flex;
-  position: relative;
-  width: 500px;
-  height: 200px;
-  align-items: center;
-  background-color: var(--clr-background);
-  border-radius: 20px;
-  font-family: "Roboto", sans-serif;
-}
-
-.YTContainer #YTicon{
-  position: absolute;
-  display: flex;
-  width: 60px;
-  left: -30px;
-  top: -25px;
-}
-
-.YTContainer #YTLogo {
-  height: 80%;
-  width: auto;
-  margin-left: 5%;
-  border-radius: 50%;
-}
-
-.YTContainer .YTText {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 50%;
+#snippetFallback {
+  position:absolute;
+  top: 0;
+  left: 0;
+  border-radius: inherit;
+  width: 100%;
   height: 100%;
-  padding: 0 5%;
-  background-color: var(--clr-background);}
-
-.YTText h1 {
-  font-size: calc(1em + 1vw);
-  color: var(--clr-foreground);
-  font: 'Roboto', sans-serif, bold;
+  background-color: transparent;
+  overflow: hidden;
 }
 
-.YTText h2 {
-  font-size: calc(.5em + .7vw);
-  color: var(--clr-foreground);
-  margin-top: 0;
-  font: 'Roboto', sans-serif;
-  font-weight: 200;
+.fallbackContainer {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 5% 90%;
+  grid-template-columns: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
 }
 
-.YTContainer p {
-  font-size: calc(.4em + .5vw);
-  color: var(--clr-foreground);
-  margin-top: 0;
-  font: 'Roboto', sans-serif;
-  font-weight: 100;
+.fallbackContainer #fallbackHeader {
+  position: relative;
+  align-items: center;
+  justify-content: left;
+  display: grid;
+  grid-template-rows: 100%;
+  grid-template-columns: 10% 80%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  color: black;
+  cursor: alias;
 }
 
 @media screen and (max-width: 930px) {
-  #YT {
-    width: 70%;
+  .fallbackContainer #fallbackHeader {
+    grid-template-columns: 20% 80%;
   }
 }
 
-.GHContainer {
-  display: flex;
-  flex-direction: column;
+.fallbackContainer #iconFallback {
   position: relative;
-  width: 250px;
-  height: 300px;
   align-items: center;
-  background-color: var(--clr-background);
-  border-radius: 20px;
-  font-family: "Roboto", sans-serif;
-}
-
-.GHContainer #GHicon{
-  position: absolute;
   display: flex;
-  width: 60px;
-  left: -25px;
-  top: -25px;
-}
-
-.GHContainer #GHLogo {
-  height: 150px;
+  top: 0;
+  left: 0;
   width: auto;
-  margin-top: 10%;
-  border-radius: 50%;
-  border: white 2px solid;
+  height: 65%;
 }
 
-.GHContainer .GHText {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.fallbackContainer #fallbackHeader #title {
+  position: relative;
+  font-size: .9em;
+  font-weight: 700;
+  font-family: 'Hack', 'JetBrains Mono', 'JetBrains', sans-serif;
   align-items: center;
-  width: 50%;
+  justify-content: left;
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 100%;
-  background-color: var(--clr-background);
 }
 
-.GHText h1 {
-  font-size: calc(.7em + .8vw);
-  color: var(--clr-foreground);
-  font: 'Roboto', sans-serif, bold;
-  margin-bottom: 0;
+.fallbackContainer #fallbackImg {
+  position: relative;
+  height: 300px;
+  width: 50%;
+  max-width: 300px;
+  display: flex;
+  align-self: center;
+  justify-self: center;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  padding: 15px;
+  font-size: 6em;
+  background-color: white;
+  color: black;
+  cursor: alias;
 }
 
-.GHText h2 {
-  font-size: calc(.4em + .6vw);
-  color: var(--clr-foreground);
-  margin-top: 0;
-  font: 'Roboto', sans-serif;
-  font-weight: 200;
+.fallbackContainer #fallbackImg:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 50px 10px rgba(255, 255, 255, 0.5);
 }
 
-.GHContainer p {
-  font-size: calc(.4em + .5vw);
-  color: var(--clr-foreground);
-  margin-top: 0;
-  font: 'Roboto', sans-serif;
-  font-weight: 100;
+.fallbackContainer #fallbackImg img{
+  width:60%;
+  height: auto;
+  object-fit: contain;
 }
