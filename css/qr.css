@@ -52,6 +52,12 @@ body {
   padding: 15px;
 }
 
+@media( prefers-color-scheme: dark ) {
+  .qr-code {
+    box-shadow: 0 0 150px 10px rgba(255, 255, 255, .4);
+  }
+}
+
 .URLContainer {
   position: fixed;
   height: 100%;

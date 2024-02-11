@@ -188,11 +188,13 @@ a {
   overflow-y: hidden;
 }
 
-.dark-theme .logoAt {
-  filter: brightness(0) invert(1);
+.dark-theme .logoAt, 
+.dark-theme #loaderImg {
+  filter: invert(1);
 }
 
-.light-theme .logoAt {
+.light-theme .logoAt,
+.light-theme #loaderImg {
   filter: brightness(0);
 }
 
@@ -457,6 +459,12 @@ a {
   transition:
     opacity 0.65s,
     visibility 0.65s;
+}
+
+@media ( prefers-color-scheme: light ) {
+  .loaderImg {
+    filter: brightness(0);
+  }
 }
 
 .loader-hidden {
