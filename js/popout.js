@@ -114,7 +114,7 @@ function closePopout() {
     popOutContent.style.removeProperty("transform");
     button.style.removeProperty("transform");
 
-    fallback.removeAttribute("style");
+    fallback.style.visibility = "hidden";
 
     setTimeout(() => {
       popOut.classList.remove("active");
