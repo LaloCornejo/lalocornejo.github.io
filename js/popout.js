@@ -60,6 +60,7 @@ social.forEach((item) => {
     }
 
     popOut.classList.add("active");
+    active = true;
 
     iframeFallback();
 
@@ -86,12 +87,12 @@ iframe.onload = function () {
 iframe.onerror = function () {
   console.log("Error: The iframe is blocked.");
   fallback.removeAttribute("style");
-  
+
   iframe.removeAttribute("src");
   iframe.removeAttribute("title");
   iframe.style.display = "none";
   iframe.style.visibility = "hidden";
-  
+
   iframeFallback();
 };
 

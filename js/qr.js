@@ -1,5 +1,6 @@
 var url = document.getElementById("input");
 var qrCodeImage = document.querySelector(".qr-code");
+var esc = document.querySelector(".ExitTxt");
 
 document.addEventListener("keydown", function (event) {
   if (
@@ -51,4 +52,8 @@ qrCodeImage.addEventListener("click", async () => {
   } catch (err) {
     console.error("Failed to copy!", err);
   }
+});
+
+esc.addEventListener("click", async () => {
+  close();
 });

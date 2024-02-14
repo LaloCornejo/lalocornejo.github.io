@@ -1,0 +1,88 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100vw;
+  overflow: auto;
+}
+
+.Archives {
+  position: relative;
+  top: 10vh;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: top;
+  display: flex;
+  overflow: visible;
+}
+
+.Archives .ArchivesContainer {
+  position: relative;
+  height: max-content;
+  width: 75%;
+  display: grid;
+  grid-template-columns: 23% 23% 23% 23%;
+  grid-template-rows: auto;
+  justify-content: space-around;
+  align-items: top;
+  overflow: visible;
+}
+
+.ArchivesContainer .Section {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 25vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  margin: 10% 0 5% 0;
+  background-color: var(--clr-background);
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+}
+
+.ArchivesContainer .Section:hover {
+  border: 2px inset var(--clr-foreground);
+  z-index: 100;
+}
+
+.dark-theme .ArchivesContainer .Section {
+  box-shadow: 0 0 100px 5px rgba(140, 0, 255, .8) inset;
+}
+
+.light-theme .ArchivesContainer .Section {
+  box-shadow: 0 0 50px 2px rgb(0, 217, 255) inset;
+  background-color: rgb(220, 255, 252);
+}
+
+.ArchivesContainer .Section ion-icon {
+  position: relative;
+  font-size: 6rem;
+  color: var(--clr-foreground);
+  margin: 10px;
+  transform: translateZ(40px);
+  transition: all 0.3s ease;
+}
+
+/* .ArchivesContainer .Section:hover ion-icon {
+  transform: scale(1.1);
+} */
+
+.ArchivesContainer .Section p {
+  position: relative;
+  align-self: bottom;
+  justify-self: left;
+  font-size: 1em;
+  transform: translateZ(40px);
+  color: var(--clr-foreground);
+}
+
+embed {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+}
