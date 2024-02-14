@@ -76,6 +76,7 @@ html, body {
   align-self: bottom;
   justify-self: left;
   font-size: 1em;
+  font-family: Hack, "JetBrains Mono", monospace;
   transform: translateZ(40px);
   color: var(--clr-foreground);
 }
