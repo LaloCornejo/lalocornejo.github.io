@@ -5,15 +5,20 @@ const popOutContent = document.querySelector(".popOutContent");
 const button = document.querySelector(".Buttons");
 
 const close = document.querySelector("#popOutClose");
-const iframe = document.querySelector("#pdf-js-viewer");
+const img = document.querySelector(".popImage");
+const imgs = document.querySelectorAll(".popImage");
+
+window.onload = (console.log("pdfReader loaded"));
 
 section.forEach((item) => {
   item.addEventListener("click", (event) => {
-    console.log(item);
+    console.log(item.id);
     popOut.classList.add("active");
 
 
-    iframe.src = `/web/viewer.html?file=/img/pdfs/${item.id}.pdf`;
+    imgs.forEach((img) => {
+      img.src = `/img/${item.id}/${img.id}.jpg`;
+    });
 
     setTimeout(() => {
       popOutContent.style.transform = "scale(1)";
@@ -26,7 +31,7 @@ function closePopOut() {
   popOutContent.style.transform = "scale(0)";
   button.style.transform = "scale(0)";
 
-  iframe.src = "";
+  imgs.src = "";
 
   setTimeout(() => {
     popOut.classList.remove("active");
@@ -34,8 +39,25 @@ function closePopOut() {
 }
 
 document.addEventListener("click", (event) => {
-  console.log(event.target) + ":)";
+  console.log(event.target + ":)"); // Fix typo: move closing parenthesis inside the console.log() function.
   if (event.target == popOut || event.target == close) {
     closePopOut();
+  }
+});
+
+const socialSnippet = document.querySelectorAll("#socialSnipet"); // Fix typo: change 'socialSnipet' to 'socialSnippet'.
+
+window.addEventListener("wheel", (event) => {
+  if (popOut.classList.contains("active")) {
+    const scrollSpeed = 100;
+    if (event.deltaY < 0) {
+      // scroll left
+      socialSnippet.scrollLeft -= scrollSpeed;
+      console.log("scrolling left" + socialSnippet.scrollLeft);
+    } else if (event.deltaY > 0) {
+      // scroll right
+      socialSnippet.scrollLeft += scrollSpeed;
+      console.log("scrolling right" + socialSnippet.scrollLeft);
+    }
   }
 });

@@ -707,11 +707,23 @@ a {
   transform: scale(1.1);
 }
 
-.popOutContent iframe {
+.popOutContent #socialSnipet {
   height: 100%;
   width: 100%;
+  display: flex;
   border-radius: 25px;
   border: none;
+  overflow: auto;
+  justify-items: center;
+}
+
+.popOutContent #socialSnipet img {
+  width: 100%;
+  height: auto;
+  border-radius: 25px;
+  margin: 0;
+  padding: 0 5px 0 5px;
+  transition: 0.3s;
 }
 
 @media screen and (max-width: 930px) {

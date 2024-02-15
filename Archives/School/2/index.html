@@ -8,14 +8,20 @@
   <link rel="stylesheet" href="/css/archives.css" />
   <link rel="stylesheet" href="/css/global.css" />
   <link rel="icon favicon" href="/img/favicon/favicon.ico" />
-  <script src="/web/viewer.mjs"></script>
 </head>
 
 <body>
 
   <div class="popOut">
     <div class="popOutContent">
-      <embed id="pdf-js-viewer" src="" title="webviewer" frameborder="0"></embed>
+      <div id="socialSnipet">
+        <img class="popImage" id="1" src="">
+        <img class="popImage" id="2" src="">
+        <img class="popImage" id="3" src="">
+        <img class="popImage" id="4" src="">
+        <img class="popImage" id="5" src="">
+        <img class="popImage" id="6" src="">
+      </div>
     </div>
     <div class="Buttons">
       <a>
@@ -119,10 +125,6 @@
         <ion-icon name="extension-puzzle"></ion-icon>
         <p>Logica</p>
       </a>
-      <a class="Section" id="Multicultural" data-tilt data-tilt-glare data-tilt-max-glare=".4" data-tilt-scale="1.1">
-        <ion-icon name="globe"></ion-icon>
-        <p>Multicultural</p>
-      </a>
     </div>
   </div>
 
@@ -132,7 +134,7 @@
 
   <!-----------------SCRIPTS----------------------->
   <script src="/js/main.js" type="module"></script>
-  <script src="/js/pdfReader.js" type="text/javascript"></script>
+  <script src="/js/pdfReader.js" type="module"></script>
   <script type="text/javascript" src="/js/vanilla-tilt.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
