@@ -5,6 +5,8 @@
  | D | A | R | K | M | O | D | E |
  +---+---+---+---+---+---+---+---*/
 
+import { goBack } from "./History.js";
+
 const themeToggle = document.querySelector("#theme-toggle");
 
 themeToggle.addEventListener("click", () => {
@@ -102,3 +104,9 @@ function setCords(e) {
     }
   }
 }
+
+const back = document.querySelector("#back");
+
+back.addEventListener("click", () => {
+  goBack();
+});
