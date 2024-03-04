@@ -4,26 +4,28 @@ import { auth } from "./FirebaseConfig.js";
 
 const signIn = document.querySelector("#loggin");
 
-signIn.addEventListener("click", async (e) => {
-  e.preventDefault();
+if (signIn) {
+  signIn.addEventListener("click", async (e) => {
+    e.preventDefault();
 
-  const email = document.querySelector("#email").value;
-  const password = document.querySelector("#password").value;
-  const wrapper = document.querySelector(".wrapper");
+    const email = document.querySelector("#email").value;
+    const password = document.querySelector("#password").value;
+    const wrapper = document.querySelector(".wrapper");
 
-  try {
-    const credentials = await signInWithEmailAndPassword(auth, email, password);
-    Noti("Welcome LÆLÖ", "success");
-    console.log(credentials);
-    wrapper.classList.remove("active-popup");
-  } catch (error) {
-    if (error.code == "auth/user-not-found") {
-      Noti("User not found", "error");
-    } else if (error.code == "auth/wrong-password") {
-      Noti("Wrong password", "error");
-    } else if (error.code == "auth/invalid-email") {
-      Noti("Invalid email", "error");
+    try {
+      const credentials = await signInWithEmailAndPassword(auth, email, password);
+      Noti("Welcome LÆLÖ", "success");
+      console.log(credentials);
+      wrapper.classList.remove("active-popup");
+    } catch (error) {
+      if (error.code == "auth/user-not-found") {
+        Noti("User not found", "error");
+      } else if (error.code == "auth/wrong-password") {
+        Noti("Wrong password", "error");
+      } else if (error.code == "auth/invalid-email") {
+        Noti("Invalid email", "error");
+      }
+      console.log(error);
     }
-    console.log(error);
-  }
-});
+  });
+}

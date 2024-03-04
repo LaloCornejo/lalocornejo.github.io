@@ -1,20 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
-@font-face {
-  font-family: 'Zweig';
-  src: url('../fonts/Zweig.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Zweig-italic';
-  src: url('../fonts/Zweig-italic.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Blur';
-  src: url('../fonts/Blur\ Regular.ttf') format('truetype');
-}
 
 .dark-theme {
   --clr-foreground: rgb(255, 255, 255);
@@ -36,8 +20,7 @@ body {
   width: 100vw;
 }
 
-
-/* #SubTitle {
+#SubTitle {
   color: rgb(218, 1, 218);
   font-weight: 700;
   font-family: 'Hack', 'JetBrains Mono', 'JetBrains', sans-serif;
@@ -45,109 +28,19 @@ body {
   position: relative;
   max-width: 60vw;
   margin-bottom: 0;
-} */
-
-.Title {
-  color: var(--clr-foreground);
-  position: relative;
-  margin-top: 12%;
-  max-width: 75vw;
-  position: relative;
-  align-self: center;
-  text-align: center;
-  align-items: center;
-  justify-self: center;
-  transition: .6s;
-  height: auto;
 }
 
-.Title h1{
-  font-family: "FuturaMedium";
-  font-size: 10em;
-  font-weight: 400;
+#Title {
+  max-width: 60vw;
+  position: relative;
+  font-size: 20em;
+  font-weight: 700;
   align-self: center;
   text-align: center;
   align-items: center;
   justify-self: center;
   line-height: 1px;
   transition: .6s;
-}
-
-.Title h3{
-  font-family: 'Zweig-italic';
-  font-size: 2em;
-  font-weight: 400;
-  align-self: center;
-  text-align: center;
-  align-items: center;
-  justify-self: center;
-  transition: .6s;
-  opacity: 1;
-}
-
-.Title h3:hover{
-  opacity: 0.5;
-}
-
-.Main {
-  position: relative;
-  display: flex;
-  margin-top: 5%;
-  width: 100vw;
-  min-height: 45vh;
-  height: max-content;
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  transition: .6s;
-}
-
-.MainContainer{
-  display: flex;
-  height: auto;
-  width: 100%;
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  transition: .6s;
-  border-radius: 20px;
-  justify-content: center;
-}
-
-.MainContainer .SocialPreview{
-  position: absolute;
-  top: 0;
-  display: flex;
-  background-color: rgb(10, 10, 30);
-  margin-top: -3%;
-  width: 85%;
-  height: 55%;
-  justify-content: center;
-  align-items: center;
-  border-radius: inherit;
-}
-.SocialPreview #SocialPreviewCard{
-  position: relative;
-  display: flex;
-  width: 20%;
-  height: 30%;
-  background-color: black;
-  align-items: center;
-  justify-content: center;
-  border-radius: inherit;
-}
-
-.SocialPreview #SocialPreviewImg{
-  position: relative;
-  width: 80%;
-  height: 80%;
-  border-radius: inherit;
-}
-
-.MainContainer .BkGround{
-  width: 100%;
-  border-radius: 20px;
-  z-index: -1;
 }
 
 #Tdes {
@@ -180,17 +73,16 @@ body {
   font-weight: 500;
 }
 
-
-
 #time {
   position: relative;
+  top: 1.8rem;
   opacity: 0.5;
 }
 
 #version {
   position: relative;
+  top: 1.8rem;
   opacity: 0.4;
-  font-size: 1.2em;
 }
 
 #word {

@@ -14,33 +14,41 @@ const closebx = document.querySelector(".icon-close");
 const logoutButton = document.querySelector(".btnloggout");
 const loggedInPage = document.querySelector(".LoggedInPage");
 
-
 // -=================== Clock ===================-
 
 let time = document.querySelector("#current-time");
 
 setInterval(() => {
   let d = new Date();
-  time.innerHTML = d.toLocaleTimeString( "en-US", { hour: 'numeric', minute: 'numeric', hour12: true });
-})
+  if (time)
+  time.innerHTML = d.toLocaleTimeString("en-US", {
+    hour: "numeric",
+    minute: "numeric",
+    hour12: true,
+  });
+});
 
 // -=================== Login ===================-
+if (login) {
+  login.addEventListener("click", () => {
+    wrapper.classList.add("active-popup");
+  });
+}
 
-login.addEventListener("click", () => {
-  wrapper.classList.add("active-popup");
-});
+if (closebx) {
+  closebx.addEventListener("click", () => {
+    wrapper.classList.remove("active-popup");
+  });
+}
 
-closebx.addEventListener("click", () => {
-  wrapper.classList.remove("active-popup");
-});
-
-word.addEventListener("click", () => {
+if (word) {
+  word.addEventListener("click", () => {
     front.classList.remove("active-page");
     front.classList.add("innactive-page");
     login.classList.remove("innactive-page");
     login.classList.add("active-page");
-});
-
+  });
+}
 
 auth.onAuthStateChanged(async (user) => {
   loginCk(user);
@@ -51,3 +59,4 @@ auth.onAuthStateChanged(async (user) => {
     loggedInPage.classList.remove("logged-out");
   }
 });
+
