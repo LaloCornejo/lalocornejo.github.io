@@ -247,6 +247,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .FooterContainer .FooterContent{
@@ -262,7 +263,7 @@ a {
 
 .FooterContentContainerTitle {
   position: relative;
-  width: 160%;
+  width: 140%;
   height: 90%;
   display: flex;
   align-items: center;
@@ -277,6 +278,18 @@ a {
   font-weight: 300;
 }
 
+@media screen and ( max-width: 742px ) {
+  .Footer {
+    margin-top: 5%;
+  }
+  .FooterContentContainerTitle{
+    width: 200%;
+  }
+  .FooterContentContainerTitle h1{
+    font-size: 3em;
+  }
+}
+
 .FooterContentContainerText {
   position: relative;
   width: 50%;
@@ -288,20 +301,21 @@ a {
 
 .Sl1, .Sl2 {
   position: absolute;
-  width: 80%;
-  left: 100%;
-  animation: slideshow 20s linear infinite;
+  width: 90%;
 }
 
 .Sl1{
   display: flex;
   justify-content: space-around;
   animation-delay: 0s;
+  animation: slideshow 20s linear infinite;
 }
 .Sl2{
   display: flex;
   justify-content: space-around;
+  left: 100%;
   animation-delay: 10s;
+  animation: slideshow2 20s linear infinite;
 }
 
 .FooterContentContainerText  p{
@@ -310,8 +324,13 @@ a {
 }
 
 @keyframes slideshow {
-  0%    { left: 100%; }
+  0%    { left: 0%; }
   100%  { left: -100%; }
+}
+
+@keyframes slideshow2 {
+  0%    { left: 100%; }
+  100%  { left: 0%; }
 }
 
 /*---+---+---+---+---+---+
@@ -329,7 +348,7 @@ a {
   top: 0;
   left: 0;
   transform: translateX(-50%) translateY(-50%);
-  transition: transform .3s;
+  transition: scale .15s ease-in-out;
 }
 
 

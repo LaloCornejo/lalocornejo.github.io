@@ -28,22 +28,23 @@ if (!mobileCheck()) {
 
   animate();
 
+
   document.addEventListener("mousemove", (event) => {
     mouseX = event.pageX;
     mouseY = event.pageY;
   });
 
-  // const MainContainer = document.querySelector(".MainContainer");
-  // if (MainContainer) {
-  //   MainContainer.addEventListener("mouseover", () => {
-  //     const cursor = document.querySelector(".cursor");
-  //     cursor.classList.add("hidden-cursor");
-  //   });
-  //   MainContainer.addEventListener("mouseleave", () => {
-  //     const cursor = document.querySelector(".cursor");
-  //     cursor.classList.remove("hidden-cursor");
-  //   });
-  // }
+  const Hover = document.querySelectorAll(".Hover");
+  if (Hover) {
+    Hover.forEach((item) => {
+      item.addEventListener("mouseover", () => {
+        cursor.style.scale = "1.2";
+      });
+      item.addEventListener("mouseout", () => {
+        cursor.style.scale = "1";
+      });
+    });
+  }
 } else {
   cursor.style.display = "none";
 }

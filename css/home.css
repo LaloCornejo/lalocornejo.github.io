@@ -34,6 +34,7 @@ body {
   overflow: hidden;
   height: auto;
   width: 100vw;
+  transition: scroll 0 ease-in-out;
 }
 
 
@@ -89,6 +90,13 @@ body {
   opacity: 0.5;
 }
 
+@media screen {
+  .Title h3 {
+    font-size: 1.5em;
+  }
+  
+}
+
 .Main {
   position: relative;
   display: flex;
@@ -121,16 +129,18 @@ body {
   background-color: rgb(10, 10, 30);
   margin-top: -3%;
   width: 85%;
-  height: 55%;
+  height: 100%;
   justify-content: center;
   align-items: center;
   border-radius: inherit;
+  transition: all .3s ease-in-out;
 }
 .SocialPreview #SocialPreviewCard{
   position: relative;
   display: flex;
   width: 20%;
-  height: 30%;
+  height: 25%;
+  margin-bottom: 15%;
   background-color: black;
   align-items: center;
   justify-content: center;
@@ -142,6 +152,7 @@ body {
   width: 80%;
   height: 80%;
   border-radius: inherit;
+  transition: all .3s ease-in-out;
 }
 
 .MainContainer .BkGround{
