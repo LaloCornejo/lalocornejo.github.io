@@ -11,8 +11,15 @@ const twitch = document.querySelector("#twitch");
 const github = document.querySelector("#github");
 const youtube = document.querySelector("#youtube");
 const socialSelector = document.querySelector("#socialSelector");
-const YT = document.querySelector("#YT");
-const GH = document.querySelector("#GH");
+
+const iconFallback = document.querySelector("#iconFallback");
+const fallbackImg = document.querySelector("#fallbackImg");
+const fallbackIcon = document.querySelector("#fallbackIcon");
+const fallbackHeader = document.querySelector("#fallbackHeader");
+
+var iconName = "";
+var iconSrc = "";
+var iconHref = "";
 
 social.forEach((item) => {
   item.addEventListener("click", (event) => {
@@ -22,40 +29,40 @@ social.forEach((item) => {
     iframe.title = "";
 
     if (item.id == "github") {
-      try {
-        maximize.href = "https://github.com/LaloCornejo";
-        iframe.src = "";
-        iframe.title = "Github";
-      } catch (e) {
-        console.log(e);
-        iframe.src = "";
-        iframe.title = "Github";
-      }
+      var title = "Github";
+      maximize.href = "https://github.com/LaloCornejo";
+      iframe.src = "https://github.com/LaloCornejo";
+      iframe.title = title;
+      iconName = "logo-github";
+      iconSrc = "/img/github.svg";
+      iconHref = "https://github.com/LaloCornejo";
+      console.log(iconHref + " " + iconSrc + " " + iconName);
     } else if (item.id == "twitch") {
-      try {
-        maximize.href = "https://twitch.tv/l_ae_l_o";
-        iframe.src =
-          "https://player.twitch.tv/?channel=l_ae_l_o&parent=lalocornejo.github.io";
-        iframe.title = "Twitch";
-      } catch (e) {
-        console.log(e);
-        iframe.src = "";
-        iframe.title = "Twitch";
-      }
+      var title = "Twitch";
+      maximize.href = "https://twitch.tv/l_ae_l_o";
+      iframe.src =
+        "https://player.twitch.tv/?channel=l_ae_l_o&parent=lalocornejo.github.io";
+      iframe.title = title;
+      iconName = "logo-twitch";
+      iconSrc = "/img/twitch.svg";
+      iconHref = "https://twitch.tv/l_ae_l_o";
+      console.log(iconHref + " " + iconSrc + " " + iconName);
     } else if (item.id == "youtube") {
-      try {
-        maximize.href =
-          "https://www.youtube.com/channel/UCPRKmKf9NkiAt1fHBlgI9Sw";
-        iframe.src = "";
-        iframe.title = "Youtube";
-      } catch (e) {
-        console.log(e);
-        iframe.src = "";
-        iframe.title = "Youtube";
-      }
+      var title = "Youtube";
+      maximize.href =
+        "https://www.youtube.com/channel/UCPRKmKf9NkiAt1fHBlgI9Sw";
+      iframe.src = "https://www.youtube.com/channel/UCPRKmKf9NkiAt1fHBlgI9Sw";
+      iframe.title = title;
+      iconName = "logo-youtube";
+      iconSrc = "/img/youtube.svg";
+      iconHref = "https://www.youtube.com/channel/UCPRKmKf9NkiAt1fHBlgI9Sw";
+      console.log(iconHref + " " + iconSrc + " " + iconName);
     }
 
     popOut.classList.add("active");
+    active = true;
+
+    iframeFallback();
 
     setTimeout(() => {
       popOutContent.style.transform = "scale(1)";
@@ -64,53 +71,54 @@ social.forEach((item) => {
   });
 });
 
-let hoverTimeout;
+const fallback = document.querySelector("#snippetFallback");
 
-github.addEventListener("mouseover", (e) => {
-  clearTimeout(hoverTimeout);
-  hoverTimeout = setTimeout(() => {
-    if (github.matches(":hover")) {
-      YT.removeAttribute("style");
-
-      GH.style.opacity = "1";
-      GH.style.visibility = "visible";
-      GH.style.bottom = "12vh";
-    }
-  }, 400);
+document.addEventListener("click", (event) => {
+  console.log(event.target) + ":)";
+  if (event.target == popOut || event.target == close) {
+    closePopout();
+  }
 });
 
-github.addEventListener("mouseout", () => {
-  hoverTimeout = setTimeout(() => {
-    GH.removeAttribute("style");
-  }, 700);
-});
+iframe.onload = function () {
+  console.log("Iframe loaded successfully");
+};
 
-youtube.addEventListener("mouseover", () => {
-  clearTimeout(hoverTimeout);
-  hoverTimeout = setTimeout(() => {
-    if (youtube.matches(":hover")) {
-      GH.removeAttribute("style");
+iframe.onerror = function () {
+  console.log("Error: The iframe is blocked.");
+  fallback.removeAttribute("style");
 
-      YT.style.opacity = "1";
-      YT.style.visibility = "visible";
-      YT.style.bottom = "12vh";
-    }
-  }, 400);
-});
+  iframe.removeAttribute("src");
+  iframe.removeAttribute("title");
+  iframe.style.display = "none";
+  iframe.style.visibility = "hidden";
 
-youtube.addEventListener("mouseout", () => {
-  hoverTimeout = setTimeout(() => {
-    YT.removeAttribute("style");
-  }, 700);
-});
+  iframeFallback();
+};
 
-close.addEventListener("click", () => {
+function iframeFallback() {
+  try {
+    iconFallback.name = iconName;
+    fallbackIcon.src = iconSrc;
+    fallbackImg.href = iconHref;
+    fallbackHeader.href = iconHref;
+  } catch (error) {
+    console.log("Error: FallBack failed.") + error;
+  }
+}
+
+function closePopout() {
   if (popOut.classList.contains("active")) {
+    iframe.removeAttribute("src");
+    iframe.removeAttribute("title");
+
     popOutContent.style.removeProperty("transform");
     button.style.removeProperty("transform");
+
+    fallback.style.visibility = "hidden";
 
     setTimeout(() => {
       popOut.classList.remove("active");
     }, 250);
   }
-});
+}

@@ -33,7 +33,7 @@
   <!--============================== LOADER ===================================-->
   <div class="loader">
     <div class="loaderContainer">
-      <img id="loaderImg" src="/img/LogoDark.png" alt="Logo">
+      <img id="loaderImg" src="/img/Logo.svg" alt="Logo">
       <div class="loadBarcontainer">
         <div class="loadBar"></div>
       </div>
@@ -46,7 +46,9 @@
     <div class="sideBarHead">
       <ion-icon class="icon" style="font-size: 1.5em;" name="hardware-chip-sharp"></ion-icon>
       <span id="separatorHead"></span>
-      <ion-icon class="icon" name="arrow-back"></ion-icon>
+      <a id="back">
+        <ion-icon class="icon" name="arrow-back"></ion-icon>
+      </a>
       <a href="../home" alt="Home">
         <ion-icon class="icon" name="planet-sharp"></ion-icon>
       </a>
@@ -72,8 +74,19 @@
         <ion-icon class="pinnedIcon" name="qr-code"></ion-icon>
       </a>
     </div>
-  </div>
 
+    <div class="sideBarTiles">
+      <a href="https://lalocornejonotionclone.vercel.app" type="_blank" class="tile">
+        <ion-icon name="clipboard"></ion-icon>
+        <p>Notion</p>
+      </a>
+      <a href="/Archives/" type="_blank" class="tile">
+        <ion-icon name="layers-outline"></ion-icon>
+        <p>Archive</p>
+      </a>
+    </div>
+  </div>
+  <!--============================== end sideBar ===================================-->
   <!--================================ Main ================================-->
   <div class="Compiler">
     <div class="Title">
