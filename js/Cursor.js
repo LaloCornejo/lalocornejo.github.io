@@ -33,17 +33,17 @@ if (!mobileCheck()) {
     mouseY = event.pageY;
   });
 
-  const MainContainer = document.querySelector(".MainContainer");
-  if (MainContainer) {
-    MainContainer.addEventListener("mouseover", () => {
-      const cursor = document.querySelector(".cursor");
-      cursor.classList.add("hidden-cursor");
-    });
-    MainContainer.addEventListener("mouseleave", () => {
-      const cursor = document.querySelector(".cursor");
-      cursor.classList.remove("hidden-cursor");
-    });
-  }
+  // const MainContainer = document.querySelector(".MainContainer");
+  // if (MainContainer) {
+  //   MainContainer.addEventListener("mouseover", () => {
+  //     const cursor = document.querySelector(".cursor");
+  //     cursor.classList.add("hidden-cursor");
+  //   });
+  //   MainContainer.addEventListener("mouseleave", () => {
+  //     const cursor = document.querySelector(".cursor");
+  //     cursor.classList.remove("hidden-cursor");
+  //   });
+  // }
 } else {
   cursor.style.display = "none";
 }
