@@ -21,11 +21,11 @@ let time = document.querySelector("#current-time");
 setInterval(() => {
   let d = new Date();
   if (time)
-  time.innerHTML = d.toLocaleTimeString("en-US", {
-    hour: "numeric",
-    minute: "numeric",
-    hour12: true,
-  });
+    time.innerHTML = d.toLocaleTimeString("en-US", {
+      hour: "numeric",
+      minute: "numeric",
+      hour12: true,
+    });
 });
 
 // -=================== Login ===================-
@@ -60,3 +60,57 @@ auth.onAuthStateChanged(async (user) => {
   }
 });
 
+// -=================== Cursor ===================-
+import "./Cursor.js";
+
+/*---+---+---+---+---+---+
+ | S | C | R | O | L | L | */
+import "./scroll.js";
+
+/*---+---+---+---+---+---+
+  | P | O | P | O | U | T |
+  +---+---+---+---+---+---*/
+const social = document.querySelectorAll(".Social");
+
+social.forEach((item) => {
+  item.addEventListener("click", (event) => {
+    flash();
+    if (item.id == "Github") {
+      var title = "Github";
+      var previewImg = "../img/github.svg";
+      var bkImage = "../img/bgbk1.svg";
+    } else if (item.id == "Twitch") {
+      var title = "Twitch";
+      var previewImg = "../img/twitch.svg";
+      var bkImage = "../img/bgbk2.svg";
+    } else if (item.id == "Youtube") {
+      var title = "Youtube";
+      var previewImg = "../img/youtube.svg";
+      var bkImage = "../img/bgbk3.svg";
+    }
+
+    const socialPreviewImg = document.querySelector("#SocialPreviewImg");
+    const socialPreviewTitle = document.querySelector("#SocialPreviewTitle");
+    const BkGround = document.querySelector(".BkGround");
+
+    setTimeout(() => {
+      if (socialPreviewImg) {
+        socialPreviewImg.src = previewImg;
+      }
+
+      if (socialPreviewTitle) {
+        socialPreviewTitle.alt = title;
+      }
+      if (BkGround) {
+        BkGround.src = bkImage;
+      }
+    }, 100);
+  });
+});
+
+function flash() {
+  document.querySelector(".MainContainer").style.animation = "flash .8s";
+  setTimeout(() => {
+    document.querySelector(".MainContainer").style.animation = "none";
+  }, 500);
+}

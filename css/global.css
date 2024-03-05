@@ -77,12 +77,20 @@
 
 #theme-toggle {
   cursor: pointer;
-  top: 0.7rem;
+  top: 1rem;
   background: 0;
   border: 0;
   position: fixed;
   isolation: isolate;
-  right: 1rem;
+  right: 3rem;
+}
+
+@media screen and ( max-width: 930px ){
+  #theme-toggle {
+    scale: .7;
+    top: .5rem;
+    right: 1rem;
+  }
 }
 
 #theme-toggle svg {
@@ -221,6 +229,10 @@ a {
   border-radius: 45px;
 }
 
+@media screen and ( max-width:930px ){
+
+}
+
 /* .Front {
   height: 98vh;
   width: 100vw;
@@ -323,6 +335,15 @@ a {
   font-family: Hack, JetBrains Mono, JetBrains, sans-serif;
 }
 
+@media screen and ( max-width: 930px ) {
+  .FooterContentContainerText {
+    flex-direction: column;
+  }
+  .FooterContentContainerText p {
+    font-size: .2em;
+  }
+}
+
 @keyframes slideshow {
   0%    { left: 0%; }
   100%  { left: -100%; }
@@ -383,6 +404,14 @@ a {
   z-index: 1;
   position: relative;
   transition: 1s;
+}
+
+@media screen and (max-width: 742px) {
+  #Logo {
+    width: 5vw;
+    min-width: 80px;
+    max-width: 160px;
+  }
 }
 
 /*---+---+---+---+---+---+---+

@@ -23,7 +23,7 @@ var iconHref = "";
 
 social.forEach((item) => {
   item.addEventListener("click", (event) => {
-    console.log(item);
+    // console.log(item);
     maximize.href = "";
     iframe.src = "";
     iframe.title = "";

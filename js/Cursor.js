@@ -34,6 +34,15 @@ if (!mobileCheck()) {
     mouseY = event.pageY;
   });
 
+  const Main = document.querySelector(".MainContainer");
+  if (Main) {
+    Main.addEventListener("mouseover", () => {
+      cursor.style.display = "none";
+    });
+    Main.addEventListener("mouseout", () => {
+      cursor.removeAttribute("style");
+    });
+  }
   const Hover = document.querySelectorAll(".Hover");
   if (Hover) {
     Hover.forEach((item) => {

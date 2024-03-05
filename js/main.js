@@ -91,11 +91,3 @@ const back = document.querySelector("#back");
 back.addEventListener("click", () => {
   goBack();
 });
-
-
-// -=================== Cursor ===================-
-import "./Cursor.js";
-
-/*---+---+---+---+---+---+
- | S | C | R | O | L | L | */
-import "./scroll.js";
