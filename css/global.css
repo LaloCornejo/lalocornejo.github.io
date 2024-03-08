@@ -49,7 +49,16 @@
 }
 
 .DarkMode {
-  z-index: 1000000000;
+  z-index: 100;
+  position: relative;
+  align-self: center;
+  justify-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  cursor: pointer;
 }
 
 .dark-theme {
@@ -77,18 +86,16 @@
 
 #theme-toggle {
   cursor: pointer;
-  top: 1rem;
   background: 0;
   border: 0;
   position: fixed;
   isolation: isolate;
-  right: 3rem;
+  right: 4%;
 }
 
 @media screen and ( max-width: 930px ){
   #theme-toggle {
     scale: .7;
-    top: .5rem;
     right: 1rem;
   }
 }
@@ -222,7 +229,7 @@ a {
   align-items: center;
   justify-content: center;
   justify-items: center;
-  align-items: center;
+  align-content: center;
   background-color: var(--clr-background);
   z-index: 100;
   transition: 0.4s;
@@ -398,11 +405,12 @@ a {
 }
 
 #Logo {
-  width: 8vw;
-  min-width: 110px;
-  max-width: 160px;
-  z-index: 1;
   position: relative;
+  height: 70%;
+  padding: 5px;
+  min-width: 50px;
+  max-width: 120px;
+  z-index: 1;
   transition: 1s;
 }
 
@@ -817,15 +825,15 @@ a {
   }
 
   to {
-    -webkit-transform: translateX(-60vw);
-    transform: translateX(-60vw);
+    -webkit-transform: translateX(-250%);
+    transform: translateX(-250);
   }
 }
 
 @keyframes slideInSB {
   from {
-    -webkit-transform: translateX(-60vw);
-    transform: translateX(-60vw);
+    -webkit-transform: translateX(-250%);
+    transform: translateX(-250%);
   }
 
   to {
