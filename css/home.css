@@ -169,7 +169,7 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: inherit;
-  box-shadow: 0 0 50px 5px rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.6);
 }
 
 .SocialPreview #SocialPreviewImg{
@@ -190,9 +190,10 @@ body {
 .SocialsPanel {
   position: absolute;
   display: flex;
-  top: 3%;
+  top: 2%;
   right: 8%;
   width: 40%;
+  min-width: 400px;
   background-color: rgba(0, 0, 0, 0.5);
   align-items: center;
   align-content: center;
@@ -200,6 +201,12 @@ body {
   border-radius: 40px;
   opacity: 0;
   transition: opacity 1s ease-in-out;
+}
+
+@media screen and (max-width: 742px){
+  .SocialsPanel {
+    display: none;
+  }
 }
 
 .SocialsPanel .Social {
@@ -212,7 +219,7 @@ body {
   align-items: center;
   justify-items: space-around;
   justify-content: space-around;
-  font-size: 1em;
+  font-size: calc(.2em + 1vw);
   color: white;
   transition: .3s;
   font-family: "Agrandir";
@@ -252,18 +259,12 @@ body {
   font-weight: 500;
 }
 
-
-
 #time {
   position: relative;
   opacity: 0.5;
 }
 
-#version {
-  position: relative;
-  opacity: 0.4;
-  font-size: 1.2em;
-}
+
 
 @media screen and ( max-width: 930px){
   #version {

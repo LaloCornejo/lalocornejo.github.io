@@ -12,24 +12,41 @@
 
 <body>
   <!--================================ Dark mode ================================-->
-  <div class="DarkMode">
-    <button id="theme-toggle" aria-label="Switch to dark theme">
-      <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 100 100">
-        <g class="toggle-sun">
-          <circle class="cls-1" cx="50" cy="50" r="30" />
-          <circle class="cls-1" cx="100"></circle>
-        </g>
-        <g class="toggle-circle">
-          <circle class="cls-1" cx="99" cy="-3" r="22" />
-        </g>
-      </svg>
-    </button>
+  <div class="navbar">
+    <div id="version">
+      <ion-icon name="git-branch-outline"></ion-icon>
+      v2.0-beta
+    </div>
+
+    <a href="/home/">
+      <img class="logoAt" id="Logo" src="/img/Logo.svg" alt="Logo" />
+    </a>
+
+    <div class="DarkMode">
+      <button id="theme-toggle" aria-label="Switch to dark theme">
+        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 100 100">
+          <g class="toggle-sun">
+            <circle class="cls-1" cx="50" cy="50" r="30" />
+            <circle class="cls-1" cx="100"></circle>
+          </g>
+          <g class="toggle-circle">
+            <circle class="cls-1" cx="99" cy="-3" r="22" />
+          </g>
+        </svg>
+      </button>
+    </div>
+    <!-- 
+      <div style="
+              display: grid;
+              grid-template-columns: auto auto;
+              justify-content: center;
+              align-items: center;
+            " id="time">
+        <ion-icon style="padding-right: 1rem" name="time-outline"></ion-icon>
+        <div id="current-time"></div>
+      </div> -->
+
   </div>
-
-  <a href="/home/">
-    <img class="logoAt" id="Logo" src="/img/Logo.svg" alt="Logo" />
-  </a>
-
   <!--============================== LOADER ===================================-->
   <div class="loader">
     <div class="loaderContainer">
