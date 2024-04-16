@@ -93,4 +93,4 @@ back.addEventListener("click", () => {
 });
 
 const version = document.querySelector("#versionTxt");
-version.innerHTML = "v2.0.1"
+version.innerHTML = "v2024.04.16"

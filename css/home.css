@@ -67,7 +67,7 @@ body {
   height: auto;
 }
 
-.Title h1{
+.Title h1 {
   font-family: "FuturaMedium";
   font-size: 10em;
   font-weight: 400;
@@ -79,7 +79,7 @@ body {
   transition: .6s;
 }
 
-.Title h3{
+.Title h3 {
   font-family: 'Zweig-italic';
   font-size: 2em;
   font-weight: 400;
@@ -91,11 +91,11 @@ body {
   opacity: 1;
 }
 
-.Title h3:hover{
+.Title h3:hover {
   opacity: 0.5;
 }
 
-@media screen and (max-width: 930px){
+@media screen and (max-width: 930px) {
   .Title {
     margin-top: 25%;
   }
@@ -118,7 +118,7 @@ body {
   transition: .6s;
 }
 
-.MainContainer{
+.MainContainer {
   display: flex;
   height: auto;
   width: 100%;
@@ -130,7 +130,7 @@ body {
   justify-content: center;
 }
 
-.MainContainer .SocialPreview{
+.MainContainer .SocialPreview {
   position: absolute;
   top: 0;
   display: flex;
@@ -146,20 +146,20 @@ body {
 
 @keyframes flash {
   0% {
-    filter: brightness(100%);
+    filter: brightness(1);
   }
-  
-  10% {
-    filter: brightness(0%);
+
+  25% {
+    filter: brightness(0);
   }
-  
+
   100% {
-    filter: brightness(100%);
+    filter: brightness(1);
   }
 
 }
 
-.SocialPreview #SocialPreviewCard{
+.SocialPreview .SocialPreviewCard {
   position: relative;
   display: flex;
   width: 20%;
@@ -172,7 +172,7 @@ body {
   box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.6);
 }
 
-.SocialPreview #SocialPreviewImg{
+.SocialPreview .SocialPreviewImg {
   position: relative;
   width: 80%;
   height: 80%;
@@ -180,7 +180,7 @@ body {
   transition: all .3s ease-in-out;
 }
 
-.MainContainer .BkGround{
+.MainContainer .BkGround {
   width: 100%;
   height: auto+5%;
   z-index: -1;
@@ -203,7 +203,7 @@ body {
   transition: opacity 1s ease-in-out;
 }
 
-@media screen and (max-width: 742px){
+@media screen and (max-width: 742px) {
   .SocialsPanel {
     display: none;
   }
@@ -266,7 +266,7 @@ body {
 
 
 
-@media screen and ( max-width: 930px){
+@media screen and (max-width: 930px) {
   #version {
     font-size: .5rem;
     width: fit-content;
@@ -835,7 +835,7 @@ body {
 }
 
 #snippetFallback {
-  position:absolute;
+  position: absolute;
   top: 0;
   left: 0;
   border-radius: inherit;
@@ -928,8 +928,8 @@ body {
   box-shadow: 0 0 50px 10px rgba(255, 255, 255, 0.5);
 }
 
-.fallbackContainer #fallbackImg img{
-  width:60%;
+.fallbackContainer #fallbackImg img {
+  width: 60%;
   height: auto;
   object-fit: contain;
 }

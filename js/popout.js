@@ -1,4 +1,4 @@
-const social = document.querySelectorAll(".social");
+const social = document.querySelectorAll(".SocialPreviewCard");
 const popOut = document.querySelector(".popOut");
 
 const close = document.querySelector("#popOutClose");
@@ -7,10 +7,9 @@ const popOutContent = document.querySelector(".popOutContent");
 const button = document.querySelector(".Buttons");
 const iframe = document.querySelector("#socialSnipet");
 
-const twitch = document.querySelector("#twitch");
-const github = document.querySelector("#github");
-const youtube = document.querySelector("#youtube");
-const socialSelector = document.querySelector("#socialSelector");
+const twitch = document.querySelector("#Twitch");
+const github = document.querySelector("#Github");
+const youtube = document.querySelector("#Youtube");
 
 const iconFallback = document.querySelector("#iconFallback");
 const fallbackImg = document.querySelector("#fallbackImg");
@@ -28,7 +27,7 @@ social.forEach((item) => {
     iframe.src = "";
     iframe.title = "";
 
-    if (item.id == "github") {
+    if (item.id == "Github") {
       var title = "Github";
       maximize.href = "https://github.com/LaloCornejo";
       iframe.src = "https://github.com/LaloCornejo";
@@ -37,7 +36,7 @@ social.forEach((item) => {
       iconSrc = "/img/github.svg";
       iconHref = "https://github.com/LaloCornejo";
       console.log(iconHref + " " + iconSrc + " " + iconName);
-    } else if (item.id == "twitch") {
+    } else if (item.id == "Twitch") {
       var title = "Twitch";
       maximize.href = "https://twitch.tv/l_ae_l_o";
       iframe.src =
@@ -47,7 +46,7 @@ social.forEach((item) => {
       iconSrc = "/img/twitch.svg";
       iconHref = "https://twitch.tv/l_ae_l_o";
       console.log(iconHref + " " + iconSrc + " " + iconName);
-    } else if (item.id == "youtube") {
+    } else if (item.id == "Youtube") {
       var title = "Youtube";
       maximize.href =
         "https://www.youtube.com/channel/UCPRKmKf9NkiAt1fHBlgI9Sw";

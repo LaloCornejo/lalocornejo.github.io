@@ -89,18 +89,16 @@ social.forEach((item) => {
       var bkImage = "../img/bgbk3.svg";
     }
 
-    const socialPreviewImg = document.querySelector("#SocialPreviewImg");
-    const socialPreviewTitle = document.querySelector("#SocialPreviewTitle");
+    const socialPreviewImg = document.querySelector(".SocialPreviewImg");
+    const SocialPreviewCard = document.querySelector(".SocialPreviewCard");
     const BkGround = document.querySelector(".BkGround");
 
     setTimeout(() => {
       if (socialPreviewImg) {
         socialPreviewImg.src = previewImg;
+        SocialPreviewCard.id = title;
       }
 
-      if (socialPreviewTitle) {
-        socialPreviewTitle.alt = title;
-      }
       if (BkGround) {
         BkGround.src = bkImage;
       }
@@ -109,7 +107,7 @@ social.forEach((item) => {
 });
 
 function flash() {
-  document.querySelector(".MainContainer").style.animation = "flash .8s";
+  document.querySelector(".MainContainer").style.animation = "flash .8s ease-in-out";
   setTimeout(() => {
     document.querySelector(".MainContainer").style.animation = "none";
   }, 500);
