@@ -99,11 +99,9 @@ body {
 }
 
 .Title h3:hover {
-.Title h3:hover {
   opacity: 0.5;
 }
 
-@media screen and (max-width: 930px) {
 @media screen and (max-width: 930px) {
   .Title {
     margin-top: 25%;
@@ -127,7 +125,7 @@ body {
   transition: .6s;
 }
 
-.MainContainer {
+.MainContainer{
   display: flex;
   height: auto;
   width: 100%;
@@ -464,16 +462,15 @@ body {
 
 @keyframes flash {
   0% {
-    filter: brightness(1);
+    filter: brightness(100%);
   }
 
   10% {
     filter: brightness(0%);
   }
 
-
   100% {
-    filter: brightness(1);
+    filter: brightness(100%);
   }
 
 }
@@ -488,7 +485,7 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: inherit;
-  box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.6);
+  box-shadow: 0 0 50px 5px rgba(255, 255, 255, 0.8);
 }
 
 .SocialPreview #SocialPreviewImg {
@@ -500,7 +497,6 @@ body {
 }
 
 .MainContainer .BkGround {
-.MainContainer .BkGround {
   width: 100%;
   height: auto+5%;
   z-index: -1;
@@ -510,10 +506,9 @@ body {
 .SocialsPanel {
   position: absolute;
   display: flex;
-  top: 2%;
+  top: 3%;
   right: 8%;
   width: 40%;
-  min-width: 400px;
   background-color: rgba(0, 0, 0, 0.5);
   align-items: center;
   align-content: center;
@@ -521,12 +516,6 @@ body {
   border-radius: 40px;
   opacity: 0;
   transition: opacity 1s ease-in-out;
-}
-
-@media screen and (max-width: 742px) {
-  .SocialsPanel {
-    display: none;
-  }
 }
 
 .SocialsPanel .Social {
@@ -539,7 +528,7 @@ body {
   align-items: center;
   justify-items: space-around;
   justify-content: space-around;
-  font-size: calc(.2em + 1vw);
+  font-size: 1em;
   color: white;
   transition: .3s;
   font-family: "Agrandir";
@@ -579,11 +568,18 @@ body {
   font-weight: 500;
 }
 
+
+
 #time {
   position: relative;
   opacity: 0.5;
 }
 
+#version {
+  position: relative;
+  opacity: 0.4;
+  font-size: 1.2em;
+}
 
 @media screen and (max-width: 930px) {
   #version {
@@ -1081,7 +1077,6 @@ body {
 
 #snippetFallback {
   position: absolute;
-  position: absolute;
   top: 0;
   left: 0;
   border-radius: inherit;
@@ -1174,8 +1169,6 @@ body {
   box-shadow: 0 0 50px 10px rgba(255, 255, 255, 0.5);
 }
 
-.fallbackContainer #fallbackImg img {
-  width: 60%;
 .fallbackContainer #fallbackImg img {
   width: 60%;
   height: auto;

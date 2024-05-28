@@ -18,9 +18,9 @@ document.addEventListener("keydown", function (event) {
     var content = url.value;
     console.log(content);
     var finalURL =
-      "https://chart.googleapis.com/chart?cht=qr&chl=" +
+      "https://api.qrserver.com/v1/create-qr-code/?data=" +
       content +
-      "&chs=200x200&chld=L|0";
+      "&chs=200x200";
     qrCodeImage.src = finalURL;
 
     setTimeout(function () {
