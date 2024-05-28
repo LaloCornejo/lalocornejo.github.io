@@ -15,8 +15,8 @@
 
 @font-face {
   font-family: "JetBrains";
-  src: url("../fonts/JetBrains-Regular.ttf");
-  src: url("../fonts/JetBrainsMono-Regular.woff2");
+  src: url("/fonts/JetBrainsMono-Regular.ttf") format("truetype");
+  src: url("/fonts/JetBrainsMono-Regular.woff2") format("woff2");
 }
 
 @font-face {
@@ -37,6 +37,30 @@
 @font-face {
   font-family: "BebasNeue";
   src: url("../fonts/BebasNeue-Regular.ttf");
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@font-face {
+  font-family: 'Zweig';
+  src: url('../fonts/Zweig.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Zweig-italic';
+  src: url('../fonts/Zweig-italic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Blur';
+  src: url('../fonts/Blur\ Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Agrandir';
+  src: url('../fonts/Agrandir-Regular.otf') format('opentype');
 }
 
 
@@ -218,11 +242,25 @@ a {
   text-decoration-color: white;
 }
 
+.velo {
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  background: var(--clr-background);
+  opacity: 0;
+  z-index: 999999999;
+  display: flex;
+  visibility: hidden;
+}
+
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
-  height: 10vh;
+  min-height: 10vh;
+  height: auto;
   display: grid;
   grid-template-rows: 100%;
   grid-template-columns: 20% 60% 20%;
@@ -237,8 +275,49 @@ a {
   border-radius: 45px;
 }
 
-@media screen and ( max-width:930px ){
+@media screen and ( max-width:742px ){
+  .navbar {
+    grid-template-columns: 50% 50%;
+  }
+}
 
+.info {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  width: auto;
+  height: 10vh;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  align-items: center;
+  justify-items: center;
+  z-index: 1000000000;
+  font-size: 1.6em;
+  color: var(--clr-foreground);
+  font-family: 'Hack', 'JetBrains Mono', 'JetBrains', sans-serif;
+  padding: 10px;
+  transition: 1s;
+  font-weight: 500;
+}
+
+#version {
+  position: relative;
+  opacity: 0.4;
+  font-size: 1.2em;
+  font-family: "Hack", "JetBrains Mono", "JetBrains", sans-serif;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto;
+  align-items: center;
+  justify-items: space-around;
+  justify-content: space-around;
+  align-content: center;
+}
+
+@media screen and (max-width: 742px) {
+  #version {
+    display: none;
+  }
 }
 
 /* .Front {
@@ -407,10 +486,10 @@ a {
 
 #Logo {
   position: relative;
-  height: 70%;
+  display: flex;
   padding: 5px;
-  min-width: 50px;
-  max-width: 120px;
+  min-width: 40px;
+  max-width: 110px;
   z-index: 1;
   transition: 1s;
 }
@@ -449,6 +528,7 @@ a {
   flex-direction: column;
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(10px);
+  font-family: "Hack", "JetBrains Mono", "JetBrains", sans-serif;
 }
 
 .sideBar .sideBarHead {
@@ -888,7 +968,7 @@ a {
   position: fixed;
   z-index: 1000000002;
   height: 97%;
-  width: 90%;
+  width: 85%;
   background: transparent;
   border-radius: 25px;
   transition: transform 0.3s ease-in-out;
@@ -915,6 +995,7 @@ a {
   display: flex;
   font-size: calc(.5em + 1vw);
   align-items: center;
+  align-content: center;
   justify-content: center;
   justify-items: center;
   height: auto;
@@ -923,13 +1004,13 @@ a {
   padding: 15%;
   background: black;
   color: white;
-  border-radius: 50%;
+  border-radius: 100%;
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
 }
 
 .Buttons a:hover {
-  transform: scale(1.1);
+  transform: scale(1.2);
 }
 
 .popOutContent #socialSnipet {

@@ -91,3 +91,6 @@ const back = document.querySelector("#back");
 back.addEventListener("click", () => {
   goBack();
 });
+
+const version = document.querySelector("#versionTxt");
+version.innerHTML = "v2024.04.16"

@@ -15,7 +15,7 @@ window.addEventListener("scroll", () => {
     preview.style.height = "83%";
     preview.style.top = "1.5";
     preview.style.marginTop = "8%";
-    document.querySelector("#SocialPreviewCard").style.marginBottom = "0%";
+    document.querySelector(".SocialPreviewCard").style.marginBottom = "0%";
     title2.style.transform = "scale(0)";
     title2.style.position = "absolute";
     title.style.transform = "scale(.5)";
@@ -40,7 +40,7 @@ window.addEventListener("scroll", () => {
     document.querySelector(".Main").removeAttribute("style");
     document.querySelector(".navbar").removeAttribute("style");
     document.querySelector(".BkGround").removeAttribute("style");
-    document.querySelector("#SocialPreviewCard").removeAttribute("style");
+    document.querySelector(".SocialPreviewCard").removeAttribute("style");
     main.removeAttribute("style");
     preview.removeAttribute("style");
     title2.removeAttribute("style");

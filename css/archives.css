@@ -1,3 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans");
+
+@import url("https://fonts.googleapis.com/cs2?family=Bebas+Neue");
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins");
+
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P");
+
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@1,500&display=swap");
+
+@font-face {
+  font-family: "JetBrains";
+  src: url("/fonts/JetBrainsMono-Regular.ttf") format("truetype");
+  src: url("/fonts/JetBrainsMono-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "FuturaMedium";
+  src: url("../fonts/futuraMedium.ttf");
+}
+
+@font-face {
+  font-family: "FuturaLight";
+  src: url("../fonts/FuturaLight.otf");
+}
+
+@font-face {
+  font-family: "PressStart2P";
+  src: url("../fonts/PressStart2P-Regular.ttf");
+}
+
+@font-face {
+  font-family: "BebasNeue";
+  src: url("../fonts/BebasNeue-Regular.ttf");
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@font-face {
+  font-family: 'Zweig';
+  src: url('../fonts/Zweig.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Zweig-italic';
+  src: url('../fonts/Zweig-italic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Blur';
+  src: url('../fonts/Blur\ Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Agrandir';
+  src: url('../fonts/Agrandir-Regular.otf') format('opentype');
+}
+
 html, body {
   margin: 0;
   padding: 0;
