@@ -64,8 +64,14 @@ auth.onAuthStateChanged(async (user) => {
 import "./Cursor.js";
 
 /*---+---+---+---+---+---+
- | S | C | R | O | L | L | */
-import "./scroll.js";
+ | S | L | I | D | E | S | 
+ *---+---+---+---+---+---*/
+import "./Slides.js";
+
+/*---+---+---+---+---+---+
+ | S | C | R | O | L | L | 
+ *---+---+---+---+---+---*/
+// import "./scroll.js";
 
 /*---+---+---+---+---+---+
   | P | O | P | O | U | T |

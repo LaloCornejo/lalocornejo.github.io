@@ -31,16 +31,17 @@ body {
 }
 
 #Title {
-  max-width: 60vw;
+  max-width: 45vw;
   position: relative;
   font-size: 20em;
   font-weight: 700;
-  align-self: center;
+  align-self: left;
   text-align: center;
   align-items: center;
   justify-self: center;
   line-height: 1px;
   transition: .6s;
+  background-color: blue;
 }
 
 #Tdes {

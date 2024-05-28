@@ -54,7 +54,7 @@
   <div class="navbar">
     <div id="version">
       <ion-icon name="git-branch-outline"></ion-icon>
-      v2.0-beta
+      v27.05.24
     </div>
 
     <a href="/home/">
@@ -146,14 +146,73 @@
   <!--============================== end sideBar ===================================-->
 
   <!--============================== Main ===================================-->
-  <div class="Title">
-    <h1 id="Title">L Æ L Ö</h1>
-    <h3 id="Quote">'Every moment of happiness requires a great amount of Ignorance' - Honoré de Balzac</h3>
+  <div class="main">
+    <div class="Title">
+      <h1 id="Title">L Æ L Ö</h1>
+      <h3 id="Quote">'Every moment of happiness requires a great amount of Ignorance' - Honoré de Balzac</h3>
+      <a id="GithubButton" class="Hover">
+        <ion-icon name="logo-github"></ion-icon>
+        <h3>Github</h3>
+      </a>
+    </div>
+    <div class="heroImg">
+      <div class="Ticket">
+        <div class="TicketContainer" data-tilt data-tilt-glare data-tilt-max-glare=".8"  data-tilt-max="10" data-tilt-scale="1.1">
+          <div class="TicketContent">
+            <div class="TicketContentContainer">
+              <div class="TicketContentContainerImg">
+                <div class="gradient-bg">
+                  <svg xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                      <filter id="goo">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo" />
+                        <feBlend in="SourceGraphic" in2="goo" />
+                      </filter>
+                    </defs>
+                  </svg>
+                  <div class="gradients-container">
+                    <div class="g1"></div>
+                    <div class="g2"></div>
+                    <div class="g3"></div>
+                    <div class="g4"></div>
+                    <div class="g5"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="TicketContentContainerTxt">
+                <div class="TicketContentContainerTitle">
+                  <h1 id="T1">L Æ L Ö</h1>
+                  <p>UwU</p>
+                </div>
+                <div class="TicketContentContainerText">
+                  <p>© 2024 LÆLÖ</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div class="Main">
+  <div class="sliders">
+    <div class="sliderViewPort">
+      <div id="Twitch" class="sliderContainer sliderNotFocused" style="transform: translateX(-100%);">
+        <img src="/img/Screenshot 2024-01-17 at 12-01-29 Twitch.png" alt="twitch">
+      </div>
+      <div- id="GitHub" class="sliderContainer sliderFocused">
+        <img src="/img/GitHub.PNG" alt="github">
+      </div>
+      <div id="Youtube" class="sliderContainer sliderNotFocused" style="transform: translateX(80%);">
+        <img src="/img/shigure-goddess-1339772715.gif" alt="youtube">
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="Main">
     <div class="MainContainer">
-      <div class="SocialsPanel">
+      <!-- <div class="SocialsPanel">
         <a class="Social" id="Github">
           <ion-icon name="logo-github"></ion-icon>
           <p>Github</p>
@@ -172,9 +231,9 @@
           <img id="SocialPreviewImg" src="../img/github.svg" alt="Social" />
         </a>
       </div>
-      <img class="BkGround" src="../img/bgbk1.svg" alt="Background" />
+      <!-- <img class="BkGround" src="../img/bgbk1.svg" alt="Background" />
     </div>
-  </div>
+  </div> -->
 
   <div class="Footer">
     <div class="FooterContainer">
@@ -199,16 +258,21 @@
 
   </div>
 
+  <div class="decoration">
+    <div class="circle1">
+
+    </div>
+  </div>
+
 
   <!-----------------SCRIPTS----------------------->
   <script src="/js/home.js" type="module"></script>
   <script src="/js/main.js" type="module"></script>
-  <script src="/js/popout.js" type="text/javascript"></script>
+    <script src="/js/popout.js" type="text/javascript"></script>
   <script type="text/javascript" src="/js/vanilla-tilt.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-  <script type="module" src="https://unpkg.com/@splinetool/viewer@1.0.31/build/spline-viewer.js"></script>
 </body>
 
 </html>

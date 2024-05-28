@@ -1,5 +1,7 @@
 // Used in: index.html
 
+console.log("Cursor.js loaded");
+
 const cursor = document.querySelector(".cursor");
 
 import { mobileCheck } from "./isMobile.js";
@@ -11,7 +13,7 @@ if (!mobileCheck()) {
   let cursorX = 0;
   let cursorY = 0;
 
-  let speed = 0.25;
+  let speed = 0.2;
 
   function animate() {
     let distX = mouseX - cursorX;
@@ -47,7 +49,7 @@ if (!mobileCheck()) {
   if (Hover) {
     Hover.forEach((item) => {
       item.addEventListener("mouseover", () => {
-        cursor.style.scale = "1.2";
+        cursor.style.scale = "1.25";
       });
       item.addEventListener("mouseout", () => {
         cursor.style.scale = "1";
