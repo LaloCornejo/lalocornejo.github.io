@@ -211,9 +211,11 @@ body {
   6% {
     background-position: 0% 82%;
   }
+
   9% {
     background-position: 100% 19%;
   }
+
   11% {
     background-position: 0% 82%;
   }
@@ -223,9 +225,11 @@ body {
   6% {
     background-position: 0% 82%;
   }
+
   9% {
     background-position: 100% 19%;
   }
+
   11% {
     background-position: 0% 82%;
   }
@@ -389,10 +393,19 @@ body {
   }
 
   .TicketContainer {
+    margin-top: 20%;
     height: 40vh;
     width: 80%;
   }
 
+  .dark-theme .TicketContainer {
+    border: 1px solid rgba(255, 255, 255, 0.25);
+  }
+
+  .light-theme .TicketContainer {
+    border: 1px solid rgba(0, 0, 0, 0.25);
+  }
+   
   .TicketContentContainerTitle h1 {
     font-size: 1.5em;
     line-height: .1em;
@@ -469,6 +482,8 @@ body {
   height: 100%;
   object-fit: contain;
   background-color: transparent;
+  transition: .3s;
+  transition: scale 0s;
 }
 
 .sliderFocused {
@@ -1210,7 +1225,7 @@ body {
   height: 100%;
 }
 
-.circle1 {
+/* .circle1 {
   top: -5%;
   right: -10%;
   position: absolute;
@@ -1219,6 +1234,22 @@ body {
   border-radius: 50%;
   background-color: #0400ff;
   filter: blur(400px);
+} */
+
+#C1 {
+  top: -85%;
+  right: -80%;
+  position: absolute;
+  width: 180%;
+  height: 210%;
+  border-radius: 50%;
+  opacity: 0.7;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-drag: none;
 }
 
 @media screen and (max-width: 1500px) and (min-width: 930px) {
@@ -1279,5 +1310,26 @@ body {
 
   .sliderFocused {
     box-shadow: none;
+  }
+}
+
+@media screen and (max-width: 930px) {
+
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  body {
+    position: relative
+  }
+
+  #C1 {
+    top: -10%;
+    right: -30%;
+    width: 160vw;
+    height: 70%;
+    opacity: 1;
   }
 }

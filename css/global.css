@@ -117,7 +117,7 @@
   right: 4%;
 }
 
-@media screen and ( max-width: 930px ){
+@media screen and (max-width: 930px) {
   #theme-toggle {
     scale: .7;
     right: 1rem;
@@ -276,7 +276,7 @@ a {
   border-radius: 45px;
 }
 
-@media screen and ( max-width:742px ){
+@media screen and (max-width:742px) {
   .navbar {
     grid-template-columns: 50% 50%;
   }
@@ -340,7 +340,7 @@ a {
   justify-content: center;
 }
 
-.Footer .FooterContainer{
+.Footer .FooterContainer {
   position: relative;
   width: 100%;
   height: 100%;
@@ -350,7 +350,7 @@ a {
   overflow: hidden;
 }
 
-.FooterContainer .FooterContent{
+.FooterContainer .FooterContent {
   position: relative;
   width: 100%;
   height: 100%;
@@ -372,23 +372,12 @@ a {
   overflow: hidden;
 }
 
-.FooterContentContainerTitle h1{
+.FooterContentContainerTitle h1 {
   font-size: 7em;
   font-family: "Zweig";
   font-weight: 300;
 }
 
-@media screen and ( max-width: 742px ) {
-  .Footer {
-    margin-top: 5%;
-  }
-  .FooterContentContainerTitle{
-    width: 200%;
-  }
-  .FooterContentContainerTitle h1{
-    font-size: 3em;
-  }
-}
 
 .FooterContentContainerText {
   position: relative;
@@ -436,18 +425,49 @@ a {
   filter: brightness(1) blur(15px);
 }
 
-.Sl1, .Sl2 {
+@media screen and (max-width: 742px) {
+  .Footer {
+    margin-top: 25%;
+  }
+
+  .FooterContentContainerTitle {
+    width: 200%;
+  }
+
+  .FooterContentContainerTitle h1 {
+    font-size: 3em;
+  }
+
+  .FooterContactBubbles{
+    display: grid;
+    grid-template-rows: auto auto ;
+    grid-template-columns: auto auto;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    overflow: visible;
+  }
+
+  .FooterContactBubble ion-icon {
+    font-size: 2em;
+  }
+}
+
+.Sl1,
+.Sl2 {
   position: absolute;
   width: 90%;
 }
 
-.Sl1{
+.Sl1 {
   display: flex;
   justify-content: space-around;
   animation-delay: 0s;
   animation: slideshow 20s linear infinite;
 }
-.Sl2{
+
+.Sl2 {
   display: flex;
   justify-content: space-around;
   left: 100%;
@@ -455,28 +475,39 @@ a {
   animation: slideshow2 20s linear infinite;
 }
 
-.FooterContentContainerText  p{
+.FooterContentContainerText p {
   font-size: 1em;
   font-family: Hack, JetBrains Mono, JetBrains, sans-serif;
 }
 
-@media screen and ( max-width: 930px ) {
+@media screen and (max-width: 930px) {
   .FooterContentContainerText {
     flex-direction: column;
   }
+
   .FooterContentContainerText p {
     font-size: .2em;
   }
 }
 
 @keyframes slideshow {
-  0%    { left: 0%; }
-  100%  { left: -100%; }
+  0% {
+    left: 0%;
+  }
+
+  100% {
+    left: -100%;
+  }
 }
 
 @keyframes slideshow2 {
-  0%    { left: 100%; }
-  100%  { left: 0%; }
+  0% {
+    left: 100%;
+  }
+
+  100% {
+    left: 0%;
+  }
 }
 
 /*---+---+---+---+---+---+
@@ -515,11 +546,23 @@ a {
 .dark-theme .logoAt,
 .dark-theme #loaderImg {
   filter: invert(1);
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  -webkit-user-drag: none;
 }
 
 .light-theme .logoAt,
 .light-theme #loaderImg {
   filter: brightness(0);
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  -webkit-user-drag: none;
 }
 
 #Logo {
