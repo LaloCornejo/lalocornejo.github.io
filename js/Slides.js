@@ -32,7 +32,7 @@ function centerSlide() {
     mouseListenerEnabled = false;
     setTimeout(() => {
       mouseListenerEnabled = true;
-    }, 1000);
+    }, 500);
   });
 }
 
@@ -51,12 +51,12 @@ function leftSlide() {
     CenterSlide.classList.remove("sliderFocused");
     CenterSlide.classList.add("sliderNotFocused");
     LeftSlide.style.transform = "translateX(0)";
-    RightSlide.style.transform = "translateX(80%)";
+    RightSlide.style.transform = "translateX(100%)";
     CenterSlide.style.transform = "translateX(-100%)";
     mouseListenerEnabled = false;
     setTimeout(() => {
       mouseListenerEnabled = true;
-    }, 1000);
+    }, 500);
   });
 }
 
@@ -76,10 +76,10 @@ function rightSlide() {
     CenterSlide.classList.add("sliderNotFocused");
     RightSlide.style.transform = "translateX(0)";
     LeftSlide.style.transform = "translateX(-100%)";
-    CenterSlide.style.transform = "translateX(80%)";
+    CenterSlide.style.transform = "translateX(100%)";
     mouseListenerEnabled = false;
     setTimeout(() => {
       mouseListenerEnabled = true;
-    }, 1000);
+    }, 500);
   });
 }

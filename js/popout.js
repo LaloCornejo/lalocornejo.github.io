@@ -116,7 +116,7 @@ slObj.forEach((item) => {
     popOut.classList.add("active");
     active = true;
 
-    iframeFallback();
+    // iframeFallback();
 
     setTimeout(() => {
       popOutContent.style.transform = "scale(1)";
@@ -152,6 +152,8 @@ iframe.onerror = function () {
 
 function iframeFallback() {
   try {
+    document.querySelector("#snippetFallback").removeAttribute("style");
+    document.querySelector("#fallbackHeader").removeAttribute("style");
     iconFallback.name = iconName;
     fallbackIcon.src = iconSrc;
     fallbackImg.href = iconHref;
