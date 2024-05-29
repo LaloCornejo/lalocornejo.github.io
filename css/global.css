@@ -161,11 +161,13 @@
 }
 
 .toggle-circle {
-  fill: var(--clr-background);
+  fill: transparent;
   transition: transform 500ms ease-out;
 }
 
 .light-theme .toggle-circle {
+  fill: var(--clr-background);
+  mix-blend-mode: difference;
   transform: translate(-34%, 40%);
 }
 
@@ -446,7 +448,6 @@ a {
     justify-content: center;
     justify-items: center;
     align-content: center;
-    overflow: visible;
   }
 
   .FooterContactBubble ion-icon {
@@ -1227,7 +1228,7 @@ a {
   }
 }
 
-@media screen {
+@media screen and (max-width: 1500px) {
   .cursor {
     display: none;
   }

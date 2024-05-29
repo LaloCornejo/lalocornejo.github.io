@@ -13,7 +13,7 @@ if (!mobileCheck()) {
   let cursorX = 0;
   let cursorY = 0;
 
-  let speed = 0.2;
+  let speed = .7;
 
   function animate() {
     let distX = mouseX - cursorX;
