@@ -423,15 +423,15 @@ a {
 
 .FooterContactBubble ion-icon {
   font-size: 3em;
-  padding: 20px;
+  padding: 30px;
   border-radius: 50%;
   filter: blur(0px) brightness(1);
 }
 
 .FooterContactBubble:hover {
-  transform: scale(1.2);
+  transform: scale(1.4);
   transform: translate3d(0, -10px, 0);
-  background-color: rgba(247, 0, 255, 0.1);
+  background-color: rgb(81, 0, 119);
   /* background-color: blueviolet; */
   filter: brightness(1) blur(15px);
 }

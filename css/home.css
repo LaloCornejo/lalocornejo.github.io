@@ -174,16 +174,21 @@ body {
 }
 
 .TicketContainer {
-  background-color: white;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  -moz-backdrop-filter: blur(10px);
+  background: linear-gradient(145deg, rgba(0, 0, 0, 0) 35%, rgba(255, 255, 255, .2) 50%, rgba(0, 0, 0, 0) 65%);
+  background-size: 500% 100%;
+  animation: holo 50s ease infinite;
+  animation-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
   border-radius: 15px;
   width: 65%;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: .3s;
-  box-shadow: 40px 40px 100px 10px rgba(54, 54, 54, 0.5);
-  border: 1px solid rgba(0, 0, 0, 0.15);
+  box-shadow: 40px 40px 100px 10px rgba(0, 0, 0, 0.6);
+  /* border: 1px solid rgba(0, 0, 0, 0.15); */
 
   .TicketContent {
     display: flex;
@@ -192,6 +197,37 @@ body {
     justify-content: center;
     height: 90%;
     width: 80%;
+  }
+}
+
+.light-theme .TicketContainer {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0) 25%, rgba(110, 110, 110, 0.3) 50%, rgba(255, 255, 255, 0) 75%);
+  background-size: 500% 100%;
+  animation: holo 50s ease infinite;
+  animation-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+@-webkit-keyframes holo {
+  6% {
+    background-position: 0% 82%;
+  }
+  9% {
+    background-position: 100% 19%;
+  }
+  11% {
+    background-position: 0% 82%;
+  }
+}
+
+@keyframes holo {
+  6% {
+    background-position: 0% 82%;
+  }
+  9% {
+    background-position: 100% 19%;
+  }
+  11% {
+    background-position: 0% 82%;
   }
 }
 
@@ -218,7 +254,7 @@ body {
   justify-content: space-around;
   height: 100%;
   width: 100%;
-  color: black;
+  color: var(--clr-foreground);
 }
 
 .TicketContentContainerTxt {
@@ -238,7 +274,7 @@ body {
   width: 100%;
   font-family: "Blur";
   line-height: .2em;
-  color: black;
+  color: var(--clr-foreground);
 
   p {
     font-size: 1em;
@@ -262,7 +298,7 @@ body {
   align-content: baseline;
   height: 100%;
   width: 100%;
-  color: black;
+  color: var(--clr-foreground);
 
   p {
     font-size: 1em;
@@ -1241,7 +1277,7 @@ body {
     display: none;
   }
 
-  .sliderFocused{
+  .sliderFocused {
     box-shadow: none;
   }
 }
