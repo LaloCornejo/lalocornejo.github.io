@@ -93,4 +93,4 @@ back.addEventListener("click", () => {
 });
 
 const version = document.querySelector("#versionTxt");
-version.innerHTML = "v28.05.24";
+version.innerHTML = "v24.06.24";

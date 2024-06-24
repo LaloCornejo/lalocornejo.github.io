@@ -427,12 +427,12 @@ a {
   filter: brightness(1) blur(15px);
 }
 
-@media screen and (max-width: 742px) {
+@media screen and (max-width: 930px) {
   .Footer {
-    margin-top: 25%;
+    margin-top: 30%;
   }
 
-  .FooterContentContainerTitle {
+  .Footer1ontentContainerTitle {
     width: 200%;
   }
 
@@ -441,9 +441,8 @@ a {
   }
 
   .FooterContactBubbles{
-    display: grid;
-    grid-template-rows: auto auto ;
-    grid-template-columns: auto auto;
+    display: flex;
+    justify-content: space-around;
     align-items: center;
     justify-content: center;
     justify-items: center;
@@ -1232,4 +1231,16 @@ a {
   .cursor {
     display: none;
   }
+}
+
+@media screen and (max-width: 1400px) and (min-width: 930px) {
+.Sl1, .Sl2 {
+  h1 {
+    font-size: 3.5em;
+  }
+}
+
+.FooterContactBubble {
+  font-size: .8em;
+}
 }
