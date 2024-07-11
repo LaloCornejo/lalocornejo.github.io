@@ -4,10 +4,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title> 🏛️ | L Æ L Ö</title>
+  <title> :) | L Æ L Ö</title>
   <meta content="text/html; charset=UTF-8; X-Content-Type-Options=nosniff" http-equiv="Content-Type" />
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
-  <link rel="stylesheet" href="/css/home.css" />
+  <link rel="stylesheet" href="/css/thangs.css" />
   <link rel="stylesheet" href="/css/global.css" />
   <link rel="icon favicon" href="/img/favicon/favicon.ico" />
   <link rel="preload" href="/img/1x/Asset 1.png" as="image" />
@@ -146,132 +146,47 @@
   </div>
   <!--============================== end sideBar ===================================-->
 
+  <div class="InputFace">
+    <input type="text" id="favoriteInput" placeholder="Add a link..." />
+  </div>
+
+  <div class="contextMenu">
+    <div class="contextMenuItem">
+      <ion-icon name="-outline"></ion-icon>
+      <p>Edit</p>
+    </div>
+    <div class="contextMenuItem">
+      <ion-icon name="trash-outline"></ion-icon>
+      <p>Delete</p>
+    </div>
+  </div>
+
   <!--============================== Main ===================================-->
   <div class="main">
     <div class="Title">
-      <h1 id="Title">L Æ L Ö</h1>
-      <h3 id="Quote">'Every moment of happiness requires a great amount of Ignorance' - Honoré de Balzac</h3>
-      <a id="GithubButton" class="Hover" href="https://github.com/LaloCornejo" target="_blank">
-        <ion-icon name="logo-github"></ion-icon>
-        <h3>Github</h3>
-      </a>
+      <h1>Favorites</h1>
     </div>
-    <div class="heroImg">
-      <div class="Ticket">
-        <div class="TicketContainer" data-tilt data-tilt-glare data-tilt-max-glare=".8" data-tilt-max="10"
-          data-tilt-scale="1.1">
-          <div class="TicketContent">
-            <div class="TicketContentContainer">
-              <div class="TicketContentContainerImg">
-              </div>
-              <div class="TicketContentContainerTxt">
-                <div class="TicketContentContainerTitle">
-                  <h1 id="T1">L Æ L Ö</h1>
-                  <p>UwU</p>
-                </div>
-                <div class="TicketContentContainerText">
-                  <p>© 2024 LÆLÖ</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="thangs">
+      <ul class="thangsList">
+        <li id="add">
+          <button class="add">
+            <ion-icon name="add-outline"></ion-icon>
+            <h4>add</h4>
+          </button>
+        </li>
+      </ul>
     </div>
   </div>
 
-  <div class="sliders">
-    <div class="sliderViewPort">
-      <div id="Twitch" class="sliderContainer sliderNotFocused" style="transform: translateX(-100%);">
-        <img src="/img/Screenshot 2024-01-17 at 12-01-29 Twitch.png" alt="twitch">
-      </div>
-      <div- id="GitHub" class="sliderContainer sliderFocused">
-        <img src="/img/GitHub.PNG" alt="github">
-    </div>
-    <div id="Youtube" class="sliderContainer sliderNotFocused" style="transform: translateX(80%);">
-      <img src="/img/shigure-goddess-1339772715.gif" alt="youtube">
-    </div>
+  <div class="AFKbutton">
+    <a class="afk">
+      <ion-icon name="bed-outline"></ion-icon>
+    </a>
   </div>
-  </div>
-
-  <!-- <div class="Main">
-    <div class="MainContainer">
-      <!-- <div class="SocialsPanel">
-        <a class="Social" id="Github">
-          <ion-icon name="logo-github"></ion-icon>
-          <p>Github</p>
-        </a>
-        <a class="Social" id="Youtube">
-          <ion-icon name="logo-youtube"></ion-icon>
-          <p>Youtube</p>
-        </a>
-        <a class="Social" id="Twitch">
-          <ion-icon name="logo-twitch"></ion-icon>
-          <p>Twitch</p>
-        </a>
-      </div>
-      <div class="SocialPreview">
-        <a id="SocialPreviewCard" class="Hover" data-tilt data-tilt-glare data-tilt-max-glare=".5" >
-          <img id="SocialPreviewImg" src="../img/github.svg" alt="Social" />
-        </a>
-      </div>
-      <!-- <img class="BkGround" src="../img/bgbk1.svg" alt="Background" />
-    </div>
-  </div> -->
-
-  <div class="Footer">
-    <div class="FooterContainer">
-      <div class="FooterContent">
-        <div class="FooterContentContainerTitle">
-          <div class="Sl1">
-            <h1 id="F1">Contact Info</h1>
-            <h1 id="F2">Contact Info</h1>
-          </div>
-          <div class="Sl2">
-            <h1 id="F3">Contact Info</h1>
-            <h1 id="F4">Contact Info</h1>
-          </div>
-        </div>
-        <div class="FooterContactBubbles">
-          <a class="FooterContactBubble" href="mailto:lalocornejoofficial@gmail.com">
-            <ion-icon name="mail-outline"></ion-icon>
-          </a>
-          <a class="FooterContactBubble" href="https://github.com/LaloCornejo" target="_blank">
-            <ion-icon name="logo-github"></ion-icon>
-          </a>
-          <a class="FooterContactBubble" href="https://youtube.com/@l_ae_l_o
-          " target="_blank">
-            <ion-icon name="logo-youtube"></ion-icon>
-          </a>
-          <a class="FooterContactBubble" href="https://twitch.tv/l_ae_l_o" target="_blank">
-            <ion-icon name="logo-twitch"></ion-icon>
-          </a>
-          <a class="FooterContactBubble" href="https://x.com/l_ae_l_o">
-            <ion-icon name="logo-twitter"></ion-icon>
-          </a>
-        </div>
-        <div class="FooterContentContainerText">
-          <p>© 2024 L Æ L Ö</p>
-          <p>Designed and Developed by L Æ L Ö</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  </div>
-
-  <div class="decoration">
-    <!-- <div class="circle1"></div> -->
-    <img id="C1" src="/img/1x/Asset 1.png" alt="circle">
-  </div>
-
-
-  <!-----------------SCRIPTS----------------------->
-  <script src="/js/home.js" type="module"></script>
   <script src="/js/main.js" type="module"></script>
-  <script src="/js/popout.js" type="text/javascript"></script>
+  <script src="/js/AFK.js" type="module"></script>
+  <script src="/js/favorites.js" type="module"></script>
   <script type="text/javascript" src="/js/vanilla-tilt.js"></script>
-  <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script> -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
