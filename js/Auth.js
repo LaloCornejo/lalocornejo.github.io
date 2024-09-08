@@ -1,5 +1,5 @@
 import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
-import { Noti } from "./Noti.js";
+// import { Noti } from "./Noti.js";
 import { auth } from "./FirebaseConfig.js";
 
 const signIn = document.querySelector("#loggin");

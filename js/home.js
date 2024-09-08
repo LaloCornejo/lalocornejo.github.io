@@ -69,11 +69,6 @@ import "./Cursor.js";
 import "./Slides.js";
 
 /*---+---+---+---+---+---+
- | S | C | R | O | L | L | 
- *---+---+---+---+---+---*/
-// import "./scroll.js";
-
-/*---+---+---+---+---+---+
   | P | O | P | O | U | T |
   +---+---+---+---+---+---*/
 const social = document.querySelectorAll(".Social");

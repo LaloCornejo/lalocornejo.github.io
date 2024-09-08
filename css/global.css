@@ -416,15 +416,15 @@ a {
   font-size: 3em;
   padding: 30px;
   border-radius: 50%;
-  filter: blur(0px) brightness(1);
+  /* filter: blur(0px) brightness(1); */
 }
 
 .FooterContactBubble:hover {
   transform: scale(1.4);
   transform: translate3d(0, -10px, 0);
-  background-color: rgb(81, 0, 119);
+  /* background-color: rgb(81, 0, 119); */
   /* background-color: blueviolet; */
-  filter: brightness(1) blur(15px);
+  /* filter: brightness(1) blur(15px); */
 }
 
 @media screen and (max-width: 930px) {
@@ -465,14 +465,15 @@ a {
   justify-content: space-around;
   animation-delay: 0s;
   animation: slideshow 20s linear infinite;
+  /* animation-play-state: paused; */
 }
 
 .Sl2 {
   display: flex;
   justify-content: space-around;
-  left: 100%;
   animation-delay: 10s;
   animation: slideshow2 20s linear infinite;
+  /* animation-play-state: paused; */
 }
 
 .FooterContentContainerText p {
@@ -899,8 +900,8 @@ a {
   height: 100px;
   background: #ae00ff;
   transform: translateZ(-150px);
-  -webkit-filter: blur(20px);
-  filter: blur(20px);
+  /* -webkit-filter: blur(20px); */
+  /* filter: blur(20px); */
   -webkit-backface-visibility: hidden;
   -webkit-perspective: 1000;
   -webkit-transform: translate3d(0, 0, 0);

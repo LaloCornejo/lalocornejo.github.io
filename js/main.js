@@ -5,7 +5,6 @@
  | D | A | R | K | M | O | D | E |
  +---+---+---+---+---+---+---+---*/
 
-import { goBack } from "./History.js";
 import { mobileCheck } from "./isMobile.js";
 
 const themeToggle = document.querySelector("#theme-toggle");
@@ -58,39 +57,42 @@ window.onload = () => {
 };
 
 // -=================== SideBar ===================-
-document.addEventListener("mousemove", setCords);
 
 let selected = false;
 
-function setCords(e) {
-  if (!mobileCheck()) {
-    if ((e.clientX < 50) & (e.clientX > 0) && selected === false) {
-      SideBar.classList.remove("sideBarInnactive");
-      SideBar.classList.add("sideBarActive");
-      selected = true;
-    } else if (e.clientX > 500 && selected === true) {
-      SideBar.classList.remove("sideBarActive");
-      SideBar.classList.add("sideBarInnactive");
-      selected = false;
-    }
-  } else {
-    if ((e.clientX < 40) & (e.clientX > 0) && selected === false) {
-      SideBar.classList.remove("sideBarInnactive");
-      SideBar.classList.add("sideBarActive");
-      selected = true;
-    } else if (e.clientX > 300 && selected === true) {
-      SideBar.classList.remove("sideBarActive");
-      SideBar.classList.add("sideBarInnactive");
-      selected = false;
-    }
-  }
-}
+// function setCords(e) {
+//   if (!mobileCheck()) {
+//     if ((e.clientX < 50) & (e.clientX > 0) && selected === false) {
+//       SideBar.classList.remove("sideBarInnactive");
+//       SideBar.classList.add("sideBarActive");
+//       selected = true;
+//     } else if (e.clientX > 500 && selected === true) {
+//       SideBar.classList.remove("sideBarActive");
+//       SideBar.classList.add("sideBarInnactive");
+//       selected = false;
+//     }
+//   } else {
+//     if ((e.clientX < 40) & (e.clientX > 0) && selected === false) {
+//       SideBar.classList.remove("sideBarInnactive");
+//       SideBar.classList.add("sideBarActive");
+//       selected = true;
+//     } else if (e.clientX > 300 && selected === true) {
+//       SideBar.classList.remove("sideBarActive");
+//       SideBar.classList.add("sideBarInnactive");
+//       selected = false;
+//     }
+//   }
+// }
 
 const back = document.querySelector("#back");
+
+function goBack() {
+  window.history.back();
+}
 
 back.addEventListener("click", () => {
   goBack();
 });
 
 const version = document.querySelector("#versionTxt");
-version.innerHTML = "v12.07.24";
+version.innerHTML = "v08.09.2024";
