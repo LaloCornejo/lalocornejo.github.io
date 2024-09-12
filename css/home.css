@@ -10,7 +10,6 @@
   font-family: 'Zweig-italic';
   src: url('../fonts/Zweig-italic.ttf') format('truetype');
 }
-
 @font-face {
   font-family: 'Blur';
   src: url('../fonts/Blur\ Regular.ttf') format('truetype');
@@ -177,6 +176,7 @@ body {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   -moz-backdrop-filter: blur(10px);
+  border: solid 3px rgba(255, 255, 255, .2);
   background: linear-gradient(145deg, rgba(0, 0, 0, 0) 35%, rgba(255, 255, 255, .2) 50%, rgba(0, 0, 0, 0) 65%);
   background-size: 500% 100%;
   animation: holo 50s ease infinite;
@@ -188,7 +188,6 @@ body {
   align-items: center;
   justify-content: center;
   box-shadow: 40px 40px 100px 10px rgba(0, 0, 0, 0.6);
-  /* border: 1px solid rgba(0, 0, 0, 0.15); */
 
   .TicketContent {
     display: flex;
@@ -317,7 +316,7 @@ body {
   justify-content: center;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.05);
+  /* background-color: rgba(0, 0, 0, 0.05); */
   background-image: url(../img/shigure-goddess-1339772715.gif);
   background-repeat: no-repeat;
   background-position: center;
@@ -495,7 +494,7 @@ body {
 }
 
 .sliderFocused {
-  box-shadow: 0px 25px 100px 30px rgba(31, 31, 31, 0.8);
+  /* box-shadow: 0px 25px 100px 30px rgba(31, 31, 31, 0.8); */
   z-index: 10;
   opacity: 1;
   /* background-color: rosybrown; */
@@ -1245,12 +1244,10 @@ body {
 } */
 
 #C1 {
-  top: -85%;
-  right: -80%;
   position: absolute;
-  width: 180%;
-  height: 210%;
-  border-radius: 50%;
+  top: -10%;
+  left: 25%;
+  width: 1400px;
   opacity: 0.7;
   filter: hue-rotate(40deg);
   user-select: none;

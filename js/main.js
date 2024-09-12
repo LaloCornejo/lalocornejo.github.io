@@ -4,10 +4,13 @@
 /*---+---+---+---+---+---+---+---+
  | D | A | R | K | M | O | D | E |
  +---+---+---+---+---+---+---+---*/
+ 
+ import { mobileCheck } from "./isMobile.js";
 
-import { mobileCheck } from "./isMobile.js";
-
-const themeToggle = document.querySelector("#theme-toggle");
+ const themeToggle = document.querySelector("#theme-toggle");
+ const loader = document.querySelector(".loader");
+ 
+ const SideBar = document.querySelector(".sideBar");
 
 themeToggle.addEventListener("click", () => {
   document.body.classList.contains("light-theme")
@@ -28,6 +31,7 @@ function enableLightMode() {
   document.body.classList.add("light-theme");
   themeToggle.setAttribute("aria-label", "Switch to dark theme");
   window.localStorage.setItem("theme", "light");
+  document.querySelector("#loaderImg").src = "../img/Logo.svg";
   console.log("light");
 }
 
@@ -41,9 +45,6 @@ function setThemePreference() {
 document.onload = setThemePreference();
 
 
-const loader = document.querySelector(".loader");
-
-const SideBar = document.querySelector(".sideBar");
 
 window.onload = () => {
   setTimeout(() => {
@@ -95,4 +96,4 @@ back.addEventListener("click", () => {
 });
 
 const version = document.querySelector("#versionTxt");
-version.innerHTML = "v08.09.2024";
+version.innerHTML = "v12.09.2024";
