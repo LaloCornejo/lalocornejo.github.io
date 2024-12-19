@@ -4,13 +4,13 @@
 /*---+---+---+---+---+---+---+---+
  | D | A | R | K | M | O | D | E |
  +---+---+---+---+---+---+---+---*/
- 
- import { mobileCheck } from "./isMobile.js";
 
- const themeToggle = document.querySelector("#theme-toggle");
- const loader = document.querySelector(".loader");
- 
- const SideBar = document.querySelector(".sideBar");
+import { mobileCheck } from "./isMobile.js";
+
+const themeToggle = document.querySelector("#theme-toggle");
+const loader = document.querySelector(".loader");
+
+const SideBar = document.querySelector(".sideBar");
 
 themeToggle.addEventListener("click", () => {
   document.body.classList.contains("light-theme")
@@ -43,8 +43,6 @@ function setThemePreference() {
   enableDarkMode();
 }
 document.onload = setThemePreference();
-
-
 
 window.onload = () => {
   setTimeout(() => {

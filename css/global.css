@@ -39,30 +39,29 @@
   src: url("../fonts/BebasNeue-Regular.ttf");
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 @font-face {
-  font-family: 'Zweig';
-  src: url('../fonts/Zweig.ttf') format('truetype');
+  font-family: "Zweig";
+  src: url("../fonts/Zweig.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'Zweig-italic';
-  src: url('../fonts/Zweig-italic.ttf') format('truetype');
+  font-family: "Zweig-italic";
+  src: url("../fonts/Zweig-italic.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'Blur';
-  src: url('../fonts/Blur\ Regular.ttf') format('truetype');
+  font-family: "Blur";
+  src: url("../fonts/Blur\ Regular.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'Agrandir';
-  src: url('../fonts/Agrandir-Regular.otf') format('opentype');
+  font-family: "Agrandir";
+  src: url("../fonts/Agrandir-Regular.otf") format("opentype");
 }
-
 
 /*================= Themes ==================*/
 @media (prefers-color-scheme: dark) {
@@ -119,7 +118,7 @@
 
 @media screen and (max-width: 930px) {
   #theme-toggle {
-    scale: .7;
+    scale: 0.7;
     right: 1rem;
   }
 }
@@ -211,7 +210,7 @@ img {
   justify-content: center;
   align-content: center;
   transition: 0.4s;
-  transform: translate3d(0, 0, 0);
+  /* transform: translate3d(0, 0, 0); */
 }
 
 svg {
@@ -225,17 +224,17 @@ h1 {
 
 h2 {
   font-size: 2vw;
-  font-family: 'Hack', 'JetBrains Mono', 'JetBrains', sans-serif;
+  font-family: "Hack", "JetBrains Mono", "JetBrains", sans-serif;
 }
 
 h4 {
   font-size: 1.2vw;
-  font-family: 'Hack', 'JetBrains Mono', 'JetBrains', sans-serif;
+  font-family: "Hack", "JetBrains Mono", "JetBrains", sans-serif;
 }
 
 h5 {
   font-size: rem;
-  font-family: 'Hack', 'JetBrains Mono', 'JetBrains', sans-serif;
+  font-family: "Hack", "JetBrains Mono", "JetBrains", sans-serif;
 }
 
 a {
@@ -278,7 +277,7 @@ a {
   border-radius: 45px;
 }
 
-@media screen and (max-width:742px) {
+@media screen and (max-width: 742px) {
   .navbar {
     grid-template-columns: 50% 50%;
   }
@@ -297,7 +296,7 @@ a {
   z-index: 1000000000;
   font-size: 1.6em;
   color: var(--clr-foreground);
-  font-family: 'Hack', 'JetBrains Mono', 'JetBrains', sans-serif;
+  font-family: "Hack", "JetBrains Mono", "JetBrains", sans-serif;
   padding: 10px;
   transition: 1s;
   font-weight: 500;
@@ -380,7 +379,6 @@ a {
   font-weight: 300;
 }
 
-
 .FooterContentContainerText {
   position: relative;
   width: 50%;
@@ -392,6 +390,7 @@ a {
 
 .FooterContactBubbles {
   position: relative;
+  marging-top: 300px;
   width: 60%;
   height: 100%;
   display: flex;
@@ -409,7 +408,7 @@ a {
   border-radius: 50%;
   transition: 0.3s;
   cursor: alias;
-  filter: brightness(.5);
+  filter: brightness(0.5);
 }
 
 .FooterContactBubble ion-icon {
@@ -427,7 +426,7 @@ a {
   /* filter: brightness(1) blur(15px); */
 }
 
-@media screen and (max-width: 930px) {
+@media screen and (max-width: 742px) {
   .Footer {
     margin-top: 30%;
   }
@@ -440,7 +439,7 @@ a {
     font-size: 3em;
   }
 
-  .FooterContactBubbles{
+  .FooterContactBubbles {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -478,16 +477,20 @@ a {
 
 .FooterContentContainerText p {
   font-size: 1em;
-  font-family: Hack, JetBrains Mono, JetBrains, sans-serif;
+  font-family:
+    Hack,
+    JetBrains Mono,
+    JetBrains,
+    sans-serif;
 }
 
-@media screen and (max-width: 930px) {
+@media screen and (max-width: 742px) {
   .FooterContentContainerText {
     flex-direction: column;
   }
 
   .FooterContentContainerText p {
-    font-size: .2em;
+    font-size: 0.2em;
   }
 }
 
@@ -526,9 +529,8 @@ a {
   top: 0;
   left: 0;
   transform: translateX(-50%) translateY(-50%);
-  transition: scale .15s ease-in-out;
+  transition: scale 0.15s ease-in-out;
 }
-
 
 .dark-theme .cursor {
   z-index: 1001;
@@ -601,10 +603,22 @@ a {
   align-items: top;
   justify-content: center;
   background: rgba(183, 0, 255, 0.9);
-  background: -moz-linear-gradient(180deg, rgba(183, 0, 255, 0.7) 0%, rgba(119, 0, 255, 0.7) 100%);
-  background: -webkit-linear-gradient(180deg, rgba(183, 0, 255, 0.7) 0%, rgba(119, 0, 255, 0.7) 100%);
-  background: linear-gradient(180deg, rgba(183, 0, 255, 0.7) 0%, rgba(119, 0, 255, 0.7) 100%);
-  font-family: 'Hack', 'JetBrains Mono', 'JetBrains', sans-serif;
+  background: -moz-linear-gradient(
+    180deg,
+    rgba(183, 0, 255, 0.7) 0%,
+    rgba(119, 0, 255, 0.7) 100%
+  );
+  background: -webkit-linear-gradient(
+    180deg,
+    rgba(183, 0, 255, 0.7) 0%,
+    rgba(119, 0, 255, 0.7) 100%
+  );
+  background: linear-gradient(
+    180deg,
+    rgba(183, 0, 255, 0.7) 0%,
+    rgba(119, 0, 255, 0.7) 100%
+  );
+  font-family: "Hack", "JetBrains Mono", "JetBrains", sans-serif;
   border: 1px solid rgba(255, 255, 255, 0.1);
   display: flex;
   flex-direction: column;
@@ -730,7 +744,7 @@ a {
 
 .sideBar .searchBox {
   position: relative;
-  font-size: .8rem;
+  font-size: 0.8rem;
   margin: auto;
   width: 85%;
   height: 4vh;
@@ -752,13 +766,13 @@ a {
 }
 
 .sparat {
-  font-family: 'Hack', 'JetBrains Mono', 'JetBrains', sans-serif;
+  font-family: "Hack", "JetBrains Mono", "JetBrains", sans-serif;
   font-weight: 800;
   margin-bottom: 10px;
-  font-size: .7rem;
+  font-size: 0.7rem;
   height: min-content;
   color: white;
-  opacity: .6;
+  opacity: 0.6;
   transition: 0.2s;
 }
 
@@ -766,7 +780,6 @@ a {
   opacity: 1;
   transform: scale(1.3);
 }
-
 
 .hgrid-1x1 {
   display: grid;
@@ -812,7 +825,7 @@ a {
   width: auto;
   padding: 5px;
   cursor: alias;
-  transition: ease-in-out .3s;
+  transition: ease-in-out 0.3s;
   border-radius: 10px;
   align-items: center;
   align-content: center;
@@ -904,11 +917,11 @@ a {
   /* filter: blur(20px); */
   -webkit-backface-visibility: hidden;
   -webkit-perspective: 1000;
-  -webkit-transform: translate3d(0, 0, 0);
+  /* -webkit-transform: translate3d(0, 0, 0); */
   -webkit-transform: translateZ(0);
   backface-visibility: hidden;
   perspective: 1000;
-  transform: translate3d(0, 0, 0);
+  /* transform: translate3d(0, 0, 0); */
   transform: translateZ(0);
   box-shadow:
     0 0 120px rgba(174, 0, 255, 0.2),
@@ -917,7 +930,6 @@ a {
     0 0 400px rgba(174, 0, 255, 0.8),
     0 0 500px rgba(174, 0, 255, 1);
 }
-
 
 .active-page {
   animation: slideIn 700ms ease-in-out forwards;
@@ -943,11 +955,11 @@ a {
   backdrop-filter: blur(10px);
   -webkit-backface-visibility: hidden;
   -webkit-perspective: 1000;
-  -webkit-transform: translate3d(0, 0, 0);
+  /* -webkit-transform: translate3d(0, 0, 0); */
   -webkit-transform: translateZ(0);
   backface-visibility: hidden;
   perspective: 1000;
-  transform: translate3d(0, 0, 0);
+  /* transform: translate3d(0, 0, 0); */
   transform: translateZ(0);
 }
 
@@ -1030,17 +1042,19 @@ a {
   -webkit-backdrop-filter: blur(5px);
   -webkit-backface-visibility: hidden;
   -webkit-perspective: 1000;
-  -webkit-transform: translate3d(0, 0, 0);
+  /* -webkit-transform: translate3d(0, 0, 0); */
   -webkit-transform: translateZ(0);
   backface-visibility: hidden;
   perspective: 1000;
-  transform: translate3d(0, 0, 0);
+  /* transform: translate3d(0, 0, 0); */
   transform: translateZ(0);
   align-items: center;
   align-content: center;
   justify-content: center;
   justify-items: center;
-  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  transition:
+    opacity 0.3s ease-in-out,
+    visibility 0.3s ease-in-out;
   opacity: 0;
   visibility: hidden;
 }
@@ -1075,7 +1089,7 @@ a {
 
 .Buttons a {
   display: flex;
-  font-size: calc(.5em + 1vw);
+  font-size: calc(0.5em + 1vw);
   align-items: center;
   align-content: center;
   justify-content: center;
@@ -1142,8 +1156,7 @@ a {
   }
 }
 
-@media screen and (max-width: 930px) {
-
+@media screen and (max-width: 742px) {
   .popOut .Buttons {
     top: 5%;
     font-size: 2em;
@@ -1166,7 +1179,7 @@ a {
 }
 
 .loadBarcontainer {
-  height: .4vh;
+  height: 0.4vh;
   width: 20%;
   max-width: 250px;
   background: rgba(255, 162, 255, 0.5);
@@ -1201,7 +1214,9 @@ a {
   opacity: 0;
   width: 5%;
   min-width: 100px;
-  animation: loaderIn .3s ease-in-out forwards .1s 1 normal, loaderOut .3s ease-in-out forwards 1.1s 1 normal;
+  animation:
+    loaderIn 0.3s ease-in-out forwards 0.1s 1 normal,
+    loaderOut 0.3s ease-in-out forwards 1.1s 1 normal;
 }
 
 @keyframes loaderIn {
@@ -1234,14 +1249,15 @@ a {
   }
 }
 
-@media screen and (max-width: 1400px) and (min-width: 930px) {
-.Sl1, .Sl2 {
-  h1 {
-    font-size: 3.5em;
+@media screen and (max-width: 1400px) and (min-width: 742px) {
+  .Sl1,
+  .Sl2 {
+    h1 {
+      font-size: 3.5em;
+    }
   }
-}
 
-.FooterContactBubble {
-  font-size: .8em;
-}
+  .FooterContactBubble {
+    font-size: 0.8em;
+  }
 }
