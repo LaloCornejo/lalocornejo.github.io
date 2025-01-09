@@ -59,19 +59,20 @@ window.onload = () => {
 
 let selected = false;
 
-// function setCords(e) {
-//   if (!mobileCheck()) {
-//     if ((e.clientX < 50) & (e.clientX > 0) && selected === false) {
-//       SideBar.classList.remove("sideBarInnactive");
-//       SideBar.classList.add("sideBarActive");
-//       selected = true;
-//     } else if (e.clientX > 500 && selected === true) {
-//       SideBar.classList.remove("sideBarActive");
-//       SideBar.classList.add("sideBarInnactive");
-//       selected = false;
-//     }
-//   } else {
-//     if ((e.clientX < 40) & (e.clientX > 0) && selected === false) {
+ function setCords(e) {
+   if (!mobileCheck()) {
+     if ((e.clientX < 100) & (e.clientX > 0) && selected === false) {
+       SideBar.classList.remove("sideBarInnactive");
+       SideBar.classList.add("sideBarActive");
+       selected = true;
+     } else if (e.clientX > 500 && selected === true) {
+       SideBar.classList.remove("sideBarActive");
+       SideBar.classList.add("sideBarInnactive");
+       selected = false;
+     }
+   } 
+//   else {
+//     if ((e.clientX < 100) & (e.clientX > 0) && selected === false) {
 //       SideBar.classList.remove("sideBarInnactive");
 //       SideBar.classList.add("sideBarActive");
 //       selected = true;
@@ -81,7 +82,7 @@ let selected = false;
 //       selected = false;
 //     }
 //   }
-// }
+ }
 
 const back = document.querySelector("#back");
 

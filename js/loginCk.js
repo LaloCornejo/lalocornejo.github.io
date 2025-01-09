@@ -1,4 +1,4 @@
-import { Noti } from "./Noti.js";
+// import { Noti } from "./Noti.js";
 import { mobileCheck } from "./isMobile.js";
 
 const loggedOutLinks = document.querySelectorAll(".logged-out");
