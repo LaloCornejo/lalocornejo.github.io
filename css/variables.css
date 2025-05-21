@@ -1,0 +1,310 @@
+/**
+ * Design System Variables
+ * Central repository of design tokens for consistent styling throughout the site
+ */
+
+:root {
+  /* ======= COLOR SYSTEM ======= */
+  
+  /* Brand colors */
+  --color-primary: #ae00ff;
+  --color-primary-light: #c94fff;
+  --color-primary-dark: #7b00b3;
+  --color-secondary: #00e5ff;
+  --color-secondary-light: #6effff;
+  --color-secondary-dark: #00b2cc;
+  --color-accent: #ff0099;
+  
+  /* Neutral colors */
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-gray-50: #fafafa;
+  --color-gray-100: #f5f5f5;
+  --color-gray-200: #eeeeee;
+  --color-gray-300: #e0e0e0;
+  --color-gray-400: #bdbdbd;
+  --color-gray-500: #9e9e9e;
+  --color-gray-600: #757575;
+  --color-gray-700: #616161;
+  --color-gray-800: #424242;
+  --color-gray-900: #212121;
+  
+  /* Semantic colors */
+  --color-success: #4caf50;
+  --color-warning: #ff9800;
+  --color-error: #f44336;
+  --color-info: #2196f3;
+  
+  /* Theme tokens - Light */
+  --light-background: var(--color-white);
+  --light-surface: var(--color-gray-50);
+  --light-text-primary: var(--color-gray-900);
+  --light-text-secondary: var(--color-gray-700);
+  --light-text-tertiary: var(--color-gray-500);
+  --light-border: rgba(0, 0, 0, 0.12);
+  --light-divider: rgba(0, 0, 0, 0.08);
+  --light-shadow: rgba(0, 0, 0, 0.1);
+  --light-shadow-intense: rgba(0, 0, 0, 0.2);
+  --light-overlay: rgba(0, 0, 0, 0.5);
+  
+  /* Theme tokens - Dark */
+  --dark-background: #121212;
+  --dark-surface: #1e1e1e;
+  --dark-surface-elevated: #292929;
+  --dark-text-primary: rgba(255, 255, 255, 0.87);
+  --dark-text-secondary: rgba(255, 255, 255, 0.6);
+  --dark-text-tertiary: rgba(255, 255, 255, 0.38);
+  --dark-border: rgba(255, 255, 255, 0.12);
+  --dark-divider: rgba(255, 255, 255, 0.08);
+  --dark-shadow: rgba(0, 0, 0, 0.5);
+  --dark-shadow-intense: rgba(0, 0, 0, 0.7);
+  --dark-overlay: rgba(0, 0, 0, 0.7);
+  
+  /* ======= TYPOGRAPHY ======= */
+  
+  /* Font families */
+  --font-primary: 'Agrandir-Regular', sans-serif;
+  --font-secondary: 'Zweig', serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  
+  /* Font sizes (rem-based for accessibility) */
+  --text-xs: 0.75rem;    /* 12px */
+  --text-sm: 0.875rem;   /* 14px */
+  --text-base: 1rem;     /* 16px */
+  --text-lg: 1.125rem;   /* 18px */
+  --text-xl: 1.25rem;    /* 20px */
+  --text-2xl: 1.5rem;    /* 24px */
+  --text-3xl: 1.875rem;  /* 30px */
+  --text-4xl: 2.25rem;   /* 36px */
+  --text-5xl: 3rem;      /* 48px */
+  --text-6xl: 4rem;      /* 64px */
+  
+  /* Font weights */
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+  
+  /* Line heights */
+  --line-height-none: 1;
+  --line-height-tight: 1.25;
+  --line-height-snug: 1.375;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.625;
+  --line-height-loose: 2;
+  
+  /* Letter spacing */
+  --letter-spacing-tighter: -0.05em;
+  --letter-spacing-tight: -0.025em;
+  --letter-spacing-normal: 0em;
+  --letter-spacing-wide: 0.025em;
+  --letter-spacing-wider: 0.05em;
+  --letter-spacing-widest: 0.1em;
+  
+  /* ======= SPACING ======= */
+  
+  /* Spacing scale (rem-based for consistency) */
+  --space-0: 0;
+  --space-1: 0.25rem;    /* 4px */
+  --space-2: 0.5rem;     /* 8px */
+  --space-3: 0.75rem;    /* 12px */
+  --space-4: 1rem;       /* 16px */
+  --space-5: 1.25rem;    /* 20px */
+  --space-6: 1.5rem;     /* 24px */
+  --space-8: 2rem;       /* 32px */
+  --space-10: 2.5rem;    /* 40px */
+  --space-12: 3rem;      /* 48px */
+  --space-16: 4rem;      /* 64px */
+  --space-20: 5rem;      /* 80px */
+  --space-24: 6rem;      /* 96px */
+  --space-32: 8rem;      /* 128px */
+  
+  /* ======= BORDERS ======= */
+  
+  /* Border radius */
+  --radius-none: 0;
+  --radius-sm: 0.125rem;  /* 2px */
+  --radius-md: 0.25rem;   /* 4px */
+  --radius-lg: 0.5rem;    /* 8px */
+  --radius-xl: 1rem;      /* 16px */
+  --radius-2xl: 1.5rem;   /* 24px */
+  --radius-full: 9999px;
+  
+  /* Border widths */
+  --border-width-0: 0px;
+  --border-width-1: 1px;
+  --border-width-2: 2px;
+  --border-width-4: 4px;
+  --border-width-8: 8px;
+  
+  /* ======= ANIMATION & TRANSITIONS ======= */
+  
+  /* Durations */
+  --duration-75: 75ms;
+  --duration-100: 100ms;
+  --duration-150: 150ms;
+  --duration-200: 200ms;
+  --duration-300: 300ms;
+  --duration-500: 500ms;
+  --duration-700: 700ms;
+  --duration-1000: 1000ms;
+  
+  /* Easing functions */
+  --ease-linear: linear;
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* Animation presets */
+  --transition-theme: background-color var(--duration-300) var(--ease-out),
+                      color var(--duration-300) var(--ease-out);
+  --transition-transform: transform var(--duration-200) var(--ease-out);
+  --transition-opacity: opacity var(--duration-200) var(--ease-out);
+  --transition-shadow: box-shadow var(--duration-200) var(--ease-out);
+  --transition-colors: background-color var(--duration-200) var(--ease-out),
+                      border-color var(--duration-200) var(--ease-out),
+                      color var(--duration-200) var(--ease-out),
+                      fill var(--duration-200) var(--ease-out),
+                      stroke var(--duration-200) var(--ease-out);
+  
+  /* ======= LAYOUT ======= */
+  
+  /* Sizing */
+  --width-sidebar: 280px;
+  --width-sidebar-collapsed: 60px;
+  --height-header: 60px;
+  --height-footer: 220px;
+  
+  /* Container widths */
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1280px;
+  --container-2xl: 1536px;
+  
+  /* ======= BREAKPOINTS ======= */
+  
+  --breakpoint-xs: 480px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+  
+  /* ======= Z-INDEX LAYERS ======= */
+  
+  --z-negative: -1;
+  --z-0: 0;
+  --z-10: 10;
+  --z-20: 20;
+  --z-30: 30;
+  --z-40: 40;
+  --z-50: 50;
+  --z-auto: auto;
+  
+  /* Semantic z-indices */
+  --z-below: var(--z-negative);
+  --z-default: var(--z-0);
+  --z-dropdown: var(--z-10);
+  --z-sticky: var(--z-20);
+  --z-fixed: var(--z-30);
+  --z-sidebar: var(--z-30);
+  --z-drawer: var(--z-30);
+  --z-modal: var(--z-40);
+  --z-popover: var(--z-40);
+  --z-toast: var(--z-50);
+  --z-tooltip: var(--z-50);
+  --z-cursor: 9999;
+  
+  /* ======= SHADOWS ======= */
+  
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+  --shadow-none: none;
+}
+
+/* Theme application - Light theme */
+.light-theme {
+  /* Base colors */
+  --background: var(--light-background);
+  --surface: var(--light-surface);
+  --text-primary: var(--light-text-primary);
+  --text-secondary: var(--light-text-secondary);
+  --text-tertiary: var(--light-text-tertiary);
+  --border-color: var(--light-border);
+  --divider-color: var(--light-divider);
+  --shadow-color: var(--light-shadow);
+  --shadow-color-intense: var(--light-shadow-intense);
+  --overlay-color: var(--light-overlay);
+  
+  /* Component-specific colors */
+  --card-background: var(--light-background);
+  --tooltip-background: var(--color-gray-900);
+  --tooltip-text: var(--color-white);
+  
+  /* Specialized colors */
+  --syntax-background: var(--color-gray-100);
+  --syntax-text: var(--color-gray-900);
+  --code-background: var(--color-gray-100);
+  --code-text: var(--color-primary-dark);
+}
+
+/* Theme application - Dark theme */
+.dark-theme {
+  /* Base colors */
+  --background: var(--dark-background);
+  --surface: var(--dark-surface);
+  --surface-elevated: var(--dark-surface-elevated);
+  --text-primary: var(--dark-text-primary);
+  --text-secondary: var(--dark-text-secondary);
+  --text-tertiary: var(--dark-text-tertiary);
+  --border-color: var(--dark-border);
+  --divider-color: var(--dark-divider);
+  --shadow-color: var(--dark-shadow);
+  --shadow-color-intense: var(--dark-shadow-intense);
+  --overlay-color: var(--dark-overlay);
+  
+  /* Component-specific colors */
+  --card-background: var(--dark-surface);
+  --tooltip-background: var(--color-gray-200);
+  --tooltip-text: var(--color-gray-900);
+  
+  /* Specialized colors */
+  --syntax-background: var(--color-gray-900);
+  --syntax-text: var(--color-gray-100);
+  --code-background: rgba(255, 255, 255, 0.1);
+  --code-text: var(--color-secondary);
+}
+
+/* Utility classes */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--color-primary);
+  color: white;
+  padding: 8px;
+  z-index: var(--z-tooltip);
+  transition: top 0.2s;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+

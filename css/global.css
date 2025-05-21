@@ -218,7 +218,7 @@ svg {
 }
 
 h1 {
-  font-size: 18vw;
+  font-size: 18vh;
   font-family: "FuturaMedium";
 }
 
@@ -603,21 +603,15 @@ a {
   align-items: top;
   justify-content: center;
   background: rgba(183, 0, 255, 0.9);
-  background: -moz-linear-gradient(
-    180deg,
-    rgba(183, 0, 255, 0.7) 0%,
-    rgba(119, 0, 255, 0.7) 100%
-  );
-  background: -webkit-linear-gradient(
-    180deg,
-    rgba(183, 0, 255, 0.7) 0%,
-    rgba(119, 0, 255, 0.7) 100%
-  );
-  background: linear-gradient(
-    180deg,
-    rgba(183, 0, 255, 0.7) 0%,
-    rgba(119, 0, 255, 0.7) 100%
-  );
+  background: -moz-linear-gradient(180deg,
+      rgba(183, 0, 255, 0.7) 0%,
+      rgba(119, 0, 255, 0.7) 100%);
+  background: -webkit-linear-gradient(180deg,
+      rgba(183, 0, 255, 0.7) 0%,
+      rgba(119, 0, 255, 0.7) 100%);
+  background: linear-gradient(180deg,
+      rgba(183, 0, 255, 0.7) 0%,
+      rgba(119, 0, 255, 0.7) 100%);
   font-family: "Hack", "JetBrains Mono", "JetBrains", sans-serif;
   border: 1px solid rgba(255, 255, 255, 0.1);
   display: flex;
@@ -1250,6 +1244,7 @@ a {
 }
 
 @media screen and (max-width: 1400px) and (min-width: 742px) {
+
   .Sl1,
   .Sl2 {
     h1 {
