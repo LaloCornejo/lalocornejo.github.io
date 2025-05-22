@@ -1,0 +1,247 @@
+@font-face {
+  font-family: 'zweig';
+  src: url('/fonts/Zweig.ttf');
+}
+
+.dark-theme {
+  --clr-foreground: rgb(255, 255, 255);
+  --clr-background: rgb(2, 0, 3);
+}
+
+.light-theme {
+  --clr-foreground: hsl(0 0% 5%);
+  --clr-background: hsl(0, 0%, 100%);
+}
+
+.main {
+  position: relative;
+  margin-top: 15vh;
+  width: 90%;
+  min-height: 60vh;
+  height: auto;
+  /* background-color: blue; */
+  align-items: center;
+  justify-content: space-around;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all .5s;
+
+  h1 {
+    font-family: 'zweig';
+    font-size: 4rem;
+  }
+}
+
+
+.thangs {
+  display: flex;
+  width: 100%;
+  height: 70%;
+  align-items: center;
+  justify-content: center;
+
+  .thang {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .thangsList {
+    width: 75%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    grid-template-rows: repeat(2, auto);
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-width: 10vw;
+      min-height: 14vh;
+      width: 20%;
+      height: 35%;
+      list-style: none;
+      margin: 0 25px;
+      border-radius: 1rem;
+      transition: all .2s;
+      background-color: rgba(255, 255, 255, 0.1);
+
+      &:hover {
+        background-color: rgba(204, 0, 255, 0.05);
+        transition: all .2s;
+        box-shadow: inset 0 0 10px #ff00ff;
+      }
+    }
+  }
+}
+
+.light-theme .thangs li {
+  background-color: rgba(0, 0, 0, .2);
+
+  &:hover {
+    background-color: rgba(0, 0, 0, .1);
+    transition: all .2s;
+    box-shadow: inset 0 0 30px #0f0032;
+  }
+}
+
+.favicon {
+  margin-top: 50%;
+  margin-bottom: 50%;
+  height: 60%;
+  width: auto;
+  vertical-align: middle;
+}
+
+.add {
+  position: absolute;
+  background-color: transparent;
+  color: var(--clr-foreground);
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: all .2s;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  max-height: 100%;
+  height: 100%;
+  width: 100%;
+
+  h4 {
+    font-family: 'zweig';
+    font-size: 1.5rem;
+    margin-top: .2rem;
+    margin-bottom: 0;
+  }
+}
+
+.AFKbutton {
+  position: absolute;
+  background-color: transparent;
+  color: var(--clr-foreground);
+  bottom: 1rem;
+  right: 3rem;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: all .2s;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  max-height: 100%;
+}
+
+.InputFace {
+  z-index: 100000;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  /* background-color: rgba(255, 255, 255, 0.1); */
+  backdrop-filter: blur(5px);
+  color: var(--clr-foreground);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all .2s;
+  display: none;
+
+  input {
+    width: 40%;
+    height: 7%;
+    border: solid 1px var(--clr-foreground);
+    border-radius: 1rem;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(20px);
+    color: var(--clr-foreground);
+    font-size: 1.5rem;
+    transition: all .2s;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    max-height: 100%;
+    visibility: inherit;
+
+    &:focus {
+      outline: none;
+      border: solid 1px var(--clr-foreground);
+      border-radius: 1rem;
+      padding: 10px;
+      background-color: transparent;
+      backdrop-filter: blur(20px);
+      color: var(--clr-foreground);
+      font-size: 1.5rem;
+      transition: all .2s;
+      align-items: center;
+      justify-content: center;
+      display: inherit;
+      flex-direction: column;
+      max-height: 100%;
+      visibility: inherit;
+    }
+  }
+}
+
+.light-theme .InputFace input {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+}
+
+.contextMenu {
+  visibility: hidden;
+  z-index: 100000;
+  position: absolute;
+  width: max-content;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: rgb(0, 0, 0);
+  border-radius: 1rem;
+  padding: 10px 20px;
+
+  .contextMenuContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contextMenuItem {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    column-gap: 1rem;
+    border-radius: 1rem;
+    transition: all .2s;
+    background-color: transparent;
+    align-items: center;
+    padding: 0 10px;
+    color: white;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+  }
+}
