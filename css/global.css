@@ -37,7 +37,8 @@ html.is-transitioning * {
 }
 
 body {
-    line-height: 1
+    line-height: 1;
+    color: white;
 }
 
 a {
@@ -115,12 +116,11 @@ html.lenis,html.lenis body {
     width: 100%
 }
 
-.headerLogoMedia {
-    height: auto;
-    bottom: 0;
-    position: absolute;
-    width: 70%;
+.headerMedia img {
     left: 0;
+    position: absolute;
+    top: 0;
+    scale: .7;
 }
 
 body {
@@ -285,14 +285,48 @@ img:not([src]),video:not([src]) {
     left: 2.5rem;
     position: absolute;
     width: calc(100svw - 5rem);
+    height: max-content;
+    display: column;
+    column-gap: 1rem;
+}
+
+.headerLogo .headerMedia {
+    aspect-ratio: 1;
+    border-radius: 5px;
+    display: block;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.footHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    width: calc(100svw - 5rem);
     height: auto;
+    position: relative;
+    column-gap: 1rem;
+    column-fill: auto;
+}
+
+.footHeader h4 {
+    font-size: 3rem;
+    align-content: center;
+}
+
+.numerilloText {
+    font-size: 5rem;
+    padding: 2rem;
+    border: 1px solid rgba(255,255,255,.5);
 }
 
 @media(max-width: 768px) {
     .headerLogo {
         bottom:1rem;
         left: 1rem;
-        max-height: 11rem;
+        max-height: 20rem;
         transform: rotate(90deg) translateX(-100%);
         transform-origin: bottom left;
         width: calc(100svh - 2rem)
