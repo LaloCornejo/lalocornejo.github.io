@@ -1,65 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title></title>
-    <link href="/css/global.css" rel="stylesheet">
-  </head>
-  <body>
-    <main>
-      <div class="Home" id="homeWrapper">
-        <header class="header">
-          <div class="headerWrapper">
-           <div class="headerCol">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link href="/css/global.css" rel="stylesheet">
+</head>
+
+<body>
+  <main>
+    <div class="Home" id="homeWrapper">
+      <header class="header">
+        <div class="headerWrapper">
+          <div class="headerCol">
             <p class="headerTitle" data-gl-text="uppercase">
-             Eduardo
-            <br>
-            Cornejo 
+              Eduardo
+              <br>
+              Cornejo
             </p>
-           </div> 
-           <div class="headerCol">
+          </div>
+          <div class="headerCol">
             <p class="headerLocation" data-gl-text="uppercase">
-            Pachuca, 
-            <br>
-            Hidalgo 
+              Pachuca,
+              <br>
+              Hidalgo
             </p>
-           </div> 
-           <div class="headerCol">
+          </div>
+          <div class="headerCol">
             <p class="headerRole" data-gl-text="uppercase">
-             Creative
-            <br>
-             Technologist
+              Creative
+              <br>
+              Technologist
             </p>
             <p class="headerYear" data-gl-text="uppercase">
-             02
-            <br>
-            25 
+              02
+              <br>
+              25
             </p>
-           </div> 
-           <div class="headerCol">
+          </div>
+          <div class="headerCol">
             <a href="/home">
               <img src="../imgs/image2.svg" alt="Logo" style="width: 70px; height: 70px;">
             </a>
-           </div> 
           </div>
-          <div class="headerLogo">
-            <div class="headerMedia">
-              <img src="../imgs/428aeb540a025d5f312649517987eb10.gif" alt="Laelo" class="headerLogoMedia" data-gl-media-active crossorigin="anonymous">
+        </div>
+        <div class="headerLogo" style="opacity: .45;">
+          <div class="clock-container">
+            <div class="clock">
+              <div class="center-dot"></div>
+              <div class="hand hour-hand" id="hourHand"></div>
+              <div class="hand minute-hand" id="minuteHand"></div>
+              <div class="hand second-hand" id="secondHand"></div>
             </div>
-            <div class="footHeader">
-              <h4 class="numerilloText" data-gl-text="uppercase">
-                01
-              </h4>
-              <h4>
-                stupid shit i dont know...
-              </h4>
+          </div>
+        </div>
+          <div class="footHeader">
+            <div class="progress-indicator">
+              <div class="progress-numbers">
+                <span id="current-section">01</span>
+                <span id="total-sections">05</span>
+              </div>
+              <div class="progress-fill" id="progress-fill"></div>
             </div>
-          </div> 
-        </header>
-      </div>
-    </main>
-  </body>
+          </div>
+      </header>
+      <nav class="nav">
+        <div class="navWrapper">
+          <div class="navItem active" id="nav1" data-index="1">Home</div>
+          <div class="navItem" id="nav2" data-index="2">Contact</div>
+          <div class="navItem" id="nav3" data-index="3">About</div>
+          <div class="navItem" id="nav4" data-index="4">Projects</div>
+          <div class="navItem" id="nav5" data-index="5">Blog</div>
+        </div>
+      </nav>
+    </div>
+  </main>
+</body>
 
-  <script src="/js/main.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/clock.js"></script>
+
 </html>
