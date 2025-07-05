@@ -64,6 +64,18 @@ const progressFill = document.getElementById("progress-fill");
 const currentSection = document.getElementById("current-section");
 const totalSections = navItem.length;
 
+const Loader = document.getElementById("pre-load");
+
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    if (Loader) {
+      Loader.style.display = "none";
+    }
+  }, 3000);
+  soundManager.enableAudio();
+  soundManager.play("textChange", 500);
+});
+
 navItem.forEach((item) => {
   item.addEventListener("mouseenter", () => {
     soundManager.enableAudio();
