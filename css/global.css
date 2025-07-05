@@ -508,22 +508,24 @@ video:not([src]) {
 }
 
 .clock-container {
-    width: 550px;
-    height: 550px;
+    width: 9rem;
+    height: 9rem;
     background: var(--clock-container-bg);
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     box-shadow: var(--clock-container-shadow-1), var(--clock-container-shadow-2);
-    position: relative;
+    position: fixed;
+    bottom: 2.5rem;
+    right: 2.5rem;
     transition: background 0.3s ease, box-shadow 0.3s ease;
-    margin: 0 auto;
+    z-index: 1001;
 }
 
 .clock {
-    width: 500px;
-    height: 500px;
+    width: 8.5rem;
+    height: 8.5rem;
     background: var(--clock-bg);
     border-radius: 50%;
     position: relative;
@@ -532,8 +534,8 @@ video:not([src]) {
 }
 
 .center-dot {
-    width: 15px;
-    height: 15px;
+    width: 0.7rem;
+    height: 0.7rem;
     background: var(--center-dot-bg);
     border-radius: 50%;
     position: absolute;
@@ -555,75 +557,27 @@ video:not([src]) {
 }
 
 .hour-hand {
-    width: 8px;
-    height: 117px;
+    width: 0.3rem;
+    height: 2.5rem;
     background: var(--hour-hand-bg);
     transform: translateX(-50%) rotate(0deg);
     transition: background 0.3s ease;
 }
 
 .minute-hand {
-    width: 6px;
-    height: 184px;
+    width: 0.2rem;
+    height: 3.5rem;
     background: var(--minute-hand-bg);
     transform: translateX(-50%) rotate(0deg);
     transition: background 0.3s ease;
 }
 
 .second-hand {
-    width: 3px;
-    height: 200px;
+    width: 0.1rem;
+    height: 4rem;
     background: var(--second-hand-bg);
     transform: translateX(-50%) rotate(0deg);
     transition: transform 0.5s cubic-bezier(0.3, 1.8, 0.3, 0.8), background 0.3s ease;
-}
-
-.tick {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform-origin: 0% 0%;
-}
-
-.tick-line {
-    position: absolute;
-    border-radius: 2px;
-    transition: background 0.7s ease;
-}
-
-.tick.short .tick-line {
-    width: 2px;
-    height: 8px;
-    background: var(--tick-line-short-bg);
-    transform: translateX(-50%) translateY(-245px);
-}
-
-.tick.medium .tick-line {
-    width: 3px;
-    height: 12px;
-    background: var(--tick-line-medium-bg);
-    transform: translateX(-50%) translateY(-245px);
-}
-
-.tick.long .tick-line {
-    width: 4px;
-    height: 18px;
-    background: var(--tick-line-long-bg);
-    transform: translateX(-50%) translateY(-245px);
-}
-
-.number {
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5em;
-    font-weight: 500;
-    color: var(--number-color);
-    transform-origin: center;
-    transition: color 1s ease;
 }
 
 .progress-indicator {
