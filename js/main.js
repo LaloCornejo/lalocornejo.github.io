@@ -66,6 +66,8 @@ const totalSections = navItem.length;
 
 const Loader = document.getElementById("pre-load");
 
+const slides = document.querySelectorAll(".Slide");
+
 window.addEventListener("load", () => {
   setTimeout(() => {
     if (Loader) {
@@ -91,9 +93,19 @@ navItem.forEach((item) => {
     });
 
     item.classList.add("active");
+    
 
     const index = parseInt(item.getAttribute("data-index"), 10);
     const progress = (index / totalSections) * 100;
+
+    slides.forEach((slide) => {
+      if( parseInt(slide.getAttribute("data-index"), 10) === index) {
+        slide.classList.add("activeSl");
+      }
+      else {
+        slide.classList.remove("activeSl");
+      }
+    });
 
     if (currentSection) {
       currentSection.textContent = index.toString().padStart(2, "0");

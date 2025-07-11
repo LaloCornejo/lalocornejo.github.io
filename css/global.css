@@ -390,6 +390,12 @@ video:not([src]) {
     justify-content: center;
 }
 
+@media (max-width: 768px) {
+    .headerLogo {
+        visibility: hidden;
+    }
+}
+
 .footHeader {
     display: flex;
     flex-direction: row;
@@ -400,6 +406,13 @@ video:not([src]) {
     column-gap: 1rem;
     column-fill: auto;
     bottom: 2.5rem;
+}
+
+@media (max-width: 768px) {
+    .footHeader {
+        transform: rotate(90deg) translateX(-100%) translateY(-85%) scale(.8);
+        transform-origin: bottom left;
+    }
 }
 
 .footHeader h4 {
@@ -449,6 +462,13 @@ video:not([src]) {
     padding-bottom: 10vh;
 }
 
+@media (max-width: 768px) {
+    .nav {
+        left: 3vw;
+        right: auto;
+    }
+}
+
 .navWrapper {
     display: flex;
     flex-direction: column;
@@ -479,6 +499,14 @@ video:not([src]) {
     margin: 1rem;
 }
 
+@media (max-width: 768px) {
+    .navWrapper .navItem {
+        align-items: left !important;
+        justify-content: left !important;
+        font-size: 1rem !important;
+    }
+}
+
 .navWrapper .navItem:hover {
     color: white;
 }
@@ -486,6 +514,12 @@ video:not([src]) {
 .navWrapper .navItem.active {
     color: white;
     transform: translateX(-40px);
+}
+
+@media (max-width: 768px) {
+    .navWrapper .navItem.active {
+        transform: translateX(20px);
+    }
 }
 
 /* Clock */
@@ -710,4 +744,21 @@ video:not([src]) {
      100%{
         opacity:.7
     }
+}
+
+.Slide {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: visibility 0s, opacity 0.5s ease-in-out;
+}
+
+.activeSl {
+    visibility: visible;
 }
