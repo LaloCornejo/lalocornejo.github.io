@@ -410,7 +410,7 @@ video:not([src]) {
 
 @media (max-width: 768px) {
     .footHeader {
-        transform: rotate(90deg) translateX(-100%) translateY(-85%) scale(.8);
+        transform: rotate(90deg) translateX(-30vh) translateY(-85%) scale(.8);
         transform-origin: bottom left;
     }
 }
