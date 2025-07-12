@@ -116,3 +116,78 @@ navItem.forEach((item) => {
     }
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const navItems = document.querySelectorAll(".navItem");
+  const slides = document.querySelectorAll(".Slide");
+  let currentSlide = 1;
+
+  function updateSlides(newIndex) {
+    if (newIndex < 1 || newIndex > slides.length || newIndex === currentSlide) {
+        return;
+    }
+
+    document.documentElement.classList.add("no-overflow");
+
+    const oldSlide = document.querySelector(`.Slide[data-index="${currentSlide}"]`);
+    const newSlide = document.querySelector(`.Slide[data-index="${newIndex}"]`);
+
+    if (oldSlide) {
+        const animationName = newIndex > currentSlide ? "activeOutUp" : "activeOutDown";
+        oldSlide.style.animation = `${animationName} 0.5s forwards`;
+        oldSlide.addEventListener('animationend', function handler() {
+            oldSlide.style.animation = '';
+            oldSlide.classList.remove("activeSl");
+            oldSlide.removeEventListener('animationend', handler);
+        });
+    }
+
+    if (newSlide) {
+        const animationName = newIndex > currentSlide ? "commingInUp" : "commingInDown";
+        newSlide.style.animation = `${animationName} 0.5s forwards`;
+        newSlide.classList.add("activeSl");
+        newSlide.addEventListener('animationend', function handler() {
+            newSlide.style.animation = '';
+            newSlide.removeEventListener('animationend', handler);
+        });
+    }
+
+    setTimeout(() => {
+        document.documentElement.classList.remove("no-overflow");
+    }, 500);
+
+    navItems.forEach(item => item.classList.remove("active"));
+    const newNavItem = document.querySelector(`.navItem[data-index="${newIndex}"]`);
+    if (newNavItem) newNavItem.classList.add("active");
+
+    const progress = (newIndex / totalSections) * 100;
+    if (progressFill) {
+        progressFill.style.width = `${progress}%`;
+    }
+    if (currentSection) {
+        currentSection.textContent = newIndex.toString().padStart(2, "0");
+    }
+
+    currentSlide = newIndex;
+  }
+
+  navItems.forEach((item) => {
+    item.addEventListener("click", () => {
+        const index = parseInt(item.getAttribute("data-index"), 10);
+        updateSlides(index);
+    });
+  });
+
+  let isWheeling = false;
+  window.addEventListener("wheel", function (event) {
+    if (isWheeling) return;
+    isWheeling = true;
+    setTimeout(() => { isWheeling = false; }, 500);
+
+    if (event.deltaY > 0) {
+      updateSlides(currentSlide + 1);
+    } else {
+      updateSlides(currentSlide - 1);
+    }
+  });
+});

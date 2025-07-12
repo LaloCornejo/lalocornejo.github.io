@@ -1,0 +1,126 @@
+.socials-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    padding: 4rem;
+    box-sizing: border-box;
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    border: none;
+}
+
+.socials-title {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: #FFFFFF;
+    text-align: center;
+    font-family: "FK Grotesk Neue";
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+}
+
+.socials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 700px
+}
+
+.social-item {
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #FFFFFF;
+    transition: all 0.3s ease-in-out;
+    box-shadow: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.social-item::before {
+    content: none;
+}
+
+.social-item:hover {
+    background-color: transparent;
+    border-color: transparent;
+    transform: translateY(0) scale(1.05);
+    box-shadow: none;
+}
+
+.social-item ion-icon {
+    font-size: 5rem;
+    margin-bottom: 0;
+    color: rgba(255, 255, 255, 0.6);
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+.social-item:hover ion-icon {
+    color: #FFFFFF;
+    transform: scale(1.2); 
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.8); /* Stronger white glow */
+}
+
+/* Keep them white */
+.social-item:nth-child(1):hover ion-icon { color: #FFFFFF; } 
+.social-item:nth-child(2):hover ion-icon { color: #FFFFFF; } 
+.social-item:nth-child(3):hover ion-icon { color: #FFFFFF; } 
+.social-item:nth-child(4):hover ion-icon { color: #FFFFFF; } 
+.social-item:nth-child(5):hover ion-icon { color: #FFFFFF; } 
+.social-item:nth-child(6):hover ion-icon { color: #FFFFFF; } 
+
+.social-name {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .socials-container {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        width: calc(100% - 14rem);
+        height: calc(100% - 2rem);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 5px;
+        padding: 1rem;
+        box-sizing: border-box;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-end;
+    }
+
+    .socials-title {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        text-align: right;
+        width: 100%;
+    }
+
+    .socials-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        width: auto;
+        max-width: none;
+        justify-content: flex-end;
+    }
+
+    .social-item {
+        padding: 0.5rem;
+        align-items: flex-end;
+    }
+
+    .social-item ion-icon {
+        font-size: 3.5rem;
+    }
+}

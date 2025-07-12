@@ -1,3 +1,10 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 *,
 *::after,
 *::before {
@@ -97,7 +104,7 @@ video {
     border: 0;
     font-size: 100%;
     font: inherit;
-    vertical-align: baseline
+    vertical-align: baseline;
 }
 
 article,
@@ -126,6 +133,10 @@ html.is-transitioning {
 
 html.is-transitioning * {
     pointer-events: none !important
+}
+
+html.no-overflow {
+    overflow: hidden !important;
 }
 
 body {
@@ -236,7 +247,6 @@ canvas {
 html {
     font-family: "FK Grotesk Neue";
     font-size: .5208333333vw;
-    overflow: hidden auto
 }
 
 @media(max-width: 768px) {
@@ -282,6 +292,41 @@ video:not([src]) {
 ::selection {
     color: #000;
     background: #fff
+}
+
+.Home::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url("../imgs/home-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    filter: invert(1) grayscale(0) contrast(.8) brightness(1) opacity(0.5);
+}
+
+.Contact::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url("../imgs/home-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    filter: invert(1) grayscale(0) contrast(.8) brightness(1) opacity(0.3);
+}
+
+.Projects::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url("../imgs/projects-bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .header {
@@ -406,6 +451,7 @@ video:not([src]) {
     column-gap: 1rem;
     column-fill: auto;
     bottom: 2.5rem;
+    z-index: 1000;
 }
 
 @media (max-width: 768px) {
@@ -757,8 +803,51 @@ video:not([src]) {
     justify-content: center;
     align-items: center;
     transition: visibility 0s, opacity 0.5s ease-in-out;
+    z-index: 1;
+    will-change: transform, opacity;
+    backface-visibility: hidden;
 }
 
 .activeSl {
     visibility: visible;
+}
+
+@keyframes activeOutUp {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100%);
+        visibility: hidden;
+    }
+}
+
+@keyframes activeOutDown {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(100%);
+        visibility: hidden;
+    }
+}
+
+@keyframes commingInUp {
+    0% {
+        transform: translateY(100%);
+        visibility: visible;
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes commingInDown {
+    0% {
+        transform: translateY(-100%);
+        visibility: visible;
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
