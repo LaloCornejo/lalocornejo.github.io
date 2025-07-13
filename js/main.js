@@ -175,9 +175,8 @@ document.addEventListener("DOMContentLoaded", function () {
     item.addEventListener("click", () => {
         const index = parseInt(item.getAttribute("data-index"), 10);
         updateSlides(index);
-    });
   });
-
+});
   let isWheeling = false;
   window.addEventListener("wheel", function (event) {
     if (isWheeling) return;
