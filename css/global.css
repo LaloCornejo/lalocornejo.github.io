@@ -327,6 +327,7 @@ video:not([src]) {
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    filter: opacity(0.6) contrast(0.8);
 }
 
 .header {
@@ -566,98 +567,6 @@ video:not([src]) {
     .navWrapper .navItem.active {
         transform: translateX(20px);
     }
-}
-
-/* Clock */
-:root {
-    --clock-container-bg: rgba(255, 255, 255, 0);
-    --clock-container-shadow-1: 0 0 20px rgba(255, 255, 255, 0.1);
-    --clock-container-shadow-2: inset 0 0 20px rgba(0, 0, 0, 0.3);
-    --clock-bg: rgba(0, 0, 0, 0.8);
-    --clock-shadow-1: 0 0 10px rgba(255, 255, 255, 0.1);
-    --clock-shadow-2: inset 0 0 10px rgba(0, 0, 0, 0.5);
-    --center-dot-bg: #fff;
-    --center-dot-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
-    --hour-hand-bg: #fff;
-    --minute-hand-bg: #fff;
-    --second-hand-bg: #ff6b6b;
-    --tick-line-short-bg: rgba(255, 255, 255, 0.3);
-    --tick-line-medium-bg: rgba(255, 255, 255, 0.5);
-    --tick-line-long-bg: rgba(255, 255, 255, 0.8);
-    --number-color: #fff;
-}
-
-.clock-container {
-    width: 9rem;
-    height: 9rem;
-    background: var(--clock-container-bg);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: var(--clock-container-shadow-1), var(--clock-container-shadow-2);
-    position: fixed;
-    bottom: 2.5rem;
-    right: 2.5rem;
-    transition: background 0.3s ease, box-shadow 0.3s ease;
-    z-index: 1001;
-}
-
-.clock {
-    width: 8.5rem;
-    height: 8.5rem;
-    background: var(--clock-bg);
-    border-radius: 50%;
-    position: relative;
-    box-shadow: var(--clock-shadow-1), var(--clock-shadow-2);
-    transition: background 0.3s ease, box-shadow 0.3s ease;
-}
-
-.center-dot {
-    width: 0.7rem;
-    height: 0.7rem;
-    background: var(--center-dot-bg);
-    border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 10;
-    box-shadow: var(--center-dot-shadow);
-    transition: background 0.3s ease, box-shadow 0.3s ease;
-}
-
-.hand {
-    position: absolute;
-    bottom: 50%;
-    left: 50%;
-    transform-origin: bottom center;
-    border-radius: 5px;
-    z-index: 9;
-}
-
-.hour-hand {
-    width: 0.3rem;
-    height: 2.5rem;
-    background: var(--hour-hand-bg);
-    transform: translateX(-50%) rotate(0deg);
-    transition: background 0.3s ease;
-}
-
-.minute-hand {
-    width: 0.2rem;
-    height: 3.5rem;
-    background: var(--minute-hand-bg);
-    transform: translateX(-50%) rotate(0deg);
-    transition: background 0.3s ease;
-}
-
-.second-hand {
-    width: 0.1rem;
-    height: 4rem;
-    background: var(--second-hand-bg);
-    transform: translateX(-50%) rotate(0deg);
-    transition: transform 0.5s cubic-bezier(0.3, 1.8, 0.3, 0.8), background 0.3s ease;
 }
 
 .progress-indicator {
@@ -1565,4 +1474,412 @@ video:not([src]) {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+/* PROJECTS SECTION - BRUTALIST FUTURISTIC GRID */
+.projects-container {
+    width: 100%;
+    height: 100vh;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+@media (max-width: 768px) {
+    .projects-container {
+        height: auto;
+        min-height: 100vh;
+        padding: 9rem 1.5rem 4rem 9.5rem;
+        justify-content: flex-start;
+        max-width: calc(100vw - 15rem);
+        box-sizing: border-box;
+    }
+}
+
+.projects-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+    .projects-header {
+        margin-bottom: 3rem;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 1rem;
+        text-align: right;
+    }
+}
+
+.projects-title {
+    font-size: 4rem;
+    font-weight: 300;
+    color: #fff;
+    margin: 0;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-family: "FK Grotesk Neue", sans-serif;
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    .projects-title {
+        font-size: 2.5rem;
+    }
+}
+
+.projects-title::after {
+    content: '';
+    position: absolute;
+    bottom: -0.5rem;
+    left: 0;
+    width: 60px;
+    height: 2px;
+    background: #fff;
+}
+
+@media (max-width: 768px) {
+    .projects-title::after {
+        right: 0;
+        left: auto;
+    }
+}
+
+.projects-count {
+    font-size: 2rem;
+    color: rgba(255, 255, 255, 0.6);
+    font-family: monospace;
+    font-weight: 300;
+}
+
+.count-current {
+    color: #fff;
+    font-weight: 500;
+}
+
+.count-separator {
+    margin: 0 0.5rem;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    width: 100%;
+    margin-bottom: 4rem;
+}
+
+@media (max-width: 1024px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin-bottom: 3rem;
+    }
+}
+
+.project-card {
+    position: relative;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    cursor: pointer;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+}
+
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+    transition: left 0.6s ease-in-out;
+    z-index: 1;
+}
+
+.project-card:hover::before {
+    left: 100%;
+}
+
+.project-card:hover {
+    border-color: rgba(255, 255, 255, 0.4);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.3),
+        0 0 0 1px rgba(255, 255, 255, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.project-card:hover .project-arrow {
+    opacity: 1;
+    transform: translate(-50%, -50%) rotate(0deg) scale(1);
+}
+
+.project-card:hover .project-number {
+    transform: scale(0.8);
+    opacity: 0.3;
+}
+
+.project-card:hover .project-info {
+    transform: translateY(-5px);
+}
+
+.project-visual {
+    position: relative;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.02);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+}
+
+.project-number {
+    font-size: 4rem;
+    font-weight: 200;
+    color: rgba(255, 255, 255, 0.15);
+    font-family: "FK Grotesk Neue", sans-serif;
+    transition: all 0.4s ease;
+    user-select: none;
+}
+
+.project-arrow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg) scale(0.8);
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    backdrop-filter: blur(10px);
+}
+
+.project-info {
+    padding: 2rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.4s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.project-name {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #fff;
+    margin: 0 0 0.5rem 0;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    line-height: 1.2;
+}
+
+.project-tech {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0 0 1rem 0;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-family: monospace;
+    font-weight: 400;
+}
+
+.project-desc {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+    line-height: 1.4;
+    font-weight: 300;
+}
+
+.project-link {
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+    text-decoration: none;
+    color: transparent;
+}
+
+.projects-footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 2rem;
+}
+
+@media (max-width: 768px) {
+    .projects-footer {
+        justify-content: flex-end;
+    }
+}
+
+.github-link-wrapper {
+    position: relative;
+}
+
+.github-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    background: transparent;
+}
+
+.github-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    transition: left 0.4s ease;
+    z-index: -1;
+}
+
+.github-link:hover::before {
+    left: 0;
+}
+
+.github-link:hover {
+    color: #000;
+    border-color: #fff;
+    transform: translateY(-2px);
+}
+
+.github-link svg {
+    transition: transform 0.3s ease;
+}
+
+.github-link:hover svg {
+    transform: rotate(45deg);
+}
+
+/* Staggered entrance animation */
+.project-card {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: project-enter 0.6s ease-out forwards;
+}
+
+.project-card:nth-child(1) { animation-delay: 0.1s; }
+.project-card:nth-child(2) { animation-delay: 0.2s; }
+.project-card:nth-child(3) { animation-delay: 0.3s; }
+.project-card:nth-child(4) { animation-delay: 0.4s; }
+.project-card:nth-child(5) { animation-delay: 0.5s; }
+.project-card:nth-child(6) { animation-delay: 0.6s; }
+
+@keyframes project-enter {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Glitch effect for project numbers */
+.project-card:hover .project-number {
+    animation: glitch 0.3s ease-in-out;
+}
+
+@keyframes glitch {
+    0%, 100% {
+        transform: scale(0.8);
+        filter: hue-rotate(0deg);
+    }
+    20% {
+        transform: scale(0.82) skew(2deg);
+        filter: hue-rotate(90deg);
+    }
+    40% {
+        transform: scale(0.78) skew(-1deg);
+        filter: hue-rotate(180deg);
+    }
+    60% {
+        transform: scale(0.83) skew(1deg);
+        filter: hue-rotate(270deg);
+    }
+    80% {
+        transform: scale(0.79) skew(-2deg);
+        filter: hue-rotate(360deg);
+    }
+}
+
+/* Brutalist geometric accents */
+.project-card:nth-child(odd)::after {
+    content: '';
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-card:nth-child(odd):hover::after {
+    opacity: 1;
+}
+
+.project-card:nth-child(even)::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: -1px;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-card:nth-child(even):hover::after {
+    opacity: 1;
 }

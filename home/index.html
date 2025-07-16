@@ -67,16 +67,7 @@
           </div>
         </div>
         <div class="headerLogo" style="opacity: .45;">
-          <div class="clock-container">
-            <div class="clock">
-              <div class="center-dot"></div>
-              <div class="hand hour-hand" id="hourHand"></div>
-              <div class="hand minute-hand" id="minuteHand"></div>
-              <div class="hand second-hand" id="secondHand"></div>
-            </div>
-          </div>
-        </div>
-      </header>
+        </div>      </header>
     </div>
     <!-- END HOME -->
 
@@ -318,10 +309,133 @@
     <!-- END ABOUT -->
     <!-- PROJECTS -->
     <div class="Slide Projects" id="projectsWrapper" data-index="4">
-      Projects warpper
+      <div class="projects-container">
+        <div class="projects-header">
+          <h1 class="projects-title">FEATURED PROJECTS</h1>
+          <div class="projects-count">
+            <span class="count-current">01</span>
+            <span class="count-separator">/</span>
+            <span class="count-total">06</span>
+          </div>
+        </div>
+        
+        <div class="projects-grid">
+          <article class="project-card" data-project="ddbp">
+            <div class="project-visual">
+              <div class="project-number">01</div>
+              <div class="project-arrow">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-name">Distributed Database Project</h3>
+              <p class="project-tech">TeX · Academic Research · Database Systems</p>
+              <p class="project-desc">Research documentation on distributed database systems</p>
+            </div>
+            <a href="https://github.com/LaloCornejo/DDBP" target="_blank" class="project-link" aria-label="View DDBP Repository"></a>
+          </article>
+
+          <article class="project-card" data-project="notion-clone">
+            <div class="project-visual">
+              <div class="project-number">02</div>
+              <div class="project-arrow">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-name">Notion Clone</h3>
+              <p class="project-tech">TypeScript · React · Next.js</p>
+              <p class="project-desc">Full-featured productivity application clone</p>
+            </div>
+            <a href="https://github.com/LaloCornejo/notion-clone" target="_blank" class="project-link" aria-label="View Notion Clone Repository"></a>
+          </article>
+
+          <article class="project-card" data-project="cplus-plus">
+            <div class="project-visual">
+              <div class="project-number">03</div>
+              <div class="project-arrow">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-name">Algorithm Studies</h3>
+              <p class="project-tech">C++ · Data Structures · Algorithms</p>
+              <p class="project-desc">Comprehensive collection of algorithmic implementations</p>
+            </div>
+            <a href="https://github.com/LaloCornejo/Cplus.plus" target="_blank" class="project-link" aria-label="View C++ Algorithm Studies"></a>
+          </article>
+
+          <article class="project-card" data-project="jva">
+            <div class="project-visual">
+              <div class="project-number">04</div>
+              <div class="project-arrow">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-name">Java Projects</h3>
+              <p class="project-tech">Java · Object-Oriented Programming</p>
+              <p class="project-desc">Academic and personal Java development projects</p>
+            </div>
+            <a href="https://github.com/LaloCornejo/Jva" target="_blank" class="project-link" aria-label="View Java Projects"></a>
+          </article>
+
+          <article class="project-card" data-project="client-server">
+            <div class="project-visual">
+              <div class="project-number">05</div>
+              <div class="project-arrow">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-name">Client-Server System</h3>
+              <p class="project-tech">C++ · Network Programming · Sockets</p>
+              <p class="project-desc">Client-server architecture implementation project</p>
+            </div>
+            <a href="https://github.com/LaloCornejo/CliSerProyecto" target="_blank" class="project-link" aria-label="View Client-Server Project"></a>
+          </article>
+
+          <article class="project-card" data-project="chat-p2p">
+            <div class="project-visual">
+              <div class="project-number">06</div>
+              <div class="project-arrow">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-name">P2P Chat Application</h3>
+              <p class="project-tech">C++ · Networking · Sockets</p>
+              <p class="project-desc">Peer-to-peer communication system implementation</p>
+            </div>
+            <a href="https://github.com/LaloCornejo/chatP2P" target="_blank" class="project-link" aria-label="View P2P Chat Project"></a>
+          </article>
+        </div>
+
+        <div class="projects-footer">
+          <div class="github-link-wrapper">
+            <a href="https://github.com/LaloCornejo" target="_blank" class="github-link">
+              <span>VIEW ALL ON GITHUB</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- END PROJECTS -->
-
     <!-- BLOG -->
     <div class="Slide Blog" id="blogWrapper" data-index="5">
       Blog warpper
@@ -349,7 +463,6 @@
 </body>
 
 <script src="/js/main.js"></script>
-<script src="/js/clock.js"></script>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </html>
