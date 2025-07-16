@@ -4,26 +4,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Eduardo Cornejo's personal portfolio website.">
-  <meta name="keywords" content="Eduardo Cornejo, Creative Technologist, Portfolio, Projects, Blog, Pachuca Hidalgo">
+  <meta name="description" content="Eduardo Cornejo's personal portfolio website showcasing projects in JavaScript, TypeScript, C++, Java, and more.">
+  <meta name="keywords" content="Eduardo Cornejo, Creative Technologist, Portfolio, Projects, JavaScript, TypeScript, C++, Java, Pachuca Hidalgo">
   <meta name="author" content="Eduardo Cornejo">
   <meta name="theme-color" content="#000000">
-  <link rel="icon" href="/imgs/image2.svg" type="image/svg+xml">
+  
+  <!-- Preconnect to external domains -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <title>L Æ L Ö - J.Eduardo Cornejo</title>
+  <link rel="preconnect" href="https://unpkg.com" crossorigin>
+  
+  <!-- DNS prefetch for performance -->
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="dns-prefetch" href="//unpkg.com">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="/imgs/image2.svg" type="image/svg+xml">
+  
+  <!-- Stylesheets -->
   <link href="/css/global.css" rel="stylesheet">
   <link href="/css/socials.css" rel="stylesheet">
+  
+  <!-- Preload critical assets -->
+  <link rel="preload" href="/fonts/fk-grotesk-neue-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/js/main.js" as="script">
+  
+  <title>L Æ L Ö - J.Eduardo Cornejo</title>
 </head>
-
 <body>
   <main>
     <div id="pre-load" class="loader">
-      <div class="loader-inner">
-        <div class="loader-logo">
-          <img src="/imgs/image2.svg" alt="Logo" style="width: 70px; height: 70px;">
-        </div>
-        <div class="box"></div>
+        <div class="loader-inner">
+          <div class="loader-logo">
+            <img src="/imgs/image2.svg" alt="Logo" width="70" height="70" loading="eager">
+          </div>        <div class="box"></div>
         <div class="box"></div>
         <div class="box"></div>
         <div class="box"></div>
@@ -62,10 +76,9 @@
           </div>
           <div class="headerCol">
             <a href="/home">
-              <img src="../imgs/image2.svg" alt="Logo" style="width: 70px; height: 70px;">
+              <img src="../imgs/image2.svg" alt="Logo" width="70" height="70" loading="eager">
             </a>
-          </div>
-        </div>
+          </div>        </div>
         <div class="headerLogo" style="opacity: .45;">
         </div>      </header>
     </div>
@@ -76,15 +89,6 @@
       <div class="socials-container">
         <h2 class="socials-title">Connect with me</h2>
         <div class="socials-grid">
-          <a href="https://x.com/l_ae_l_o" target="_blank" class="social-item">
-            <ion-icon name="logo-twitter"></ion-icon>
-          </a>
-          <a href="http://www.youtube.com/@l_ae_l_o" target="_blank" class="social-item">
-            <ion-icon name="logo-youtube"></ion-icon>
-          </a>
-          <a href="https://www.twitch.tv/l_ae_l_o" target="_blank" class="social-item">
-            <ion-icon name="logo-twitch"></ion-icon>
-          </a>
           <a href="https://www.linkedin.com/in/lalocornejo/" target="_blank" class="social-item">
             <ion-icon name="logo-linkedin"></ion-icon>
           </a>
@@ -94,8 +98,16 @@
           <a href="mailto:lalocornejoofficial@gmail.com" target="_blank" class="social-item">
             <ion-icon name="mail"></ion-icon>
           </a>
-        </div>
-      </div>
+          <a href="https://x.com/l_ae_l_o" target="_blank" class="social-item">
+            <ion-icon name="logo-twitter"></ion-icon>
+          </a>
+          <a href="http://www.youtube.com/@l_ae_l_o" target="_blank" class="social-item">
+            <ion-icon name="logo-youtube"></ion-icon>
+          </a>
+          <a href="https://www.twitch.tv/l_ae_l_o" target="_blank" class="social-item">
+            <ion-icon name="logo-twitch"></ion-icon>
+          </a>
+        </div>      </div>
     </div>
     <!-- END CONTACT -->
 
@@ -462,7 +474,8 @@
   </main>
 </body>
 
-<script src="/js/main.js"></script>
+<!-- Scripts - optimized loading -->
+<script src="/js/main.js" defer></script>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </html>

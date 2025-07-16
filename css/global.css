@@ -124,7 +124,8 @@ section {
 html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility
+    text-rendering: optimizeLegibility;
+    scroll-behavior: smooth;
 }
 
 html.is-transitioning {
@@ -544,6 +545,8 @@ video:not([src]) {
     justify-content: right;
     align-items: right;
     margin: 1rem;
+    will-change: transform, color;
+    transform: translateZ(0);
 }
 
 @media (max-width: 768px) {
@@ -715,6 +718,7 @@ video:not([src]) {
     z-index: 1;
     will-change: transform, opacity;
     backface-visibility: hidden;
+    contain: layout style paint;
 }
 
 .activeSl {
@@ -1028,18 +1032,6 @@ video:not([src]) {
     white-space: nowrap;
 }
 
-.lang-item {
-    background: transparent;
-    color: rgba(255, 255, 255, 0.8);
-    padding: 0.7rem 1.2rem;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    font-size: 1.2rem;
-    font-weight: 400;
-    transition: all 0.2s ease;
-    cursor: default;
-    font-family: monospace;
-}
-
 .lang-item.primary {
     background: #fff;
     color: #000;
@@ -1100,17 +1092,6 @@ video:not([src]) {
     box-sizing: border-box;
     word-break: keep-all;
     white-space: nowrap;
-}
-
-.tech-item {
-    background: transparent;
-    color: rgba(255, 255, 255, 0.8);
-    padding: 0.6rem 1rem;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    font-size: 1.2rem;
-    font-weight: 400;
-    transition: all 0.2s ease;
-    cursor: default;
 }
 
 .tech-item:hover {
@@ -1607,7 +1588,8 @@ video:not([src]) {
     overflow: hidden;
     transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     cursor: pointer;
-    transform-style: preserve-3d;
+    transform: translateZ(0);
+    will-change: transform;
     backface-visibility: hidden;
 }
 
