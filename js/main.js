@@ -149,3 +149,63 @@ document.addEventListener("keydown", function (event) {
       break;
   }
 });
+
+// ─── Live GitHub Stats ─────────────────────────────────────────────
+const GITHUB_USER = "LaloCornejo";
+const CACHE_KEY = "gh_stats";
+const CACHE_TTL = 60 * 60 * 1000; // 1 hour
+
+async function fetchGitHubStats() {
+  try {
+    const [userRes, reposRes] = await Promise.all([
+      fetch(`https://api.github.com/users/${GITHUB_USER}`),
+      fetch(`https://api.github.com/users/${GITHUB_USER}/repos?per_page=100&sort=pushed`)
+    ]);
+
+    if (!userRes.ok || !reposRes.ok) throw new Error("GitHub API error");
+
+    const user = await userRes.json();
+    const repos = await reposRes.json();
+
+    const totalStars = repos.reduce((sum, r) => sum + r.stargazers_count, 0);
+
+    const data = {
+      repos: user.public_repos,
+      stars: totalStars,
+      followers: user.followers,
+      fetchedAt: Date.now()
+    };
+
+    localStorage.setItem(CACHE_KEY, JSON.stringify(data));
+    return data;
+  } catch {
+    return null;
+  }
+}
+
+function renderStats(data) {
+  const reposEl = document.getElementById("stat-repos");
+  const starsEl = document.getElementById("stat-stars");
+  const followersEl = document.getElementById("stat-followers");
+  if (reposEl) reposEl.textContent = data.repos;
+  if (starsEl) starsEl.textContent = data.stars;
+  if (followersEl) followersEl.textContent = data.followers;
+}
+
+function loadStats() {
+  const cached = localStorage.getItem(CACHE_KEY);
+  if (cached) {
+    const parsed = JSON.parse(cached);
+    if (Date.now() - parsed.fetchedAt < CACHE_TTL) {
+      renderStats(parsed);
+      return;
+    }
+  }
+
+  // Render stale cache immediately, then refresh in background
+  if (cached) renderStats(JSON.parse(cached));
+
+  fetchGitHubStats().then(data => { if (data) renderStats(data); });
+}
+
+document.addEventListener("DOMContentLoaded", loadStats);

@@ -28,6 +28,7 @@
   <!-- Preload critical assets -->
   <link rel="preload" href="/fonts/fk-grotesk-neue-regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/js/main.js" as="script">
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/marked@15/marked.min.js" as="script">
   
   <title>L Æ L Ö - J.Eduardo Cornejo</title>
 </head>
@@ -71,7 +72,7 @@
             <p class="headerYear" data-gl-text="uppercase">
               02
               <br>
-              25
+              26
             </p>
           </div>
           <div class="headerCol">
@@ -137,15 +138,15 @@
               </p>
               <div class="stats-grid">
                 <div class="stat-item">
-                  <span class="stat-number">12</span>
+                  <span class="stat-number" id="stat-repos">—</span>
                   <span class="stat-label">Repositories</span>
                 </div>
                 <div class="stat-item">
-                  <span class="stat-number">174</span>
+                  <span class="stat-number" id="stat-stars">—</span>
                   <span class="stat-label">Stars</span>
                 </div>
                 <div class="stat-item">
-                  <span class="stat-number">6</span>
+                  <span class="stat-number" id="stat-followers">—</span>
                   <span class="stat-label">Followers</span>
                 </div>
               </div>
@@ -154,18 +155,18 @@
             <section class="languages-section-elegant">
               <h3 class="section-label">Programming Languages</h3>
               <div class="languages-grid">
-                <span class="lang-item primary">JavaScript</span>
                 <span class="lang-item primary">TypeScript</span>
-                <span class="lang-item">Java</span>
+                <span class="lang-item primary">Python</span>
                 <span class="lang-item">C++</span>
-                <span class="lang-item">Python</span>
-                <span class="lang-item">Lua</span>
-                <span class="lang-item">HTML</span>
-                <span class="lang-item">CSS</span>
-                <span class="lang-item">PHP</span>
-                <span class="lang-item">SQL</span>
-                <span class="lang-item">Bash</span>
+                <span class="lang-item">Java</span>
+                <span class="lang-item">C</span>
+                <span class="lang-item">Golang</span>
                 <span class="lang-item">Rust</span>
+                <span class="lang-item">Lua</span>
+                <span class="lang-item">JavaScript</span>
+                <span class="lang-item">CSS</span>
+                <span class="lang-item">SQL</span>
+                <span class="lang-item">HTML</span>
               </div>
             </section>
             
@@ -191,6 +192,7 @@
                     <span class="tech-item">Express</span>
                     <span class="tech-item">MongoDB</span>
                     <span class="tech-item">PostgreSQL</span>
+                    <span class="tech-item">SQLite</span>
                     <span class="tech-item">Firebase</span>
                     <span class="tech-item">REST APIs</span>
                   </div>
@@ -199,9 +201,14 @@
                 <div class="tech-category">
                   <h4 class="category-title">Tools & Platform</h4>
                   <div class="tech-stack">
-                    <span class="tech-item">Git</span>
+                    <span class="tech-item">OpenCode</span>
+                    <span class="tech-item">Claude Code</span>
+                    <span class="tech-item">Agentic Workflows</span>
+                    <span class="tech-item">Jira</span>
+                    <span class="tech-item">Linear</span>
+                    <span class="tech-item">n8n</span>
                     <span class="tech-item">GitHub</span>
-                    <span class="tech-item">VS Code</span>
+                    <span class="tech-item">Git</span>
                     <span class="tech-item">Docker</span>
                     <span class="tech-item">Linux</span>
                     <span class="tech-item">Figma</span>
@@ -366,7 +373,7 @@
             <a href="https://github.com/LaloCornejo/notion-clone" target="_blank" class="project-link" aria-label="View Notion Clone Repository"></a>
           </article>
 
-          <article class="project-card" data-project="cplus-plus">
+          <article class="project-card" data-project="jarvis">
             <div class="project-visual">
               <div class="project-number">03</div>
               <div class="project-arrow">
@@ -376,14 +383,14 @@
               </div>
             </div>
             <div class="project-info">
-              <h3 class="project-name">Algorithm Studies</h3>
-              <p class="project-tech">C++ · Data Structures · Algorithms</p>
-              <p class="project-desc">Comprehensive collection of algorithmic implementations</p>
+              <h3 class="project-name">JARVIS</h3>
+              <p class="project-tech">Python · AI · Natural Language Processing</p>
+              <p class="project-desc">AI-powered personal assistant with natural language processing</p>
             </div>
-            <a href="https://github.com/LaloCornejo/Cplus.plus" target="_blank" class="project-link" aria-label="View C++ Algorithm Studies"></a>
+            <a href="https://github.com/LaloCornejo/JARVIS" target="_blank" class="project-link" aria-label="View JARVIS Repository"></a>
           </article>
 
-          <article class="project-card" data-project="jva">
+          <article class="project-card" data-project="nasa-test">
             <div class="project-visual">
               <div class="project-number">04</div>
               <div class="project-arrow">
@@ -393,14 +400,14 @@
               </div>
             </div>
             <div class="project-info">
-              <h3 class="project-name">Java Projects</h3>
-              <p class="project-tech">Java · Object-Oriented Programming</p>
-              <p class="project-desc">Academic and personal Java development projects</p>
+              <h3 class="project-name">NASA NEO 3D Visualization</h3>
+              <p class="project-tech">JavaScript · Three.js · Python · NASA API</p>
+              <p class="project-desc">Top 6 National — 3D Earth-Moon-NEO visualization with real NASA orbital mechanics</p>
             </div>
-            <a href="https://github.com/LaloCornejo/Jva" target="_blank" class="project-link" aria-label="View Java Projects"></a>
+            <a href="https://github.com/LaloCornejo/NASATest" target="_blank" class="project-link" aria-label="View NASATest Repository"></a>
           </article>
 
-          <article class="project-card" data-project="client-server">
+          <article class="project-card" data-project="siia">
             <div class="project-visual">
               <div class="project-number">05</div>
               <div class="project-arrow">
@@ -410,11 +417,10 @@
               </div>
             </div>
             <div class="project-info">
-              <h3 class="project-name">Client-Server System</h3>
-              <p class="project-tech">C++ · Network Programming · Sockets</p>
-              <p class="project-desc">Client-server architecture implementation project</p>
+              <h3 class="project-name">SIIA — Academic System</h3>
+              <p class="project-tech">Java · Spring Boot · TypeScript · Next.js</p>
+              <p class="project-desc">Full-stack university academic information system (private repository)</p>
             </div>
-            <a href="https://github.com/LaloCornejo/CliSerProyecto" target="_blank" class="project-link" aria-label="View Client-Server Project"></a>
           </article>
 
           <article class="project-card" data-project="chat-p2p">
@@ -450,7 +456,26 @@
     <!-- END PROJECTS -->
     <!-- BLOG -->
     <div class="Slide Blog" id="blogWrapper" data-index="5">
-      Blog warpper
+      <div class="blog-container" id="blogContainer">
+        <div class="blog-header">
+          <h1 class="blog-title">BLOG</h1>
+          <div class="blog-count">
+            <span class="count-current" id="blog-count">0</span>
+            <span class="count-separator">/</span>
+            <span class="count-total" id="blog-total">0</span>
+          </div>
+        </div>
+        <div class="blog-list" id="blogList"></div>
+        <div class="blog-post" id="blogPost" style="display:none">
+          <button class="blog-back" id="blogBack" aria-label="Back to blog list">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Back
+          </button>
+          <div class="blog-content" id="blogContent"></div>
+        </div>
+      </div>
     </div>
 
       <div class="footHeader">
@@ -476,6 +501,8 @@
 
 <!-- Scripts - optimized loading -->
 <script src="/js/main.js" defer></script>
+<script src="/js/blog.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/marked@15/marked.min.js"></script>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </html>
