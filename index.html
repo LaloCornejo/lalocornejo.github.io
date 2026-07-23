@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Eduardo Cornejo's personal portfolio website showcasing projects in JavaScript, TypeScript, C++, Java, and more.">
+  <meta name="keywords" content="Eduardo Cornejo, Creative Technologist, Portfolio, Projects, JavaScript, TypeScript, C++, Java, Pachuca Hidalgo">
+  <meta name="author" content="Eduardo Cornejo">
+  <meta name="theme-color" content="#000000">
+
+  <!-- Preconnect to external domains -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://unpkg.com" crossorigin>
+
+  <!-- DNS prefetch for performance -->
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="dns-prefetch" href="//unpkg.com">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/imgs/image2.svg" type="image/svg+xml">
+
+  <title>L Æ L Ö - J.Eduardo Cornejo</title>
+</head>
+<body>
+  <main>
+      <!-- On load redirect into .../home -->
+        <script>
+          window.addEventListener('load', function() {
+            // Check if the current URL is the root
+            if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
+              // Redirect to /home
+              window.location.href = '/home';
+            }
+          });
+        </script>
+  </main>
+</body>
